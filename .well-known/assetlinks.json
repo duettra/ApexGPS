@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.apexgps.app",
+      "sha256_cert_fingerprints": [
+        "86:12:2A:F5:B8:4E:A9:C0:33:77:55:64:F3:A0:A4:B1:83:26:55:A2:88:2B:D5:97:29:C1:9B:CA:7C:BA:82:00"
+      ]
+    }
+  }
+]

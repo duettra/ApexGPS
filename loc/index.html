@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shared location — ApexGPS</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    margin: 0; padding: 16px;
+    max-width: 640px; margin-inline: auto;
+  }
+  h1 { font-size: 1.25rem; margin: 0 0 12px; }
+  .meta { color: #666; font-size: 0.9rem; margin-bottom: 12px; }
+  iframe {
+    width: 100%; height: 360px;
+    border: 1px solid #ccc; border-radius: 8px;
+    margin-bottom: 16px;
+  }
+  .btn {
+    display: block; width: 100%;
+    padding: 12px; margin-bottom: 10px;
+    text-align: center; text-decoration: none;
+    background: #1976d2; color: #fff;
+    border-radius: 8px; font-weight: 600;
+  }
+  .btn.secondary { background: #555; }
+  .err { color: #b00; }
+</style>
+</head>
+<body>
+<h1>Shared location</h1>
+<p class="meta" id="coords">Loading…</p>
+<iframe id="map" src="about:blank" title="Map preview"></iframe>
+<a id="open-app" class="btn" href="#">Open in ApexGPS</a>
+<a class="btn secondary" href="https://maps.google.com/" id="open-maps">Open in Google Maps</a>
+<p class="meta">ApexGPS is a free Android hiking app — currently in closed beta. <a id="get-app" href="https://github.com/duettra/ApexGPS">Learn more</a></p>
+<script>
+  (function () {
+    const params = new URLSearchParams(location.search);
+    const lat = parseFloat(params.get('lat'));
+    const lon = parseFloat(params.get('lon'));
+    const coordsEl = document.getElementById('coords');
+    const mapEl = document.getElementById('map');
+    const openAppEl = document.getElementById('open-app');
+    const openMapsEl = document.getElementById('open-maps');
+
+    if (isNaN(lat) || isNaN(lon)) {
+      coordsEl.textContent = 'No coordinates in this link.';
+      coordsEl.classList.add('err');
+      mapEl.style.display = 'none';
+      openAppEl.style.display = 'none';
+      openMapsEl.style.display = 'none';
+      return;
+    }
+
+    coordsEl.textContent = lat.toFixed(6) + ', ' + lon.toFixed(6);
+
+    const margin = 0.005;
+    const bbox = [lon - margin, lat - margin, lon + margin, lat + margin].join(',');
+    mapEl.src = 'https://www.openstreetmap.org/export/embed.html?bbox=' + encodeURIComponent(bbox)
+              + '&marker=' + lat + ',' + lon
+              + '&layer=mapnik';
+
+    openMapsEl.href = 'https://maps.google.com/?q=' + lat + ',' + lon;
+
+    if (/Android/i.test(navigator.userAgent)) {
+      openAppEl.href = 'intent://apexgps.duttra.de/loc?lat=' + lat + '&lon=' + lon
+                     + '#Intent;scheme=https;package=com.apexgps.app;end';
+    } else {
+      openAppEl.textContent = 'ApexGPS is Android only';
+      openAppEl.removeAttribute('href');
+      openAppEl.style.opacity = '0.5';
+    }
+  })();
+</script>
+</body>
+</html>
