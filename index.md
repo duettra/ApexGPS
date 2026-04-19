@@ -16,7 +16,7 @@ Currently in **closed beta**. Public release on the Play Store coming soon.
 
 ## Source
 
-The public site source (this repo) is at [github.com/duettra/ApexGPS](https://github.com/duettra/ApexGPS). The Android app source is in a separate private repo.
+The public site source (this repo) is at [github.com/duettra/ApexGPS](https://github.com/duettra/ApexGPS).
 
 ## Contact
 
