@@ -17,6 +17,7 @@ A free Android hiking app. Open offline maps, import GPX tracks, mark waypoints,
 - [**Backup & restore**](/docs/backup/) — save and migrate your data.
 - [**Settings**](/docs/settings/) — every option.
 - [**FAQ & troubleshooting**](/docs/faq/)
+- [**Changelog**](/docs/changelog/) — what's new in each release.
 
 Full index at [`/docs/`](/docs/).
 

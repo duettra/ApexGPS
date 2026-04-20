@@ -32,6 +32,7 @@ This guide walks through everything the app can do. Start with **Getting started
 ## Help
 
 - [FAQ & troubleshooting](faq.md) — common questions and what to do when something isn't working.
+- [Changelog](changelog.md) — what's new in each release.
 
 ---
 

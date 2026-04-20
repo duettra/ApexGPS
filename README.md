@@ -11,7 +11,7 @@ End-user documentation lives under [`docs/`](docs/README.md):
 - [Tracks](docs/tracks.md) · [Waypoints](docs/waypoints.md)
 - [Share & navigate](docs/share-and-navigate.md)
 - [Offline maps](docs/offline-maps.md) · [Backup & restore](docs/backup.md)
-- [Settings](docs/settings.md) · [FAQ](docs/faq.md)
+- [Settings](docs/settings.md) · [FAQ](docs/faq.md) · [Changelog](docs/changelog.md)
 
 Published online at [`apexgps.duttra.de/docs/`](https://apexgps.duttra.de/docs/).
 
