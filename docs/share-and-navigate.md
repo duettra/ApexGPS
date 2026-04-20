@@ -81,6 +81,10 @@ After tapping a shared link, tap **Navigate** on the bottom bar:
 
 This is straight-line bearing — not turn-by-turn. For hiking off-trail it's usually what you want; in a city, prefer opening the Google Maps link for street routing.
 
+### Also works for your own waypoints
+
+The same go-to mode also starts from any waypoint on the map. Tap a waypoint → the **Navigate** icon (walking person) in its overlay → the waypoint overlay closes and the navigation strip takes over. Covered in detail in [Waypoints → Navigate to a waypoint](waypoints.md#navigate-to-a-waypoint).
+
 ## Panic button (optional)
 
 **What it is:** a red ⚠ chip at the top-left of the map, mirroring the compass at the top-right. One tap → opens the Share location panel instantly.

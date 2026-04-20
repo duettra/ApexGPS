@@ -37,9 +37,24 @@ Tap any waypoint on the map. A panel slides up from the bottom with:
 - Elevation (if set).
 - Distance from your current GPS position (blue — live).
 - Description (if you entered one).
+- **Navigate** button (walking person, blue) — starts straight-line navigation to this waypoint. See below.
 - **Edit** button.
 
 Dismiss by swiping down.
+
+## Navigate to a waypoint
+
+Tap the **Navigate** icon (walking person, primary-tinted) in the waypoint overlay. The overlay closes and:
+
+- A **light-blue dotted line** draws from your live GPS position to the waypoint.
+- The bottom bar becomes: *"Navigating · 0.42 km · 045° NE · [Stop]"* — distance updates live (blue when auto-updating), bearing is in degrees + a cardinal direction (N, NE, E, SE, S, SW, W, NW).
+- The **DIST** field in the bottom stats row also shows this live distance in blue.
+- Auto-stops when you're within **20 metres** of the waypoint ("Arrived" toast).
+- Tap **Stop** to end navigation manually at any time. The waypoint is still there — tap it to reopen the overlay.
+
+This is the same go-to mode that shared locations use. Straight-line bearing, not turn-by-turn — for hiking off-trail it's usually what you want.
+
+Tap the waypoint again anytime during navigation to reopen the overlay (navigation continues in the background).
 
 ## Editing a waypoint
 
