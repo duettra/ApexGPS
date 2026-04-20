@@ -38,6 +38,7 @@ Tap any waypoint on the map. A panel slides up from the bottom with:
 - Distance from your current GPS position (blue — live).
 - Description (if you entered one).
 - **Navigate** button (walking person, blue) — starts straight-line navigation to this waypoint. See below.
+- **Share** button — sends the waypoint via WhatsApp / SMS / email. The recipient gets a text with the name, coords, elevation, and two links (ApexGPS App Link + Google Maps). If they also have ApexGPS installed, tapping the link opens the app directly with a red bullseye marker at the spot — they can Save it as their own waypoint.
 - **Edit** button.
 
 Dismiss by swiping down.

@@ -9,6 +9,13 @@ User-visible changes, newest first. For internal refactoring / version-bump-only
 
 ---
 
+## 1.24.x — Apr 19, 2026
+
+- **Full-screen navigation compass.** While navigating to a target, tap the 🧭 icon on the nav strip to open a big analog compass: distance / ETA / speed / elevation up top, a rotating dial with the blue needle pointing at the target, and lat/lon/bearing/accuracy below. Drag down to minimise. See [Share → The navigation compass](share-and-navigate.md#the-navigation-compass-full-screen).
+- **Share a waypoint.** Waypoint overlay now has a Share button next to Navigate and Edit. Sends the waypoint via any messaging app; recipients with ApexGPS open the link directly as a shared location they can Save.
+- **Cleaner nav strip + stats bar.** The nav strip now shows bearing + ETA (bearing in blue — it updates live), distance lives in the stats bar's DIST field. No more duplicate numbers stacked on top of each other.
+- Needle on the compass emerges smoothly from the centre pivot (subtle visual polish).
+
 ## 1.23.0 — Apr 19, 2026
 
 - **Navigate to any waypoint** straight from the waypoint overlay. Tap the walking-person icon next to Edit — same light-blue dotted line + live distance/bearing + auto-stop at 20 m as shared-location navigation. See [Waypoints → Navigate to a waypoint](waypoints.md#navigate-to-a-waypoint).

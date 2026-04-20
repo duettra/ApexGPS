@@ -85,6 +85,43 @@ This is straight-line bearing — not turn-by-turn. For hiking off-trail it's us
 
 The same go-to mode also starts from any waypoint on the map. Tap a waypoint → the **Navigate** icon (walking person) in its overlay → the waypoint overlay closes and the navigation strip takes over. Covered in detail in [Waypoints → Navigate to a waypoint](waypoints.md#navigate-to-a-waypoint).
 
+## The navigation compass (full-screen)
+
+While navigating to a target, a small **compass icon** 🧭 appears on the navigation strip, left of Stop. Tap it to open a full-screen compass view. Drag the sheet down to minimise back to the strip.
+
+### Layout
+
+Top data row: **Distance** (blue) · **ETA** · **Speed** · **Elevation**.
+
+Central analog-style dial:
+- Outer ring with tick marks every 15° (major ticks every 30°).
+- **N / E / S / W** labels on the card.
+- A small **red triangle** marks true north on the card.
+- A **blue needle** (triangle) points at the target in real-world direction.
+- **Centre badge** shows the phone's current heading (`245°`), or the letter **S** with a *"Simulated Heading"* caption when the phone's compass sensor is unreliable (near metal, strong magnets, or needing a figure-8 calibration waggle).
+
+Bottom data row: **Lat · Lon · Bearing° + cardinal · ±Accuracy**.
+
+At the bottom: **Stop navigation** (full-width, ends nav entirely).
+
+### Using it
+
+The compass dial **rotates with your phone's orientation** so the red triangle always points to real-world north regardless of how you're holding the phone. Point the top of the phone at the blue needle's direction to face the target.
+
+When the sensor is fully reliable the centre badge shows the heading in degrees; otherwise it falls back to a stylised "S" and labels itself *Simulated Heading* — a reminder that the direction might drift.
+
+### What happens to the bottom stats bar
+
+While the compass is open, the usual SPEED / ELEV / DIST stats bar at the bottom of the map is **hidden** — the compass's own top panel already shows those numbers in larger type, so duplicating them below would be noisy. The stats bar re-appears the moment you drag the compass down.
+
+### What the nav strip shows when the compass is closed
+
+When the compass is minimised, the navigation strip at the bottom reads:
+
+> *Navigating · **045° NE** · ETA 12 min · 🧭 · Stop*
+
+The bearing and cardinal are in **blue** because they update with every GPS fix. ETA is an estimate based on your current walking / moving speed — shows `--` when you're stationary. Distance isn't shown on the strip any more; it's in the bottom stats bar's **DIST** field (also blue while navigating).
+
 ## Panic button (optional)
 
 **What it is:** a red ⚠ chip at the top-left of the map, mirroring the compass at the top-right. One tap → opens the Share location panel instantly.
