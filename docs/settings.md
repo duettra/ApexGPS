@@ -55,6 +55,9 @@ Runs Douglas-Peucker simplification across every imported track. Reduces point c
 
 Individual tracks can also be optimized one-at-a-time from the track detail screen.
 
+### Load sample data
+Imports 3 example waypoints (Summit / Viewpoint / Trailhead) and 3 tracks of different lengths and elevation profiles (5 km / 12 km / 25 km, with realistic +260 m to +3030 m elevation gain). Useful for exploring what the app can do without needing your own GPX files yet. The samples are just normal tracks/waypoints after import — delete them any time.
+
 ## API Keys
 
 ### Thunderforest
@@ -62,9 +65,9 @@ Required to use the **Outdoors (Thunderforest)** tile style. Free "Hobby" plan: 
 
 Without a key, the Outdoors style shows a placeholder; the other five styles work without any key.
 
-## About / Help
+## About
 
-Tap the **☰ menu → Settings** and scroll; some builds expose version info and an "About" row. For help, contact [sandwalker.one@proton.me](mailto:sandwalker.one@proton.me).
+**Settings → About** shows the app version, attributions, and contact email — plus the **User Guide**: tappable entries for every chapter of this documentation, bundled with the app so the full guide works offline. Tap a chapter → a reader opens and renders the chapter in-app. Cross-chapter links inside each page are honoured; back arrow returns to the chapter list. A **"View online"** link at the bottom opens the same docs at [apexgps.duttra.de/docs](https://apexgps.duttra.de/docs/) in your browser. For help, contact [sandwalker.one@proton.me](mailto:sandwalker.one@proton.me).
 
 ---
 

@@ -9,24 +9,32 @@ A **waypoint** is a named point on the map — a trailhead, a summit, a good pho
 
 ## Adding a waypoint
 
-### At a specific place
+### At a specific place (long-press the map)
 
-Long-press on the map where you want the waypoint. A dialog opens:
+Long-press on the map where you want the waypoint. A sheet slides up with:
 
 - **Name** — optional. Defaults to "Waypoint" if you leave it blank.
-- **Description** — optional notes.
-- **Symbol** — pick from 32 icons (see list below).
+- **Notes** — optional description.
+- **Latitude / Longitude** — auto-filled from the tapped point; **editable** if you want to tweak them.
+- **Symbol** — pick from 32 icons.
 - **Colour** — 16-colour palette.
-- **Elevation** — auto-filled from the GPS if available; editable.
 - **Save** / **Cancel**.
+
+### By typing coordinates
+
+Open **menu → Waypoints** → tap the blue **+** FAB at the bottom-right. Same sheet as above, but the Lat / Lon fields start empty. Type coordinates (or paste a `lat, lon` string into the Latitude field — the app auto-splits into both fields).
+
+### By importing a GPX file
+
+Open **menu → Waypoints** → tap the blue **folder icon** FAB at the bottom-right. Pick one or more `.gpx` files. Any waypoints inside the files are imported. Duplicates (same name, within ~11 m) are skipped automatically.
 
 ### At your current location
 
 Turn on GPS (tap the crosshair button if the triangle isn't showing), long-press on the triangle itself (or anywhere very close to it), and the dialog opens pre-positioned at your fix.
 
-### From an imported GPX
+### From an imported GPX (via share / open-with)
 
-GPX files often contain waypoints alongside tracks. They're imported automatically when you open the GPX. If the GPX has no name for a waypoint (some exporters drop the coords into the name field), ApexGPS detects that and shows "Waypoint" instead.
+GPX files opened from another app (WhatsApp attachment, Gmail, file manager) also import their waypoints automatically. If the GPX has no name for a waypoint (some exporters drop the coords into the name field), ApexGPS detects that and shows "Waypoint" instead.
 
 ## Viewing a waypoint
 
@@ -61,7 +69,7 @@ Tap the waypoint again anytime during navigation to reopen the overlay (navigati
 
 Tap the waypoint → **Edit** in the overlay, or open **menu → Waypoints** and tap a row.
 
-The same dialog as when adding — change any field, Save.
+Same sheet as when adding. Name, Notes, **Latitude**, **Longitude**, Symbol, Colour are all editable. On Save, the app validates the coordinates (lat ∈ [−90, 90], lon ∈ [−180, 180], both must be numbers) and shows an inline red error if they're out of range.
 
 ## Moving a waypoint
 

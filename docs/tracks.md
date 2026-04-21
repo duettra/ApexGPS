@@ -13,7 +13,7 @@ A **track** is a recorded path — a sequence of GPS points connected as a line 
 
 ### From a file
 
-Tap the **+ button** (bottom right of the map screen) → pick one or more `.gpx` files from your phone's storage. You can select multiple at once. The map auto-zooms to fit the imported tracks.
+Open **menu → Tracks** → tap the blue **folder icon** FAB at the bottom-right. Pick one or more `.gpx` files from your phone's storage (multi-select allowed). The app navigates you back to the map and auto-zooms to fit the imported tracks.
 
 ### From a share (WhatsApp, email, another app)
 

@@ -9,6 +9,25 @@ User-visible changes, newest first. For internal refactoring / version-bump-only
 
 ---
 
+## 1.26.0 — Apr 21, 2026
+
+- **Offline User Guide.** The full 10-chapter guide is now bundled inside the app — open **Settings → About** and tap any chapter to read without an internet connection. Links between chapters work in-app; taps on external links open your browser.
+- **Load sample data.** New button in **Settings → Data** loads 3 example waypoints (Summit / Viewpoint / Trailhead) and 3 tracks of different lengths and elevation profiles. Lets you try every feature of the app without needing your own GPX files. Safe to delete later — they're just normal tracks/waypoints after import.
+- **Navigate auto-enables GPS.** Tapping Navigate on a shared location or waypoint now turns live location on automatically if it was off. No more "Acquiring GPS…" stall when you actually wanted to start navigating.
+- **Map panning unlocks follow-me again.** A regression from earlier 1.2x builds: under continuous GPS updates the map kept snapping back to your position every second even after you'd dragged it. Drag the map → camera unlocks (FAB turns mid-blue) as before; your triangle keeps updating in place.
+- **Waypoint symbols that used to crash.** Importing a GPX that contained Viewpoint / Saddle / Waterfall / Picnic / Drinking water / Guidepost / Ruins / Toilets symbols could crash the app on render. Fixed — all 32 symbols render correctly now.
+
+---
+
+## 1.25.x — Apr 21, 2026
+
+- **Import GPX from the Tracks list** (top-right folder icon). Same for the Waypoints list. The map's Import FAB is gone — list screens own imports now.
+- **Add waypoint by coordinates** — blue "+" in the Waypoints list opens the full waypoint edit sheet with empty Lat/Lon fields. Type coords or paste a `lat, lon` string into Latitude (auto-splits).
+- **Edit a waypoint's coordinates.** Lat and Lon are now editable in the waypoint edit sheet, with inline validation (lat ∈ [-90, 90], lon ∈ [-180, 180]).
+- **Follow-me FAB moved to the bottom** of the map's right-hand column — closest to your thumb. Layers is above it, Measure above that.
+
+---
+
 ## 1.24.x — Apr 19, 2026
 
 - **Full-screen navigation compass.** While navigating to a target, tap the 🧭 icon on the nav strip to open a big analog compass: distance / ETA / speed / elevation up top, a rotating dial with the blue needle pointing at the target, and lat/lon/bearing/accuracy below. Drag down to minimise. See [Share → The navigation compass](share-and-navigate.md#the-navigation-compass-full-screen).

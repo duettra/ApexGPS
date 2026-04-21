@@ -35,6 +35,11 @@ From top to bottom:
 ### Measure distance
 The **ruler icon**. Tap to enter measure mode; tap on the map to drop pins; a line connects them and the bottom stats bar shows the total distance. Drag pin A onto your GPS position to measure "from me." Tap the icon again to exit.
 
+### Map layers
+The **layers icon**. Six styles to pick from: OpenTopoMap (default, hiking focus), OSM Standard (clean general-purpose), ESRI Topo, ESRI Shaded Relief, Satellite, Outdoors (Thunderforest — requires a free API key from Settings → API Keys).
+
+The chosen style is remembered across app restarts.
+
 ### Follow-me (crosshair)
 Three states — the button colour tells you which:
 
@@ -50,13 +55,9 @@ Three states — the button colour tells you which:
 - Tap from **Unlocked** → re-centres + re-locks.
 - **Long-press** on any on-state → turns GPS off instantly (skips the re-centre animation).
 
-### Map layers
-The **layers icon**. Six styles to pick from: OpenTopoMap (default, hiking focus), OSM Standard (clean general-purpose), ESRI Topo, ESRI Shaded Relief, Satellite, Outdoors (Thunderforest — requires a free API key from Settings → API Keys).
+### Where did the Import (+) button go?
 
-The chosen style is remembered across app restarts.
-
-### Import GPX
-The **+ button**. Opens the system file picker. You can select multiple `.gpx` files at once. Imported tracks appear on the map and in your Tracks list.
+As of **v1.25.2** the map no longer has a dedicated import FAB — importing GPX now lives in the Tracks and Waypoints list screens. See [Tracks](tracks.md#importing) or [Waypoints](waypoints.md#adding-a-waypoint).
 
 ## Top-left
 
