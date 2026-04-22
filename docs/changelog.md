@@ -4,10 +4,24 @@ User-visible changes, newest first. For internal refactoring / version-bump-only
 
 ---
 
+## 1.26.2 — Apr 22, 2026
+
+- **Thunderforest API key now encrypted at rest.** The key you paste in **Settings → Advanced** is now stored in an Android-Keystore-backed vault, not plaintext. Existing keys migrate automatically on first launch. Backups that include your settings will carry the key in the ZIP (needed for portability) — a new red warning appears in the backup dialog when this applies, so you know to keep the ZIP private.
+- **Backup restore is safer.** Restore now rejects ZIPs attempting directory traversal, caps entries at 100 000, per-entry size at 500 MB, and total uncompressed size at 2 GB. Crafted / malformed backups can't fill your storage or escape the backup directory any more.
+- **Cancel button on backup.** While a backup is running you can now hit **Cancel** under the busy button to abort without waiting.
+- **GPX import progress.** A `Importing GPX…` snackbar is shown while large imports are in progress, so the app no longer appears frozen during a big load.
+- **Location service more reliable on Android 14+.** The GPS foreground service now starts correctly on Android 14 and 15 (previously silently killed in some edge cases). Wake-lock scope tightened — should improve battery drain during long tracking sessions.
+- **Tile preview fix + background hygiene.** The saved-offline-maps detail preview now loads without blocking the UI. Internal: tile download service can no longer ANR on shutdown. Release builds no longer leak debug log output.
+- **Removed:** the Buy-me-a-coffee link in Settings → About. ApexGPS remains free with no ads, no tracking, no cloud.
+- **Internal (for curious users):** Room DB now ships with explicit migrations (1→2→3); upgrades preserve your tracks and waypoints even if a schema bump lands. Downgrade wipe still applies — sideloading an older APK over a newer one will reset the DB.
+
+---
+
 ## 1.26.1 — Apr 22, 2026
 
 - **Saved offline map detail — fixed skewed preview.** The map preview on **Menu → Saved offline maps → [tap a region]** was painting tiles past its own bounds, overlapping the stat rows and the "Show on Map" button. The preview now clips correctly to its 1.6:1 rectangle.
 - **In-app "View online" link** in Settings → About now points at `apexgps.duttra.de/docs/` (the rendered user guide) instead of the raw GitHub tree view.
+- **Buy me a coffee.** New Support section in **Settings → About**. ApexGPS stays free with no ads and no tracking — if it's useful to you, a small tip helps keep new features coming.
 
 ---
 
