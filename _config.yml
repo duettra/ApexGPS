@@ -1,2 +1,15 @@
 include:
   - .well-known
+
+# Keep docs/*.md free of YAML frontmatter so GitHub's raw-markdown view at
+# github.com/duettra/ApexGPS/tree/main/docs renders cleanly. Jekyll derives
+# page URLs from these defaults instead of per-file `permalink:` keys.
+defaults:
+  - scope:
+      path: "docs"
+    values:
+      permalink: /docs/:basename/
+  - scope:
+      path: "docs/README.md"
+    values:
+      permalink: /docs/

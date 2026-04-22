@@ -1,8 +1,3 @@
----
-title: Waypoints — ApexGPS
-permalink: /docs/waypoints/
----
-
 # Waypoints
 
 A **waypoint** is a named point on the map — a trailhead, a summit, a good photo spot, a cabin, the place the car is parked. Each one has a name, a colour, and one of 32 symbols.

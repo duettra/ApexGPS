@@ -1,8 +1,3 @@
----
-title: Tracks — ApexGPS
-permalink: /docs/tracks/
----
-
 # Tracks
 
 A **track** is a recorded path — a sequence of GPS points connected as a line on the map. You get tracks by importing GPX files (from GaiaGPS, Strava, Garmin Connect, wikiloc.com, or anything else that exports GPX).

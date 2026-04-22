@@ -1,8 +1,3 @@
----
-title: Offline maps — ApexGPS
-permalink: /docs/offline-maps/
----
-
 # Offline maps
 
 ApexGPS works without signal if the map tiles for the area are already on your phone. Two ways that happens: automatic caching, and manual pre-downloading.

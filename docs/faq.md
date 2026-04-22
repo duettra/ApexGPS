@@ -1,8 +1,3 @@
----
-title: FAQ — ApexGPS
-permalink: /docs/faq/
----
-
 # FAQ & troubleshooting
 
 ## "My blue triangle isn't showing"

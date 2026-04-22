@@ -1,8 +1,3 @@
----
-title: Share & navigate — ApexGPS
-permalink: /docs/share-and-navigate/
----
-
 # Share your location & navigate to a target
 
 ## Sharing your current location

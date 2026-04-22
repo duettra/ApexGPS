@@ -1,11 +1,13 @@
----
-title: Changelog — ApexGPS
-permalink: /docs/changelog/
----
-
 # Changelog
 
 User-visible changes, newest first. For internal refactoring / version-bump-only builds see the private repo.
+
+---
+
+## 1.26.1 — Apr 22, 2026
+
+- **Saved offline map detail — fixed skewed preview.** The map preview on **Menu → Saved offline maps → [tap a region]** was painting tiles past its own bounds, overlapping the stat rows and the "Show on Map" button. The preview now clips correctly to its 1.6:1 rectangle.
+- **In-app "View online" link** in Settings → About now points at `apexgps.duttra.de/docs/` (the rendered user guide) instead of the raw GitHub tree view.
 
 ---
 

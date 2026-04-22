@@ -1,8 +1,3 @@
----
-title: The map screen — ApexGPS
-permalink: /docs/map/
----
-
 # The map screen
 
 Everything revolves around this view. Here's what each control does.

@@ -1,8 +1,3 @@
----
-title: Backup & restore — ApexGPS
-permalink: /docs/backup/
----
-
 # Backup & restore
 
 ApexGPS stores everything **locally on your phone**. There's no cloud sync. If you factory-reset, switch phones, or uninstall the app, **your tracks, waypoints, and downloaded offline regions are gone** unless you've made a backup.

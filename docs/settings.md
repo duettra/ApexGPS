@@ -1,8 +1,3 @@
----
-title: Settings — ApexGPS
-permalink: /docs/settings/
----
-
 # Settings
 
 **menu → Settings** is organised into four sub-screens: Appearance, Storage, Data, API Keys. Each has an ⓘ info button next to group headers explaining what the feature does.

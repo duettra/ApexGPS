@@ -1,8 +1,3 @@
----
-title: Getting started — ApexGPS
-permalink: /docs/getting-started/
----
-
 # Getting started
 
 ## Install

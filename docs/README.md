@@ -1,8 +1,3 @@
----
-title: ApexGPS — User Guide
-permalink: /docs/
----
-
 # ApexGPS User Guide
 
 A free Android hiking app. View GPX tracks, mark waypoints, download maps for offline use, share your live location with a friend. No account, no ads, no cloud.
