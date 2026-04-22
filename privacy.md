@@ -5,7 +5,7 @@ permalink: /privacy.html
 
 # ApexGPS Privacy Policy
 
-_Last updated: 2026-04-17_
+_Last updated: 2026-04-22_
 
 ApexGPS is a free Android hiking app. This policy explains what data the app reads, where it stays, and who it's shared with.
 
@@ -22,6 +22,8 @@ Your location data and everything you create (tracks, waypoints, saved map regio
 ## Where the data goes
 
 **Nowhere external by default.** All tracks, waypoints, saved maps and settings live in the app's local storage. You can export them as a GPX or ZIP file and share with anyone you choose; we never see it.
+
+**On-device storage details.** Tracks and waypoints are stored in a local SQLite database on your device. That database is not encrypted — on a rooted device or if your phone is attached to a debug-enabled computer, the contents are readable. Your Thunderforest API key, if you set one, is stored in an Android Keystore-backed encrypted preferences file (AES-256-GCM). Backup ZIPs you create carry a plaintext copy of the API key so the backup is portable to a new device; keep those ZIPs private.
 
 **Map tile requests** — when you view a map, tiles are fetched over HTTPS from one of these public providers:
 
