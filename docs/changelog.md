@@ -4,6 +4,16 @@ User-visible changes, newest first. For internal refactoring / version-bump-only
 
 ---
 
+## 1.27.0 — Apr 23, 2026
+
+- **App now available in four new languages.** German, French, Spanish, and Polish, alongside English. Every screen, every dialog, every menu — all translated. Pick your language in **Settings → Appearance → Language**, or leave it on *System default* to follow your phone\'s language.
+- **Translated user guide.** All 11 chapters of the in-app User Guide (Settings → About → User Guide) are translated into the same four languages. Offline and online — the "View online" link at the bottom of the guide takes you to the matching language version at `apexgps.duttra.de/<lang>/docs/`.
+- **Language survives a backup restore.** Your chosen language is included in the Settings category of the backup ZIP. Restore on a new phone and you land in the right language without having to find the picker again.
+- **Stats bar now translated too.** The SPEED / ELEV / DIST labels at the bottom of the map (and km/h / m units) now switch with the UI language. German shows TEMPO / HÖHE / DIST, Spanish shows VEL / ALT / DIST, and so on.
+- **Italian and Arabic are next.** Italian follows the same pattern as French. Arabic adds right-to-left layout, which needs a dedicated visual audit before it ships.
+
+---
+
 ## 1.26.2 — Apr 22, 2026
 
 - **Thunderforest API key now encrypted at rest.** The key you paste in **Settings → Advanced** is now stored in an Android-Keystore-backed vault, not plaintext. Existing keys migrate automatically on first launch. Backups that include your settings will carry the key in the ZIP (needed for portability) — a new red warning appears in the backup dialog when this applies, so you know to keep the ZIP private.
