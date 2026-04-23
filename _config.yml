@@ -13,3 +13,11 @@ defaults:
       path: "docs/README.md"
     values:
       permalink: /docs/
+  - scope:
+      path: "de/docs"
+    values:
+      permalink: /de/docs/:basename/
+  - scope:
+      path: "de/docs/README.md"
+    values:
+      permalink: /de/docs/
