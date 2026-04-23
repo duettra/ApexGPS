@@ -21,3 +21,27 @@ defaults:
       path: "de/docs/README.md"
     values:
       permalink: /de/docs/
+  - scope:
+      path: "fr/docs"
+    values:
+      permalink: /fr/docs/:basename/
+  - scope:
+      path: "fr/docs/README.md"
+    values:
+      permalink: /fr/docs/
+  - scope:
+      path: "es/docs"
+    values:
+      permalink: /es/docs/:basename/
+  - scope:
+      path: "es/docs/README.md"
+    values:
+      permalink: /es/docs/
+  - scope:
+      path: "pl/docs"
+    values:
+      permalink: /pl/docs/:basename/
+  - scope:
+      path: "pl/docs/README.md"
+    values:
+      permalink: /pl/docs/
