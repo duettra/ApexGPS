@@ -117,20 +117,6 @@ Boussole minimisée, la barre de nav affiche :
 
 Le cap et la cardinale sont en **bleu** parce qu\'ils se mettent à jour à chaque fix. ETA est une estimation basée sur votre vitesse actuelle — `--` à l\'arrêt. La distance n\'est plus dans la barre ; elle est dans **DIST** de la barre stats (également bleu en nav).
 
-## Bouton panique (optionnel)
-
-**Ce que c\'est :** une pastille rouge ⚠ en haut à gauche, symétrique de la boussole en haut à droite. Un tap → ouvre instantanément le panneau de partage de position.
-
-**Activer :** Paramètres → Apparence → Bouton panique → **Activé**. Masqué par défaut car la plupart des utilisateurs n\'en ont pas besoin.
-
-**Ce qu\'il fait :**
-
-- Ouvre le même panneau que le triangle bleu.
-- **Démarre le GPS** automatiquement s\'il est coupé, pour éviter le deadlock « Acquisition GPS… » en urgence.
-- Ne partage pas directement — il faut toujours appuyer **Partager** dans le panneau. C\'est voulu : un appui accidentel en poche ne doit pas envoyer votre position à quelqu\'un sans confirmation.
-
-C\'est un **raccourci**, pas une fonction différente. Pensez-y comme « saute la recherche du triangle, amène-moi au partage ».
-
 ---
 
 **Voir aussi :** [L\'écran carte →](map.md) · [Paramètres →](settings.md) · [FAQ →](faq.md)

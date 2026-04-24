@@ -30,6 +30,10 @@ Mantén pulsado en cualquier parte del mapa. Se abre un diálogo — elige nombr
 
 Menú → Rutas → toca el **botón de carpeta azul** abajo a la derecha → elige un archivo `.gpx` de tus descargas o archivos. La ruta aparece en el mapa; tócala para ver detalles (distancia, perfil de altitud).
 
+### Grabar una salida
+
+Toca la **pastilla de grabación** roja en la esquina superior izquierda. El punto se expande a un cronómetro en vivo; una línea roja de migas dibuja tu trayecto mientras te mueves. Toca el cronómetro para **Pausar / Finalizar / Eliminar**. Al **Finalizar**, la grabación se guarda como nueva Ruta. Ver [Rutas → Grabación](tracks.md#grabación).
+
 ### Compartir tu ubicación
 
 Toca el triángulo azul. Un panel sube con altitud, precisión, hora, batería y dos enlaces de mapas. Toca **Compartir** → elige WhatsApp, SMS, e-mail, lo que sea. El receptor ve la info + un enlace; si también tiene ApexGPS, el enlace abre directamente la app.

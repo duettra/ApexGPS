@@ -4,6 +4,21 @@ Cambios visibles para el usuario, más recientes primero. Para refactors interno
 
 ---
 
+## 1.29.0 — 24 abr. 2026
+
+- **Grabación de ruta en vivo.** Toca la pastilla roja en la esquina superior izquierda del mapa para empezar a grabar tu salida. Un cronómetro en vivo `HH:MM:SS` reemplaza al punto; tócalo para **Pausar / Finalizar / Eliminar**. Tu trayecto se dibuja como una línea roja mientras te mueves. Al **Finalizar**, la grabación se guarda como nueva Ruta y el panel se abre automáticamente para revisar distancia, ascenso y perfil de altitud al momento.
+- **Recortar ruta.** En la pantalla de detalle, **Recortar ruta** abre un diálogo con una mini-vista previa y dos manejadores arrastrables en el gráfico de altitud. Recorta un inicio malo (aún sin fix GPS) o una cola espuria (olvidaste tocar Finalizar) sin perder el resto. Destructivo — un paso de confirmación te dice exactamente cuántos puntos perderás.
+- **Etiqueta de actividad por ruta.** La pantalla Detalle de ruta tiene un nuevo menú **Actividad**: Senderismo · Caminata · Correr · Ciclismo · Todoterreno · Parapente. Las grabaciones arrancan por defecto en Senderismo; las importadas sin etiqueta.
+- **Elevación de punto.** El sheet de edición de puntos tiene un nuevo campo opcional **Elev (m)** — rellénalo cuando quieras llevar una altitud para una cumbre / collado conocido / etc. En blanco = sin elevación almacenada (igual que los puntos importados sin datos de elevación hoy en día).
+- **Detalle de ruta + edición de punto renovados.** Tarjetas agrupadas, encabezados de sección, iconos en cada fila, icono específico de la actividad en el chip Actividad, **Eliminar** con borde rojo para casar con la acción destructiva, nueva estadística **Puntos** en la pantalla de ruta. La edición de puntos es más compacta — el formulario entero cabe ahora sobre la barra de navegación del sistema en la mayoría de teléfonos sin desplazamiento.
+- **Recuperación tras muerte de proceso.** Si Android mata la app en plena grabación (poca memoria, forzar detención), la línea se conserva. Reabre la app y la grabación vuelve en pausa — reanudar, finalizar o descartar.
+- **Ahorro de batería: cadencia GPS adaptativa.** Mientras grabas con la pantalla apagada, la cadencia de fixes GPS pasa de 2 s a 10 s para ahorrar batería. En cuanto desbloqueas el teléfono vuelve a 2 s para fluidez. Totalmente automático.
+- **Protección ubicación del sistema.** Tocar grabar con el interruptor de ubicación del sistema Android apagado ahora muestra un mensaje con un acceso directo a **Ajustes** en lugar de arrancar silenciosamente una grabación muerta.
+- **Aviso de no-fix.** Si tocas grabar antes de que el GPS tenga fix, un breve aviso *«Adquiriendo GPS…»* te explica por qué aún no ha empezado la línea. La grabación arranca en cuanto llega el primer fix.
+- **Eliminado:** el botón de pánico opcional. La esquina superior izquierda ahora pertenece a la pastilla de grabación.
+
+---
+
 ## 1.28.0 — 24 abr. 2026
 
 - **Árabe añadido.** العربية se une al alemán, francés, español y polaco junto al inglés. Seis idiomas de interfaz en **Ajustes → Apariencia → Idioma**.
@@ -75,10 +90,6 @@ Cambios visibles para el usuario, más recientes primero. Para refactors interno
 ## 1.22.2 — 19 abr. 2026
 
 - **Enlace a la guía** en Ajustes → Acerca de. Abre esta documentación en el navegador.
-
-## 1.22.0 — 19 abr. 2026
-
-- **Botón de pánico** (opt-in). Pastilla roja ⚠ arriba a la izquierda. Toque → abre el panel de compartir y activa el GPS si hace falta. Actívalo en **Ajustes → Apariencia → Botón de pánico**. Ver [Compartir → Botón de pánico](share-and-navigate.md#botón-de-pánico-opcional).
 
 ## 1.21.0 — 19 abr. 2026
 

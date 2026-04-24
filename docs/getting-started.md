@@ -30,6 +30,10 @@ Long-press anywhere on the map. A dialog opens — pick a name, a colour, one of
 
 Tap the **+ button** (bottom right) → pick a `.gpx` file from your downloads or files. The track appears on the map; tap it to see details (distance, elevation profile).
 
+### Record a trip
+
+Tap the red **record dot** at the top-left. The dot expands into a live timer; a red breadcrumb draws your path as you move. Tap the timer for **Pause / Finish / Delete**. On **Finish**, the recording is saved as a new Track. See [Tracks → Recording](tracks.md#recording).
+
 ### Share your location
 
 Tap the blue triangle on the map. A panel slides up with your elevation, accuracy, time, battery, and two map links. Tap **Share** → pick WhatsApp, SMS, email — whatever. The recipient sees the info + a link; if they also have ApexGPS installed, the link opens straight into the app.

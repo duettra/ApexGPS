@@ -11,6 +11,7 @@ Long-press on the map where you want the waypoint. A sheet slides up with:
 - **Name** — optional. Defaults to "Waypoint" if you leave it blank.
 - **Notes** — optional description.
 - **Latitude / Longitude** — auto-filled from the tapped point; **editable** if you want to tweak them.
+- **Elevation (m)** — optional. Leave blank if unknown; fill in when you want the waypoint to carry a specific altitude (e.g. a summit height you looked up).
 - **Symbol** — pick from 32 icons.
 - **Colour** — 16-colour palette.
 - **Save** / **Cancel**.

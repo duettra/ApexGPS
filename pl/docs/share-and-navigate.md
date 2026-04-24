@@ -117,20 +117,6 @@ Gdy kompas jest zminimalizowany, dolny pasek:
 
 Kurs i kardynalny są **niebieskie**, bo aktualizują się przy każdym fixie. ETA to szacunek na podstawie aktualnej prędkości — pokazuje `--`, gdy stoisz. Dystans nie jest już na pasku; jest w **DYST** w pasku statystyk (także niebieski podczas nawigacji).
 
-## Przycisk alarmowy (opcjonalny)
-
-**Co to jest:** czerwony znaczek ⚠ w lewym górnym rogu mapy, symetrycznie do kompasu w prawym górnym. Jedno dotknięcie → natychmiast otwiera panel udostępniania lokalizacji.
-
-**Włączenie:** Ustawienia → Wygląd → Przycisk alarmowy → **Wł.**. Domyślnie ukryty, bo większości użytkowników nie jest potrzebny.
-
-**Co robi po naciśnięciu:**
-
-- Otwiera ten sam panel udostępniania co dotknięcie niebieskiego trójkąta.
-- **Automatycznie uruchamia GPS**, jeśli nie działał, aby uniknąć „Szukam GPS…” w prawdziwej sytuacji awaryjnej.
-- Nie udostępnia bezpośrednio — nadal trzeba dotknąć **Udostępnij** w panelu. To celowe: przypadkowe naciśnięcie w kieszeni nie powinno wysłać lokalizacji bez potwierdzenia.
-
-To **skrót**, nie inna funkcja. Myśl o tym jak „pomiń szukanie trójkąta, zabierz mnie od razu do arkusza udostępniania”.
-
 ---
 
 **Powiązane:** [Ekran mapy →](map.md) · [Ustawienia →](settings.md) · [FAQ →](faq.md)

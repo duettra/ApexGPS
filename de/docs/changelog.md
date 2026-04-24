@@ -4,6 +4,21 @@ Für Nutzer sichtbare Änderungen, neueste zuerst. Für internes Refactoring / r
 
 ---
 
+## 1.29.0 — 24. Apr. 2026
+
+- **Live-Track-Aufzeichnung.** Tippen Sie auf den roten Punkt oben links auf der Karte, um die Aufzeichnung Ihrer aktuellen Tour zu starten. Ein Live-Timer `HH:MM:SS` ersetzt den Punkt; Tap für **Pause / Fertig / Löschen**. Ihr Pfad zeichnet sich als rote Linie auf der Karte, während Sie sich bewegen. Bei **Fertig** wird die Aufzeichnung als neuer Track gespeichert und das Overlay öffnet sich automatisch, damit Sie Distanz, Aufstieg und Höhenprofil sofort prüfen können.
+- **Track zuschneiden.** In der Track-Detailansicht öffnet **Track zuschneiden** einen Dialog mit Mini-Karten-Vorschau und zwei ziehbaren Griffen im Höhendiagramm. Schneiden Sie einen schlechten Anfang (noch kein GPS-Fix) oder ein versehentliches Ende (vergessen, Fertig zu tippen) ab, ohne den Rest des Tracks zu verlieren. Destruktiv — ein Bestätigungsschritt nennt genau, wie viele Punkte entfallen.
+- **Aktivitäts-Tag pro Track.** Die Track-Detailansicht hat ein neues Dropdown **Aktivität**: Wandern · Spazieren · Laufen · Radfahren · Offroad · Gleitschirmfliegen. Aufzeichnungen starten standardmäßig als Wandern; importierte Tracks ohne Tag.
+- **Höhe am Wegpunkt.** Das Wegpunkt-Dialogfenster hat ein neues optionales Feld **Höhe (m)** — ausfüllen, wenn Sie eine Höhe für einen bekannten Gipfel / Pass / o. ä. mitführen möchten. Leer = keine Höhe gespeichert (wie heute bei importierten Wegpunkten ohne Höhendaten).
+- **Track-Details + Wegpunkt-Bearbeitung überarbeitet.** Gruppierte Karten, Abschnitts-Überschriften, Icons in jeder Zeile, aktivitätsspezifisches Icon am Aktivitäts-Chip, rot umrandetes **Löschen** passend zur destruktiven Aktion, neue Statistik **Punkte** im Track-Bildschirm. Das Wegpunkt-Dialogfenster ist kompakter — das ganze Formular passt auf den meisten Telefonen über die System-Navigationsleiste, ohne zu scrollen.
+- **Prozess-Tod-Wiederherstellung.** Beendet Android die App mitten in einer Aufzeichnung (Low-Memory, Force-Stop), bleibt die Breadcrumb erhalten. Nach dem erneuten Öffnen kommt die Aufzeichnung im pausierten Zustand zurück — fortsetzen, beenden oder verwerfen.
+- **Energiesparen: adaptive GPS-Rate.** Während einer Aufzeichnung bei ausgeschaltetem Bildschirm verlangsamt sich die GPS-Abfragerate von 2 s auf 10 s, um Akku zu sparen. Sobald Sie das Telefon entsperren, geht es zurück auf 2 s für live-glatte Aufzeichnung. Vollautomatisch.
+- **System-Ortung-Schutz.** Tippen auf Aufnahme bei deaktivierter Android-System-Ortung zeigt jetzt eine Meldung mit einer **Einstellungen**-Abkürzung statt still eine tote Aufzeichnung zu starten.
+- **No-Fix-Hinweis.** Tippen Sie auf Aufnahme, bevor GPS einen Fix erfasst hat, erscheint eine kurze Meldung *„GPS wird erfasst…"*, die erklärt, warum die Breadcrumb noch nicht gestartet ist. Die Aufzeichnung beginnt, sobald der erste Fix eintrifft.
+- **Entfernt:** der optionale Notfall-Button. Der Bereich oben links gehört nun dem Aufnahme-Chip.
+
+---
+
 ## 1.28.0 — 24. Apr. 2026
 
 - **Arabisch ergänzt.** العربية schließt sich Deutsch, Französisch, Spanisch und Polnisch neben Englisch an. Sechs UI-Sprachen in **Einstellungen → Darstellung → Sprache**.
@@ -75,10 +90,6 @@ Für Nutzer sichtbare Änderungen, neueste zuerst. Für internes Refactoring / r
 ## 1.22.2 — 19. Apr. 2026
 
 - **Anleitungs-Link** in Einstellungen → Über. Öffnet diese Dokumentation im Browser.
-
-## 1.22.0 — 19. Apr. 2026
-
-- **Notfall-Button** (Opt-in). Ein rotes ⚠ Symbol oben links auf der Karte. Tap → öffnet sofort das Standort-teilen-Panel und startet GPS bei Bedarf automatisch. Aktivierbar unter **Einstellungen → Darstellung → Notfall-Button**. Siehe [Teilen → Notfall-Button](share-and-navigate.md#notfall-button-optional).
 
 ## 1.21.0 — 19. Apr. 2026
 

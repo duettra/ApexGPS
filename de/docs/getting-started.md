@@ -30,6 +30,10 @@ Lange drücken auf irgendeinen Punkt der Karte. Ein Dialog öffnet sich — wäh
 
 Öffnen Sie **Menü → Tracks** → tippen Sie auf den blauen **Ordner-Button** unten rechts → wählen Sie eine `.gpx`-Datei aus Ihren Downloads oder Dateien. Der Track erscheint auf der Karte; tippen Sie ihn an, um Details zu sehen (Distanz, Höhenprofil).
 
+### Eine Tour aufzeichnen
+
+Tippen Sie auf den roten **Aufnahme-Punkt** oben links. Der Punkt erweitert sich zu einem Live-Timer; eine rote Breadcrumb zeichnet Ihren Pfad, während Sie sich bewegen. Tap auf den Timer für **Pause / Fertig / Löschen**. Bei **Fertig** wird die Aufzeichnung als neuer Track gespeichert. Siehe [Tracks → Aufzeichnung](tracks.md#aufzeichnung).
+
 ### Ihren Standort teilen
 
 Tippen Sie auf das blaue Dreieck auf der Karte. Ein Panel fährt nach oben mit Höhe, Genauigkeit, Uhrzeit, Akkustand und zwei Kartenlinks. Tippen Sie **Teilen** → wählen Sie WhatsApp, SMS, E-Mail, was immer. Der Empfänger sieht die Infos + einen Link; wenn er auch ApexGPS installiert hat, öffnet der Link direkt die App.

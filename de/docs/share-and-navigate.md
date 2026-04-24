@@ -117,20 +117,6 @@ Wenn der Kompass minimiert ist, zeigt die Navigationsleiste unten:
 
 Die Peilung und die Himmelsrichtung sind in **Blau**, weil sie sich bei jeder GPS-Position aktualisieren. ANK ist eine Schätzung basierend auf Ihrer aktuellen Geh- / Fortbewegungsgeschwindigkeit — zeigt `--`, wenn Sie stehen. Die Distanz erscheint nicht mehr in der Leiste; sie steht im **DIST**-Feld der Statusleiste unten (während der Navigation ebenfalls blau).
 
-## Notfall-Button (optional)
-
-**Was er ist:** ein rotes ⚠ Symbol oben links auf der Karte, als Spiegelung des Kompasses oben rechts. Ein Tap → öffnet sofort das Standort-teilen-Panel.
-
-**Aktivieren:** Einstellungen → Darstellung → Notfall-Button → auf **An** stellen. Standardmäßig versteckt, weil die meisten Nutzer ihn nicht brauchen.
-
-**Was passiert beim Drücken:**
-
-- Öffnet dasselbe Standort-teilen-Panel wie ein Tap auf das blaue Dreieck.
-- **Startet GPS automatisch**, wenn es nicht schon läuft, damit Sie im echten Notfall keinen „GPS wird erfasst…“-Stau haben.
-- Teilt nicht direkt — Sie müssen weiterhin auf **Teilen** im Panel tippen. Das ist gewollt: Ein versehentlicher Druck in der Tasche soll nicht ohne Bestätigung Ihren Standort an jemanden senden.
-
-Es ist eine **Abkürzung**, kein eigenes Feature. Denken Sie an „Überspringe das Dreieck-Suchen, bring mich direkt zum Teilen-Dialog“.
-
 ---
 
 **Verwandt:** [Die Kartenansicht →](map.md) · [Einstellungen →](settings.md) · [FAQ →](faq.md)

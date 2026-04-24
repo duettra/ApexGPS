@@ -1,8 +1,42 @@
 # Rutas
 
-Una **ruta** es un camino grabado — una secuencia de puntos GPS unidos como una línea en el mapa. Las rutas vienen de importar archivos GPX (desde GaiaGPS, Strava, Garmin Connect, wikiloc.com, cualquier otro exportador GPX).
+Una **ruta** es un camino grabado — una secuencia de puntos GPS unidos como una línea en el mapa. Obtienes rutas **grabándolas** en vivo en ApexGPS o **importando** archivos GPX (desde GaiaGPS, Strava, Garmin Connect, wikiloc.com o cualquier otro exportador GPX).
 
-**Nota:** ApexGPS no graba rutas nuevas en esta versión. La grabación en vivo llegará en una versión futura.
+## Grabación
+
+Toca la **pastilla de grabación** roja en la esquina superior izquierda del mapa. El punto se expande a un chip de tiempo en vivo (`00:12:43`) y una línea roja de migas empieza a dibujar tu salida en el mapa a medida que llegan nuevos fixes GPS.
+
+### Mientras grabas
+
+- **Toca el chip del cronómetro** para un menú:
+  - **Pausar** — congela el reloj; los nuevos fixes dejan de añadirse a la línea hasta que toques **Reanudar**.
+  - **Finalizar** — guarda la salida como nueva Ruta, abre el panel de la ruta para que revises estadísticas + perfil de altitud al instante.
+  - **Eliminar** — descarta la grabación actual sin guardar.
+- El servicio GPS de primer plano arranca solo cuando empiezas una grabación — no necesitas activar antes el seguimiento.
+- **¿Pantalla apagada?** La app relaja la cadencia de fixes GPS para ahorrar batería (≈10 s entre fixes con la pantalla apagada vs 2 s con la pantalla encendida). No hay que hacer nada — cambia automáticamente.
+
+### Si la ubicación del sistema está apagada
+
+Tocar grabar con el interruptor de ubicación del sistema Android apagado muestra un mensaje rápido *«Ubicación del sistema apagada — actívala para grabar»* con un acceso directo a **Ajustes**. La grabación no empieza.
+
+### Si la app se cierra a mitad de la salida
+
+Si Android mata la app durante una grabación activa (recuperación de memoria, forzar detención, reinicio), la línea recogida hasta ese momento se **conserva**. Reabre la app y la pastilla vuelve mostrando el tiempo transcurrido en pausa — toca **Reanudar** para seguir, o **Finalizar** para guardar lo que tengas.
+
+### Tipo de actividad
+
+Cada ruta grabada arranca etiquetada como **Senderismo**. Abre la pantalla de detalle de la ruta (Rutas → toca la fila) y usa el menú **Actividad** para cambiarla a Caminata / Correr / Ciclismo / Todoterreno / Parapente. Las rutas importadas no tienen etiqueta por defecto; puedes asignarla igual.
+
+### Recortar una grabación
+
+¿Ruido de calentamiento de GPS al inicio de tu ruta? ¿Olvidaste tocar **Finalizar** y la ruta se alarga hasta el coche? Abre la pantalla de detalle y toca **Recortar ruta**:
+
+- Se abre un diálogo con una mini-vista previa del mapa de la ruta completa y su perfil de altitud debajo.
+- Arrastra los dos manejadores del gráfico de altitud para fijar el inicio y el final del tramo que quieres conservar. La mini-vista se actualiza en vivo — el tramo que se conserva se mantiene en el color de la ruta, las partes descartadas se vuelven grises.
+- El indicador **Conservado** muestra la distancia y el número de puntos resultantes.
+- Toca **Recortar** para confirmar. Un diálogo de confirmación detalla cuántos puntos caerán de cada extremo. **No se puede deshacer** — guarda un export GPX si dudas.
+
+Recortar también recalcula la distancia, el bounding box y el perfil de altitud de la ruta, así que las estadísticas de la parte superior reflejan la ruta recortada al instante.
 
 ## Importar
 

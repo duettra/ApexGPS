@@ -117,20 +117,6 @@ Brújula minimizada, la barra de abajo muestra:
 
 Rumbo y cardinal van en **azul** porque se actualizan en cada fix. ETA se estima con tu velocidad actual — muestra `--` parado. La distancia ya no está en la barra; está en **DIST** (también azul durante la navegación).
 
-## Botón de pánico (opcional)
-
-**Qué es:** una pastilla roja ⚠ arriba a la izquierda, reflejando la brújula arriba a la derecha. Un toque → abre al instante el panel de compartir.
-
-**Activar:** Ajustes → Apariencia → Botón de pánico → **Activado**. Oculto por defecto, no lo necesita la mayoría.
-
-**Qué hace al pulsar:**
-
-- Abre el mismo panel de compartir que el triángulo azul.
-- **Enciende el GPS** automáticamente si no estaba, para evitar un bloqueo «Adquiriendo GPS…» en una emergencia.
-- No comparte directamente — sigues teniendo que tocar **Compartir** en el panel. Es deliberado: un roce en el bolsillo no debería enviar tu ubicación sin confirmar.
-
-Es un **atajo**, no una función distinta. Piensa en ello como «salta buscar el triángulo, llévame al panel de compartir».
-
 ---
 
 **Relacionado:** [La pantalla del mapa →](map.md) · [Ajustes →](settings.md) · [FAQ →](faq.md)

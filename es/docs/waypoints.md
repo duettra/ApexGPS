@@ -11,6 +11,7 @@ Pulsa largo en el mapa donde quieras el punto. Se abre un sheet con:
 - **Nombre** — opcional. «Punto» por defecto si lo dejas vacío.
 - **Notas** — descripción opcional.
 - **Latitud / Longitud** — autorrellenadas del punto tocado; **editables** si quieres ajustar.
+- **Elevación (m)** — opcional. Déjala en blanco si no la sabes; rellénala cuando quieras que el punto lleve una altitud concreta (p. ej. la altura de una cumbre que consultaste).
 - **Símbolo** — elige entre 32 iconos.
 - **Color** — paleta de 16 colores.
 - **Guardar** / **Cancelar**.

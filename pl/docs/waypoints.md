@@ -11,6 +11,7 @@ Przytrzymaj mapę w miejscu, gdzie chcesz punkt. Pojawia się okno z:
 - **Nazwa** — opcjonalna. Domyślnie „Punkt”, jeśli puste.
 - **Notatki** — opcjonalny opis.
 - **Szerokość / Długość** — wypełnione z dotkniętego punktu; **edytowalne**, jeśli chcesz poprawić.
+- **Wysokość (m)** — opcjonalna. Zostaw puste, jeśli nie znasz; uzupełnij, gdy chcesz, by punkt niósł konkretną wysokość (np. wysokość szczytu, którą sprawdziłeś).
 - **Symbol** — wybór z 32 ikon.
 - **Kolor** — paleta 16 kolorów.
 - **Zapisz** / **Anuluj**.

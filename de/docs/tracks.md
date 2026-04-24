@@ -1,8 +1,42 @@
 # Tracks
 
-Ein **Track** ist eine aufgezeichnete Strecke — eine Abfolge von GPS-Punkten, als Linie auf der Karte verbunden. Tracks erhalten Sie durch Import von GPX-Dateien (aus GaiaGPS, Strava, Garmin Connect, wikiloc.com oder allem anderen, das GPX exportiert).
+Ein **Track** ist eine aufgezeichnete Strecke — eine Abfolge von GPS-Punkten, als Linie auf der Karte verbunden. Tracks erhalten Sie entweder durch **Live-Aufzeichnung** direkt in ApexGPS oder durch **Import** von GPX-Dateien (aus GaiaGPS, Strava, Garmin Connect, wikiloc.com oder allem anderen, das GPX exportiert).
 
-**Hinweis:** ApexGPS zeichnet in dieser Version selbst keine neuen Tracks auf. Live-Aufzeichnung ist für eine zukünftige Version geplant.
+## Aufzeichnung
+
+Tippen Sie auf den roten **Aufnahme-Punkt** oben links auf der Karte. Der Punkt erweitert sich zu einem Live-Zeit-Chip (`00:12:43`) und eine rote Breadcrumb-Linie zeichnet Ihre Tour auf der Karte, sobald neue GPS-Fixes eintreffen.
+
+### Während der Aufzeichnung
+
+- **Tap auf den Timer-Chip** für ein Menü:
+  - **Pause** — hält die Uhr an; neue Fixes werden nicht mehr zur Breadcrumb hinzugefügt, bis Sie **Fortsetzen** tippen.
+  - **Fertig** — speichert die Tour als neuen Track und öffnet das Track-Overlay, damit Sie Statistiken und Höhenprofil sofort prüfen können.
+  - **Löschen** — verwirft die aktuelle Aufzeichnung ohne zu speichern.
+- Der GPS-Vordergrund-Dienst wird automatisch gestartet, wenn Sie eine Aufzeichnung beginnen — Sie müssen den Folgen-Modus nicht vorher aktivieren.
+- **Bildschirm aus?** Die App verlangsamt die GPS-Abfragerate, um Akku zu sparen (≈10 s zwischen Fixes bei ausgeschaltetem Bildschirm gegenüber 2 s bei eingeschaltetem). Keine Aktion erforderlich — es wechselt automatisch.
+
+### Wenn die Systemortung aus ist
+
+Tippen auf Aufnahme bei deaktivierter Android-System-Ortung zeigt die kurze Meldung *„Systemortung ist aus — aktivieren, um aufzuzeichnen"* mit einer **Einstellungen**-Abkürzung. Die Aufzeichnung beginnt nicht.
+
+### Wenn die App während der Wanderung beendet wird
+
+Falls Android die App während einer aktiven Aufzeichnung beendet (Low-Memory-Reclaim, Force-Stop, Neustart), bleibt die bis dahin gesammelte Breadcrumb **erhalten**. Öffnen Sie die App erneut und der Chip kehrt mit der bisherigen verstrichenen Zeit in pausiertem Zustand zurück — tippen Sie **Fortsetzen**, um weiterzumachen, oder **Fertig**, um das Bisherige zu speichern.
+
+### Aktivitätstyp
+
+Jeder aufgezeichnete Track startet mit dem Tag **Wandern**. Öffnen Sie die Track-Detailansicht (Tracks → Zeile antippen) und verwenden Sie das Dropdown **Aktivität**, um ihn auf Spazieren / Laufen / Radfahren / Offroad / Gleitschirmfliegen zu ändern. Importierte Tracks haben standardmäßig keinen Aktivitäts-Tag; Sie können ihn auf dieselbe Weise zuweisen.
+
+### Zuschneiden einer Aufzeichnung
+
+GPS-Warmlauf-Rauschen am Anfang Ihres Tracks? Vergessen, **Fertig** zu tippen, und der Track zieht sich jetzt halbwegs zum Auto? Öffnen Sie die Track-Detailansicht und tippen Sie auf **Track zuschneiden**:
+
+- Ein Dialog öffnet sich mit einer Mini-Karten-Vorschau des gesamten Tracks und dem Höhenprofil darunter.
+- Ziehen Sie die beiden Griffe im Höhendiagramm, um Start und Ende des Bereichs festzulegen, den Sie behalten möchten. Die Mini-Karte aktualisiert sich live — der behaltene Abschnitt bleibt in der Track-Farbe, die entfallenden Teile werden grau.
+- Die Anzeige **Behalten** zeigt die resultierende Distanz und Punktzahl.
+- Tippen Sie **Zuschneiden**, um zu bestätigen. Ein Bestätigungsdialog nennt genau, wie viele Punkte an jedem Ende entfallen. **Dies kann nicht rückgängig gemacht werden** — behalten Sie einen GPX-Export, wenn Sie unsicher sind.
+
+Das Zuschneiden berechnet auch Distanz, Bounding-Box und Höhenprofil neu, damit die Statistiken oben im Bildschirm sofort den gekürzten Track widerspiegeln.
 
 ## Importieren
 

@@ -9,7 +9,7 @@ La copia es manual pero sencilla. Hazla periódicamente si tienes datos que no q
 - **Todas las rutas** (datos GPX, nombre, color, visibilidad).
 - **Todos los puntos** (nombre, descripción, coords, altitud, color, símbolo).
 - **Todas las regiones guardadas** (bundles de mosaicos — pueden ser grandes).
-- **Todos los ajustes** (tema, fuente por defecto, grosor, tamaño de puntos, bloqueo de rotación, visibilidad del botón de pánico).
+- **Todos los ajustes** (tema, fuente por defecto, grosor, tamaño de puntos, bloqueo de rotación).
 
 Qué **no** incluye:
 

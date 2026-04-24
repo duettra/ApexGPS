@@ -1,6 +1,6 @@
 # Podręcznik ApexGPS
 
-Darmowa aplikacja turystyczna na Androida. Wyświetlanie tras GPX, oznaczanie punktów, pobieranie map offline, udostępnianie swojej lokalizacji. Bez konta, bez reklam, bez chmury.
+Darmowa aplikacja turystyczna na Androida. Nagrywaj swoje wędrówki, wyświetlaj trasy GPX, oznaczaj punkty, pobieraj mapy offline, udostępniaj swoją lokalizację. Bez konta, bez reklam, bez chmury.
 
 Ten podręcznik opisuje wszystko, co aplikacja potrafi. Zacznij od **Pierwsze kroki**, jeśli właśnie ją zainstalowałeś; w innym razie przejdź od razu do potrzebnej sekcji.
 
@@ -15,7 +15,7 @@ Ten podręcznik opisuje wszystko, co aplikacja potrafi. Zacznij od **Pierwsze kr
 
 ## Twoje dane
 
-- [Trasy](tracks.md) — import GPX, wyświetlanie, filtrowanie, sortowanie, edycja, udostępnianie, usuwanie.
+- [Trasy](tracks.md) — nagrywanie na żywo, import GPX, wyświetlanie, filtrowanie, sortowanie, edycja, udostępnianie, usuwanie.
 - [Punkty](waypoints.md) — dodawanie, edycja, 32 symbole, filtrowanie, sortowanie, przenoszenie.
 - [Mapy offline](offline-maps.md) — pobieranie regionów do użycia bez zasięgu.
 - [Kopia zapasowa](backup.md) — zapisz wszystko do pliku ZIP, przywróć na innym urządzeniu.

@@ -30,6 +30,10 @@ Przytrzymaj dowolne miejsce na mapie. Otworzy się okno dialogowe — wybierz na
 
 Menu → Trasy → dotknij niebieskiego **przycisku folderu** (prawy dolny róg) → wybierz plik `.gpx` z pobranych lub plików. Trasa pojawi się na mapie; dotknij jej, aby zobaczyć szczegóły (dystans, profil wysokości).
 
+### Nagraj wędrówkę
+
+Dotknij czerwonej **kropki nagrywania** w lewym górnym rogu. Kropka rozszerza się do stopera na żywo; czerwona linia okruchów rysuje Twoją trasę, gdy się poruszasz. Dotknij stopera, aby otworzyć **Pauza / Zakończ / Usuń**. Po **Zakończ** nagranie zostaje zapisane jako nowa Trasa. Zobacz [Trasy → Nagrywanie](tracks.md#nagrywanie).
+
 ### Udostępnij swoją lokalizację
 
 Dotknij niebieskiego trójkąta na mapie. Panel wysuwa się z góry z wysokością, dokładnością, czasem, baterią i dwoma linkami do map. Dotknij **Udostępnij** → wybierz WhatsApp, SMS, e-mail. Odbiorca zobaczy dane + link; jeśli też ma ApexGPS, link otwiera aplikację bezpośrednio.

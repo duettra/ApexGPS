@@ -1,6 +1,6 @@
 # Guide ApexGPS
 
-Une app de randonnée Android gratuite. Afficher des traces GPX, marquer des points, télécharger des cartes hors ligne, partager sa position avec un ami. Sans compte, sans pub, sans cloud.
+Une app de randonnée Android gratuite. Enregistrez vos sorties, affichez des traces GPX, marquez des points, téléchargez des cartes hors ligne, partagez votre position avec un ami. Sans compte, sans pub, sans cloud.
 
 Ce guide parcourt tout ce que l\'app sait faire. Commencez par **Pour commencer** si vous venez de l\'installer ; sinon, sautez à la section dont vous avez besoin.
 
@@ -15,7 +15,7 @@ Ce guide parcourt tout ce que l\'app sait faire. Commencez par **Pour commencer*
 
 ## Vos données
 
-- [Traces](tracks.md) — importer du GPX, afficher, filtrer, trier, modifier, partager, supprimer.
+- [Traces](tracks.md) — enregistrer en live, importer du GPX, afficher, filtrer, trier, modifier, partager, supprimer.
 - [Points](waypoints.md) — ajouter, modifier, 32 symboles, filtrer, trier, déplacer.
 - [Cartes hors ligne](offline-maps.md) — télécharger des régions pour utilisation sans signal.
 - [Sauvegarde & restauration](backup.md) — sauvegarder tout dans un ZIP, restaurer sur un autre appareil.

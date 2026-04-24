@@ -11,6 +11,7 @@ Lange drücken auf die Karte an dem Punkt, wo der Wegpunkt hinsoll. Ein Dialog f
 - **Name** — optional. Ohne Eingabe wird „Wegpunkt“ verwendet.
 - **Notizen** — optionale Beschreibung.
 - **Breitengrad / Längengrad** — vorausgefüllt vom angetippten Punkt; **editierbar**, falls Sie sie anpassen möchten.
+- **Höhe (m)** — optional. Leer lassen, wenn unbekannt; ausfüllen, wenn der Wegpunkt eine bestimmte Höhe tragen soll (z. B. eine nachgeschlagene Gipfelhöhe).
 - **Symbol** — Auswahl aus 32 Icons.
 - **Farbe** — 16-Farben-Palette.
 - **Speichern** / **Abbrechen**.

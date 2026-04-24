@@ -30,6 +30,10 @@ Appui long n\'importe où sur la carte. Une boîte de dialogue s\'ouvre — choi
 
 Menu → Traces → appuyez sur le bouton **dossier bleu** (en bas à droite) → choisissez un fichier `.gpx` dans vos téléchargements ou fichiers. La trace apparaît sur la carte ; appuyez dessus pour voir les détails (distance, profil d\'altitude).
 
+### Enregistrer une sortie
+
+Appuyez sur la **pastille d\'enregistrement** rouge en haut à gauche. La pastille se déploie en un chronomètre live ; une ligne rouge de miettes dessine votre parcours au fur et à mesure. Tap sur le chrono pour **Pause / Terminer / Supprimer**. Sur **Terminer**, l\'enregistrement est sauvegardé comme nouvelle Trace. Voir [Traces → Enregistrement](tracks.md#enregistrement).
+
 ### Partager votre position
 
 Appuyez sur le triangle bleu. Un panneau glisse vers le haut avec altitude, précision, heure, batterie et deux liens carte. Appuyez **Partager** → choisissez WhatsApp, SMS, e-mail. Le destinataire voit les infos + un lien ; s\'il a aussi ApexGPS, le lien ouvre directement l\'app.

@@ -11,6 +11,7 @@ Appui long sur la carte à l\'endroit voulu. Un sheet s\'ouvre avec :
 - **Nom** — optionnel. « Point » par défaut si vide.
 - **Notes** — description optionnelle.
 - **Latitude / Longitude** — pré-remplies depuis le point tapé ; **modifiables** si besoin.
+- **Altitude (m)** — optionnelle. Laissez vide si inconnue ; remplissez quand vous voulez que le point porte une altitude précise (ex. une hauteur de sommet que vous avez cherchée).
 - **Symbole** — choix parmi 32 icônes.
 - **Couleur** — palette de 16 couleurs.
 - **Enregistrer** / **Annuler**.

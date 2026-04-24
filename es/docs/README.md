@@ -1,6 +1,6 @@
 # Guía de ApexGPS
 
-Una app de senderismo Android gratuita. Ver rutas GPX, marcar puntos, descargar mapas para usar sin conexión, compartir tu ubicación con un amigo. Sin cuenta, sin anuncios, sin nube.
+Una app de senderismo Android gratuita. Graba tus salidas, ver rutas GPX, marcar puntos, descargar mapas para usar sin conexión, compartir tu ubicación con un amigo. Sin cuenta, sin anuncios, sin nube.
 
 Esta guía recorre todo lo que hace la app. Empieza por **Primeros pasos** si acabas de instalarla; si no, salta a la sección que necesites.
 
@@ -15,7 +15,7 @@ Esta guía recorre todo lo que hace la app. Empieza por **Primeros pasos** si ac
 
 ## Tus datos
 
-- [Rutas](tracks.md) — importar GPX, ver, filtrar, ordenar, editar, compartir, eliminar.
+- [Rutas](tracks.md) — grabar en vivo, importar GPX, ver, filtrar, ordenar, editar, compartir, eliminar.
 - [Puntos](waypoints.md) — añadir, editar, 32 símbolos, filtrar, ordenar, mover.
 - [Mapas sin conexión](offline-maps.md) — descargar regiones para usar sin señal.
 - [Copia y restauración](backup.md) — guardar todo en un ZIP, restaurar en otro dispositivo.

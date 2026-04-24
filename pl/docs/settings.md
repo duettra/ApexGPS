@@ -22,10 +22,6 @@ Mały / Normalny / Duży / XL. To mnożnik nakładany na automatyczny rozmiar ad
 - **Wył.** (domyślnie) — dwupalcowe gesty obrotu działają od otwarcia aplikacji.
 - **Wł.** — obrót zablokowany przy uruchomieniu; przytrzymaj kompas, aby odblokować. Przydatne, jeśli często przypadkowo obracasz mapę.
 
-### Przycisk alarmowy
-- **Wył.** (domyślnie) — brak przycisku alarmowego.
-- **Wł.** — czerwony znaczek ⚠ w lewym górnym rogu mapy (lustrzane odbicie kompasu w prawym górnym). Dotknięcie → otwiera panel udostępniania, uruchamiając GPS w razie potrzeby. Zobacz [Udostępnij → Przycisk alarmowy](share-and-navigate.md#przycisk-alarmowy-opcjonalny).
-
 ## Pamięć
 
 ### Użycie pamięci podręcznej

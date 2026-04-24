@@ -117,20 +117,6 @@ When the compass is minimised, the navigation strip at the bottom reads:
 
 The bearing and cardinal are in **blue** because they update with every GPS fix. ETA is an estimate based on your current walking / moving speed — shows `--` when you're stationary. Distance isn't shown on the strip any more; it's in the bottom stats bar's **DIST** field (also blue while navigating).
 
-## Panic button (optional)
-
-**What it is:** a red ⚠ chip at the top-left of the map, mirroring the compass at the top-right. One tap → opens the Share location panel instantly.
-
-**Enable it:** Settings → Appearance → Panic button → toggle **On**. Hidden by default because most users don't need it.
-
-**What it does when pressed:**
-
-- Opens the same Share location panel as tapping the blue triangle.
-- **Auto-starts GPS** if it's not already running, so you don't hit "Acquiring GPS…" deadlock in an actual emergency.
-- Does not directly share — you still have to tap **Share** on the panel. This is deliberate: a pocket-press shouldn't send your location to anyone without a confirmation.
-
-It's a **shortcut**, not a different feature. Think of it as "skip finding the triangle, just get me to the share sheet."
-
 ---
 
 **Related:** [The map screen →](map.md) · [Settings →](settings.md) · [FAQ →](faq.md)

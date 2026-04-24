@@ -57,7 +57,7 @@ As of **v1.25.2** the map no longer has a dedicated import FAB — importing GPX
 ## Top-left
 
 - **☰ menu** — nav drawer (Tracks, Waypoints, Maps, Settings).
-- **Panic button** — a red ⚠ chip, only if you've enabled it in **Settings → Appearance → Panic button**. Tap opens the Share location panel (starts GPS automatically if it wasn't already on).
+- **Record chip** — a red dot in a dark circle. Tap to start recording your current trip. While recording it expands into a live `00:00:00` timer; tap the timer for **Pause / Finish / Delete**. Your path draws as a red line on the map as you move. On **Finish** the recording is saved as a new Track and the overlay opens so you can immediately review it. See [Tracks → Recording](tracks.md#recording).
 
 ## Bottom stats bar
 

@@ -9,7 +9,7 @@ Kopia zapasowa jest ręczna, ale łatwa. Rób ją okresowo, jeśli masz dane, kt
 - **Wszystkie trasy** (dane GPX, nazwa, kolor, widoczność).
 - **Wszystkie punkty** (nazwa, opis, współrzędne, wysokość, kolor, symbol).
 - **Wszystkie zapisane regiony map offline** (paczki kafelków — mogą być duże).
-- **Wszystkie ustawienia** (motyw, domyślne źródło, grubość trasy, rozmiar punktów, blokada obrotu, widoczność przycisku alarmowego).
+- **Wszystkie ustawienia** (motyw, domyślne źródło, grubość trasy, rozmiar punktów, blokada obrotu).
 
 Czego **nie ma** w kopii:
 

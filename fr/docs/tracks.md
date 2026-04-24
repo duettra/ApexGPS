@@ -1,8 +1,42 @@
 # Traces
 
-Une **trace** est un chemin enregistré — une série de points GPS reliés comme une ligne sur la carte. Les traces viennent de l\'import de fichiers GPX (depuis GaiaGPS, Strava, Garmin Connect, wikiloc.com ou tout autre export GPX).
+Une **trace** est un chemin enregistré — une série de points GPS reliés comme une ligne sur la carte. Vous obtenez des traces soit en les **enregistrant** en direct dans ApexGPS, soit en **important** des fichiers GPX (depuis GaiaGPS, Strava, Garmin Connect, wikiloc.com ou tout autre export GPX).
 
-**Remarque :** ApexGPS n\'enregistre pas de nouvelles traces dans cette version. L\'enregistrement live est prévu pour une future version.
+## Enregistrement
+
+Appuyez sur la **pastille d\'enregistrement** rouge en haut à gauche de la carte. La pastille se déploie en un chip de temps écoulé live (`00:12:43`) et une ligne rouge de miettes commence à dessiner votre sortie sur la carte au fur et à mesure que de nouveaux fixes GPS arrivent.
+
+### Pendant l\'enregistrement
+
+- **Tap sur le chip chrono** pour un menu :
+  - **Pause** — gèle le chrono ; les nouveaux fixes ne sont plus ajoutés à la ligne tant que vous n\'appuyez pas sur **Reprendre**.
+  - **Terminer** — sauvegarde la sortie comme nouvelle Trace, ouvre le panneau de trace pour que vous puissiez consulter stats + profil d\'altitude immédiatement.
+  - **Supprimer** — jette l\'enregistrement en cours sans sauvegarder.
+- Le service GPS de premier plan démarre pour vous dès que vous commencez un enregistrement — vous n\'avez pas besoin d\'activer le suivi au préalable.
+- **Écran éteint ?** L\'app relâche la cadence des fixes GPS pour économiser la batterie (≈10 s entre fixes écran éteint vs 2 s écran allumé). Aucune action requise — c\'est automatique.
+
+### Si la localisation système est désactivée
+
+Appuyer sur enregistrer alors que l\'interrupteur de localisation système Android est désactivé affiche un message rapide *« Localisation système désactivée — activez-la pour enregistrer »* avec un raccourci **Paramètres**. L\'enregistrement ne démarre pas.
+
+### Si l\'app est tuée en pleine sortie
+
+Si Android tue l\'app pendant un enregistrement actif (récupération mémoire, arrêt forcé, redémarrage), la ligne collectée jusqu\'à ce point est **préservée**. Rouvrez l\'app et le chip revient en affichant le temps écoulé en pause — tap sur **Reprendre** pour continuer, ou **Terminer** pour sauvegarder ce que vous avez.
+
+### Type d\'activité
+
+Chaque trace enregistrée démarre étiquetée **Randonnée**. Ouvrez l\'écran de détail de la trace (Traces → tap sur la ligne) et utilisez le menu déroulant **Activité** pour la passer en Marche / Course / Vélo / Tout-terrain / Parapente. Les traces importées n\'ont aucune étiquette d\'activité par défaut ; vous pouvez en assigner une de la même manière.
+
+### Rogner un enregistrement
+
+Du bruit de préchauffage GPS au début de votre trace ? Oublié de taper **Terminer** et la trace traîne à moitié jusqu\'à votre voiture ? Ouvrez l\'écran de détail et tap sur **Rogner la trace** :
+
+- Une boîte de dialogue s\'ouvre avec une mini-carte en aperçu de la trace complète et son profil d\'altitude en dessous.
+- Glissez les deux poignées sur le graphique d\'altitude pour définir le début et la fin de la plage à conserver. La mini-carte se met à jour en live — le segment conservé reste dans la couleur de la trace, les parties abandonnées passent en gris.
+- L\'indicateur **Conservé** affiche la distance et le nombre de points résultants.
+- Tap sur **Rogner** pour valider. Une confirmation précise combien de points tomberont de chaque extrémité. **Impossible à annuler** — gardez un export GPX si vous doutez.
+
+Le rognage recalcule aussi la distance, la bounding box et le profil d\'altitude de la trace, pour que les stats en haut d\'écran reflètent immédiatement la trace raccourcie.
 
 ## Importer
 

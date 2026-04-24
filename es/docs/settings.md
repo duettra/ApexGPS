@@ -22,10 +22,6 @@ Pequeño / Normal / Grande / XL. Multiplicador sobre el tamaño adaptativo al zo
 - **Desactivado** (por defecto) — los gestos de dos dedos funcionan desde el inicio.
 - **Activado** — rotación bloqueada al abrir; pulsa largo la brújula para desbloquear. Útil si a menudo rotas el mapa sin querer.
 
-### Botón de pánico
-- **Desactivado** (por defecto) — sin botón de pánico.
-- **Activado** — pastilla roja ⚠ arriba a la izquierda (reflejo de la brújula a la derecha). Toque → abre el panel de compartir, activando GPS si hace falta. Ver [Compartir → Botón de pánico](share-and-navigate.md#botón-de-pánico-opcional).
-
 ## Almacenamiento
 
 ### Uso de caché

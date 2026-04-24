@@ -4,6 +4,21 @@ User-visible changes, newest first. For internal refactoring / version-bump-only
 
 ---
 
+## 1.29.0 — Apr 24, 2026
+
+- **Live track recording.** Tap the red dot at the top-left of the map to start recording your current trip. A live `HH:MM:SS` timer replaces the dot; tap it for **Pause / Finish / Delete**. Your path draws as a red line on the map as you move. On **Finish** the recording is saved as a new Track and the overlay opens automatically so you can review distance, ascent, and elevation profile right away.
+- **Crop Track.** On the track detail screen, **Crop Track** opens a dialog with a mini-map preview and two draggable handles on the elevation chart. Trim a bad start (no GPS fix yet) or a stray tail (forgot to hit Finish) without losing the rest of the track. Destructive — a confirmation step tells you exactly how many points you'll drop.
+- **Activity tag per track.** The Track detail screen has a new **Activity** picker: Hiking · Walking · Running · Cycling · Offroading · Paragliding. Recordings default to Hiking; imported tracks start unset.
+- **Waypoint elevation.** The waypoint edit sheet has a new optional **Elev (m)** field — fill it in when you want to carry an altitude for a known summit / pass / etc. Blank = no elevation stored (same as today's imported waypoints without elevation data).
+- **Track detail + waypoint edit refreshed.** Grouped Cards, section overlines, icons on every row, activity-specific icon on the Activity chip, red-outlined **Delete** to match the destructive action, new **Points** stat on the track screen. Waypoint edit is tighter — the whole form now fits above the system nav bar on most phones without scrolling.
+- **Process-death recovery.** If Android ever kills the app mid-recording (low memory, force-stop), the breadcrumb is preserved. Re-open the app and the recording comes back in a paused state — resume, finish, or discard.
+- **Battery saver: adaptive GPS cadence.** While recording with the screen off, GPS fix cadence relaxes from 2 s to 10 s to save battery. The moment you unlock the phone it's back to 2 s for live smoothness. Fully automatic.
+- **System-location guard.** Tapping record when your Android system-wide location toggle is off now shows a message with a **Settings** shortcut instead of silently starting a dead recording.
+- **No-fix hint.** If you tap record before GPS has acquired a fix, a short *"Acquiring GPS fix…"* notice tells you why the breadcrumb hasn't started yet. Recording begins as soon as the first fix lands.
+- **Removed:** the opt-in panic button. The top-left area now belongs to the record chip.
+
+---
+
 ## 1.28.0 — Apr 24, 2026
 
 - **App now available in Arabic.** العربية joins German, French, Spanish, and Polish alongside English. All six languages in **Settings → Appearance → Language**. Every screen, every menu, the offline User Guide, the website — all translated.
@@ -78,10 +93,6 @@ User-visible changes, newest first. For internal refactoring / version-bump-only
 ## 1.22.2 — Apr 19, 2026
 
 - **User guide link** in Settings → About. Opens this documentation in your browser.
-
-## 1.22.0 — Apr 19, 2026
-
-- **Panic button** (opt-in). A red ⚠ chip at the top-left of the map. Tap → opens the Share location panel instantly and auto-starts GPS if needed. Enable in **Settings → Appearance → Panic button**. See [Share → Panic button](share-and-navigate.md#panic-button-optional).
 
 ## 1.21.0 — Apr 19, 2026
 

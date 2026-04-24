@@ -9,7 +9,7 @@ La sauvegarde est manuelle mais simple. Faites-en une régulièrement si vous av
 - **Toutes les traces** (données GPX, nom, couleur, visibilité).
 - **Tous les points** (nom, description, coords, altitude, couleur, symbole).
 - **Toutes les régions de carte hors ligne enregistrées** (les bundles de tuiles — peuvent être gros).
-- **Tous les paramètres** (thème, source par défaut, largeur de trace, taille des points, verrou rotation, visibilité bouton panique).
+- **Tous les paramètres** (thème, source par défaut, largeur de trace, taille des points, verrou rotation).
 
 Ce qu\'une sauvegarde **ne contient pas** :
 

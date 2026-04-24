@@ -4,6 +4,21 @@ Changements visibles par l\'utilisateur, plus récents en premier. Pour les refa
 
 ---
 
+## 1.29.0 — 24 avr. 2026
+
+- **Enregistrement live de trace.** Appuyez sur la pastille rouge en haut à gauche de la carte pour démarrer l\'enregistrement de votre sortie. Un chrono live `HH:MM:SS` remplace la pastille ; tap pour **Pause / Terminer / Supprimer**. Votre parcours se dessine comme une ligne rouge au fil de vos déplacements. Sur **Terminer** l\'enregistrement est sauvegardé comme nouvelle Trace et le panneau s\'ouvre automatiquement pour consulter distance, dénivelé et profil d\'altitude tout de suite.
+- **Rogner la trace.** Sur l\'écran détail, **Rogner la trace** ouvre une boîte avec une mini-carte en aperçu et deux poignées glissables sur le graphique d\'altitude. Coupez un mauvais début (pas encore de fix GPS) ou une fin parasite (oublié d\'appuyer sur Terminer) sans perdre le reste de la trace. Destructif — une étape de confirmation dit exactement combien de points vous allez perdre.
+- **Tag d\'activité par trace.** L\'écran Détail de trace a un nouveau menu **Activité** : Randonnée · Marche · Course · Vélo · Tout-terrain · Parapente. Les enregistrements démarrent par défaut en Randonnée ; les traces importées sans tag.
+- **Altitude de point.** Le sheet d\'édition de point a un nouveau champ optionnel **Altitude (m)** — remplissez-le quand vous voulez porter une altitude pour un sommet / col connu / etc. Vide = aucune altitude stockée (comme pour les points importés sans donnée d\'altitude aujourd\'hui).
+- **Détail de trace + édition de point rafraîchis.** Cartes groupées, libellés de section, icônes sur chaque ligne, icône spécifique à l\'activité sur la puce Activité, **Supprimer** encadré rouge pour coller à l\'action destructive, nouvelle stat **Points** sur l\'écran trace. L\'édition de point est plus serrée — le formulaire entier tient désormais au-dessus de la barre de navigation système sur la plupart des téléphones sans défilement.
+- **Récupération après mort du processus.** Si Android tue l\'app en pleine sortie (mémoire faible, arrêt forcé), la ligne est préservée. Rouvrez l\'app et l\'enregistrement revient en pause — reprendre, terminer ou jeter.
+- **Économie de batterie : cadence GPS adaptative.** Pendant l\'enregistrement écran éteint, la cadence des fixes passe de 2 s à 10 s pour économiser la batterie. Dès que vous déverrouillez le téléphone elle revient à 2 s pour la fluidité. Entièrement automatique.
+- **Protection localisation système.** Appuyer sur enregistrer alors que l\'interrupteur de localisation système Android est désactivé affiche désormais un message avec un raccourci **Paramètres** au lieu de démarrer silencieusement un enregistrement mort.
+- **Indice no-fix.** Si vous appuyez sur enregistrer avant que le GPS ait acquis un fix, un court message *« Acquisition GPS… »* vous explique pourquoi la ligne n\'a pas démarré. L\'enregistrement commence dès que le premier fix arrive.
+- **Supprimé :** le bouton panique optionnel. La zone en haut à gauche appartient maintenant à la pastille d\'enregistrement.
+
+---
+
 ## 1.28.0 — 24 avr. 2026
 
 - **Arabe ajouté.** العربية rejoint l\'allemand, le français, l\'espagnol et le polonais aux côtés de l\'anglais. Six langues d\'interface dans **Paramètres → Apparence → Langue**.
@@ -75,10 +90,6 @@ Changements visibles par l\'utilisateur, plus récents en premier. Pour les refa
 ## 1.22.2 — 19 avr. 2026
 
 - **Lien guide utilisateur** dans Paramètres → À propos. Ouvre cette doc dans le navigateur.
-
-## 1.22.0 — 19 avr. 2026
-
-- **Bouton panique** (opt-in). Pastille rouge ⚠ en haut à gauche. Tap → ouvre le panneau de partage et active le GPS si besoin. À activer dans **Paramètres → Apparence → Bouton panique**. Voir [Partager → Bouton panique](share-and-navigate.md#bouton-panique-optionnel).
 
 ## 1.21.0 — 19 avr. 2026
 

@@ -57,7 +57,7 @@ Seit **v1.25.2** hat die Karte keinen eigenen Import-FAB mehr — GPX-Import fin
 ## Oben links
 
 - **☰ Menü** — Navigationsschublade (Tracks, Wegpunkte, Karten, Einstellungen).
-- **Notfall-Button** — ein rotes ⚠ Symbol, nur wenn Sie ihn unter **Einstellungen → Darstellung → Notfall-Button** aktiviert haben. Antippen öffnet das Standort-teilen-Panel (startet GPS automatisch, wenn es nicht schon läuft).
+- **Aufnahme-Chip** — ein roter Punkt in einem dunklen Kreis. Antippen, um die Aufzeichnung Ihrer aktuellen Tour zu starten. Während der Aufzeichnung erweitert er sich zu einem Live-Timer `00:00:00`; Tap auf den Timer für **Pause / Fertig / Löschen**. Ihr Pfad wird als rote Linie auf der Karte gezeichnet, während Sie sich bewegen. Bei **Fertig** wird die Aufzeichnung als neuer Track gespeichert und das Overlay öffnet sich direkt, damit Sie sie sofort ansehen können. Siehe [Tracks → Aufzeichnung](tracks.md#aufzeichnung).
 
 ## Untere Statusleiste
 

@@ -22,10 +22,6 @@ Petit / Normal / Grand / XL. Multiplicateur sur la taille adaptative au zoom —
 - **Désactivé** (par défaut) — les gestes deux doigts marchent dès l\'ouverture.
 - **Activé** — rotation verrouillée au lancement ; appui long sur la boussole pour débloquer. Utile si vous tournez souvent la carte par erreur.
 
-### Bouton panique
-- **Désactivé** (par défaut) — pas de bouton panique.
-- **Activé** — pastille rouge ⚠ en haut à gauche (symétrique de la boussole à droite). Tap → ouvre le panneau de partage, démarre le GPS si besoin. Voir [Partager → Bouton panique](share-and-navigate.md#bouton-panique-optionnel).
-
 ## Stockage
 
 ### Usage du cache

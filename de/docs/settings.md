@@ -22,10 +22,6 @@ Klein / Normal / Groß / XL. Das ist ein Multiplikator auf die automatische zoom
 - **Aus** (Standard) — Zwei-Finger-Drehgesten funktionieren vom ersten Moment an.
 - **An** — Rotation ist beim Start gesperrt; Sie müssen den Kompass lange drücken, um zu entsperren. Nützlich, wenn Sie die Karte oft versehentlich drehen und den zusätzlichen Schritt zum Zurückdrehen hassen.
 
-### Notfall-Button
-- **Aus** (Standard) — kein Notfall-Button auf der Karte.
-- **An** — zeigt ein rotes ⚠ Symbol oben links auf der Karte (als Spiegelung des Kompasses oben rechts). Tap → öffnet das Standort-teilen-Panel und startet GPS bei Bedarf automatisch. Siehe [Teilen → Notfall-Button](share-and-navigate.md#notfall-button-optional).
-
 ## Speicher
 
 ### Cache-Nutzung

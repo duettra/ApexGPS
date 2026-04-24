@@ -1,8 +1,42 @@
 # Trasy
 
-**Trasa** to zarejestrowana droga — sekwencja punktów GPS połączonych linią na mapie. Trasy pochodzą z importu plików GPX (z GaiaGPS, Strava, Garmin Connect, wikiloc.com lub dowolnego innego eksportera GPX).
+**Trasa** to zarejestrowana droga — sekwencja punktów GPS połączonych linią na mapie. Trasy możesz uzyskać albo **nagrywając** je na żywo w ApexGPS, albo **importując** pliki GPX (z GaiaGPS, Strava, Garmin Connect, wikiloc.com lub dowolnego innego eksportera GPX).
 
-**Uwaga:** ApexGPS w tej wersji nie zapisuje nowych tras. Nagrywanie na żywo jest planowane na przyszłą wersję.
+## Nagrywanie
+
+Dotknij czerwonej **kropki nagrywania** w lewym górnym rogu mapy. Kropka rozszerza się do chipa z czasem na żywo (`00:12:43`), a czerwona linia okruchów zaczyna rysować Twoją wędrówkę na mapie, gdy napływają nowe punkty GPS.
+
+### Podczas nagrywania
+
+- **Dotknij chipa stopera**, aby wyświetlić menu:
+  - **Pauza** — zatrzymuje zegar; nowe punkty nie są dodawane do linii, dopóki nie dotkniesz **Wznów**.
+  - **Zakończ** — zapisuje wędrówkę jako nową Trasę, otwiera panel trasy, abyś mógł od razu zobaczyć statystyki + profil wysokości.
+  - **Usuń** — odrzuca bieżące nagranie bez zapisu.
+- Pierwszoplanowa usługa GPS uruchamia się sama, gdy rozpoczynasz nagrywanie — nie musisz wcześniej włączać śledzenia.
+- **Ekran wyłączony?** Aplikacja zmniejsza częstotliwość aktualizacji GPS, żeby oszczędzać baterię (≈10 s między punktami przy wyłączonym ekranie vs 2 s przy włączonym). Żadne działanie nie jest wymagane — przełącza się automatycznie.
+
+### Jeśli lokalizacja systemowa jest wyłączona
+
+Dotknięcie nagrywania, gdy systemowy przełącznik lokalizacji Androida jest wyłączony, pokazuje krótki komunikat *„Lokalizacja systemowa jest wyłączona — włącz, aby nagrywać"* ze skrótem do **Ustawienia**. Nagrywanie się nie rozpoczyna.
+
+### Jeśli aplikacja zostanie zabita w trakcie wędrówki
+
+Jeśli Android zabije aplikację podczas aktywnego nagrywania (odzyskiwanie pamięci, wymuszenie zatrzymania, restart), linia zebrana do tego momentu zostaje **zachowana**. Otwórz aplikację ponownie, a chip wraca, pokazując upływający czas w stanie pauzy — dotknij **Wznów**, aby kontynuować, lub **Zakończ**, aby zapisać to, co masz.
+
+### Typ aktywności
+
+Każda nagrana trasa startuje z tagiem **Wędrówka**. Otwórz ekran szczegółów trasy (Trasy → dotknij wiersza) i użyj listy rozwijanej **Aktywność**, aby zmienić na Spacer / Bieganie / Kolarstwo / Off-road / Paralotniarstwo. Zaimportowane trasy domyślnie nie mają tagu aktywności; możesz przypisać go w ten sam sposób.
+
+### Przycinanie nagrania
+
+Szum rozgrzewki GPS na początku trasy? Zapomniałeś dotknąć **Zakończ** i trasa ciągnie się aż do auta? Otwórz ekran szczegółów trasy i dotknij **Przytnij trasę**:
+
+- Otwiera się okno z mini-podglądem mapy całej trasy i profilem wysokości poniżej.
+- Przeciągnij dwa uchwyty na wykresie wysokości, aby ustawić początek i koniec zakresu, który chcesz zachować. Mini-mapa aktualizuje się na żywo — zachowywany odcinek pozostaje w kolorze trasy, odrzucane fragmenty stają się szare.
+- Wskaźnik **Zachowano** pokazuje wynikowy dystans i liczbę punktów.
+- Dotknij **Przytnij**, aby zatwierdzić. Okno potwierdzenia mówi dokładnie, ile punktów zniknie z każdego końca. **Nie można tego cofnąć** — zachowaj eksport GPX, jeśli masz wątpliwości.
+
+Przycinanie przelicza też dystans, bounding box i profil wysokości trasy, tak że statystyki u góry ekranu natychmiast odzwierciedlają skróconą trasę.
 
 ## Importowanie
 

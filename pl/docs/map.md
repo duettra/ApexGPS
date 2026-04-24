@@ -57,7 +57,7 @@ Od **v1.25.2** mapa nie ma już dedykowanego FAB importu — import GPX znajduje
 ## Lewy górny róg
 
 - **☰ menu** — szuflada nawigacji (Trasy, Punkty, Mapy, Ustawienia).
-- **Przycisk alarmowy** — czerwony znaczek ⚠, tylko jeśli włączony w **Ustawienia → Wygląd → Przycisk alarmowy**. Dotknięcie otwiera panel udostępniania lokalizacji (automatycznie uruchamia GPS, jeśli był wyłączony).
+- **Znaczek nagrywania** — czerwona kropka w ciemnym kółku. Dotknij, aby rozpocząć nagrywanie aktualnej wędrówki. Podczas nagrywania rozszerza się do stopera na żywo `00:00:00`; dotknij stopera, aby otworzyć **Pauza / Zakończ / Usuń**. Twoja trasa rysuje się jako czerwona linia na mapie w miarę przemieszczania się. Po **Zakończ** nagranie zostaje zapisane jako nowa Trasa, a panel otwiera się, żebyś mógł od razu przejrzeć wynik. Zobacz [Trasy → Nagrywanie](tracks.md#nagrywanie).
 
 ## Dolny pasek statystyk
 

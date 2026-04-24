@@ -1,6 +1,6 @@
 # ApexGPS User Guide
 
-A free Android hiking app. View GPX tracks, mark waypoints, download maps for offline use, share your live location with a friend. No account, no ads, no cloud.
+A free Android hiking app. Record your trips, view GPX tracks, mark waypoints, download maps for offline use, share your live location with a friend. No account, no ads, no cloud.
 
 This guide walks through everything the app can do. Start with **Getting started** if you just installed it; otherwise jump to whatever section you need.
 
@@ -15,7 +15,7 @@ This guide walks through everything the app can do. Start with **Getting started
 
 ## Your data
 
-- [Tracks](tracks.md) — import GPX, view, filter, sort, edit, share, delete.
+- [Tracks](tracks.md) — record live, import GPX, view, filter, sort, edit, share, delete.
 - [Waypoints](waypoints.md) — add, edit, 32 symbols, filter, sort, relocate.
 - [Offline maps](offline-maps.md) — download map regions to use without signal.
 - [Backup & restore](backup.md) — save a copy of everything to a ZIP, restore on another device.

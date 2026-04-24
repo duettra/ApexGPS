@@ -4,6 +4,21 @@ Zmiany widoczne dla użytkownika, najnowsze u góry. Refaktory wewnętrzne / pod
 
 ---
 
+## 1.29.0 — 24 kwi 2026
+
+- **Nagrywanie trasy na żywo.** Dotknij czerwonej kropki w lewym górnym rogu mapy, aby rozpocząć nagrywanie bieżącej wędrówki. Stoper na żywo `HH:MM:SS` zastępuje kropkę; dotknij go, aby uzyskać **Pauza / Zakończ / Usuń**. Twoja trasa rysuje się jako czerwona linia, gdy się poruszasz. Po **Zakończ** nagranie zostaje zapisane jako nowa Trasa, a panel otwiera się automatycznie, abyś mógł od razu sprawdzić dystans, podejście i profil wysokości.
+- **Przytnij trasę.** Na ekranie szczegółów trasy **Przytnij trasę** otwiera okno z mini-podglądem mapy i dwoma przeciąganymi uchwytami na wykresie wysokości. Obetnij zły początek (jeszcze bez fixa GPS) lub przypadkowy ogon (zapomniałeś dotknąć Zakończ) bez utraty reszty trasy. Destrukcyjne — krok potwierdzenia mówi dokładnie, ile punktów stracisz.
+- **Tag aktywności na trasę.** Ekran Szczegóły trasy ma nową listę **Aktywność**: Wędrówka · Spacer · Bieganie · Kolarstwo · Off-road · Paralotniarstwo. Nagrania domyślnie są Wędrówką; zaimportowane trasy startują bez tagu.
+- **Wysokość punktu.** Okno edycji punktu ma nowe opcjonalne pole **Wysokość (m)** — uzupełnij, gdy chcesz nieść wysokość dla znanego szczytu / przełęczy / itp. Puste = brak zapisanej wysokości (tak jak dziś zaimportowane punkty bez danych wysokości).
+- **Odświeżone szczegóły trasy + edycja punktu.** Zgrupowane karty, nagłówki sekcji, ikony w każdym wierszu, ikona właściwa dla aktywności na chipie Aktywność, przycisk **Usuń** z czerwoną obwódką pasujący do destrukcyjnego działania, nowa statystyka **Punkty** na ekranie trasy. Edycja punktu jest bardziej zwarta — cały formularz mieści się teraz nad systemowym paskiem nawigacji na większości telefonów bez przewijania.
+- **Odzyskiwanie po śmierci procesu.** Jeśli Android zabije aplikację w trakcie nagrywania (mało pamięci, wymuszenie zatrzymania), linia jest zachowana. Otwórz aplikację ponownie, a nagranie wraca w stanie pauzy — wznów, zakończ lub odrzuć.
+- **Oszczędzanie baterii: adaptacyjna częstotliwość GPS.** Podczas nagrywania przy wyłączonym ekranie częstotliwość aktualizacji GPS spada z 2 s do 10 s, by oszczędzać baterię. Gdy odblokujesz telefon, wraca do 2 s dla płynności. W pełni automatyczne.
+- **Zabezpieczenie lokalizacji systemowej.** Dotknięcie nagrywania, gdy systemowy przełącznik lokalizacji Androida jest wyłączony, pokazuje teraz komunikat ze skrótem do **Ustawienia** zamiast cicho uruchamiać martwe nagranie.
+- **Wskazówka no-fix.** Jeśli dotkniesz nagrywania, zanim GPS pozyska pierwszy punkt, krótki komunikat *„Szukam GPS…"* wyjaśnia, dlaczego linia się jeszcze nie zaczęła. Nagrywanie rusza, gdy tylko pojawi się pierwszy fix.
+- **Usunięte:** opcjonalny przycisk alarmowy. Obszar w lewym górnym rogu należy teraz do znaczka nagrywania.
+
+---
+
 ## 1.28.0 — 24 kwi 2026
 
 - **Dodano arabski.** العربية dołącza do niemieckiego, francuskiego, hiszpańskiego i polskiego obok angielskiego. Sześć języków interfejsu w **Ustawienia → Wygląd → Język**.
@@ -75,10 +90,6 @@ Zmiany widoczne dla użytkownika, najnowsze u góry. Refaktory wewnętrzne / pod
 ## 1.22.2 — 19 kwi 2026
 
 - **Link do podręcznika** w Ustawienia → Informacje. Otwiera tę dokumentację w przeglądarce.
-
-## 1.22.0 — 19 kwi 2026
-
-- **Przycisk alarmowy** (opt-in). Czerwony znaczek ⚠ w lewym górnym rogu mapy. Dotknięcie → otwiera panel udostępniania i automatycznie uruchamia GPS w razie potrzeby. Włącz w **Ustawienia → Wygląd → Przycisk alarmowy**. Zobacz [Udostępnij → Przycisk alarmowy](share-and-navigate.md#przycisk-alarmowy-opcjonalny).
 
 ## 1.21.0 — 19 kwi 2026
 

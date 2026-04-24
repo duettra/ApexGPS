@@ -9,7 +9,7 @@ Sicherungen sind manuell, aber einfach. Führen Sie sie regelmäßig durch, wenn
 - **Alle Tracks** (GPX-Daten, Name, Farbe, Sichtbarkeit).
 - **Alle Wegpunkte** (Name, Beschreibung, Koordinaten, Höhe, Farbe, Symbol).
 - **Alle gespeicherten Offline-Kartenregionen** (die echten Kachelpakete — können groß sein).
-- **Alle Einstellungen** (Design, Standard-Kartenquelle, Track-Linienbreite, Wegpunkt-Größe, Rotationssperre, Sichtbarkeit des Notfall-Buttons).
+- **Alle Einstellungen** (Design, Standard-Kartenquelle, Track-Linienbreite, Wegpunkt-Größe, Rotationssperre).
 
 Was **nicht** in einer Sicherung enthalten ist:
 

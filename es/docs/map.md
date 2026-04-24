@@ -57,7 +57,7 @@ Desde la **v1.25.2** el mapa ya no tiene FAB de importar — la importación GPX
 ## Arriba a la izquierda
 
 - **☰ menú** — cajón de navegación (Rutas, Puntos, Mapas, Ajustes).
-- **Botón de pánico** — pastilla roja ⚠, solo si está activado en **Ajustes → Apariencia → Botón de pánico**. Toque abre el panel de compartir ubicación (activa GPS si no estaba).
+- **Pastilla de grabación** — un punto rojo en un círculo oscuro. Tócalo para iniciar la grabación de tu salida actual. Mientras graba se expande a un cronómetro en vivo `00:00:00`; toca el cronómetro para **Pausar / Finalizar / Eliminar**. Tu trayecto se dibuja como una línea roja en el mapa mientras te mueves. Al **Finalizar** la grabación se guarda como nueva Ruta y el panel se abre para que la revises al instante. Ver [Rutas → Grabación](tracks.md#grabación).
 
 ## Barra de estadísticas (abajo)
 

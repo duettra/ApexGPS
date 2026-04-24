@@ -1,8 +1,42 @@
 # Tracks
 
-A **track** is a recorded path — a sequence of GPS points connected as a line on the map. You get tracks by importing GPX files (from GaiaGPS, Strava, Garmin Connect, wikiloc.com, or anything else that exports GPX).
+A **track** is a recorded path — a sequence of GPS points connected as a line on the map. You get tracks either by **recording** them live in ApexGPS, or by **importing** GPX files (from GaiaGPS, Strava, Garmin Connect, wikiloc.com, or anything else that exports GPX).
 
-**Note:** ApexGPS does not record new tracks itself in this version. Live recording is planned for a future release.
+## Recording
+
+Tap the red **record dot** at the top-left of the map. The dot expands into a live elapsed-time chip (`00:12:43`) and a red breadcrumb line starts drawing your trip on the map as new GPS fixes arrive.
+
+### While recording
+
+- **Tap the timer chip** for a menu:
+  - **Pause** — freezes the clock; new fixes stop being added to the breadcrumb until you tap **Resume**.
+  - **Finish** — saves the trip as a new Track, opens the track overlay so you can review stats + elevation profile immediately.
+  - **Delete** — throws away the current recording without saving.
+- The GPS foreground service is started for you when you begin a recording — you don't need to toggle follow-me first.
+- **Screen off?** The app relaxes the GPS update cadence to save battery (≈10 s between fixes with screen off vs. 2 s with screen on). No action required — it flips automatically.
+
+### If system location is off
+
+Tapping record when the Android system-wide location toggle is off shows a quick *"System location is off — turn it on to record"* message with a **Settings** shortcut. The recording doesn't start.
+
+### If the app is killed mid-hike
+
+If Android ever kills the app during an active recording (low-memory reclaim, force-stop, reboot), the breadcrumb collected up to that point is **preserved**. Re-open the app and the chip comes back showing elapsed time in a paused state — tap **Resume** to keep going, or **Finish** to save what you've got.
+
+### Activity type
+
+Every recorded track starts tagged as **Hiking**. Open the track's detail screen (Tracks → tap the row) and use the **Activity** picker to change it to Walking / Running / Cycling / Offroading / Paragliding. Imported tracks have no activity tag by default; you can assign one the same way.
+
+### Cropping a recording
+
+Got GPS-warmup noise at the start of your track? Forgot to tap **Finish** and the track now drags halfway to your car? Open the track detail screen and tap **Crop Track**:
+
+- A dialog opens with a mini-map preview of the full track and its elevation profile below.
+- Drag the two handles on the elevation chart to set the start and end of the range you want to keep. The mini-map updates live — the kept segment stays in the track's colour, the parts you're dropping fade to grey.
+- The **Kept** readout shows the resulting distance and point count.
+- Tap **Crop** to commit. A confirmation dialog spells out how many points will drop from each end. **This cannot be undone** — keep a GPX export if you're worried.
+
+Cropping also recomputes the track's distance, bounding box, and elevation profile, so the top-of-screen stats reflect the trimmed track immediately.
 
 ## Importing
 

@@ -1,6 +1,6 @@
 # ApexGPS Anleitung
 
-Eine kostenlose Android-Wander-App. GPX-Tracks anzeigen, Wegpunkte markieren, Karten für die Offline-Nutzung herunterladen, Ihren Live-Standort mit einem Freund teilen. Kein Konto, keine Werbung, keine Cloud.
+Eine kostenlose Android-Wander-App. Zeichnen Sie Ihre Touren auf, zeigen Sie GPX-Tracks an, markieren Sie Wegpunkte, laden Sie Karten für die Offline-Nutzung herunter, teilen Sie Ihren Live-Standort mit einem Freund. Kein Konto, keine Werbung, keine Cloud.
 
 Diese Anleitung führt durch alles, was die App kann. Beginnen Sie mit **Erste Schritte**, wenn Sie die App gerade installiert haben; ansonsten springen Sie direkt zu dem Abschnitt, den Sie brauchen.
 
@@ -15,7 +15,7 @@ Diese Anleitung führt durch alles, was die App kann. Beginnen Sie mit **Erste S
 
 ## Ihre Daten
 
-- [Tracks](tracks.md) — GPX importieren, anzeigen, filtern, sortieren, bearbeiten, teilen, löschen.
+- [Tracks](tracks.md) — live aufzeichnen, GPX importieren, anzeigen, filtern, sortieren, bearbeiten, teilen, löschen.
 - [Wegpunkte](waypoints.md) — hinzufügen, bearbeiten, 32 Symbole, filtern, sortieren, verschieben.
 - [Offline-Karten](offline-maps.md) — Kartenregionen für die Nutzung ohne Signal herunterladen.
 - [Sicherung & Wiederherstellung](backup.md) — alles als ZIP sichern, auf einem anderen Gerät wiederherstellen.

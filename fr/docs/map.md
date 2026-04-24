@@ -57,7 +57,7 @@ Depuis la **v1.25.2**, la carte n\'a plus de FAB d\'import dédié — l\'import
 ## En haut à gauche
 
 - **☰ menu** — tiroir de navigation (Traces, Points, Cartes, Paramètres).
-- **Bouton panique** — pastille rouge ⚠, visible seulement si activé dans **Paramètres → Apparence → Bouton panique**. Tap ouvre le panneau de partage de position (lance le GPS automatiquement s\'il était coupé).
+- **Pastille d\'enregistrement** — un point rouge dans un cercle foncé. Appuyez pour démarrer l\'enregistrement de votre sortie. Pendant l\'enregistrement, elle se déploie en un chronomètre live `00:00:00` ; tap sur le chrono pour **Pause / Terminer / Supprimer**. Votre parcours se dessine comme une ligne rouge sur la carte au fil de vos déplacements. Sur **Terminer** l\'enregistrement est sauvegardé comme nouvelle Trace et le panneau s\'ouvre pour que vous puissiez la consulter immédiatement. Voir [Traces → Enregistrement](tracks.md#enregistrement).
 
 ## Barre stats en bas
 

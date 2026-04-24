@@ -22,10 +22,6 @@ Small / Normal / Large / XL. This is a multiplier on top of the automatic zoom-a
 - **Off** (default) — two-finger rotation gestures work from the moment the app opens.
 - **On** — rotation is locked at launch; you need to long-press the compass to unlock. Useful if you often accidentally rotate the map and hate the extra step to un-rotate.
 
-### Panic button
-- **Off** (default) — no panic button on the map.
-- **On** — shows a red ⚠ chip at the top-left of the map (mirroring the compass at top-right). Tap → opens the Share location panel, auto-starting GPS if needed. See [Share → Panic button](share-and-navigate.md#panic-button-optional).
-
 ## Storage
 
 ### Cache usage

@@ -9,7 +9,7 @@ Backup is manual but easy. Do it periodically if you have data you'd miss.
 - **All tracks** (the GPX data, name, colour, visibility).
 - **All waypoints** (name, description, coords, elevation, colour, symbol).
 - **All saved offline map regions** (the actual tile bundles — can be large).
-- **All settings** (theme, default tile source, track width, waypoint size, rotation lock, panic-button visibility).
+- **All settings** (theme, default tile source, track width, waypoint size, rotation lock).
 
 What **isn't** in a backup:
 
