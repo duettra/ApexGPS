@@ -4,6 +4,23 @@ Für Nutzer sichtbare Änderungen, neueste zuerst. Für internes Refactoring / r
 
 ---
 
+## 1.28.0 — 24. Apr. 2026
+
+- **Arabisch ergänzt.** العربية schließt sich Deutsch, Französisch, Spanisch und Polnisch neben Englisch an. Sechs UI-Sprachen in **Einstellungen → Darstellung → Sprache**.
+- **Wegpunkt-Panel jetzt übersetzt.** Tippen auf einen Wegpunkt zeigte bisher „Elev 145 m · Dist 0,42 km" auf Englisch — unabhängig von der App-Sprache. Jetzt schaltet es mit um (z. B. „Höhe 145 m · Dist 0,42 km").
+- **Zahlen bleiben in allen Sprachen westliche Ziffern.** Koordinaten, Distanzen, Höhen, Richtungen — immer `25.165`, `145`, `0.42`. Konsistent mit Google Maps / WhatsApp.
+
+---
+
+## 1.27.0 — 23. Apr. 2026
+
+- **Fünf UI-Sprachen.** Deutsch, Französisch, Spanisch, Polnisch und Englisch. Auswahl in **Einstellungen → Darstellung → Sprache**, oder „Systemsprache" für die Telefon-Sprache.
+- **Offline-Anleitung in Ihrer Sprache.** Alle 11 Kapitel des Anwenderhandbuchs (Einstellungen → Über → Anleitung) sind übersetzt.
+- **Sprache übersteht Wiederherstellung aus Sicherung.** Die gewählte Sprache ist in der ZIP enthalten.
+- **Statusleiste auch übersetzt.** TEMPO / HÖHE / DIST wechseln mit der Sprache.
+
+---
+
 ## 1.26.2 — 22. Apr. 2026
 
 - **Thunderforest-API-Schlüssel jetzt verschlüsselt gespeichert.** Der Schlüssel, den Sie unter **Einstellungen → Erweitert** einfügen, liegt nun in einem Android-Keystore-gestützten Tresor, nicht im Klartext. Existierende Schlüssel wandern beim ersten Start automatisch. Sicherungen, die Ihre Einstellungen einschließen, tragen den Schlüssel weiter in der ZIP (nötig für Portabilität) — ein neuer roter Warnhinweis im Sicherungsdialog weist darauf hin, die ZIP privat zu halten.

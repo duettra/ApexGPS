@@ -4,6 +4,23 @@ Zmiany widoczne dla użytkownika, najnowsze u góry. Refaktory wewnętrzne / pod
 
 ---
 
+## 1.28.0 — 24 kwi 2026
+
+- **Dodano arabski.** العربية dołącza do niemieckiego, francuskiego, hiszpańskiego i polskiego obok angielskiego. Sześć języków interfejsu w **Ustawienia → Wygląd → Język**.
+- **Panel punktu teraz przetłumaczony.** Dotknięcie punktu pokazywało wcześniej „Elev 145 m · Dist 0,42 km" po angielsku — niezależnie od języka aplikacji. Teraz zmienia się z nim (np. „Wys 145 m · Dyst 0,42 km").
+- **Liczby pozostają w cyfrach zachodnich we wszystkich językach.** Współrzędne, dystanse, wysokości, kursy — zawsze `25.165`, `145`, `0.42`. Spójne z Google Maps / WhatsApp.
+
+---
+
+## 1.27.0 — 23 kwi 2026
+
+- **Pięć języków interfejsu.** Niemiecki, francuski, hiszpański, polski i angielski. Wybierz w **Ustawienia → Wygląd → Język**, lub „Język systemu" aby podążać za telefonem.
+- **Podręcznik offline w Twoim języku.** Wszystkie 11 rozdziałów (Ustawienia → Informacje → Podręcznik) jest przetłumaczonych.
+- **Język przetrwa przywracanie z kopii.** Wybrany język jest w ZIP-ie.
+- **Pasek statystyk również przetłumaczony.** PRED / WYS / DYST zmieniają się z językiem.
+
+---
+
 ## 1.26.2 — 22 kwi 2026
 
 - **Klucz API Thunderforest szyfrowany w spoczynku.** Klucz wklejany w **Ustawienia → Zaawansowane** trafia teraz do magazynu opartego na Android Keystore, a nie do zwykłego tekstu. Istniejące klucze migrują automatycznie przy pierwszym uruchomieniu. Kopie zawierające ustawienia nadal niosą klucz w ZIP-ie (potrzebny dla przenośności) — nowe czerwone ostrzeżenie w oknie kopii o tym przypomina.

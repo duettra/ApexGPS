@@ -4,6 +4,16 @@ User-visible changes, newest first. For internal refactoring / version-bump-only
 
 ---
 
+## 1.28.0 — Apr 24, 2026
+
+- **App now available in Arabic.** العربية joins German, French, Spanish, and Polish alongside English. All six languages in **Settings → Appearance → Language**. Every screen, every menu, the offline User Guide, the website — all translated.
+- **Waypoint-overlay labels now translated.** Tapping a waypoint on the map used to show "Elev 145 m · Dist 0.42 km" in English regardless of the app language. Now it switches with the UI language (e.g. "Höhe 145 m · Dist 0.42 km" in German, "ارتفاع 145 م · مسافة 0.42 كم" in Arabic).
+- **Numbers stay in Western digits in every language.** Coordinates, distances, altitudes, bearings — all render as `25.165`, `145`, `0.42`, etc. regardless of UI language. Matches the convention used by Google Maps, WhatsApp, and every modern Arabic app.
+- **On the compass and in shared coordinates**, N/E/S/W stay Latin — international GPS/aviation convention.
+- **Map tile labels (place names)** continue to reflect OpenStreetMap's native-script data for each region — Arabic for Arab-world areas, Latin elsewhere. Independent of the UI language.
+
+---
+
 ## 1.27.0 — Apr 23, 2026
 
 - **App now available in four new languages.** German, French, Spanish, and Polish, alongside English. Every screen, every dialog, every menu — all translated. Pick your language in **Settings → Appearance → Language**, or leave it on *System default* to follow your phone\'s language.

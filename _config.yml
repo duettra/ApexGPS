@@ -45,3 +45,11 @@ defaults:
       path: "pl/docs/README.md"
     values:
       permalink: /pl/docs/
+  - scope:
+      path: "ar/docs"
+    values:
+      permalink: /ar/docs/:basename/
+  - scope:
+      path: "ar/docs/README.md"
+    values:
+      permalink: /ar/docs/
