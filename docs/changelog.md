@@ -4,6 +4,20 @@ User-visible changes, newest first. For internal refactoring / version-bump-only
 
 ---
 
+## 1.31.0 — Apr 25, 2026 — Weather
+
+ApexGPS now shows hiking-grade weather information from free public APIs, fully opt-in.
+
+- **Forecast chip in the stats bar.** Once you turn weather on in **Settings → Weather**, a small chip above the speed/elevation/distance bar shows current conditions for your GPS location: temperature, wind, humidity. The chip updates every 15 minutes when online and tells you when the data is stale or you've gone offline (greys out and adds a clock).
+- **Tap-to-expand sheet.** Tap the chip (or the new "Weather here" line on a waypoint panel) for the full breakdown — current readings, the next 24 hours as a temperature line + precipitation bars chart, and a 7-day strip with high/low temps and weather icons.
+- **Manual refresh.** A ↻ button in the sheet header forces a fresh fetch when you've reconnected after a flight-mode patch.
+- **Animated map overlays.** A new **Overlays** section in the Maps hub adds two independent toggles: precipitation radar (animated colour-coded rain, past 2 hours plus a 30-minute nowcast) and cloud satellite (infrared cloud-tops, geostationary). These don't send your location anywhere — they're pure tile fetches, independent of the weather chip.
+- **Privacy first.** The whole feature defaults off. Forecasts come from Open-Meteo and radar from RainViewer; both are free public APIs that don't require an account or an API key. Your location is only sent when you explicitly enable the chip.
+
+Read the full chapter under **Settings → User Guide → Weather**.
+
+---
+
 ## 1.30.2 — Apr 25, 2026
 
 - **Compass tap respects the rotation lock.** Long-press the compass to lock the map's rotation; while locked, a single tap on the compass no longer snaps the map back to north. (You'd have to long-press again to unlock first, then tap.) This restores the lock's intent — freezing the angle against accidental input, including a stray tap on the compass itself.
