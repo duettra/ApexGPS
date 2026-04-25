@@ -4,6 +4,57 @@ Cambios visibles para el usuario, más recientes primero. Para refactors interno
 
 ---
 
+## 1.32.1 — 25 abr. 2026 — Tiempo: pequeñas correcciones
+
+- **Iconos de sol / luna correctos al cruzar medianoche.** La franja de tiempo de 24 horas mostraba glifos de luna en las horas de tarde del *día siguiente* (11:00, 14:00, 17:00) al abrir la hoja de noche. Cada hora elige ahora su propio orto / ocaso, así las horas diurnas siempre muestran los iconos lado sol.
+- **La previsión del waypoint usa de verdad su altitud.** Cuando un waypoint en cumbre estaba prácticamente en la misma coordenada que tu lectura GPS, a veces se devolvía la previsión cacheada de la posición actual en lugar de una consulta fresca consciente de la altitud. En una cumbre de 1480 m la previsión salía ~9 °C demasiado cálida. La caché ahora también incluye la altitud como clave, así la altura guardada del waypoint se respeta siempre.
+
+---
+
+## 1.32.0 — 25 abr. 2026 — Tiempo: pulido por punto, sin overlays de mapa
+
+Tras 1.31.0, los overlays de tiempo en rejilla no pasaron la prueba visual a niveles de zoom de senderismo — se veían como cuadrados de color sin alineación real con el terreno, y la fila inferior de controles (deslizador de overlay + chip + barra velocidad / altitud / distancia) ocupaba demasiada pantalla. Esta versión despeja el mapa y refuerza la hoja por punto, donde está el detalle útil.
+
+- **Overlays de mapa retirados.** Sin radar de precipitación ni overlay de nubosidad sobre el mapa base, sin deslizador temporal. La pantalla **Ajustes → Tiempo** se reduce a un único interruptor maestro.
+- **Hoja por punto más rica.** La hoja de tiempo (toca el chip o la línea «Tiempo aquí» de un waypoint) muestra ahora: panel actual con emoji del tiempo, temperatura, «sensación»; filas para viento / humedad / punto de rocío / presión / UV / ocaso; franja de 24 horas con iconos horarios + temperatura; tendencia de humedad (azul claro) y tendencia de presión (verde); y franja de 7 días con máxima / mínima + icono. Diseñada para caber en una pantalla de móvil normal.
+- **La altitud del waypoint llega a la previsión.** Los waypoints con altitud guardada la pasan al modelo, así las previsiones de cumbre usan la altura real en vez de la altitud media del modelo. Igual para el chip de la posición actual — usa tu altitud GPS.
+- **Chip alineado con la tarjeta del waypoint.** El texto del chip de la barra de stats coincide ahora con lo que ves al tocar un waypoint: emoji + temp + viento. Se añadió un fino separador entre el chip y la fila velocidad / altitud / distancia para que se lean como un solo panel.
+
+---
+
+## 1.31.0 — 25 abr. 2026 — Tiempo
+
+ApexGPS muestra ahora información meteorológica de nivel senderismo desde APIs públicas gratuitas, totalmente opt-in.
+
+- **Chip de previsión en la barra de stats.** Una vez actives el tiempo en **Ajustes → Tiempo**, un pequeño chip sobre la barra velocidad / altitud / distancia muestra las condiciones actuales en tu posición GPS: temperatura, viento, humedad. El chip se actualiza cada 15 minutos en línea e indica cuándo los datos están viejos o estás sin red (gris + reloj).
+- **Hoja desplegable.** Toca el chip (o la nueva línea «Tiempo aquí» de un panel de waypoint) para el desglose — lecturas actuales, próximas 24 horas como curva de temperatura + barras de precipitación, y franja de 7 días con máx/mín e iconos.
+- **Refresco manual.** Un botón ↻ en la cabecera fuerza una consulta fresca tras reconectar.
+- **Overlays animados en el mapa.** Una nueva sección **Overlays** en el hub de Mapas añade dos interruptores independientes: radar de precipitación (lluvia animada con código de color, últimas 2 h + nowcast 30 min) y satélite de nubes (cima de nubes IR geoestacionario). No envían tu posición — son solo teselas, independientes del chip de tiempo.
+- **Privacidad primero.** Toda la función está desactivada por defecto. Las previsiones vienen de Open-Meteo y el radar de RainViewer; ambas APIs públicas gratuitas, sin cuenta ni clave. Tu posición solo se envía si activas el chip explícitamente.
+
+Lee el capítulo completo en **Ajustes → Guía → Tiempo**.
+
+---
+
+## 1.30.2 — 25 abr. 2026
+
+- **El tap en la brújula respeta el bloqueo de rotación.** Pulsación larga en la brújula bloquea la rotación del mapa; bloqueada, un solo tap en la brújula ya no devuelve el mapa al norte. (Tendrías que volver a pulsar largo para desbloquear y luego tocar.) Esto restaura la intención del bloqueo — congelar el ángulo contra entradas accidentales, incluido un tap perdido en la propia brújula.
+- **Avisos más cortos y menos invasivos.** Los mensajes «Eliminado …» / «Movido …» / «Llegada» / seguir-bloqueado / auto-pausa-localización ahora se muestran como un Toast Android breve (~2 s, overlay de sistema) en vez de un snackbar de 4 s que tapaba la parte baja del mapa. Puedes tocar otro waypoint nada más eliminar uno, sin esperar.
+
+---
+
+## 1.30.0 / 1.30.1 — 25 abr. 2026 — Calidad de grabación
+
+La primera salida tras 1.29 (4 h 10 min, 9,98 km) reveló que la grabación live de track guardaba muchos más puntos de los necesarios y había absorbido una falsa caída de altitud por una lectura de altitud atascada. Ambos arreglados:
+
+- **Grabaciones más ligeras y suaves.** Un nuevo filtro solo conserva un fix si te has movido al menos 5 m, han pasado 15 segundos o la altitud ha cambiado 3 m+. Los fixes muy imprecisos (>25 m) se descartan. En la prueba: ~4600 → ~1500 puntos guardados, sin cambio visible en la línea, distancia igual. Menos almacenamiento; exportes GPX más pequeños; el mismo trazo.
+- **No más caídas falsas de altitud.** El fused location provider de algunos Android se atasca y devuelve la misma altitud cacheada (p. ej. `139 m` en una salida a 1200 m) durante minutos. La grabación trata ahora esas lecturas como «sin valor» en vez de persistir el número erróneo. El perfil de altitud muestra un hueco limpio en la ventana fallida en lugar de una bajada a cero, y los stats de subida / bajada solo reflejan cambios reales.
+- **Altitud MSL en Android 14+.** Cuando está disponible, la grabación usa la altitud media respecto al nivel del mar, más honesta que el fallback WGS84 propenso al fallo anterior.
+
+Si tienes una grabación previa a 1.30.0 con una altitud incorrecta, puedes regrabarla — pero la pantalla del track usa los puntos persistidos. No hay paso de migración.
+
+---
+
 ## 1.29.0 — 24 abr. 2026
 
 - **Grabación de ruta en vivo.** Toca la pastilla roja en la esquina superior izquierda del mapa para empezar a grabar tu salida. Un cronómetro en vivo `HH:MM:SS` reemplaza al punto; tócalo para **Pausar / Finalizar / Eliminar**. Tu trayecto se dibuja como una línea roja mientras te mueves. Al **Finalizar**, la grabación se guarda como nueva Ruta y el panel se abre automáticamente para revisar distancia, ascenso y perfil de altitud al momento.

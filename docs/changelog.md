@@ -4,6 +4,24 @@ User-visible changes, newest first. For internal refactoring / version-bump-only
 
 ---
 
+## 1.32.1 — Apr 25, 2026 — Weather: small fixes
+
+- **Correct sun / moon icons through midnight.** The 24-hour weather strip used to show moon glyphs against the next day's afternoon hours (11:00, 14:00, 17:00) when you opened the sheet late at night. Each hour now picks its own day's sunrise / sunset, so daytime hours always show the sun-side icons.
+- **Waypoint forecast actually uses the waypoint's elevation.** When a peak waypoint sat at virtually the same coordinate as your current GPS reading, the cached current-location forecast was sometimes returned for the waypoint instead of a fresh elevation-aware fetch. On a 1480 m summit that meant the forecast was running ~9 °C too warm. The cache now keys on elevation as well as coordinates, so the waypoint's stored height is always honoured.
+
+---
+
+## 1.32.0 — Apr 25, 2026 — Weather: per-point polish, no map overlays
+
+After 1.31.0 went out, the gridded weather overlays didn't pass the eye test on hiking-zoom maps — they read as blocky colour squares with no real terrain alignment, and the bottom row of controls (overlay slider + chip + speed / elevation / distance bar) ate too much screen. This release strips the map back and doubles down on the per-point sheet, which is where the useful detail lives.
+
+- **Map overlays removed.** No more precipitation radar or cloud-cover overlays on the basemap, no time slider. The **Settings → Weather** screen shrinks to a single master toggle.
+- **Richer per-point sheet.** The weather sheet (tap the chip or a waypoint's "Weather here" line) now shows: hero current panel with weather emoji, temperature, "feels like", wind / humidity / dewpoint / pressure / UV / sunset; a 24-hour strip with hour-by-hour weather icons + temperature; a humidity trend (light blue) and a pressure trend (green); and a 7-day strip with high / low + icon. Designed to fit on one screen on a typical phone.
+- **Per-waypoint elevation is sent to the forecast.** Waypoints with a stored elevation field now feed it to the forecast model, so summit forecasts use the real summit height instead of the model's coarse averaged elevation. Same for the chip's current-location forecast — it uses your GPS altitude.
+- **Chip aligns with waypoint card.** The stats-bar chip text now matches what you see when you tap a waypoint: emoji + temp + wind. A thin separator was added between the chip and the speed/elevation/distance row so they read as one panel.
+
+---
+
 ## 1.31.0 — Apr 25, 2026 — Weather
 
 ApexGPS now shows hiking-grade weather information from free public APIs, fully opt-in.

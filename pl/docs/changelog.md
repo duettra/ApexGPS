@@ -4,6 +4,57 @@ Zmiany widoczne dla użytkownika, najnowsze u góry. Refaktory wewnętrzne / pod
 
 ---
 
+## 1.32.1 — 25 kwi 2026 — Pogoda: drobne poprawki
+
+- **Poprawne ikony słońca / księżyca po północy.** 24-godzinny pasek pogody pokazywał glify księżyca dla popołudniowych godzin *następnego* dnia (11:00, 14:00, 17:00), gdy arkusz otwierano późno wieczorem. Każda godzina wybiera teraz własny wschód / zachód słońca, więc godziny dzienne zawsze pokazują ikony strony słońca.
+- **Prognoza waypointa rzeczywiście używa jego wysokości.** Gdy waypoint na szczycie znajdował się praktycznie w tych samych współrzędnych co Twoje aktualne odczyty GPS, czasem zwracana była buforowana prognoza dla bieżącej pozycji zamiast świeżego zapytania uwzględniającego wysokość. Na szczycie 1480 m prognoza była ~9 °C za ciepła. Cache uwzględnia teraz także wysokość jako klucz, więc zapisana wysokość waypointa jest zawsze respektowana.
+
+---
+
+## 1.32.0 — 25 kwi 2026 — Pogoda: dopracowanie punktowe, bez nakładek na mapie
+
+Po 1.31.0 siatkowe nakładki pogody nie przeszły testu wzrokowego na poziomach zoomu odpowiednich dla wędrówek — wyglądały jak blokowe kolorowe kwadraty bez prawdziwego dopasowania do terenu, a dolny rząd kontrolek (suwak nakładki + chip + pasek prędkość / wysokość / dystans) zjadał za dużo ekranu. Ta wersja czyści mapę i stawia na arkusz punktowy, gdzie są naprawdę przydatne szczegóły.
+
+- **Nakładki na mapie usunięte.** Bez radaru opadów ani warstwy zachmurzenia na mapie podstawowej, bez suwaka czasu. Ekran **Ustawienia → Pogoda** zmniejsza się do jednego głównego przełącznika.
+- **Bogatszy arkusz punktowy.** Arkusz pogody (stuknij chip lub wiersz „Pogoda tutaj" przy waypoincie) pokazuje teraz: panel bieżący z emoji pogody, temperaturą, „odczuwalna"; wiersze na wiatr / wilgotność / punkt rosy / ciśnienie / UV / zachód; pasek 24 godzin z godzinowymi ikonami pogody + temperaturą; trend wilgotności (jasnoniebieski) i trend ciśnienia (zielony); pasek 7 dni z maks / min + ikoną. Zaprojektowany, by zmieścił się na typowym ekranie telefonu.
+- **Wysokość waypointa trafia do prognozy.** Waypointy z zapisaną wysokością przekazują ją do modelu, więc prognozy szczytów używają prawdziwej wysokości zamiast uśrednionej grubo przez model. To samo dla chipa pozycji bieżącej — używa Twojej wysokości GPS.
+- **Chip dopasowany do karty waypointa.** Tekst chipa w pasku statystyk odpowiada teraz temu, co widzisz po stuknięciu waypointa: emoji + temp + wiatr. Pomiędzy chipem a wierszem prędkość / wysokość / dystans dodano cienki separator, żeby czytały się jako jeden panel.
+
+---
+
+## 1.31.0 — 25 kwi 2026 — Pogoda
+
+ApexGPS pokazuje teraz informacje pogodowe poziomu wędrówkowego z darmowych publicznych API, w pełni opt-in.
+
+- **Chip prognozy w pasku statystyk.** Po włączeniu pogody w **Ustawienia → Pogoda** mały chip nad paskiem prędkość / wysokość / dystans pokazuje aktualne warunki dla pozycji GPS: temperaturę, wiatr, wilgotność. Chip aktualizuje się co 15 minut online i sygnalizuje, gdy dane są stare lub jesteś offline (szarzeje + dodaje zegar).
+- **Rozwijany arkusz.** Stuknij chip (lub nowy wiersz „Pogoda tutaj" w panelu waypointa) po pełny rozkład — bieżące odczyty, kolejne 24 godziny jako linia temperatury + słupki opadów oraz pasek 7 dni z maks/min i ikonami.
+- **Ręczne odświeżenie.** Przycisk ↻ w nagłówku arkusza wymusza świeże zapytanie po ponownym połączeniu.
+- **Animowane nakładki na mapie.** Nowa sekcja **Nakładki** w hubie Mapy dodaje dwa niezależne przełączniki: radar opadów (animowany kolorowy deszcz, ostatnie 2 h + 30-minutowy nowcast) i satelita chmur (geostacjonarny IR). Nie wysyłają Twojej pozycji nigdzie — to czyste pobrania kafli, niezależne od chipa pogody.
+- **Prywatność na pierwszym miejscu.** Cała funkcja jest domyślnie wyłączona. Prognozy z Open-Meteo, radar z RainViewer; obie publiczne darmowe API bez konta i bez klucza. Twoja pozycja jest wysyłana tylko, gdy wyraźnie włączysz chip.
+
+Przeczytaj pełny rozdział w **Ustawienia → Podręcznik → Pogoda**.
+
+---
+
+## 1.30.2 — 25 kwi 2026
+
+- **Stuknięcie kompasu respektuje blokadę rotacji.** Długie naciśnięcie kompasu blokuje rotację mapy; gdy zablokowana, pojedyncze stuknięcie kompasu nie przyciąga już mapy do północy. (Trzeba ponownie długo nacisnąć, by odblokować, dopiero potem stuknąć.) Przywraca to intencję blokady — zamrożenie kąta przed przypadkowymi wejściami, w tym błędnym stuknięciem samego kompasu.
+- **Krótsze, mniej natrętne komunikaty.** Komunikaty „Usunięto …" / „Przeniesiono …" / „Dotarcie" / podążanie-zablokowane / auto-pauza-lokalizacja-wyłączona pokazują się teraz jako krótki Toast Androida (~2 s, system overlay) zamiast 4-sekundowego snackbara, który blokował dół mapy. Możesz stuknąć inny waypoint zaraz po usunięciu jednego, bez czekania.
+
+---
+
+## 1.30.0 / 1.30.1 — 25 kwi 2026 — Jakość nagrywania
+
+Pierwszy hike po 1.29 (4 h 10 min, 9,98 km) ujawnił, że nagrywanie live tracku zapisywało dużo więcej punktów niż potrzeba i wchłonęło duży fałszywy spadek wysokości spowodowany utkniętą wartością wysokości. Oba naprawione:
+
+- **Lżejsze, gładsze nagrania.** Nowy filtr zachowuje fix tylko, jeśli ruszyłeś się co najmniej 5 m, minęło 15 sekund albo wysokość zmieniła się o 3 m+. Mocno nieprecyzyjne fixy (>25 m) są odrzucane od razu. Na hike testowym: ~4600 → ~1500 zapisanych punktów, brak widocznej zmiany linii trasy, dystans bez zmian. Mniej miejsca; mniejsze eksporty GPX; ten sam ślad.
+- **Koniec z fałszywymi załamaniami wysokości.** Fused location provider niektórych Androidów zacina się i zwraca tę samą buforowaną wysokość (np. `139 m` na hike na 1200 m) przez minuty. Nagrywanie traktuje teraz takie odczyty jako „brak wartości" zamiast utrwalać błędną liczbę. Profil wysokości pokazuje czystą lukę zamiast zjazdu do zera, a statystyki wzniesienia / spadku odzwierciedlają tylko prawdziwe zmiany.
+- **Wysokość MSL na Androidzie 14+.** Tam, gdzie jest dostępna, nagrywanie używa uczciwszej wysokości względem średniego poziomu morza zamiast fallbacku WGS84 podatnego na powyższe zacinanie.
+
+Jeśli masz nagranie sprzed 1.30.0 z błędnym odczytem wysokości, możesz je powtórzyć — wyświetlanie tracku w aplikacji używa zapisanych punktów. Brak kroku migracji.
+
+---
+
 ## 1.29.0 — 24 kwi 2026
 
 - **Nagrywanie trasy na żywo.** Dotknij czerwonej kropki w lewym górnym rogu mapy, aby rozpocząć nagrywanie bieżącej wędrówki. Stoper na żywo `HH:MM:SS` zastępuje kropkę; dotknij go, aby uzyskać **Pauza / Zakończ / Usuń**. Twoja trasa rysuje się jako czerwona linia, gdy się poruszasz. Po **Zakończ** nagranie zostaje zapisane jako nowa Trasa, a panel otwiera się automatycznie, abyś mógł od razu sprawdzić dystans, podejście i profil wysokości.

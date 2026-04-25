@@ -1,6 +1,6 @@
 # Weather
 
-ApexGPS can show current conditions, an hourly forecast, and a 7-day outlook for any point you care about, plus animated precipitation radar and cloud-satellite layers on the map. Everything is opt-in.
+ApexGPS can show current conditions, an hour-by-hour outlook, and a 7-day outlook for any point you care about. Everything is opt-in.
 
 ## Turning weather on
 
@@ -18,7 +18,7 @@ The chip rotates between a few states:
 
 | State | Looks like | Meaning |
 |---|---|---|
-| Fresh | `☼ 24° · 12 km/h NE · 38%` | Updated within the last 15 minutes. |
+| Fresh | `☼ 24° · 12 km/h NE` | Updated within the last 15 minutes. |
 | Aging | `… · 32 min ago` | More than 15 minutes old, but still likely accurate. |
 | Stale / offline | `⚠ … · 2h ago` (greyed) | More than an hour old or no connectivity. Tap the chip to refresh manually. |
 
@@ -26,30 +26,27 @@ The chip never disappears once weather is on — it just changes its appearance 
 
 ## The forecast sheet
 
-Tap the chip (or the "Weather here" line on a waypoint) to open the full sheet:
+Tap the chip (or the "Weather here" line on a waypoint) to open the full sheet. Top-to-bottom it shows:
 
-- **Now** — temperature, "feels like", wind speed/direction/gusts, humidity, cloud cover, pressure, UV index, sunset.
-- **Next 24 hours** — a chart with temperature as a line and precipitation as bars.
-- **Next 7 days** — a row of weekday icons with the day's high/low temperature.
+- **Now** — large weather emoji + temperature, "feels like", and a row each for wind / humidity + max precip / dewpoint + UV / pressure + sunset.
+- **Next 24 hours** — eight icons every 3 hours (sun-side or moon-side depending on the local sunrise / sunset for that hour) with the hourly temperature.
+- **Pressure trend** (green) — 24-hour line chart, useful for spotting an approaching front.
+- **Humidity trend** (light blue) — 24-hour line chart.
+- **Next 7 days** — a row of weekday icons with the day's high / low temperature.
 
-There's a refresh button (↻) in the sheet header that bypasses the cache and fetches fresh data. If you're offline, the button briefly shows "No connection — showing last cached data" and the previous data stays on screen.
+There's a refresh button (↻) in the sheet header that bypasses the cache and fetches fresh data. If you're offline, the previous data stays on screen and the chip's stale indicator stays visible.
 
-## Map overlays
+## Elevation-aware forecasts on peaks
 
-The Maps hub (☰ → Maps) has an **Overlays** section with two independent toggles:
-
-- **Precipitation radar** — animated rain layer in colour-coded blue → green → yellow → red, covering the past 2 hours plus a 30-minute nowcast. Coverage is global; the network of ground-stations is sparser in some regions (notably the Middle East), so radar fine detail varies.
-- **Cloud satellite** — infrared cloud-top layer from geostationary weather satellites, refreshed about every 10 minutes.
-
-Both overlays are tile-only — they don't send your location anywhere. They're independent of the master weather toggle, so you can have radar on the map without enabling per-point forecasts (or vice versa).
+If a waypoint has a stored elevation (entered manually, set from GPS, or imported from a GPX with `<ele>`), that elevation is sent to Open-Meteo so the model knows it's a summit and not a valley point at the same lat / lon. The same applies to the chip: it uses your GPS altitude. On a 1500 m peak this typically corrects the forecast temperature by ~9 °C compared to a coordinates-only lookup.
 
 ## Auto-refresh
 
-When weather is enabled, the chip updates every 15 minutes while the app is open and online. The map overlays refresh in the background as new tiles become available (~every 10 minutes for radar). If you're in airplane mode the chip stays put with the last known data and a "stale" indicator until you reconnect.
+When weather is enabled, the chip updates every 15 minutes while the app is open and online. If you're in airplane mode the chip stays put with the last known data and a "stale" indicator until you reconnect.
 
 ## Data sources
 
-Forecasts come from **[Open-Meteo](https://open-meteo.com)**, a free public API that blends ECMWF, GFS, ICON and other top-tier global models. Animated radar comes from **[RainViewer](https://rainviewer.com)**. Both are free for personal use and require no account or API key on your part.
+Forecasts come from **[Open-Meteo](https://open-meteo.com)**, a free public API that blends ECMWF, GFS, ICON and other top-tier global models. Free for personal use, no account, no API key.
 
 ## Limitations
 

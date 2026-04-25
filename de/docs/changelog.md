@@ -4,6 +4,57 @@ Für Nutzer sichtbare Änderungen, neueste zuerst. Für internes Refactoring / r
 
 ---
 
+## 1.32.1 — 25. Apr. 2026 — Wetter: kleine Korrekturen
+
+- **Korrekte Sonnen- / Mondsymbole über Mitternacht hinweg.** Der 24-Stunden-Wetterstreifen zeigte bei spätem Öffnen nachts Mond-Glyphen für die Nachmittagsstunden des Folgetages (11:00, 14:00, 17:00). Jede Stunde wählt jetzt ihren eigenen Sonnenauf- / -untergang, sodass Tagstunden immer die Sonnenseite-Symbole zeigen.
+- **Wegpunkt-Vorhersage berücksichtigt nun tatsächlich die Höhe.** Wenn ein Gipfel-Wegpunkt fast an derselben Koordinate wie Ihre aktuelle GPS-Position lag, wurde manchmal die zwischengespeicherte Vorhersage für die aktuelle Position für den Wegpunkt zurückgegeben statt einer frischen, höhenbewussten Abfrage. Auf einem 1480-m-Gipfel bedeutete das eine Vorhersage, die ~9 °C zu warm war. Der Cache schlüsselt jetzt zusätzlich nach Höhe, sodass die gespeicherte Höhe des Wegpunkts immer berücksichtigt wird.
+
+---
+
+## 1.32.0 — 25. Apr. 2026 — Wetter: Punktdaten verfeinert, keine Karten-Overlays
+
+Nach 1.31.0 bestanden die Karten-Overlays (Niederschlag, Wolken) den Augen-Test auf Wander-Zoomstufen nicht — sie wirkten wie blockige farbige Quadrate ohne echten Geländebezug, und die untere Steuerleiste (Overlay-Schieberegler + Chip + Tempo / Höhe / Distanz) verschlang zu viel Bildschirm. Diese Version räumt die Karte auf und konzentriert sich auf das Punkt-Sheet, wo die nützlichen Details sitzen.
+
+- **Karten-Overlays entfernt.** Keine Niederschlag-Radar- oder Wolkendecken-Overlays auf der Basiskarte mehr, kein Zeitschieber. Der Bildschirm **Einstellungen → Wetter** schrumpft auf einen einzigen Hauptschalter.
+- **Reicheres Punkt-Sheet.** Das Wetter-Sheet (Tippen auf den Chip oder auf die Zeile „Wetter hier“ eines Wegpunkts) zeigt nun: ein Held-Panel mit Wetter-Emoji, Temperatur, „Gefühlt“; Zeilen für Wind / Luftfeuchte / Taupunkt / Druck / UV / Sonnenuntergang; einen 24-Stunden-Streifen mit stündlichen Wettersymbolen + Temperatur; einen Luftfeuchte-Verlauf (hellblau) und einen Druckverlauf (grün); und einen 7-Tage-Streifen mit Höchst- / Tiefstwert + Symbol. So gestaltet, dass es auf einem typischen Telefon auf einen Bildschirm passt.
+- **Wegpunkt-Höhe geht in die Vorhersage.** Wegpunkte mit gespeicherter Höhe geben diese an das Vorhersage-Modell weiter, sodass Gipfel-Vorhersagen die echte Gipfelhöhe nutzen statt der grob gemittelten Modellhöhe. Dasselbe gilt für die Chip-Vorhersage am aktuellen Standort — sie nutzt Ihre GPS-Höhe.
+- **Chip stimmt mit Wegpunkt-Karte überein.** Der Chip-Text in der Statusleiste passt nun zu dem, was beim Tippen auf einen Wegpunkt erscheint: Emoji + Temperatur + Wind. Eine dünne Trennlinie wurde zwischen Chip und Tempo / Höhe / Distanz-Zeile eingefügt, sodass sie als ein Panel gelesen werden.
+
+---
+
+## 1.31.0 — 25. Apr. 2026 — Wetter
+
+ApexGPS zeigt nun wandertaugliche Wetterinformationen aus kostenlosen öffentlichen APIs, vollständig opt-in.
+
+- **Vorhersage-Chip in der Statusleiste.** Sobald Sie Wetter unter **Einstellungen → Wetter** aktivieren, zeigt ein kleiner Chip über der Tempo / Höhe / Distanz-Leiste die aktuellen Bedingungen für Ihren GPS-Standort: Temperatur, Wind, Luftfeuchte. Der Chip aktualisiert alle 15 Minuten, solange Sie online sind, und zeigt an, wenn die Daten veraltet sind oder Sie offline gegangen sind (graut aus und ergänzt eine Uhr).
+- **Tippen-zum-Erweitern-Sheet.** Tippen Sie auf den Chip (oder die neue „Wetter hier“-Zeile in einem Wegpunkt-Panel) für die volle Aufschlüsselung — aktuelle Werte, die nächsten 24 Stunden als Temperaturlinie + Niederschlagsbalken-Diagramm und ein 7-Tage-Streifen mit Höchst-/Tiefstwerten und Wettersymbolen.
+- **Manuelle Aktualisierung.** Ein ↻-Button im Sheet-Header erzwingt eine frische Abfrage, wenn Sie nach einem Flugmodus-Patch wieder verbunden sind.
+- **Animierte Karten-Overlays.** Ein neuer Bereich **Overlays** im Karten-Hub fügt zwei unabhängige Schalter hinzu: Niederschlagsradar (animierter farblich kodierter Regen, letzte 2 Stunden plus 30-Minuten-Nowcast) und Wolken-Satellit (geostationäre IR-Wolkenoberseiten). Diese senden Ihren Standort nirgendwohin — es sind reine Kachel-Abfragen, unabhängig vom Wetter-Chip.
+- **Datenschutz zuerst.** Die gesamte Funktion ist standardmäßig aus. Vorhersagen kommen von Open-Meteo und Radar von RainViewer; beides sind kostenlose öffentliche APIs, die kein Konto und keinen API-Schlüssel erfordern. Ihr Standort wird nur gesendet, wenn Sie den Chip ausdrücklich aktivieren.
+
+Lesen Sie das vollständige Kapitel unter **Einstellungen → Anleitung → Wetter**.
+
+---
+
+## 1.30.2 — 25. Apr. 2026
+
+- **Kompass-Tippen respektiert die Rotationssperre.** Lange auf den Kompass drücken sperrt die Karten-Rotation; im gesperrten Zustand schnappt ein einzelner Tipp auf den Kompass die Karte nicht mehr nach Norden. (Sie müssten erst lange drücken, um zu entsperren, und dann tippen.) Das stellt die Absicht der Sperre wieder her — den Winkel gegen unbeabsichtigte Eingaben einfrieren, einschließlich eines Versehens-Tipps auf den Kompass.
+- **Kürzere, weniger störende Hinweise.** Die Meldungen „Gelöscht …“ / „Verschoben …“ / „Angekommen“ / Folgen-gesperrt / Auto-pausiert-Ortung-aus erscheinen nun als kurzer Android-Toast (etwa 2 Sekunden, System-Overlay) statt als 4-Sekunden-Snackbar, die den unteren Kartenrand blockierte. Sie können sofort einen anderen Wegpunkt antippen, nachdem Sie einen gelöscht haben, ohne zu warten.
+
+---
+
+## 1.30.0 / 1.30.1 — 25. Apr. 2026 — Aufzeichnungsqualität
+
+Die erste Wanderung nach 1.29 (4 h 10 Min, 9,98 km) zeigte, dass die Live-Track-Aufzeichnung viel mehr Punkte als nötig speicherte und einen großen falschen Höhenabfall durch eine festsitzende Höhenangabe übernommen hatte. Beides behoben:
+
+- **Leichtere, glattere Aufzeichnungen.** Ein neuer Filter behält einen Fix nur, wenn Sie sich mindestens 5 m bewegt haben, 15 Sekunden vergangen sind oder sich die Höhe um 3 m+ geändert hat. Schlecht genauere Fixes (>25 m) werden direkt verworfen. Beim Test-Hike: ~4600 → ~1500 gespeicherte Punkte, keine sichtbare Änderung der Track-Linie, Distanz unverändert. Weniger Speicher; kleinere GPX-Exporte; derselbe Track.
+- **Keine falschen Höhen-Einbrüche mehr.** Manche Android-Geräte liefern aus dem fused location provider dieselbe gecachte Höhe (z. B. `139 m` auf einer Wanderung bei 1200 m) minutenlang. Die Aufzeichnung behandelt diese Werte jetzt als „kein Wert“ statt die falsche Zahl zu persistieren. Das Höhenprofil zeigt eine saubere Lücke über dem fehlerhaften Bereich statt eines Einbruchs auf null, und die Aufstieg- / Abstieg-Werte spiegeln nur echte Höhenänderungen wider.
+- **MSL-Höhe auf Android 14+.** Wo verfügbar, nutzt die Aufzeichnung die ehrlichere Mittelmeer-Höhe statt der WGS84-Fallback-Höhe, die dem oben beschriebenen Festsitzen unterworfen ist.
+
+Wenn Sie eine Aufzeichnung vor 1.30.0 mit einer falschen Höhenangabe haben, können Sie sie neu aufzeichnen — die Anzeige im Track verwendet aber die persistierten Punkte. Es gibt keinen Migrationsschritt.
+
+---
+
 ## 1.29.0 — 24. Apr. 2026
 
 - **Live-Track-Aufzeichnung.** Tippen Sie auf den roten Punkt oben links auf der Karte, um die Aufzeichnung Ihrer aktuellen Tour zu starten. Ein Live-Timer `HH:MM:SS` ersetzt den Punkt; Tap für **Pause / Fertig / Löschen**. Ihr Pfad zeichnet sich als rote Linie auf der Karte, während Sie sich bewegen. Bei **Fertig** wird die Aufzeichnung als neuer Track gespeichert und das Overlay öffnet sich automatisch, damit Sie Distanz, Aufstieg und Höhenprofil sofort prüfen können.

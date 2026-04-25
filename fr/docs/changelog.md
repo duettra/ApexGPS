@@ -4,6 +4,57 @@ Changements visibles par l\'utilisateur, plus récents en premier. Pour les refa
 
 ---
 
+## 1.32.1 — 25 avr. 2026 — Météo : petites corrections
+
+- **Icônes soleil / lune correctes au passage de minuit.** Le bandeau météo sur 24 heures affichait des glyphes lune sur les heures d\'après-midi du *lendemain* (11h00, 14h00, 17h00) lorsqu\'on ouvrait la feuille tard le soir. Chaque heure choisit désormais son propre lever / coucher de soleil, donc les heures de jour montrent toujours les icônes côté soleil.
+- **La prévision waypoint utilise vraiment l\'altitude du waypoint.** Quand un waypoint sommet se trouvait pratiquement aux mêmes coordonnées que votre position GPS actuelle, la prévision en cache pour la position courante était parfois renvoyée pour le waypoint au lieu d\'une requête fraîche tenant compte de l\'altitude. Sur un sommet à 1480 m la prévision était ~9 °C trop chaude. Le cache utilise maintenant l\'altitude comme clé, donc l\'altitude stockée du waypoint est toujours respectée.
+
+---
+
+## 1.32.0 — 25 avr. 2026 — Météo : finition par-point, plus d\'overlays carte
+
+Après 1.31.0, les overlays météo en grille n\'ont pas passé le test visuel sur les niveaux de zoom de randonnée — ils apparaissaient comme des carrés colorés sans alignement réel avec le terrain, et la rangée du bas (curseur d\'overlay + pastille + barre vitesse / altitude / distance) prenait trop d\'écran. Cette version dépouille la carte et mise sur la feuille par-point, là où les détails utiles vivent.
+
+- **Overlays carte retirés.** Plus de radar de précipitations ni de couvert nuageux sur le fond de carte, plus de curseur temporel. L\'écran **Paramètres → Météo** se réduit à un seul interrupteur principal.
+- **Feuille par-point plus riche.** La feuille météo (toucher la pastille ou la ligne « Météo ici » d\'un waypoint) montre maintenant : panneau actuel avec emoji météo, température, « ressenti » ; lignes pour vent / humidité / point de rosée / pression / UV / coucher ; bandeau 24 heures avec icônes météo horaires + température ; tendance d\'humidité (bleu clair) et tendance de pression (vert) ; et bandeau 7 jours avec maxi / mini + icône. Conçu pour tenir sur un écran de téléphone classique.
+- **L\'altitude par-waypoint est envoyée à la prévision.** Les waypoints avec un champ altitude stocké la transmettent au modèle, donc les prévisions de sommet utilisent la vraie hauteur au lieu de l\'altitude moyennée grossière. Idem pour la prévision de la pastille — elle utilise votre altitude GPS.
+- **La pastille s\'aligne avec la carte du waypoint.** Le texte de la pastille de la barre de stats correspond désormais à ce que vous voyez en touchant un waypoint : emoji + temp + vent. Un fin séparateur a été ajouté entre la pastille et la rangée vitesse / altitude / distance pour qu\'elles se lisent comme un seul panneau.
+
+---
+
+## 1.31.0 — 25 avr. 2026 — Météo
+
+ApexGPS affiche maintenant des informations météo de niveau randonnée depuis des APIs publiques gratuites, entièrement opt-in.
+
+- **Pastille de prévision dans la barre de stats.** Une fois la météo activée dans **Paramètres → Météo**, une petite pastille au-dessus de la barre vitesse / altitude / distance affiche les conditions actuelles à votre position GPS : température, vent, humidité. La pastille se met à jour toutes les 15 minutes en ligne et indique quand les données sont périmées ou que vous êtes hors-ligne (grise et ajoute une horloge).
+- **Feuille déroulante.** Touchez la pastille (ou la nouvelle ligne « Météo ici » d\'un panneau de waypoint) pour le détail complet — relevés actuels, prochaines 24 heures sous forme de courbe de température + barres de précipitations, et bandeau 7 jours avec maxi/mini et icônes.
+- **Rafraîchissement manuel.** Un bouton ↻ dans l\'en-tête force une requête fraîche après reconnexion.
+- **Overlays animés sur la carte.** Une nouvelle section **Overlays** dans le hub Cartes ajoute deux interrupteurs indépendants : radar de précipitations (pluie animée code couleur, 2 dernières heures + nowcast 30 min) et satellite nuageux (sommets nuageux IR géostationnaires). Ils n\'envoient pas votre position — ce sont juste des tuiles, indépendantes de la pastille météo.
+- **Vie privée d\'abord.** Tout est désactivé par défaut. Les prévisions viennent d\'Open-Meteo, le radar de RainViewer ; deux APIs publiques gratuites sans compte ni clé. Votre position n\'est envoyée que si vous activez explicitement la pastille.
+
+Lisez le chapitre complet sous **Paramètres → Guide d\'utilisation → Météo**.
+
+---
+
+## 1.30.2 — 25 avr. 2026
+
+- **Tap sur la boussole respecte le verrouillage de rotation.** Appui long sur la boussole pour verrouiller la rotation de la carte ; une fois verrouillée, un simple tap sur la boussole ne ramène plus la carte au nord. (Il faudrait d\'abord rappuyer long pour déverrouiller, puis tapoter.) Cela rétablit l\'intention du verrou — figer l\'angle contre les entrées involontaires, y compris un tap parasite sur la boussole.
+- **Notifications plus brèves, moins intrusives.** Les messages « Supprimé … » / « Déplacé … » / « Arrivé » / suivi-verrouillé / auto-pause-localisation s\'affichent maintenant comme un bref Toast Android (~2 s, overlay système) au lieu d\'un snackbar de 4 s qui bloquait le bas de la carte. Vous pouvez toucher un autre waypoint juste après en avoir supprimé un, sans attendre.
+
+---
+
+## 1.30.0 / 1.30.1 — 25 avr. 2026 — Qualité d\'enregistrement
+
+La première randonnée après 1.29 (4 h 10 min, 9,98 km) a révélé que l\'enregistrement live de trace stockait beaucoup plus de points que nécessaire et avait absorbé une fausse chute d\'altitude due à une lecture d\'altitude bloquée. Les deux corrigés :
+
+- **Enregistrements plus légers, plus lisses.** Un nouveau filtre ne garde un fix que si vous avez bougé d\'au moins 5 m, 15 secondes se sont écoulées ou l\'altitude a changé de 3 m+. Les fixes très imprécis (>25 m) sont écartés. Sur la randonnée test : ~4600 → ~1500 points stockés, aucun changement visible de la trace, distance inchangée. Moins de stockage, exports GPX plus petits, même trace.
+- **Plus de fausses chutes d\'altitude.** Le fused location provider de certains Android se bloque et renvoie la même altitude en cache (par ex. `139 m` en randonnée à 1200 m) pendant des minutes. L\'enregistrement traite désormais ces lectures comme « pas de valeur » plutôt que de persister le mauvais chiffre. Le profil d\'altitude montre une coupure propre sur la fenêtre fautive au lieu d\'un creux à zéro, et les stats montée / descente ne reflètent que les vraies variations.
+- **Altitude MSL sur Android 14+.** Quand disponible, l\'enregistrement utilise l\'altitude moyenne au-dessus du niveau de la mer plus honnête que le fallback WGS84, sujet au bug ci-dessus.
+
+Si vous avez un enregistrement antérieur à 1.30.0 avec une mauvaise altitude, vous pouvez le refaire — l\'affichage dans la trace utilise les points persistés. Pas d\'étape de migration.
+
+---
+
 ## 1.29.0 — 24 avr. 2026
 
 - **Enregistrement live de trace.** Appuyez sur la pastille rouge en haut à gauche de la carte pour démarrer l\'enregistrement de votre sortie. Un chrono live `HH:MM:SS` remplace la pastille ; tap pour **Pause / Terminer / Supprimer**. Votre parcours se dessine comme une ligne rouge au fil de vos déplacements. Sur **Terminer** l\'enregistrement est sauvegardé comme nouvelle Trace et le panneau s\'ouvre automatiquement pour consulter distance, dénivelé et profil d\'altitude tout de suite.
