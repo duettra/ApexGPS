@@ -18,8 +18,8 @@ Everything revolves around this view. Here's what each control does.
 
 A round chip with a red needle. Always visible. The needle always points to true north regardless of how the map is rotated, so it also works as a permanent north indicator.
 
-- **Tap** — smoothly rotates the map back to north-up.
-- **Long-press** — toggles rotation lock. When the chip is **blue**, two-finger rotation gestures are ignored; the map stays at its current orientation. Long-press again to unlock.
+- **Tap** — smoothly rotates the map back to north-up. While the lock is on, tap is a no-op so a stray touch on the compass can't reset your orientation.
+- **Long-press** — toggles rotation lock. When the chip is **blue**, two-finger rotation gestures are ignored and the map stays at its current orientation. Long-press again to unlock; one more tap then takes you back to north.
 
 A lock-at-launch option lives in **Settings → Appearance → Start with rotation locked** for users who never want to rotate the map.
 

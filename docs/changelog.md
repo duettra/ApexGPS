@@ -4,6 +4,25 @@ User-visible changes, newest first. For internal refactoring / version-bump-only
 
 ---
 
+## 1.30.2 — Apr 25, 2026
+
+- **Compass tap respects the rotation lock.** Long-press the compass to lock the map's rotation; while locked, a single tap on the compass no longer snaps the map back to north. (You'd have to long-press again to unlock first, then tap.) This restores the lock's intent — freezing the angle against accidental input, including a stray tap on the compass itself.
+- **Shorter, less intrusive notifications.** The "Deleted …" / "Moved …" / "Arrived" / follow-locked / auto-paused-location-off messages now show as a brief Android Toast (about 2 seconds, system overlay) instead of a 4-second snackbar that blocked the bottom of the map. You can tap another waypoint immediately after deleting one without waiting.
+
+---
+
+## 1.30.0 / 1.30.1 — Apr 25, 2026 — Recording quality
+
+First post-1.29 hike (4 h 10 min, 9.98 km) revealed that the live track recording was storing far more points than necessary and had absorbed a large false elevation drop from a stuck altitude reading. Both fixed:
+
+- **Lighter, smoother recordings.** A new filter only keeps a fix if you've moved at least 5 m, 15 seconds have elapsed, or the elevation changed by 3 m+. Wild fixes with accuracy worse than 25 m are dropped outright. On the test hike: ~4600 → ~1500 points stored, no visible change to the trail line, distance accuracy unchanged. Less storage; smaller GPX exports; the same trail.
+- **No more false elevation ditches.** Some Android devices' fused location provider gets stuck and reports the same cached altitude (e.g. `139 m` on a hike at 1200 m) for minutes at a time. The recording now treats those readings as "no value" rather than persisting the wrong number. The elevation profile shows a clean gap across the bad window instead of a dip to zero, and the climb / descent stats reflect only real altitude changes.
+- **MSL altitude on Android 14+.** Where available, the recording uses the more honest mean-sea-level altitude reading instead of the WGS84 fallback that's prone to the stuck-cache behaviour above.
+
+If you have a recording from before 1.30.0 with a wrong elevation reading, you can re-record it — but the on-track display in the app will use the persisted points. There's no migration step.
+
+---
+
 ## 1.29.0 — Apr 24, 2026
 
 - **Live track recording.** Tap the red dot at the top-left of the map to start recording your current trip. A live `HH:MM:SS` timer replaces the dot; tap it for **Pause / Finish / Delete**. Your path draws as a red line on the map as you move. On **Finish** the recording is saved as a new Track and the overlay opens automatically so you can review distance, ascent, and elevation profile right away.
