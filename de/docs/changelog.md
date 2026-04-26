@@ -4,6 +4,14 @@ Für Nutzer sichtbare Änderungen, neueste zuerst. Für internes Refactoring / r
 
 ---
 
+## 1.32.2 — 26. Apr. 2026 — Wetter standardmäßig an + vollständige Übersetzungen + Karten-Zurück-Button
+
+- **Wetter ist jetzt von Haus aus aktiviert.** Der Vorhersage-Chip und die Zeile „Wetter hier“ auf Wegpunkten sind ohne vorherige Aktivierung sichtbar. Sie können das Wetter unter **Einstellungen → Wetter** weiterhin ausschalten, falls Sie keine Netzwerk-Aufrufe wünschen — bestehende Installationen behalten Ihre vorherige Einstellung.
+- **Vollständige Übersetzungen für die Wetter-Funktion.** Alle Wetter-Texte — der Chip, das Sheet (aktuelles Panel, 24-Stunden-Streifen, Luftfeuchte- / Druck-Trends, 7-Tages-Streifen, Sonnenuntergang / UV / Druck / Taupunkt-Beschriftungen), die Einstellungen-Zeilen und der Anleitungs-Kapitelname — sind jetzt ins Deutsche, Französische, Spanische, Polnische und Arabische übersetzt. Die Wetter-Bedingungen („Leichter Regen“, „Gewitter mit Hagel“, „Teilweise bewölkt“, …) folgen dem standardisierten meteorologischen Vokabular der jeweiligen Sprache.
+- **Karten-Menü: Zurück-Button schließt jetzt zuerst eine geöffnete Karte.** Wenn **Neuen Bereich herunterladen** oder **Gespeicherte Offline-Karten** ausgeklappt war, hat der Zurück-Button das Karten-Menü übersprungen und Sie zur Hauptkarte gebracht. Jetzt schließt Zurück zuerst die geöffnete Karte; ein weiterer Druck führt Sie zur Hauptkarte. Das entspricht dem Verhalten anderswo (Einstellungen-Unterseiten, Mehrfachauswahl in den Tracks- / Wegpunkt-Listen).
+
+---
+
 ## 1.32.1 — 25. Apr. 2026 — Wetter: kleine Korrekturen
 
 - **Korrekte Sonnen- / Mondsymbole über Mitternacht hinweg.** Der 24-Stunden-Wetterstreifen zeigte bei spätem Öffnen nachts Mond-Glyphen für die Nachmittagsstunden des Folgetages (11:00, 14:00, 17:00). Jede Stunde wählt jetzt ihren eigenen Sonnenauf- / -untergang, sodass Tagstunden immer die Sonnenseite-Symbole zeigen.

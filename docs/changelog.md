@@ -4,6 +4,14 @@ User-visible changes, newest first. For internal refactoring / version-bump-only
 
 ---
 
+## 1.32.2 — Apr 26, 2026 — Weather on by default + full translations + Maps back-button
+
+- **Weather is now on out of the box.** The forecast chip and "Weather here" line on waypoints are visible without having to flip a setting first. You can still turn weather off under **Settings → Weather** if you'd prefer no network calls — existing installs keep whatever you already had.
+- **Full translations for the weather feature.** All weather text — the chip, the sheet (current panel, 24-hour strip, humidity / pressure trends, 7-day strip, sunset / UV / pressure / dewpoint labels), the Settings rows, and the User Guide chapter title — is now translated into German, French, Spanish, Polish and Arabic. Weather condition labels ("Light rain", "Thunderstorm + hail", "Partly cloudy", …) follow the standard meteorological vocabulary in each language.
+- **Maps menu: back button now collapses an open card before leaving.** When **Download new map area** or **Saved offline maps** was expanded, pressing back used to skip the Maps menu entirely and dump you back on the map. Now back closes the open card first; one more press takes you to the map. This matches how the back button already worked elsewhere (Settings sub-screens, multi-select on the tracks / waypoints list).
+
+---
+
 ## 1.32.1 — Apr 25, 2026 — Weather: small fixes
 
 - **Correct sun / moon icons through midnight.** The 24-hour weather strip used to show moon glyphs against the next day's afternoon hours (11:00, 14:00, 17:00) when you opened the sheet late at night. Each hour now picks its own day's sunrise / sunset, so daytime hours always show the sun-side icons.

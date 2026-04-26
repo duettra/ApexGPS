@@ -1,16 +1,16 @@
 # Wetter
 
-ApexGPS kann aktuelle Bedingungen, eine stündliche Vorschau und eine 7-Tages-Aussicht für jeden Punkt anzeigen, an dem Sie interessiert sind. Alles ist Opt-in.
+ApexGPS kann aktuelle Bedingungen, eine stündliche Vorschau und eine 7-Tages-Aussicht für jeden Punkt anzeigen, an dem Sie interessiert sind.
 
-## Wetter aktivieren
+## Was Sie sehen
 
-Öffnen Sie **Einstellungen → Wetter** und aktivieren Sie **Wetter anzeigen**. Sobald aktiviert:
+Wetter ist seit 1.32.2 **standardmäßig aktiviert**. Sobald Sie einen GPS-Fix haben:
 
-- Ein kleiner Chip erscheint über der Statusleiste und zeigt die Bedingungen an Ihrem aktuellen GPS-Standort.
+- Ein kleiner Chip erscheint über der Statusleiste und zeigt die Bedingungen an Ihrem aktuellen Standort.
 - Beim Tippen auf einen Wegpunkt erscheint im Wegpunkt-Panel eine Zeile „Wetter hier“.
 - Tippen auf eine der beiden Oberflächen öffnet ein Sheet mit der vollständigen Aufschlüsselung.
 
-Standard ist **aus**, damit die App Ihren Standort nicht ohne Ihr Einverständnis an einen Drittanbieter sendet. Wenn Sie es aktivieren, wird Ihr Breitengrad/Längengrad bei jeder Vorhersage-Abfrage an Open-Meteo (eine kostenlose öffentliche Wetter-API) gesendet.
+Wenn Wetter aktiviert ist, wird Ihr Breitengrad/Längengrad bei jeder Vorhersage-Abfrage an Open-Meteo (eine kostenlose öffentliche Wetter-API) gesendet. Wenn Sie keine Netzwerk-Aufrufe wünschen, öffnen Sie **Einstellungen → Wetter** und schalten Sie **Wetter anzeigen** aus — der Chip und die Zeile „Wetter hier“ verschwinden, und ApexGPS kontaktiert Open-Meteo nicht mehr.
 
 ## Was der Chip anzeigt
 

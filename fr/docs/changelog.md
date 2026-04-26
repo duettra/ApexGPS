@@ -4,6 +4,14 @@ Changements visibles par l\'utilisateur, plus récents en premier. Pour les refa
 
 ---
 
+## 1.32.2 — 26 avr. 2026 — Météo activée par défaut + traductions complètes + bouton retour des Cartes
+
+- **La météo est désormais activée d'origine.** La pastille de prévision et la ligne « Météo ici » sur les waypoints sont visibles sans devoir basculer un réglage. Vous pouvez toujours désactiver la météo dans **Paramètres → Météo** si vous préférez aucun appel réseau — les installations existantes conservent votre réglage précédent.
+- **Traductions complètes pour la fonction météo.** Tous les textes météo — la pastille, la feuille (panneau actuel, bandeau 24 heures, tendances humidité / pression, bandeau 7 jours, étiquettes coucher / UV / pression / point de rosée), les rangées dans Paramètres et le titre du chapitre du guide — sont maintenant traduits en allemand, français, espagnol, polonais et arabe. Les libellés de conditions météo (« Pluie légère », « Orage + grêle », « Partiellement nuageux », …) suivent le vocabulaire météorologique standard de chaque langue.
+- **Menu Cartes : le bouton retour referme désormais une carte ouverte avant de quitter.** Quand **Télécharger une nouvelle zone** ou **Cartes hors ligne enregistrées** était dépliée, retour ignorait le menu Cartes et vous renvoyait directement à la carte principale. Désormais retour referme d'abord la carte ouverte ; un appui de plus vous ramène à la carte principale. Cela correspond au comportement ailleurs (sous-écrans Paramètres, sélection multiple dans les listes de traces / waypoints).
+
+---
+
 ## 1.32.1 — 25 avr. 2026 — Météo : petites corrections
 
 - **Icônes soleil / lune correctes au passage de minuit.** Le bandeau météo sur 24 heures affichait des glyphes lune sur les heures d\'après-midi du *lendemain* (11h00, 14h00, 17h00) lorsqu\'on ouvrait la feuille tard le soir. Chaque heure choisit désormais son propre lever / coucher de soleil, donc les heures de jour montrent toujours les icônes côté soleil.

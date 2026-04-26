@@ -4,6 +4,14 @@ Zmiany widoczne dla użytkownika, najnowsze u góry. Refaktory wewnętrzne / pod
 
 ---
 
+## 1.32.2 — 26 kwi 2026 — Pogoda domyślnie włączona + pełne tłumaczenia + przycisk Wstecz w Mapach
+
+- **Pogoda jest teraz domyślnie włączona.** Chip prognozy i wiersz „Pogoda tutaj" przy punktach są widoczne bez konieczności wcześniejszego włączenia ustawienia. Możesz nadal wyłączyć pogodę w **Ustawienia → Pogoda**, jeśli wolisz brak połączeń sieciowych — istniejące instalacje zachowują Twoje wcześniejsze ustawienie.
+- **Pełne tłumaczenia funkcji pogody.** Wszystkie teksty pogodowe — chip, arkusz (panel bieżący, pasek 24-godzinny, trendy wilgotności / ciśnienia, pasek 7-dniowy, etykiety zachodu / UV / ciśnienia / punktu rosy), wiersze w Ustawieniach i tytuł rozdziału przewodnika — są teraz przetłumaczone na niemiecki, francuski, hiszpański, polski i arabski. Warunki pogodowe („Lekki deszcz", „Burza z gradem", „Częściowe zachmurzenie", …) używają standardowego słownictwa meteorologicznego w każdym języku.
+- **Menu Mapy: przycisk Wstecz najpierw zamyka otwartą kartę.** Gdy **Pobierz nowy obszar** lub **Zapisane mapy offline** były rozwinięte, Wstecz pomijał menu Mapy i przenosił Cię z powrotem na główną mapę. Teraz Wstecz najpierw zamyka otwartą kartę; kolejne naciśnięcie wraca do głównej mapy. To pokrywa się z zachowaniem w innych miejscach (podekrany Ustawień, wielokrotny wybór na listach tras / punktów).
+
+---
+
 ## 1.32.1 — 25 kwi 2026 — Pogoda: drobne poprawki
 
 - **Poprawne ikony słońca / księżyca po północy.** 24-godzinny pasek pogody pokazywał glify księżyca dla popołudniowych godzin *następnego* dnia (11:00, 14:00, 17:00), gdy arkusz otwierano późno wieczorem. Każda godzina wybiera teraz własny wschód / zachód słońca, więc godziny dzienne zawsze pokazują ikony strony słońca.

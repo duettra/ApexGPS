@@ -1,16 +1,16 @@
 # Météo
 
-ApexGPS peut afficher les conditions actuelles, une prévision horaire et un aperçu sur 7 jours pour n'importe quel point qui vous intéresse. Tout est opt-in.
+ApexGPS peut afficher les conditions actuelles, une prévision horaire et un aperçu sur 7 jours pour n'importe quel point qui vous intéresse.
 
-## Activer la météo
+## Ce que vous verrez
 
-Ouvrez **Paramètres → Météo** et activez **Afficher la météo**. Une fois activé :
+La météo est **activée par défaut** depuis 1.32.2. Dès que vous avez un point GPS :
 
-- Une petite pastille apparaît au-dessus de la barre de stats et affiche les conditions à votre position GPS actuelle.
+- Une petite pastille apparaît au-dessus de la barre de stats et affiche les conditions à votre position actuelle.
 - Toucher un waypoint affiche une ligne « Météo ici » sur le panneau du waypoint.
 - Toucher l'une ou l'autre surface ouvre une feuille avec le détail complet.
 
-Par défaut **désactivé** pour que l'app n'envoie pas votre position à un service tiers sans votre accord. Quand vous l'activez, votre latitude/longitude est envoyée à Open-Meteo (une API publique gratuite) à chaque requête de prévision.
+Quand la météo est active, votre latitude/longitude est envoyée à Open-Meteo (une API publique gratuite) à chaque requête de prévision. Si vous préférez qu'aucun appel réseau ne soit fait, ouvrez **Paramètres → Météo** et désactivez **Afficher la météo** — la pastille et la ligne « Météo ici » disparaissent, et ApexGPS cesse de contacter Open-Meteo.
 
 ## Ce que montre la pastille
 

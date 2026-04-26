@@ -1,16 +1,16 @@
 # Pogoda
 
-ApexGPS może pokazać aktualne warunki, prognozę godzinową i 7-dniową dla dowolnego punktu, który Cię interesuje. Wszystko jest opt-in.
+ApexGPS może pokazać aktualne warunki, prognozę godzinową i 7-dniową dla dowolnego punktu, który Cię interesuje.
 
-## Włączanie pogody
+## Co zobaczysz
 
-Otwórz **Ustawienia → Pogoda** i włącz **Pokaż pogodę**. Po włączeniu:
+Pogoda jest **domyślnie włączona** od wersji 1.32.2. Gdy tylko masz pozycję GPS:
 
-- Mały chip pojawia się nad paskiem statystyk i pokazuje warunki w Twojej aktualnej pozycji GPS.
-- Stuknięcie waypointa pokazuje wiersz „Pogoda tutaj" w panelu waypointa.
+- Mały chip pojawia się nad paskiem statystyk i pokazuje warunki w Twojej aktualnej pozycji.
+- Stuknięcie punktu pokazuje wiersz „Pogoda tutaj" w panelu punktu.
 - Stuknięcie któregokolwiek otwiera arkusz z pełnym rozkładem.
 
-Domyślnie **wyłączone**, by aplikacja nie wysyłała Twojej pozycji do serwisu zewnętrznego bez Twojej zgody. Po włączeniu Twoja szerokość/długość jest wysyłana do Open-Meteo (darmowe publiczne API pogodowe) przy każdym zapytaniu.
+Gdy pogoda jest włączona, Twoja szerokość/długość jest wysyłana do Open-Meteo (darmowe publiczne API pogodowe) przy każdym zapytaniu. Jeśli wolisz, by aplikacja nie wykonywała połączeń sieciowych, otwórz **Ustawienia → Pogoda** i wyłącz **Pokaż pogodę** — chip i wiersz „Pogoda tutaj" znikną, a ApexGPS przestanie się łączyć z Open-Meteo.
 
 ## Co pokazuje chip
 

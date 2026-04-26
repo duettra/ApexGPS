@@ -1,16 +1,16 @@
 # Weather
 
-ApexGPS can show current conditions, an hour-by-hour outlook, and a 7-day outlook for any point you care about. Everything is opt-in.
+ApexGPS can show current conditions, an hour-by-hour outlook, and a 7-day outlook for any point you care about.
 
-## Turning weather on
+## What you'll see
 
-Open **Settings → Weather** and switch on **Show weather**. Once enabled:
+Weather is **on by default** as of 1.32.2. As soon as you have a GPS fix:
 
-- A small chip appears above the stats bar showing the conditions at your current GPS location.
+- A small chip appears above the stats bar showing the conditions at your current location.
 - Tapping a waypoint shows a "Weather here" line on the waypoint panel.
 - Tapping either surface opens a sheet with the full breakdown.
 
-The default is **off** so the app doesn't send your location to a third-party service unless you ask. When you enable it, your latitude/longitude is sent to Open-Meteo (a free public weather API) for each forecast lookup.
+When weather is on, your latitude / longitude is sent to Open-Meteo (a free public weather API) for each forecast lookup. If you'd rather no network calls leave the app, open **Settings → Weather** and switch off **Show weather** — the chip and "Weather here" line disappear and ApexGPS stops contacting Open-Meteo.
 
 ## What the chip shows
 

@@ -1,16 +1,16 @@
 # Tiempo
 
-ApexGPS puede mostrar las condiciones actuales, una previsión por horas y un avance de 7 días para cualquier punto que te interese. Todo es opt-in.
+ApexGPS puede mostrar las condiciones actuales, una previsión por horas y un avance de 7 días para cualquier punto que te interese.
 
-## Activar el tiempo
+## Lo que verás
 
-Abre **Ajustes → Tiempo** y activa **Mostrar tiempo**. Una vez activado:
+El tiempo está **activado por defecto** desde 1.32.2. En cuanto tengas un punto GPS:
 
-- Aparece un pequeño chip sobre la barra de stats con las condiciones de tu posición GPS actual.
+- Aparece un pequeño chip sobre la barra de stats con las condiciones de tu posición actual.
 - Tocar un waypoint muestra una línea «Tiempo aquí» en el panel del waypoint.
 - Tocar cualquiera de las dos abre una hoja con el desglose completo.
 
-Por defecto está **desactivado** para que la app no envíe tu posición a un servicio externo sin tu consentimiento. Cuando lo activas, tu latitud/longitud se envía a Open-Meteo (una API pública gratuita) en cada consulta de previsión.
+Cuando el tiempo está activado, tu latitud/longitud se envía a Open-Meteo (una API pública gratuita) en cada consulta de previsión. Si prefieres que no se hagan llamadas de red, abre **Ajustes → Tiempo** y desactiva **Mostrar tiempo** — el chip y la línea «Tiempo aquí» desaparecen, y ApexGPS deja de contactar con Open-Meteo.
 
 ## Lo que muestra el chip
 

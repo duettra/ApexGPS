@@ -4,6 +4,14 @@ Cambios visibles para el usuario, más recientes primero. Para refactors interno
 
 ---
 
+## 1.32.2 — 26 abr. 2026 — Tiempo activado por defecto + traducciones completas + botón atrás de Mapas
+
+- **El tiempo viene activado de fábrica.** El chip de previsión y la línea «Tiempo aquí» en los waypoints se ven sin tener que activar un ajuste antes. Puedes desactivar el tiempo en **Ajustes → Tiempo** si prefieres no hacer llamadas de red — las instalaciones existentes mantienen tu ajuste anterior.
+- **Traducciones completas para la función del tiempo.** Todos los textos del tiempo — el chip, la hoja (panel actual, franja de 24 horas, tendencias de humedad / presión, franja de 7 días, etiquetas de ocaso / UV / presión / rocío), las filas de Ajustes y el título del capítulo de la Guía — están ahora traducidos al alemán, francés, español, polaco y árabe. Las condiciones meteorológicas («Lluvia ligera», «Tormenta con granizo», «Parcialmente nublado», …) siguen el vocabulario meteorológico estándar de cada idioma.
+- **Menú Mapas: el botón atrás cierra ahora una tarjeta abierta antes de salir.** Cuando **Descargar nueva zona** o **Mapas guardados** estaba desplegado, atrás se saltaba el menú Mapas y te devolvía directo al mapa. Ahora atrás cierra primero la tarjeta abierta; otra pulsación te lleva al mapa. Coincide con el comportamiento en otros sitios (subpantallas de Ajustes, multi-selección en las listas de rutas / waypoints).
+
+---
+
 ## 1.32.1 — 25 abr. 2026 — Tiempo: pequeñas correcciones
 
 - **Iconos de sol / luna correctos al cruzar medianoche.** La franja de tiempo de 24 horas mostraba glifos de luna en las horas de tarde del *día siguiente* (11:00, 14:00, 17:00) al abrir la hoja de noche. Cada hora elige ahora su propio orto / ocaso, así las horas diurnas siempre muestran los iconos lado sol.
