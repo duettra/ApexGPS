@@ -11,7 +11,7 @@ Long-press on the map where you want the waypoint. A sheet slides up with:
 - **Name** — optional. Defaults to "Waypoint" if you leave it blank.
 - **Notes** — optional description.
 - **Latitude / Longitude** — auto-filled from the tapped point; **editable** if you want to tweak them.
-- **Elevation (m)** — optional. Leave blank if unknown; fill in when you want the waypoint to carry a specific altitude (e.g. a summit height you looked up).
+- **Elevation (m)** — optional. Leave blank if unknown; fill in when you want the waypoint to carry a specific altitude (e.g. a summit height you looked up). Tap the small **download icon** on the right side of the field to fetch elevation from a worldwide terrain model (~30 m accuracy) using the typed Lat/Lon — handy when you're typing coordinates by hand. Greyed out until both Lat and Lon parse to valid numbers; brief spinner while fetching; a "Couldn't fetch elevation" toast if you're offline.
 - **Symbol** — pick from 32 icons.
 - **Colour** — 16-colour palette.
 - **Save** / **Cancel**.
@@ -65,7 +65,7 @@ Tap the waypoint again anytime during navigation to reopen the overlay (navigati
 
 Tap the waypoint → **Edit** in the overlay, or open **menu → Waypoints** and tap a row.
 
-Same sheet as when adding. Name, Notes, **Latitude**, **Longitude**, Symbol, Colour are all editable. On Save, the app validates the coordinates (lat ∈ [−90, 90], lon ∈ [−180, 180], both must be numbers) and shows an inline red error if they're out of range.
+Same sheet as when adding. Name, Notes, **Latitude**, **Longitude**, **Elevation**, Symbol, Colour are all editable. On Save, the app validates the coordinates (lat ∈ [−90, 90], lon ∈ [−180, 180], both must be numbers) and shows an inline red error if they're out of range. The download icon inside the Elev field re-fetches elevation from the terrain model — useful after dragging a waypoint to a new spot or after correcting Lat/Lon.
 
 ## Moving a waypoint
 
