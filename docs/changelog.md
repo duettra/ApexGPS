@@ -4,6 +4,12 @@ User-visible changes, newest first. For internal refactoring / version-bump-only
 
 ---
 
+## 1.32.4 — Apr 27, 2026 — Crop dialog fix for Arabic
+
+- **Crop track dialog now works in Arabic.** Previously, opening a track's crop dialog in Arabic showed no visible track until you dragged the sliders inward. Fixed: the chart's coordinate frame and slider drag handlers now stay consistent regardless of locale.
+
+---
+
 ## 1.32.3 — Apr 27, 2026 — One-tap elevation for waypoints
 
 - **Fetch elevation from terrain.** When you're editing a waypoint, the Elev (m) field now has a small download icon on the right. Tap it and the app fills in the elevation from a worldwide terrain model (about 30 m accuracy) using the latitude / longitude you've typed. Useful when you're typing a waypoint by hand, or after dragging one to a new spot. The icon is greyed out until you have valid coordinates entered; it shows a brief spinner while fetching, and a quick "Couldn't fetch elevation" message if you're offline. Whatever you'd already typed in the field is replaced — you explicitly asked for it.
