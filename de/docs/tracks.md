@@ -1,6 +1,6 @@
 # Tracks
 
-Ein **Track** ist eine aufgezeichnete Strecke — eine Abfolge von GPS-Punkten, als Linie auf der Karte verbunden. Tracks erhalten Sie entweder durch **Live-Aufzeichnung** direkt in ApexGPS oder durch **Import** von GPX-Dateien (aus GaiaGPS, Strava, Garmin Connect, wikiloc.com oder allem anderen, das GPX exportiert).
+Ein **Track** ist eine aufgezeichnete Strecke — eine Abfolge von GPS-Punkten, als Linie auf der Karte verbunden. Tracks erhalten Sie auf drei Arten: durch **Live-Aufzeichnung** direkt in ApexGPS, durch **Import** von GPX-Dateien (aus GaiaGPS, Strava, Garmin Connect, wikiloc.com oder allem anderen, das GPX exportiert) oder durch **Planung** einer neuen Strecke per Antippen auf der Karte.
 
 ## Aufzeichnung
 
@@ -37,6 +37,21 @@ GPS-Warmlauf-Rauschen am Anfang Ihres Tracks? Vergessen, **Fertig** zu tippen, u
 - Tippen Sie **Zuschneiden**, um zu bestätigen. Ein Bestätigungsdialog nennt genau, wie viele Punkte an jedem Ende entfallen. **Dies kann nicht rückgängig gemacht werden** — behalten Sie einen GPX-Export, wenn Sie unsicher sind.
 
 Das Zuschneiden berechnet auch Distanz, Bounding-Box und Höhenprofil neu, damit die Statistiken oben im Bildschirm sofort den gekürzten Track widerspiegeln.
+
+## Eine Strecke planen
+
+Wenn Sie eine Route vor der Wanderung planen möchten — die morgige Tour, eine Schleife von einer Papierkarte, eine Verbindung zwischen zwei bekannten Wegen — können Sie sie direkt auf der Karte skizzieren und als Track speichern.
+
+Öffnen Sie **Menü → Tracks** → tippen Sie auf den blauen **+**-Knopf unten rechts (über dem Importordner-Knopf). Die App wechselt zur Karte im **Planungsmodus**:
+
+- Die obere Leiste ändert sich zu `✕  Strecke planen  ✓ Speichern`. Ein kleiner Chip darunter zeigt die aktuelle Punktzahl und Gesamtdistanz.
+- **Tippen Sie irgendwo auf die Karte**, um einen nummerierten türkisfarbenen Punkt zu setzen. Jeder Tipp verlängert die Route zum nächsten Stopp. Punkt 1 wird automatisch an Ihrer aktuellen Position gesetzt, wenn Folgemodus aktiv ist.
+- **Lange auf einen Punkt drücken und ziehen**, um ihn zu verschieben. Lange auf den kleinen Punkt zwischen zwei Stopps drücken und ziehen, um einen neuen Punkt auf diesem Abschnitt einzufügen.
+- **Ziehen Sie einen Punkt auf das Mülleimer-Symbol** oben rechts (direkt unter dem Kompass), um ihn zu löschen. Die Linie verbindet sich neu durch die verbleibenden Nachbarn. Der Mülleimer leuchtet rot, wenn ein Punkt darüber schwebt.
+- Tippen Sie auf das **Diagramm-Symbol** rechts, um das **Höhenprofil** zu öffnen. Die App fragt Höhen von Open-Meteo für Stichproben alle ~100 m entlang Ihrer Route ab und zeigt dann ein Diagramm mit Aufstieg und Abstieg. Eine lange Strecke wird gröber abgetastet (max. ~500 Stichproben), damit der Abruf nie aufgebläht wird. Während des Ladens stehen Abbruch und Schließen zur Verfügung.
+- Tippen Sie auf **✓ Speichern** oben, benennen Sie Ihre Route, bestätigen Sie. Der neue Track erscheint in Ihrer Track-Liste (sortierbar, als GPX exportierbar, gegen eine spätere Aufzeichnung vergleichbar). Die Karte passt sich automatisch an die neue Streckenausdehnung an.
+
+Zum Abbrechen: tippen Sie auf **✕** oder drücken Sie die Hardware-Zurück-Taste. Wenn Sie Punkte gesetzt haben, fragt die App vor dem Verwerfen.
 
 ## Importieren
 

@@ -4,6 +4,14 @@ User-visible changes, newest first. For internal refactoring / version-bump-only
 
 ---
 
+## 1.33.0 — Apr 27, 2026 — Plan a track on the map
+
+- **New: track planning.** Sketch a route by tapping points on the map and save it as a regular Track — useful for scouting tomorrow's hike, marking a connector you spotted on a paper map, or just drawing the loop you remember. Open **menu → Tracks** and tap the new **+** button (above the import-folder button). The map opens in planning mode: tap to add numbered teal stops, long-press a stop to drag it, long-press the small dot between two stops to insert a new one. Drag any stop onto the **trash icon** (top-right, below the compass) to delete it — the line reconnects through the remaining neighbours. The trash glows red when a stop is hovering over it.
+- **Elevation profile for planned routes.** While planning, tap the **chart icon** on the right to see a real elevation chart for your draft. The app samples your route every ~100 m and asks Open-Meteo for the terrain altitude at each sample, then shows total ascent and descent. Long routes are sampled coarser so the fetch stays quick; you'll see a `X / Y` progress count and a Cancel button while it loads.
+- **Save the plan.** Tap **✓ Save** in the top bar, name your route, confirm — the planned track lands in your Tracks list, exportable as GPX, comparable against a future recording. If you'd loaded the elevation profile, the saved track carries the dense sampled points; if not, just the stops you tapped (with elevation to fill in later if you want).
+
+---
+
 ## 1.32.4 — Apr 27, 2026 — Crop dialog fix for Arabic
 
 - **Crop track dialog now works in Arabic.** Previously, opening a track's crop dialog in Arabic showed no visible track until you dragged the sliders inward. Fixed: the chart's coordinate frame and slider drag handlers now stay consistent regardless of locale.
