@@ -105,11 +105,13 @@ Active filters turn the icon blue.
 
 ### Sort
 
-**Sort icon**:
+**Sort icon** — three keys, and **re-tapping the active key flips the direction** (the active row shows the directional name + `✓`):
 
-- **Newest first** — by import / creation date (default).
-- **By name** — alphabetical.
-- **Nearest first** — closest to your current GPS location. Shows "(no GPS)" if the phone has no cached fix.
+- **Newest first** / **Oldest first** — by import / creation date (newest is the default).
+- **By name** → **Name (A→Z)** / **Name (Z→A)** — alphabetical.
+- **Nearest first** / **Farthest first** — closest to your current GPS location. Shows "(no GPS)" if the phone has no cached fix.
+
+Tapping a different key resets to that key's natural direction (newest / A→Z / nearest); re-tap to flip.
 
 ### Search
 

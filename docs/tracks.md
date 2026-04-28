@@ -88,21 +88,25 @@ A full list of every track you've imported. Count in the title.
 
 ### Filter
 
-Tap the **filter icon**. Two options:
+Tap the **filter icon**. Three options:
 
 - **Visibility** — All / Visible only / Hidden only. Tracks you've hidden via the visibility toggle still exist in the list but don't draw on the map.
 - **Color** — 16-colour palette. Tap a colour chip to see only tracks of that colour.
+- **Activity** — six chips (Hiking / Walking / Running / Cycling / Offroading / Paragliding) plus a **No activity** chip for tracks you haven't tagged yet. Combine with the others to isolate, say, only hiking tracks coloured blue.
 
-Active filter turns the icon blue. Tap **Any** in either section to clear.
+Active filter turns the icon blue. Tap **Any** in any section to clear that section.
 
 ### Sort
 
-Tap the **sort icon**:
+Tap the **sort icon**. Five keys, and **re-tapping the active key flips the direction** (the active row shows the directional name + `✓`):
 
-- **Newest first** — by import date (default).
-- **By name** — alphabetical.
-- **Nearest first** — closest centre-point to your current location. Uses your phone's last-known GPS fix so it works even if you haven't turned on GPS in ApexGPS this session. Shows "(no GPS)" if location permission is denied or there's no cached fix.
-- **By points** — tracks with the most points first (useful for picking out heavily-detailed tracks vs simple routes).
+- **Newest first** / **Oldest first** — by import / creation date (newest is the default).
+- **By name** → **Name (A→Z)** / **Name (Z→A)** — alphabetical.
+- **Nearest first** / **Farthest first** — closest centre-point to your current location. Uses your phone's last-known GPS fix so it works even if you haven't turned on GPS in ApexGPS this session. Shows "(no GPS)" if location permission is denied or there's no cached fix.
+- **By points** → **Most points** / **Fewest points** — useful for picking out heavily-detailed tracks vs simple routes.
+- **By activity** → **Activity (A→Z)** / **Activity (Z→A)** — alphabetical by activity type. Tracks with no activity tag sink to the bottom in A→Z and float to the top in Z→A — chosen so "what activities have I tagged?" is the readable view.
+
+Tapping a different key resets to that key's natural direction (newest / A→Z / nearest / most / A→Z); re-tap to flip.
 
 ### Search
 
@@ -124,7 +128,7 @@ Tap a track in the list → it opens the **Track detail** screen.
 - **Name** — editable.
 - **Colour** — tap to open colour picker.
 - **Visibility** — show / hide on the map.
-- **Elevation profile** — the same chart as the map overlay, but full-size.
+- **Elevation profile** — the same chart as the map overlay, but full-size. If the track was imported without per-point altitude (some GPX exporters strip it), the chart area shows a **Tap to fetch from terrain** card instead. One tap pulls altitudes from the same worldwide terrain model the waypoint and planning fetches use (~30 m accuracy, no account required); you'll see an `X / Y` progress count and a Cancel button while it loads. When it finishes, the chart renders against the fetched values and a **Save / Discard** bar appears at the bottom of the screen — Save persists the new altitudes onto your track, Discard throws them away.
 - **Ascent / descent** totals.
 - **Point count** — how many GPS samples make up this track.
 - **Show on map** — closes the detail and zooms the map to fit the track.

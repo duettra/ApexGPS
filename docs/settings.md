@@ -10,7 +10,7 @@
 - **Dark** — always dark.
 
 ### Default map
-The tile style used when the app launches. Six options; see [The map screen → Map layers](map.md) for details on each. You can still switch styles mid-session via the layers button on the map.
+The tile style used when the app launches. Six options; see [The map screen → Map layers](map.md) for details on each. You can still switch styles mid-session via the layers button on the map. Fresh installs default to **ESRI Topo** (clean labels at hiking zooms); existing installs keep whatever you'd previously selected.
 
 ### Track line width
 Slider, 4–24 dp. Heavier lines are easier to see when many tracks overlap; thinner lines look cleaner at high zoom. Default is around 6 dp.
