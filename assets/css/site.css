@@ -126,22 +126,37 @@ section.alt { background: var(--bg-2); }
 }
 
 /* ── Screenshot strip ─────────────────────────────────────────── */
+/* Desktop default: wrap into rows, centred — no scroll, no clipping
+   when 5 × 220 px overflows the wrap on 1100–1200 px viewports.
+   Mobile (≤ 720 px): switch to a horizontal carousel with snap. */
 .shots {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 16px;
-  overflow-x: auto;
-  padding: 4px 4px 24px;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: thin;
+  padding: 4px;
 }
 .shots img {
-  width: 220px;
+  width: 200px;
   flex: 0 0 auto;
   border-radius: 22px;
   box-shadow: 0 12px 28px -8px rgba(12,24,40,0.35), 0 2px 6px rgba(0,0,0,0.08);
-  scroll-snap-align: center;
   background: var(--navy);
+}
+@media (max-width: 720px) {
+  .shots {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    padding: 4px 4px 24px;
+  }
+  .shots img {
+    width: 200px;
+    scroll-snap-align: center;
+  }
 }
 
 /* ── Feature grid ─────────────────────────────────────────────── */
