@@ -1,7 +1,12 @@
 ---
-title: ApexGPS
+title: ApexGPS — Free hiking maps · offline
 permalink: /
+layout: home
 ---
+
+<!-- The rendered home page is built from _layouts/home.html. The markdown
+     body below is what GitHub shows when someone browses the public repo
+     source, so keep it informative but not duplicative of the landing page. -->
 
 # ApexGPS
 

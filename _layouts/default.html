@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if page.title %}{{ page.title }} · {% endif %}ApexGPS</title>
+<meta name="description" content="ApexGPS user guide — free Android hiking app with offline maps, GPX, waypoints, weather, planning.">
+<meta name="theme-color" content="#0c1828">
+<meta property="og:type" content="article">
+<meta property="og:title" content="{{ page.title | default: 'ApexGPS' }}">
+<meta property="og:image" content="https://apexgps.duttra.de/assets/hero.png">
+<meta property="og:site_name" content="ApexGPS">
+<link rel="stylesheet" href="/assets/css/site.css">
+<link rel="icon" href="/assets/hero.png" type="image/png">
+</head>
+<body>
+
+<nav class="site-nav">
+  <a class="brand" href="/"><span class="pin">📍</span> ApexGPS</a>
+  <span class="links">
+    <a href="/docs/">Guide</a>
+    <a href="/docs/changelog/">Changelog</a>
+    <a href="/docs/faq/">FAQ</a>
+    <a href="/privacy.html">Privacy</a>
+  </span>
+</nav>
+
+<main class="doc-body">
+  {{ content }}
+</main>
+
+<footer class="site-footer">
+  <div class="row">
+    <a href="/">Home</a> ·
+    <a href="/docs/">Guide</a> ·
+    <a href="mailto:sandwalker.one@proton.me">Contact</a> ·
+    <a href="/privacy.html">Privacy</a>
+  </div>
+  <div class="row" style="opacity:0.7">
+    © {{ 'now' | date: '%Y' }} ApexGPS
+  </div>
+</footer>
+
+</body>
+</html>

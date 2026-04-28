@@ -1,14 +1,16 @@
 include:
   - .well-known
+  - assets
 
 # Keep docs/*.md free of YAML frontmatter so GitHub's raw-markdown view at
 # github.com/duettra/ApexGPS/tree/main/docs renders cleanly. Jekyll derives
-# page URLs from these defaults instead of per-file `permalink:` keys.
+# page URLs and layout from these defaults instead of per-file frontmatter.
 defaults:
   - scope:
       path: "docs"
     values:
       permalink: /docs/:basename/
+      layout: default
   - scope:
       path: "docs/README.md"
     values:
@@ -17,6 +19,7 @@ defaults:
       path: "de/docs"
     values:
       permalink: /de/docs/:basename/
+      layout: default
   - scope:
       path: "de/docs/README.md"
     values:
@@ -25,6 +28,7 @@ defaults:
       path: "fr/docs"
     values:
       permalink: /fr/docs/:basename/
+      layout: default
   - scope:
       path: "fr/docs/README.md"
     values:
@@ -33,6 +37,7 @@ defaults:
       path: "es/docs"
     values:
       permalink: /es/docs/:basename/
+      layout: default
   - scope:
       path: "es/docs/README.md"
     values:
@@ -41,6 +46,7 @@ defaults:
       path: "pl/docs"
     values:
       permalink: /pl/docs/:basename/
+      layout: default
   - scope:
       path: "pl/docs/README.md"
     values:
@@ -49,6 +55,7 @@ defaults:
       path: "ar/docs"
     values:
       permalink: /ar/docs/:basename/
+      layout: default
   - scope:
       path: "ar/docs/README.md"
     values:

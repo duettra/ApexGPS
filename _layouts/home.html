@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page.title | default: site.title }}</title>
+<meta name="description" content="ApexGPS — a free Android hiking app. Offline maps, GPX import, waypoints, tracks, weather, planning. No subscription, no tracking.">
+<meta name="theme-color" content="#0c1828">
+
+<!-- Open Graph (WhatsApp / Telegram / Slack link unfurl) -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="ApexGPS — Free hiking maps · offline">
+<meta property="og:description" content="GPX · waypoints · tracks · weather · planning. No subscription, no tracking.">
+<meta property="og:image" content="https://apexgps.duttra.de/assets/hero.png">
+<meta property="og:url" content="https://apexgps.duttra.de/">
+<meta property="og:site_name" content="ApexGPS">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="stylesheet" href="/assets/css/site.css">
+<link rel="icon" href="/assets/hero.png" type="image/png">
+</head>
+<body>
+
+<header class="hero">
+  <h1><span aria-hidden="true">📍</span> ApexGPS</h1>
+  <p class="tag">Free hiking maps · 100% offline</p>
+  <p class="sub">GPX · Waypoints · Tracks · Weather · Planning</p>
+  <p class="ctas">
+    <a class="btn btn-primary" href="/docs/getting-started/">Read the guide →</a>
+    <a class="btn btn-ghost" href="mailto:sandwalker.one@proton.me?subject=ApexGPS%20access%20request">Request access ✉</a>
+  </p>
+</header>
+
+<section class="alt">
+  <div class="wrap">
+    <h2 class="section-title">See it in action</h2>
+    <p class="section-lede">Six map providers, offline-ready, with the data depth a serious hiker actually needs.</p>
+    <div class="shots" role="list">
+      <img src="/assets/screenshots/01-world.jpg" alt="World map with clustered waypoints" loading="lazy">
+      <img src="/assets/screenshots/02-relief.jpg" alt="ESRI Relief map with track overlay and tile-source picker" loading="lazy">
+      <img src="/assets/screenshots/03-track-profile.jpg" alt="Track detail with elevation profile" loading="lazy">
+      <img src="/assets/screenshots/04-planning.jpg" alt="Track planner with numbered vertices on satellite imagery" loading="lazy">
+      <img src="/assets/screenshots/05-tracks-list.jpg" alt="Tracks list with sort menu" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2 class="section-title">What's inside</h2>
+    <div class="features">
+      <div class="feature">
+        <span class="icon" aria-hidden="true">🗺️</span>
+        <h3>Six map providers</h3>
+        <p>OpenTopoMap, OSM Standard, ESRI Topo &amp; Relief, Satellite, Outdoors. Switch instantly.</p>
+      </div>
+      <div class="feature">
+        <span class="icon" aria-hidden="true">📥</span>
+        <h3>Offline regions</h3>
+        <p>Download tiles by area before you head out. No signal needed once stored.</p>
+      </div>
+      <div class="feature">
+        <span class="icon" aria-hidden="true">📍</span>
+        <h3>GPX import &amp; export</h3>
+        <p>Open standard. Bring tracks from anywhere; share with anyone.</p>
+      </div>
+      <div class="feature">
+        <span class="icon" aria-hidden="true">⛰️</span>
+        <h3>Elevation profiles</h3>
+        <p>Per-point ascent/descent from your recording or fetched from terrain DEM on demand.</p>
+      </div>
+      <div class="feature">
+        <span class="icon" aria-hidden="true">🛰️</span>
+        <h3>Live GPS recording</h3>
+        <p>Foreground tracking with smart filters; survives screen-off and reboots.</p>
+      </div>
+      <div class="feature">
+        <span class="icon" aria-hidden="true">✏️</span>
+        <h3>Track planner</h3>
+        <p>Sketch a route by tapping the map, fetch its elevation profile, save as a real track.</p>
+      </div>
+      <div class="feature">
+        <span class="icon" aria-hidden="true">☁️</span>
+        <h3>Hiking-grade weather</h3>
+        <p>Per-waypoint hourly forecasts for the next 7 days, no API key, fully localized.</p>
+      </div>
+      <div class="feature">
+        <span class="icon" aria-hidden="true">🧭</span>
+        <h3>Compass &amp; navigation</h3>
+        <p>Always-visible compass with rotation lock. Navigate to any waypoint with bearing &amp; distance.</p>
+      </div>
+      <div class="feature">
+        <span class="icon" aria-hidden="true">💾</span>
+        <h3>Backup &amp; restore</h3>
+        <p>One-tap ZIP backup of every track, waypoint, region, and setting. Move phones in seconds.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt why">
+  <div class="wrap">
+    <h2 class="section-title">Why ApexGPS?</h2>
+    <p class="section-lede">Built because subscription paywalls had taken over the hiking-app space. This one stays free, private, and yours.</p>
+    <ul>
+      <li><b>No subscription</b> — every feature, free, forever.</li>
+      <li><b>No tracking</b> — your location stays on your device. We don't run servers.</li>
+      <li><b>Open formats</b> — GPX in, GPX out. Your data is portable.</li>
+      <li><b>Six languages</b> — English · Deutsch · Français · Español · Polski · العربية.</li>
+      <li><b>Lean</b> — &lt; 4 MB APK, runs on Android 8+.</li>
+      <li><b>Honest</b> — closed-testing alpha while it earns its production launch.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap" style="text-align:center">
+    <h2 class="section-title">Read in your language</h2>
+    <p class="section-lede" style="margin-inline:auto">The full user guide is translated into six languages.</p>
+    <div class="langs">
+      <a href="/docs/">English</a>
+      <a href="/de/docs/">Deutsch</a>
+      <a href="/fr/docs/">Français</a>
+      <a href="/es/docs/">Español</a>
+      <a href="/pl/docs/">Polski</a>
+      <a href="/ar/docs/">العربية</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="row">
+    <a href="/docs/">User guide</a> ·
+    <a href="/docs/changelog/">Changelog</a> ·
+    <a href="/docs/faq/">FAQ</a> ·
+    <a href="/privacy.html">Privacy</a>
+  </div>
+  <div class="row">
+    <a href="mailto:sandwalker.one@proton.me">sandwalker.one@proton.me</a>
+  </div>
+  <div class="row" style="opacity:0.7">
+    © {{ 'now' | date: '%Y' }} ApexGPS · Map data © OpenStreetMap, Esri &amp; contributors
+  </div>
+</footer>
+
+</body>
+</html>

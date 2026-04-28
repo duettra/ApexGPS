@@ -1,6 +1,7 @@
 ---
 title: ApexGPS Privacy Policy
 permalink: /privacy.html
+layout: default
 ---
 
 # ApexGPS Privacy Policy
