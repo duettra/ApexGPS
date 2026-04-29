@@ -1,0 +1,19 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["QJ9HU233VT.com.apexgps.app.ios"],
+        "components": [
+          {
+            "/": "/loc",
+            "?": {
+              "lat": "?*",
+              "lon": "?*"
+            },
+            "comment": "Shared location pin — opens map with the bullseye marker centered on the lat/lon query"
+          }
+        ]
+      }
+    ]
+  }
+}
