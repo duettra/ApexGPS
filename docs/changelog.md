@@ -4,6 +4,19 @@ User-visible changes, newest first. For internal refactoring / version-bump-only
 
 ---
 
+## 1.33.2 — Apr 30, 2026 — Refreshed map look + bug-fix sweep
+
+- **Cleaner, more modern map screen.** The top bar, Layers / Measure / Follow-me FABs, the Record button, the stats bar, and the weather chip are now translucent — the map shows through faintly behind them so the screen feels less boxed-in. The map itself now extends edge-to-edge from the very top to the very bottom of the screen.
+- **Modernised menus.** The hamburger menu (top-right) and the Layers tile-source picker now appear as rounded popup cards with leading icons, instead of the flat rectangles they were before. Tap targets are larger; the active tile source is marked with a bold name + checkmark.
+- **Arabic / Persian / Urdu — Western digits everywhere.** Distances, elevations, coordinates, share-location notification times, and the weather sheet's hourly clock no longer render as Eastern-Arabic numerals (`٣٫٤ كم`) — they read as `3.4 km` regardless of phone language. This was a long-standing inconsistency in the chart labels and a few notification builders.
+- **Arabic charts: scrub gestures in the right direction.** The track-detail and planning elevation charts had inverted scrubbing in Arabic — touching the visual left edge jumped to the end of the route. Now the scrub follows your finger correctly regardless of language.
+- **Hardware-back from the elevation Save / Discard preview now discards the preview** instead of silently navigating away and dropping the unsaved fetch. The preview bar mirrors the planning-mode "are you sure?" pattern.
+- **Backup → restore now preserves your recorded tracks' start time, stop time, and activity tag.** Imported GPX tracks were already covered (they don't carry these fields anyway); recorded tracks were silently losing all three on every restore. If you've restored a backup since the activity-tagging feature shipped and noticed your hikes / rides lost their badges — that's why. Take a fresh backup now and the next restore will keep them.
+- **Translation completion (de / fr / es / pl / ar).** Eleven strings around the elevation-fetch flow ("Fetching elevation…", "Save", "Discard", "Couldn't fetch elevation", etc.) and the chart scrub tooltip ("Touch chart to explore") are now translated. Previously these were English-only on non-English phones.
+- **Misc tightening.** Several "Track saved" / "Acquiring GPS fix" status messages now appear as quick toasts (~2 s, don't block the map) instead of bottom snackbars (~4 s, blocked taps). The recording / follow-me service start path was hardened against a rare race that could log a "service didn't start" warning. Track planning's elevation fetch is faster on long routes (the per-batch network connections are now reused).
+
+---
+
 ## 1.33.1 — Apr 28, 2026 — Sort polish + fetch elevation for old tracks + ESRI default
 
 - **Re-tap a sort row to flip the direction.** In the Tracks and Waypoints lists, tapping the **active** sort row now reverses the order — `Newest first` flips to `Oldest first`, `Name (A→Z)` flips to `Name (Z→A)`, `Nearest first` flips to `Farthest first`, `Most points` flips to `Fewest points`. The active row shows the directional name plus a `✓`. Tapping a different row picks that key's natural direction; re-tapping then flips it. No separate asc / desc switch — keeps the menu compact.
