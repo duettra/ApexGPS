@@ -125,16 +125,17 @@ Long-press a track → selection mode. Tick the ones you want, then:
 
 Tap a track in the list → it opens the **Track detail** screen.
 
-- **Name** — editable.
+- **Name** — **tap the title in the top bar to rename**.
 - **Colour** — tap to open colour picker.
 - **Visibility** — show / hide on the map.
-- **Elevation profile** — the same chart as the map overlay, but full-size. If the track was imported without per-point altitude (some GPX exporters strip it), the chart area shows a **Tap to fetch from terrain** card instead. One tap pulls altitudes from the same worldwide terrain model the waypoint and planning fetches use (~30 m accuracy, no account required); you'll see an `X / Y` progress count and a Cancel button while it loads. When it finishes, the chart renders against the fetched values and a **Save / Discard** bar appears at the bottom of the screen — Save persists the new altitudes onto your track, Discard throws them away.
+- **Elevation profile** — the same chart as the map overlay, but full-size. If the track was imported without per-point altitude (some GPX exporters strip it), the chart area shows a **Tap to fetch from terrain** card instead. One tap pulls altitudes from the same worldwide terrain model the waypoint and planning fetches use (~30 m accuracy, no account required); you'll see an `X / Y` progress count and a Cancel button while it loads. When it finishes, the chart renders against the fetched values and a **Save / Discard** bar appears so you can preview the result and back out if it looks wrong.
 - **Ascent / descent** totals.
 - **Point count** — how many GPS samples make up this track.
-- **Show on map** — closes the detail and zooms the map to fit the track.
-- **Optimize** — simplify the track by dropping redundant points. Useful for importing huge overly-detailed exports. Non-destructive; you can re-import to get the original back.
-- **Share as GPX** — same as the map overlay's share button.
-- **Delete** — with confirmation.
+- **Top-bar icons:** **share** (export as GPX) and **show on map** (closes the detail and zooms the map to fit the track).
+- **Action row below the chart** — three buttons:
+  - **Crop Track** — open the cropping dialog (see [Cropping a recording](#cropping-a-recording) above).
+  - **Optimize Track (N pts)** — simplify the track by dropping redundant points. Useful for importing huge overly-detailed exports. The dialog asks for a target point count; on confirm the simplified track renders in the chart + stats panel beneath a small dialog summary (`3214 → 500 points · 12.40 → 12.30 km`). **Save** persists; **Discard** (or hardware-back) drops the preview without touching your track.
+  - **Delete Track** (red) — with confirmation.
 
 ## Bulk optimize (for heavy libraries)
 

@@ -4,6 +4,17 @@ User-visible changes, newest first. For internal refactoring / version-bump-only
 
 ---
 
+## 1.33.3 — May 4, 2026 — Correct sea-level elevation + cleaner track screen + follow-me bug fix
+
+- **Stats-bar elevation now reads true sea-level metres.** On most Android phones the GPS chip reports altitude relative to the *ellipsoid* — a smooth math model of Earth — not the actual ocean. In the Persian Gulf that's about 30 m off; standing on Abu Dhabi corniche showed roughly **−27 m** instead of zero. The app now uses the device's mean-sea-level value when available (Android 14+ on supporting hardware) and falls back to a bundled global geoid correction (1° EGM96 grid, ~128 KB) on devices that don't supply it (Vivo X300 Pro is one). Sea level now reads **+0 m to a couple of metres**, anywhere in the world, regardless of phone. Same correction is applied to the share-location text and the elevation passed to the weather forecast.
+- **Stats-bar speed pins to 0 km/h when you're standing still.** Previously, GPS jitter at standstill would spike the speed reading to 1–3 km/h despite no actual movement. The display now shows zero until you exceed your phone's reported speed-accuracy floor — the recording itself still uses the raw value, so slow legitimate motion isn't masked.
+- **Cleaner recordings in canyons and built-up areas.** Three new defenses against multipath altitude spikes (where a wall reflects the GPS signal): the recording filter now drops altitude readings whose vertical-accuracy is poor, rejects hard jumps over 50 m vs the previous good fix regardless of the elapsed time, and keeps its rate gate sharp even after long no-altitude stretches. A May-3 Wadi Hijr canyon trace had eight one-second altitude jumps of 70–300 m slip through the previous filter; the new layers catch them.
+- **Track detail screen — simpler layout.** The toolbar's pencil icon is gone — **tap the track name** in the toolbar to rename. A single row of three buttons sits below the elevation chart: **Crop · Optimize Track (X pts) · Delete Track**. The previous full-width button stack and the 3-dot overflow menu are both removed; everything fits on one phone screen without scrolling.
+- **Optimize is now preview-then-save.** Confirming the optimization in the dialog used to commit immediately with no undo. Now the simplified track renders in the chart + stats card underneath a small dialog that shows `3214 → 500 points · 12.40 → 12.30 km`. **Save** writes it; **Discard** (or hardware-back) drops it. No DB changes until you Save.
+- **Follow-me FAB: tap once to re-lock.** A bug where panning the map (which dimmed the follow-me FAB) and then tapping it required **two taps** to make the FAB go solid blue — the recenter animation was being misread as a continued user pan. Now one tap re-locks and recenters, as it should always have.
+
+---
+
 ## 1.33.2 — Apr 30, 2026 — Refreshed map look + bug-fix sweep
 
 - **Cleaner, more modern map screen.** The top bar, Layers / Measure / Follow-me FABs, the Record button, the stats bar, and the weather chip are now translucent — the map shows through faintly behind them so the screen feels less boxed-in. The map itself now extends edge-to-edge from the very top to the very bottom of the screen.
