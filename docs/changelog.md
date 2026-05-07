@@ -4,6 +4,19 @@ User-visible changes, newest first. For internal refactoring / version-bump-only
 
 ---
 
+## 1.33.5 — May 7, 2026 — Adjustable map-tile cache + welcome hike on first install
+
+- **Choose how much disk to allow for the map cache.** Settings → Offline cache now has four presets: 250 MB / 500 MB (default) / 1 GB / 2 GB. The new cap takes effect immediately — no restart. Saved offline regions are stored separately and aren't counted, so changing this value never deletes a region you've explicitly downloaded.
+- **A welcome hike on every fresh install.** A real recording of the **Watzmann Traverse** (Berchtesgaden, Germany) — Wimbachbrücke → Watzmannhaus → Hocheck → Mittelspitze → Südspitze → Wimbachgrieshütte → Wimbachbrücke, ~22.6 km loop / +2250 m / about 10–12 h on the move — is auto-imported the first time you open the app. Three landmark waypoints come along (Wimbachbrücke trailhead, DAV Watzmannhaus, Watzmann-Mittelspitze). Existing installs are untouched. If you delete the samples and want them back later, **Settings → Data → Load sample data** re-imports them on demand.
+
+---
+
+## 1.33.4 — May 5, 2026 — Permissions tidy-up for the Play Store listing
+
+- **Cleaner permissions on the Play Store page.** Removed a leftover "USB storage" permission declaration that was never used — the app caches map tiles in its own internal storage, not on USB / shared storage. The Play permissions summary now shows four fewer entries; nothing changes on your phone.
+
+---
+
 ## 1.33.3 — May 4, 2026 — Correct sea-level elevation + cleaner track screen + follow-me bug fix
 
 - **Stats-bar elevation now reads true sea-level metres.** On most Android phones the GPS chip reports altitude relative to the *ellipsoid* — a smooth math model of Earth — not the actual ocean. In the Persian Gulf that's about 30 m off; standing on Abu Dhabi corniche showed roughly **−27 m** instead of zero. The app now uses the device's mean-sea-level value when available (Android 14+ on supporting hardware) and falls back to a bundled global geoid correction (1° EGM96 grid, ~128 KB) on devices that don't supply it (Vivo X300 Pro is one). Sea level now reads **+0 m to a couple of metres**, anywhere in the world, regardless of phone. Same correction is applied to the share-location text and the elevation passed to the weather forecast.

@@ -4,6 +4,19 @@ Changements visibles par l\'utilisateur, plus récents en premier. Pour les refa
 
 ---
 
+## 1.33.5 — 7 mai 2026 — Cache de tuiles ajustable + randonnée d\'accueil à la première installation
+
+- **Choisissez l\'espace disque alloué au cache des tuiles.** Réglages → Cache hors-ligne propose désormais quatre préréglages : 250 Mo / 500 Mo (défaut) / 1 Go / 2 Go. La nouvelle limite s\'applique immédiatement — pas besoin de redémarrer. Les régions hors-ligne enregistrées sont stockées à part et non comptabilisées : modifier cette valeur ne supprime aucune région que vous avez délibérément téléchargée.
+- **Une randonnée d\'accueil à chaque nouvelle installation.** Un enregistrement réel de la **traversée du Watzmann** (Berchtesgaden, Allemagne) — Wimbachbrücke → Watzmannhaus → Hocheck → Mittelspitze → Südspitze → Wimbachgrieshütte → Wimbachbrücke, boucle de ~22,6 km / +2250 m / environ 10–12 h de marche — est importé automatiquement lors de la première ouverture de l\'app. Trois points de repère l\'accompagnent (départ Wimbachbrücke, DAV Watzmannhaus, Watzmann-Mittelspitze). Les installations existantes ne sont pas affectées. Si vous supprimez les exemples et les voulez à nouveau plus tard, **Réglages → Données → Charger les exemples** les réimporte à la demande.
+
+---
+
+## 1.33.4 — 5 mai 2026 — Nettoyage des autorisations pour la fiche Play Store
+
+- **Liste d\'autorisations Play Store plus propre.** Suppression d\'une déclaration héritée « stockage USB » qui n\'était jamais utilisée — l\'app met en cache les tuiles dans son stockage interne propre, pas sur USB / stockage partagé. La page d\'autorisations affiche désormais quatre entrées de moins ; rien ne change sur votre téléphone.
+
+---
+
 ## 1.32.2 — 26 avr. 2026 — Météo activée par défaut + traductions complètes + bouton retour des Cartes
 
 - **La météo est désormais activée d'origine.** La pastille de prévision et la ligne « Météo ici » sur les waypoints sont visibles sans devoir basculer un réglage. Vous pouvez toujours désactiver la météo dans **Paramètres → Météo** si vous préférez aucun appel réseau — les installations existantes conservent votre réglage précédent.

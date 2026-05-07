@@ -4,6 +4,19 @@ Zmiany widoczne dla użytkownika, najnowsze u góry. Refaktory wewnętrzne / pod
 
 ---
 
+## 1.33.5 — 7 maja 2026 — Konfigurowalny rozmiar cache\'u kafli + powitalna trasa po świeżej instalacji
+
+- **Wybierz, ile miejsca na dysku przeznaczyć na cache kafli.** Ustawienia → Cache offline mają teraz cztery wartości do wyboru: 250 MB / 500 MB (domyślny) / 1 GB / 2 GB. Nowy limit zaczyna działać natychmiast — restart nie jest potrzebny. Zapisane regiony offline są przechowywane osobno i nie wliczają się tutaj, więc zmiana tej wartości nigdy nie usuwa regionu, który świadomie pobrałeś.
+- **Powitalna trasa przy każdej nowej instalacji.** Prawdziwy zapis **trawersowania Watzmanna** (Berchtesgaden, Niemcy) — Wimbachbrücke → Watzmannhaus → Hocheck → Mittelspitze → Südspitze → Wimbachgrieshütte → Wimbachbrücke, pętla ~22,6 km / +2250 m / około 10–12 h marszu — jest automatycznie importowany przy pierwszym uruchomieniu aplikacji. Wraz z trasą pojawiają się trzy punkty orientacyjne (początek Wimbachbrücke, DAV Watzmannhaus, Watzmann-Mittelspitze). Istniejące instalacje nie są dotykane. Jeśli usuniesz przykłady i będziesz chciał je z powrotem, **Ustawienia → Dane → Wczytaj dane przykładowe** sprowadzi je z powrotem na żądanie.
+
+---
+
+## 1.33.4 — 5 maja 2026 — Porządki w uprawnieniach na karcie w Sklepie Play
+
+- **Czystsza lista uprawnień w Sklepie Play.** Usunięto przestarzałą deklarację „pamięci USB", która nie była nigdy używana — aplikacja buforuje kafle we własnej pamięci wewnętrznej, nie na USB / pamięci współdzielonej. Strona uprawnień pokazuje teraz cztery wpisy mniej; w samym telefonie nic się nie zmienia.
+
+---
+
 ## 1.32.2 — 26 kwi 2026 — Pogoda domyślnie włączona + pełne tłumaczenia + przycisk Wstecz w Mapach
 
 - **Pogoda jest teraz domyślnie włączona.** Chip prognozy i wiersz „Pogoda tutaj" przy punktach są widoczne bez konieczności wcześniejszego włączenia ustawienia. Możesz nadal wyłączyć pogodę w **Ustawienia → Pogoda**, jeśli wolisz brak połączeń sieciowych — istniejące instalacje zachowują Twoje wcześniejsze ustawienie.

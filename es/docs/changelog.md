@@ -4,6 +4,19 @@ Cambios visibles para el usuario, más recientes primero. Para refactors interno
 
 ---
 
+## 1.33.5 — 7 may. 2026 — Tamaño de caché ajustable + ruta de bienvenida en la primera instalación
+
+- **Elige cuánto espacio asignar al caché de mosaicos.** Ajustes → Caché offline ofrece ahora cuatro valores: 250 MB / 500 MB (predeterminado) / 1 GB / 2 GB. El nuevo límite se aplica al instante — no hace falta reiniciar. Las regiones offline guardadas se almacenan aparte y no cuentan aquí, así que cambiar este valor nunca borra una región que descargaste a propósito.
+- **Una ruta de bienvenida en cada instalación nueva.** Una grabación real de la **travesía del Watzmann** (Berchtesgaden, Alemania) — Wimbachbrücke → Watzmannhaus → Hocheck → Mittelspitze → Südspitze → Wimbachgrieshütte → Wimbachbrücke, bucle de ~22,6 km / +2250 m / unas 10–12 h de marcha — se importa automáticamente la primera vez que abres la app. Vienen tres puntos destacados (inicio Wimbachbrücke, DAV Watzmannhaus, Watzmann-Mittelspitze). Las instalaciones existentes no se tocan. Si borras los ejemplos y los quieres luego, **Ajustes → Datos → Cargar datos de ejemplo** los reimporta cuando lo desees.
+
+---
+
+## 1.33.4 — 5 may. 2026 — Limpieza de permisos para la ficha en Play Store
+
+- **Lista de permisos más limpia en Play Store.** Se eliminó una declaración heredada de "almacenamiento USB" que nunca se usó — la app guarda los mosaicos en su almacenamiento interno propio, no en USB / almacenamiento compartido. La página de permisos muestra ahora cuatro entradas menos; en tu teléfono no cambia nada.
+
+---
+
 ## 1.32.2 — 26 abr. 2026 — Tiempo activado por defecto + traducciones completas + botón atrás de Mapas
 
 - **El tiempo viene activado de fábrica.** El chip de previsión y la línea «Tiempo aquí» en los waypoints se ven sin tener que activar un ajuste antes. Puedes desactivar el tiempo en **Ajustes → Tiempo** si prefieres no hacer llamadas de red — las instalaciones existentes mantienen tu ajuste anterior.

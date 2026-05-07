@@ -27,6 +27,9 @@ Petit / Normal / Grand / XL. Multiplicateur sur la taille adaptative au zoom —
 ### Usage du cache
 Taille totale du cache de navigation + détail par source.
 
+### Taille du cache des tuiles carto
+Choisissez l\'espace disque alloué au cache automatique des tuiles : **250 Mo**, **500 Mo** (défaut), **1 Go**, **2 Go**. La nouvelle limite s\'applique immédiatement au prochain téléchargement de tuile — pas besoin de redémarrer. Les régions hors-ligne enregistrées sont stockées à part et ne comptent pas dans cette limite ; changer la taille du cache ne supprime jamais une région que vous avez délibérément téléchargée.
+
 ### Vider le cache
 - **Tout vider** — supprime les tuiles cachées pour chaque style. NE supprime PAS les régions enregistrées.
 - **Vider [source]** — par style. Utile quand un style prend beaucoup de place (imagerie satellite > carte courbes).
@@ -47,7 +50,7 @@ Lance Douglas-Peucker sur toutes les traces. Réduit les points sans altérer vi
 Les traces individuelles peuvent aussi être optimisées depuis leur écran détail.
 
 ### Charger les données d\'exemple
-Importe 3 points (Sommet / Point de vue / Départ de sentier) et 3 traces de longueurs et profils variés (5 km / 12 km / 25 km, avec +260 m à +3030 m). Pratique pour explorer l\'app sans avoir de GPX sous la main. Après import, ce sont des traces/points normaux — supprimables à tout moment.
+Un enregistrement réel de la **traversée du Watzmann** (Berchtesgaden, Allemagne) : Wimbachbrücke → Watzmannhaus → Hocheck → Mittelspitze → Südspitze → Wimbachgrieshütte → Wimbachbrücke, boucle de ~22,6 km / +2250 m / environ 10–12 h de marche. Trois points de repère aux coordonnées réelles : départ Wimbachbrücke (628 m), refuge DAV Watzmannhaus (1930 m), Watzmann-Mittelspitze (le *Hauptgipfel*, 2713 m). Importée automatiquement à la première ouverture d\'une installation neuve ; ce bouton la réimporte à la demande si vous l\'avez supprimée et la voulez à nouveau. Après import, ce sont des traces/points normaux — supprimables à tout moment.
 
 ## Clés API
 

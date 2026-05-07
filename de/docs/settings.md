@@ -27,6 +27,9 @@ Klein / Normal / Groß / XL. Das ist ein Multiplikator auf die automatische zoom
 ### Cache-Nutzung
 Gesamtgröße des Browse-Kachel-Caches + Aufschlüsselung pro Kartenquelle.
 
+### Cache-Größe für Kartenkacheln
+Wählen Sie, wie viel Speicherplatz für automatisch zwischengespeicherte Kartenkacheln genutzt wird: **250 MB**, **500 MB** (Standard), **1 GB**, **2 GB**. Der neue Wert greift sofort beim nächsten Kachel-Abruf — kein App-Neustart nötig. Gespeicherte Offline-Regionen werden separat abgelegt und nicht gegen dieses Limit gerechnet; das Ändern der Cache-Größe löscht also nie eine bewusst heruntergeladene Region.
+
 ### Cache leeren
 - **Alle leeren** — entfernt Browse-zwischengespeicherte Kacheln aus jedem Stil. Löscht NICHT Ihre gespeicherten Offline-Regionen.
 - **[bestimmte Quelle] leeren** — Leerung pro Stil. Nützlich, wenn ein Stil besonders viel Platz belegt (z. B. ist Satellitenbild schwerer als Höhenlinienkarte).
@@ -47,7 +50,7 @@ Führt die Douglas-Peucker-Vereinfachung auf jedem importierten Track durch. Red
 Einzelne Tracks können auch einzeln aus der Track-Detailansicht optimiert werden.
 
 ### Beispieldaten laden
-Importiert 3 Beispiel-Wegpunkte (Gipfel / Aussicht / Wanderparkplatz) und 3 Tracks unterschiedlicher Länge und Höhenprofile (5 km / 12 km / 25 km, mit realistischem Aufstieg von +260 m bis +3030 m). Nützlich, um das Verhalten der App ohne eigene GPX-Dateien auszuprobieren. Nach dem Import sind es ganz normale Tracks/Wegpunkte — jederzeit löschbar.
+Eine reale Aufzeichnung der **Watzmann-Überschreitung** (Berchtesgaden): Wimbachbrücke → Watzmannhaus → Hocheck → Mittelspitze → Südspitze → Wimbachgrieshütte → Wimbachbrücke, ~22,6 km Rundtour / +2250 m / etwa 10–12 h Gehzeit. Drei markante Wegpunkte mit echten Koordinaten: Trailhead Wimbachbrücke (628 m), DAV-Watzmannhaus (1930 m), Watzmann-Mittelspitze (Hauptgipfel, 2713 m). Beim ersten Start einer Neuinstallation automatisch importiert; mit dieser Schaltfläche können Sie die Daten bei Bedarf erneut importieren, falls Sie sie gelöscht haben und zurückhaben möchten. Nach dem Import sind es ganz normale Tracks/Wegpunkte — jederzeit löschbar.
 
 ## API-Schlüssel
 

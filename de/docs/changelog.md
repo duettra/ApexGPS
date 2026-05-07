@@ -4,6 +4,19 @@ Für Nutzer sichtbare Änderungen, neueste zuerst. Für internes Refactoring / r
 
 ---
 
+## 1.33.5 — 7. Mai 2026 — Anpassbarer Karten-Cache + Begleit-Wanderung auf neuen Installationen
+
+- **Wählen Sie, wie viel Speicherplatz für den Karten-Cache reserviert wird.** Unter Einstellungen → Offline-Cache stehen jetzt vier Voreinstellungen zur Auswahl: 250 MB / 500 MB (Standard) / 1 GB / 2 GB. Der neue Wert greift sofort — kein Neustart nötig. Gespeicherte Offline-Regionen werden separat abgelegt und nicht mitgezählt; das Ändern dieses Werts löscht also keine bewusst heruntergeladene Region.
+- **Eine Begleit-Wanderung bei jeder Neuinstallation.** Eine reale Aufzeichnung der **Watzmann-Überschreitung** (Berchtesgaden) — Wimbachbrücke → Watzmannhaus → Hocheck → Mittelspitze → Südspitze → Wimbachgrieshütte → Wimbachbrücke, ~22,6 km Rundtour / +2250 m / etwa 10–12 h Gehzeit — wird beim ersten Öffnen der App automatisch importiert. Dazu kommen drei markante Wegpunkte (Trailhead Wimbachbrücke, DAV-Watzmannhaus, Watzmann-Mittelspitze). Bestehende Installationen bleiben unberührt. Wenn Sie die Beispieldaten löschen und später zurückhaben möchten, importiert sie **Einstellungen → Daten → Beispieldaten laden** auf Knopfdruck erneut.
+
+---
+
+## 1.33.4 — 5. Mai 2026 — Berechtigungs-Aufräumarbeiten für den Play-Store-Eintrag
+
+- **Saubererer Berechtigungs-Eintrag im Play Store.** Eine veraltete „USB-Speicher"-Berechtigung wurde entfernt, die nie genutzt wurde — die App speichert Kartenkacheln im eigenen internen Speicher, nicht auf USB-/Wechselspeicher. Die Berechtigungs-Übersicht im Play Store zeigt jetzt vier Einträge weniger; auf Ihrem Telefon ändert sich nichts.
+
+---
+
 ## 1.32.2 — 26. Apr. 2026 — Wetter standardmäßig an + vollständige Übersetzungen + Karten-Zurück-Button
 
 - **Wetter ist jetzt von Haus aus aktiviert.** Der Vorhersage-Chip und die Zeile „Wetter hier“ auf Wegpunkten sind ohne vorherige Aktivierung sichtbar. Sie können das Wetter unter **Einstellungen → Wetter** weiterhin ausschalten, falls Sie keine Netzwerk-Aufrufe wünschen — bestehende Installationen behalten Ihre vorherige Einstellung.

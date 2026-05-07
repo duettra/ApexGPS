@@ -27,6 +27,9 @@ Pequeño / Normal / Grande / XL. Multiplicador sobre el tamaño adaptativo al zo
 ### Uso de caché
 Tamaño total del caché de navegación + desglose por fuente.
 
+### Tamaño del caché de mosaicos
+Elige cuánto espacio en disco asignar a los mosaicos guardados automáticamente: **250 MB**, **500 MB** (predeterminado), **1 GB**, **2 GB**. El nuevo límite se aplica al instante en la siguiente descarga de mosaico — no hace falta reiniciar. Las regiones offline guardadas se almacenan aparte y no cuentan en este límite; cambiar el tamaño del caché nunca borra una región que descargaste a propósito.
+
 ### Limpiar caché
 - **Limpiar todo** — borra mosaicos cacheados en todos los estilos. NO elimina regiones guardadas.
 - **Limpiar [fuente]** — por estilo. Útil si uno ocupa mucho (imagen satelital pesa más que mapa de curvas).
@@ -47,7 +50,7 @@ Ejecuta Douglas-Peucker en todas las rutas. Reduce puntos sin cambiar visualment
 Las rutas individuales también se pueden optimizar desde la pantalla detalle.
 
 ### Cargar datos de ejemplo
-Importa 3 puntos (Cumbre / Mirador / Inicio de sendero) y 3 rutas de longitudes y perfiles variados (5 km / 12 km / 25 km, con +260 m a +3030 m). Útil para explorar la app sin tener GPX propios. Tras el import son rutas/puntos normales — bórralos cuando quieras.
+Una grabación real de la **travesía del Watzmann** (Berchtesgaden, Alemania): Wimbachbrücke → Watzmannhaus → Hocheck → Mittelspitze → Südspitze → Wimbachgrieshütte → Wimbachbrücke, bucle de ~22,6 km / +2250 m / unas 10–12 h de marcha. Tres puntos destacados en coordenadas reales: inicio Wimbachbrücke (628 m), refugio DAV Watzmannhaus (1930 m), Watzmann-Mittelspitze (el *Hauptgipfel*, 2713 m). Se importa automáticamente al abrir la app por primera vez en una instalación nueva; este botón vuelve a importarlos a demanda si los has borrado y los quieres de vuelta. Tras el import son rutas/puntos normales — bórralos cuando quieras.
 
 ## Claves API
 

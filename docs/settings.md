@@ -27,6 +27,9 @@ Small / Normal / Large / XL. This is a multiplier on top of the automatic zoom-a
 ### Cache usage
 Total size of the browse tile cache + per-tile-source breakdown.
 
+### Map tile cache size
+Pick how much disk to allow for auto-cached map tiles: **250 MB**, **500 MB** (default), **1 GB**, **2 GB**. The new cap takes effect immediately on the next tile fetch — no app restart needed. Saved offline regions live separately and are not counted against this limit, so changing the cache size never deletes a region you explicitly downloaded.
+
 ### Clear cache
 - **Clear all** — removes browse-cached tiles across every style. Does NOT delete your saved offline regions.
 - **Clear [specific source]** — per-style clear. Useful if one style is taking a lot of space (e.g., satellite imagery is heavier than contour maps).
@@ -47,7 +50,7 @@ Runs Douglas-Peucker simplification across every imported track. Reduces point c
 Individual tracks can also be optimized one-at-a-time from the track detail screen.
 
 ### Load sample data
-Imports 3 example waypoints (Summit / Viewpoint / Trailhead) and 3 tracks of different lengths and elevation profiles (5 km / 12 km / 25 km, with realistic +260 m to +3030 m elevation gain). Useful for exploring what the app can do without needing your own GPX files yet. The samples are just normal tracks/waypoints after import — delete them any time.
+A real recording of the **Watzmann Traverse** (Berchtesgaden, Germany): Wimbachbrücke → Watzmannhaus → Hocheck → Mittelspitze → Südspitze → Wimbachgrieshütte → Wimbachbrücke, ~22.6 km loop / +2250 m / about 10–12 h on the move. Three landmark waypoints at canonical real-world coordinates: Wimbachbrücke trailhead (628 m), DAV Watzmannhaus (1930 m), Watzmann-Mittelspitze (the *Hauptgipfel* at 2713 m). Auto-imported on the first launch of a fresh install; this button re-imports it on demand if you've deleted it and want it back. The samples are just normal tracks/waypoints after import — delete them any time.
 
 ## API Keys
 

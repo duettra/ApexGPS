@@ -27,6 +27,9 @@ Mały / Normalny / Duży / XL. To mnożnik nakładany na automatyczny rozmiar ad
 ### Użycie pamięci podręcznej
 Łączny rozmiar pamięci przeglądania + podział wg źródła.
 
+### Rozmiar pamięci kafli mapy
+Wybierz, ile miejsca na dysku przeznaczyć na automatyczny cache kafli mapy: **250 MB**, **500 MB** (domyślny), **1 GB**, **2 GB**. Nowy limit zaczyna działać natychmiast przy następnym pobraniu kafla — restart aplikacji nie jest potrzebny. Zapisane regiony offline są przechowywane osobno i nie wliczają się do tego limitu; zmiana rozmiaru cache\'u nigdy nie usuwa regionu, który świadomie pobrałeś.
+
 ### Wyczyść pamięć
 - **Wyczyść wszystko** — usuwa kafelki z pamięci dla każdego stylu. NIE usuwa zapisanych regionów offline.
 - **Wyczyść [źródło]** — tylko dla danego stylu. Przydatne, gdy jeden styl zajmuje dużo (satelita > mapa poziomic).
@@ -47,7 +50,7 @@ Uruchamia Douglas-Peucker na każdej zaimportowanej trasie. Redukuje liczbę pun
 Pojedyncze trasy można też optymalizować jednocześnie z ekranu szczegółów.
 
 ### Wczytaj dane przykładowe
-Importuje 3 punkty (Szczyt / Punkt widokowy / Początek szlaku) i 3 trasy o różnych długościach i profilach wysokości (5 km / 12 km / 25 km, z podejściami od +260 m do +3030 m). Przydatne do odkrywania aplikacji bez własnych plików GPX. Po imporcie to zwykłe trasy/punkty — usuń je kiedy chcesz.
+Prawdziwy zapis **trawersowania Watzmanna** (Berchtesgaden, Niemcy): Wimbachbrücke → Watzmannhaus → Hocheck → Mittelspitze → Südspitze → Wimbachgrieshütte → Wimbachbrücke, pętla ~22,6 km / +2250 m / około 10–12 h marszu. Trzy punkty orientacyjne we współrzędnych rzeczywistych: początek Wimbachbrücke (628 m), schronisko DAV Watzmannhaus (1930 m), Watzmann-Mittelspitze (*Hauptgipfel*, 2713 m). Importowane automatycznie przy pierwszym uruchomieniu nowej instalacji; ten przycisk importuje je ponownie na żądanie, jeśli je usunąłeś i chcesz mieć je z powrotem. Po imporcie to zwykłe trasy/punkty — usuń je kiedy chcesz.
 
 ## Klucze API
 
