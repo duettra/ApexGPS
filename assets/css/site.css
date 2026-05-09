@@ -130,22 +130,28 @@ section.alt { background: var(--bg-2); }
    when 5 × 220 px overflows the wrap on 1100–1200 px viewports.
    Mobile (≤ 720 px): switch to a horizontal carousel with snap. */
 .shots {
+  /* Desktop: 7 tiles always in one row, sharing available width equally.
+     Each tile gets `flex: 1 1 0` so they fill the row, capped at
+     `max-width: 160px` so on ultra-wide they don't balloon. On smaller
+     desktops (< ~1120 px viewport) tiles auto-shrink to keep 7-in-a-row
+     instead of wrapping. The mobile breakpoint (≤ 720 px) below
+     overrides this to a horizontal scroll-snap carousel. */
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
-  gap: 14px;
+  gap: 12px;
   padding: 4px;
 }
 .shots img {
-  /* Auto-size so 7 thumbnails fit in one row inside the 1100 px wrap.
-     (1100 − 6 × 14 gap) / 7 ≈ 145; we floor to 140 to leave a small
-     slack for browser scrollbar gutter / fractional rounding.
-     Total: 7×140 + 6×14 = 1064 px, fits with ~36 px headroom. */
-  width: 140px;
-  flex: 0 0 auto;
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: 160px;
+  height: auto;
+  aspect-ratio: 630 / 1255;
   border-radius: 22px;
   box-shadow: 0 12px 28px -8px rgba(12,24,40,0.35), 0 2px 6px rgba(0,0,0,0.08);
   background: var(--navy);
+  object-fit: cover;
 }
 @media (max-width: 720px) {
   .shots {
@@ -159,7 +165,11 @@ section.alt { background: var(--bg-2); }
     gap: 16px;
   }
   .shots img {
+    /* Reset the desktop flex-fill rule — mobile uses fixed-width
+       horizontal-scroll carousel tiles, not equal-share flex. */
+    flex: 0 0 auto;
     width: 200px;
+    max-width: 200px;
     scroll-snap-align: center;
   }
 }
@@ -386,7 +396,7 @@ section.alt { background: var(--bg-2); }
 
   /* Carousel: image takes ~76 % of viewport width so neighbours peek in,
      making the swipe affordance obvious. */
-  .shots img { width: 76vw; max-width: 240px; }
+  .shots img { flex: 0 0 auto; width: 76vw; max-width: 240px; }
 
   .doc-body { padding: 20px 16px 48px; }
   .doc-body h1 { font-size: 1.55rem; }
