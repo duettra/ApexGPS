@@ -4,6 +4,13 @@ Zmiany widoczne dla użytkownika, najnowsze u góry. Refaktory wewnętrzne / pod
 
 ---
 
+## 1.33.6 — 9 maja 2026 — Niezawodna strefa-kosz po powrocie z ostatnich aplikacji
+
+- **Strefa-kosz służąca do usuwania punktów podczas planowania trasy i pomiaru znów działa niezawodnie po zminimalizowaniu aplikacji i ponownym otwarciu z listy ostatnich aplikacji.** Ukryta usterka powodowała, że gest "przeciągnij punkt na kosz, aby go usunąć" po cichu przestawał działać po odłączeniu i ponownym podłączeniu okna aplikacji (minimalizacja → dotknięcie z ostatnich aplikacji). Granice strefy-kosza pozostawały na współrzędnych sprzed minimalizacji, podczas gdy pozycja mapy nadal się aktualizowała, więc upuszczanie nie było już wykrywane. Test kolizji odczytuje teraz granice na świeżo przy każdym zdarzeniu przeciągania (i tylko wtedy, gdy ikona kosza jest faktycznie podłączona do okna) — dzięki czemu strefa-kosz działa poprawnie po dowolnej liczbie cykli powrotu. Restart aplikacji jako obejście nie jest już potrzebny.
+- **Wewnętrzne: porządki w buildzie pod weryfikację produkcyjną Play Store.** Aktualizacja zależności UI (`androidx.activity:activity-compose` 1.9.3 → 1.10.1) rozwiązująca ostrzeżenia Vitals zgłoszone w weryfikacji 1.33.5 ("edge-to-edge może nie wyświetlać się wszystkim użytkownikom") — czyste porządki, bez zmian w zachowaniu. Włączono ekstrakcję natywnych symboli debugowania dla buildów release (dziś bez efektu, bo jedyne biblioteki natywne w AAB są dostarczane bez symboli przez Google — uruchomi się automatycznie, jeśli przyszła zależność dostarczy symbole).
+
+---
+
 ## 1.33.5 — 7 maja 2026 — Konfigurowalny rozmiar cache\'u kafli + powitalna trasa po świeżej instalacji
 
 - **Wybierz, ile miejsca na dysku przeznaczyć na cache kafli.** Ustawienia → Cache offline mają teraz cztery wartości do wyboru: 250 MB / 500 MB (domyślny) / 1 GB / 2 GB. Nowy limit zaczyna działać natychmiast — restart nie jest potrzebny. Zapisane regiony offline są przechowywane osobno i nie wliczają się tutaj, więc zmiana tej wartości nigdy nie usuwa regionu, który świadomie pobrałeś.

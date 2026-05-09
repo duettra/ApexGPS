@@ -4,6 +4,13 @@ Cambios visibles para el usuario, más recientes primero. Para refactors interno
 
 ---
 
+## 1.33.6 — 9 may. 2026 — Fiabilidad de la zona-papelera tras volver desde recientes
+
+- **La zona-papelera para borrar un vértice durante la planificación o la medición vuelve a funcionar de forma fiable después de minimizar la app y reabrirla desde Recientes.** Un fallo latente hacía que el gesto de "arrastrar un vértice a la papelera para borrarlo" dejase de funcionar en silencio después de que la ventana de la app se desacoplase y se volviera a acoplar (minimizar → tocar desde Recientes). Los límites de la zona-papelera se quedaban fijados en las coordenadas previas a la minimización mientras la posición del mapa se seguía actualizando, así que los soltados ya no se detectaban. La prueba de colisión ahora lee los límites en fresco en cada evento de arrastre (y solo cuando el icono de la papelera está efectivamente acoplado a la ventana), por lo que la zona-papelera se mantiene operativa a través de cualquier número de ciclos de regreso. Ya no hace falta reiniciar la app como solución alternativa.
+- **Interno: limpiezas de build para la revisión de producción de Play Store.** Una dependencia de UI actualizada (`androidx.activity:activity-compose` 1.9.3 → 1.10.1) para resolver los avisos de Vitals señalados en la revisión 1.33.5 ("edge-to-edge puede no mostrarse a todos los usuarios") — pura limpieza, sin cambios de comportamiento. Extracción de símbolos de depuración nativos habilitada para builds release (hoy sin efecto porque las únicas bibliotecas nativas del AAB se entregan sin símbolos por parte de Google — se activa automáticamente si alguna futura dependencia los entrega).
+
+---
+
 ## 1.33.5 — 7 may. 2026 — Tamaño de caché ajustable + ruta de bienvenida en la primera instalación
 
 - **Elige cuánto espacio asignar al caché de mosaicos.** Ajustes → Caché offline ofrece ahora cuatro valores: 250 MB / 500 MB (predeterminado) / 1 GB / 2 GB. El nuevo límite se aplica al instante — no hace falta reiniciar. Las regiones offline guardadas se almacenan aparte y no cuentan aquí, así que cambiar este valor nunca borra una región que descargaste a propósito.

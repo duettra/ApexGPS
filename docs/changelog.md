@@ -4,6 +4,13 @@ User-visible changes, newest first. For internal refactoring / version-bump-only
 
 ---
 
+## 1.33.6 — May 9, 2026 — Trash drop-zone reliability fix
+
+- **Track-planning and measure-tool trash drop-zone now works reliably after the app is minimised and resumed from Recents.** A latent issue made the "drag a vertex over the trash bin to delete it" gesture silently stop working after the app's window detached and reattached (minimise → tap from Recents). The drop-zone bounds got stuck at their pre-minimise coordinates while the live map position kept updating, so drops never registered. The hit-test now reads bounds fresh on every drag event (and only when the trash icon is actually attached to the window), so the drop-zone keeps working through any number of resume cycles. No app-restart workaround needed any more.
+- **Internal: build cleanups for the Play Store production review.** Bumped a UI dependency (`androidx.activity:activity-compose` 1.9.3 → 1.10.1) to resolve the "edge-to-edge may not display for all users" Vitals warnings flagged on the 1.33.5 review — pure cleanup, no behavior change. Native debug-symbol extraction enabled for release builds (no-op today since the only native libs in the AAB ship pre-stripped by Google, but auto-activates if a future dep ever ships symbols).
+
+---
+
 ## 1.33.5 — May 7, 2026 — Adjustable map-tile cache + welcome hike on first install
 
 - **Choose how much disk to allow for the map cache.** Settings → Offline cache now has four presets: 250 MB / 500 MB (default) / 1 GB / 2 GB. The new cap takes effect immediately — no restart. Saved offline regions are stored separately and aren't counted, so changing this value never deletes a region you've explicitly downloaded.

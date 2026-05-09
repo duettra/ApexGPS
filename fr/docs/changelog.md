@@ -4,6 +4,13 @@ Changements visibles par l\'utilisateur, plus récents en premier. Pour les refa
 
 ---
 
+## 1.33.6 — 9 mai 2026 — Fiabilité de la zone-poubelle après mise en arrière-plan
+
+- **La zone-poubelle pour supprimer un sommet pendant la planification d\'itinéraire ou la mesure fonctionne à nouveau de façon fiable après que l\'application a été minimisée et rouverte depuis Récents.** Un défaut latent faisait que le geste « glisser un sommet sur la corbeille pour le supprimer » cessait silencieusement de fonctionner après que la fenêtre de l\'app se soit détachée puis rattachée (minimiser → toucher depuis Récents). Les limites de la zone-poubelle restaient figées sur les coordonnées d\'avant la mise en arrière-plan tandis que la position de la carte continuait à se mettre à jour, donc les dépôts n\'étaient plus détectés. Le test de collision lit maintenant les limites à neuf à chaque événement de glissement (et seulement quand l\'icône poubelle est effectivement attachée à la fenêtre) — la zone-poubelle reste donc fonctionnelle après n\'importe quel nombre de cycles de retour. Plus besoin de redémarrer l\'application comme contournement.
+- **Interne : nettoyages de build pour la revue de production Play Store.** Une dépendance UI mise à jour (`androidx.activity:activity-compose` 1.9.3 → 1.10.1) pour résoudre les avertissements Vitals signalés sur la revue 1.33.5 (« edge-to-edge peut ne pas s\'afficher pour tous les utilisateurs ») — pur nettoyage, aucun changement de comportement. Extraction des symboles de débogage natifs activée pour les builds release (sans effet aujourd\'hui car les seules bibliothèques natives présentes dans l\'AAB sont livrées sans symboles par Google — s\'active automatiquement si une dépendance future en livre).
+
+---
+
 ## 1.33.5 — 7 mai 2026 — Cache de tuiles ajustable + randonnée d\'accueil à la première installation
 
 - **Choisissez l\'espace disque alloué au cache des tuiles.** Réglages → Cache hors-ligne propose désormais quatre préréglages : 250 Mo / 500 Mo (défaut) / 1 Go / 2 Go. La nouvelle limite s\'applique immédiatement — pas besoin de redémarrer. Les régions hors-ligne enregistrées sont stockées à part et non comptabilisées : modifier cette valeur ne supprime aucune région que vous avez délibérément téléchargée.

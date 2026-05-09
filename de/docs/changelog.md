@@ -4,6 +4,13 @@ Für Nutzer sichtbare Änderungen, neueste zuerst. Für internes Refactoring / r
 
 ---
 
+## 1.33.6 — 9. Mai 2026 — Mülleimer-Ablegezone wieder zuverlässig nach Wiederherstellen
+
+- **Mülleimer-Ablegezone in Routenplanung und Messwerkzeug funktioniert wieder zuverlässig, nachdem die App minimiert und über „Letzte Apps" wieder geöffnet wurde.** Eine versteckte Schwachstelle führte dazu, dass die Geste „Wegpunkt über den Mülleimer ziehen, um ihn zu löschen" nach dem Lösen und Wiederanhängen des App-Fensters (Minimieren → aus „Letzte Apps" antippen) stillschweigend nicht mehr funktionierte. Die Begrenzung der Ablegezone blieb auf den Koordinaten vor dem Minimieren stehen, während die Kartenposition weiter aktualisiert wurde, sodass Ablegevorgänge nicht erkannt wurden. Der Treffertest liest die Begrenzung jetzt bei jedem Drag-Ereignis frisch (und nur, wenn das Mülleimer-Symbol tatsächlich am Fenster angehängt ist) — damit funktioniert die Ablegezone über beliebig viele Wiederherstellungszyklen hinweg. Kein App-Neustart als Workaround mehr nötig.
+- **Intern: Build-Aufräumarbeiten für die Play-Store-Produktionsprüfung.** UI-Abhängigkeit (`androidx.activity:activity-compose` 1.9.3 → 1.10.1) aktualisiert, um die in der 1.33.5-Prüfung gemeldeten Vitals-Warnungen („Edge-to-Edge wird möglicherweise nicht für alle Nutzer angezeigt") zu beheben — reine Aufräumarbeit, kein Verhalten geändert. Extraktion nativer Debug-Symbole für Release-Builds aktiviert (heute ohne Effekt, da die einzigen nativen Bibliotheken im AAB von Google bereits ohne Symbole ausgeliefert werden — aktiviert sich automatisch, falls künftig eine Abhängigkeit Symbole mitliefert).
+
+---
+
 ## 1.33.5 — 7. Mai 2026 — Anpassbarer Karten-Cache + Begleit-Wanderung auf neuen Installationen
 
 - **Wählen Sie, wie viel Speicherplatz für den Karten-Cache reserviert wird.** Unter Einstellungen → Offline-Cache stehen jetzt vier Voreinstellungen zur Auswahl: 250 MB / 500 MB (Standard) / 1 GB / 2 GB. Der neue Wert greift sofort — kein Neustart nötig. Gespeicherte Offline-Regionen werden separat abgelegt und nicht mitgezählt; das Ändern dieses Werts löscht also keine bewusst heruntergeladene Region.
