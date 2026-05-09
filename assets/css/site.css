@@ -137,10 +137,11 @@ section.alt { background: var(--bg-2); }
   padding: 4px;
 }
 .shots img {
-  /* Auto-size so 6 thumbnails fit in one row inside the 1100 px wrap.
-     (1100 − 5 × 14 gap) / 6 ≈ 171; we floor to 165 to leave a small
-     slack for browser scrollbar gutter / fractional rounding. */
-  width: 165px;
+  /* Auto-size so 7 thumbnails fit in one row inside the 1100 px wrap.
+     (1100 − 6 × 14 gap) / 7 ≈ 145; we floor to 140 to leave a small
+     slack for browser scrollbar gutter / fractional rounding.
+     Total: 7×140 + 6×14 = 1064 px, fits with ~36 px headroom. */
+  width: 140px;
   flex: 0 0 auto;
   border-radius: 22px;
   box-shadow: 0 12px 28px -8px rgba(12,24,40,0.35), 0 2px 6px rgba(0,0,0,0.08);
