@@ -28,7 +28,7 @@ A lock-at-launch option lives in **Settings → Appearance → Start with rotati
 From top to bottom:
 
 ### Measure distance
-The **ruler icon**. Tap to enter measure mode; tap on the map to drop pins; a line connects them and the bottom stats bar shows the total distance. Drag pin A onto your GPS position to measure "from me." Tap the icon again to exit.
+The **ruler icon**. Tap to enter measure mode. If location-following is on, pin A auto-places at your current position (or queues until your first GPS fix arrives, with an "Acquiring GPS fix…" toast — no second tap needed); otherwise tap on the map to drop pin A. Tap the map to add more pins. A line connects the pins and the bottom stats bar shows the total distance. While both measure mode and follow-me are on, pin A continues to track your live GPS position. Tap the ruler icon again to exit.
 
 ### Map layers
 The **layers icon**. Six styles to pick from: OpenTopoMap (default, hiking focus), OSM Standard (clean general-purpose), ESRI Topo, ESRI Shaded Relief, Satellite, Outdoors (Thunderforest — requires a free API key from Settings → API Keys).

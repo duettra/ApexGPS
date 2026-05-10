@@ -4,6 +4,20 @@ User-visible changes, newest first. For internal refactoring / version-bump-only
 
 ---
 
+## 1.33.8 — May 10, 2026 — Measure tool & route planner first-pin queue
+
+- **Tap the measure tool or planner FAB before your GPS fix is ready and the first point now auto-drops as soon as your location lands.** Previously, tapping while GPS was still warming up left an empty start — you had to tap the map manually to drop pin A. Now the app shows "Acquiring GPS fix…" on the toggle and queues the first-point auto-place; once the fix arrives, pin A appears at your current location and the live tracker takes over normally. Mirrors the same queue behaviour the recording FAB got in 1.33.7. Manually tapping to drop a pin meanwhile cancels the queue, so you never lose a tap.
+
+---
+
+## 1.33.7 — May 10, 2026 — Tolerant GPX import · Privacy in About · Recording auto-start
+
+- **Imports of GPX files with malformed coordinates no longer fail outright.** A track-point or waypoint with a malformed `lat` / `lon` value used to abort the entire import. The app now skips the bad point and keeps importing the rest — one bad point in a 10,000-point hike no longer loses the file. Hard upper limits (10K tracks, 100K waypoints, 500K points per track) still throw to prevent out-of-memory.
+- **Privacy policy directly under Settings → About.** A new "Privacy policy" row sits beneath User Guide; tap it to read the policy in-app, no internet needed. The same content is mirrored at `apexgps.duttra.de/privacy.html` (the Play Store privacy URL) for anyone who wants to read it before installing.
+- **Tap Record before your first GPS fix and the recording auto-starts when the fix arrives.** Previously, tapping Record before any fix had been received started an empty-breadcrumb track immediately — if you tapped Stop before any fix arrived, you'd save a track with zero points. Now the toast says "Acquiring GPS fix…" and the recording auto-fires the moment the first non-null fix lands — no second tap needed.
+
+---
+
 ## 1.33.6 — May 9, 2026 — Trash drop-zone reliability fix
 
 - **Track-planning and measure-tool trash drop-zone now works reliably after the app is minimised and resumed from Recents.** A latent issue made the "drag a vertex over the trash bin to delete it" gesture silently stop working after the app's window detached and reattached (minimise → tap from Recents). The drop-zone bounds got stuck at their pre-minimise coordinates while the live map position kept updating, so drops never registered. The hit-test now reads bounds fresh on every drag event (and only when the trash icon is actually attached to the window), so the drop-zone keeps working through any number of resume cycles. No app-restart workaround needed any more.
