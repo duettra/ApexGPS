@@ -4,6 +4,16 @@ Für Nutzer sichtbare Änderungen, neueste zuerst. Für internes Refactoring / r
 
 ---
 
+## 1.34.0 — 13. Mai 2026 — Größenanpassung · Wassersport · Live-Wiederherstellungsfortschritt · Korrekte Pluralformen
+
+- **Wegpunkt-Symbole sind standardmäßig etwa 25 % größer.** „Normal" (1,0×) rendert jetzt in der Größe, die früher „Groß" hatte. Wenn die Wegpunkte zu klein wirken, gibt es weiterhin Klein / Normal / Groß / XL — Einstellungen → Darstellung → Wegpunkt-Größe. Bestehende Einstellung wird beibehalten; möglicherweise eine Stufe niedriger wählen, da die ganze Skala größer geworden ist.
+- **Schnitt-Schieberegler — die runden Griffe funktionieren jetzt überall.** Vorher reagierte nur die senkrechte Linie jedes Griffs; ein Tipp auf den runden Knopf unten löste oft nichts aus, weil die Trefferfläche nicht ganz nach unten reichte. Behoben — beide runden Griffe lassen sich jetzt überall auf dem Kreis plus einem kleinen Bereich darunter greifen.
+- **Neue Aktivitätsart: Wassersport.** Wählbar über Trackdetails → Aktivität, um Paddel-, Segel-, Surf-, Kajak- oder andere Wassersport-Sitzungen zu markieren. Gleiches Wellen-Symbol wie der Wasserfall-Wegpunkt.
+- **Wiederherstellen einer Sicherung zeigt jetzt Live-Fortschritt.** Eine große Sicherung (hunderte Tracks, tausende Wegpunkte) blockierte die App früher minutenlang auf einem Spinner ohne Hinweis — leicht mit einem Absturz zu verwechseln. Die Schaltfläche „Wiederherstellen" sitzt jetzt über einem Fortschrittsbalken + Beschriftung („Stelle Track N von M wieder her…" / „Stelle Wegpunkt N von M wieder her…"), die pro Track und alle 100 Wegpunkte tickt.
+- **Polnisch und Arabisch zeigen jetzt korrekt pluralisierte Zähltexte.** 13 Zeichenketten mit Zählwerten („X Tracks", „Y Wegpunkte", „vor Z Minuten" usw.) routen jetzt durch echte Pluralregeln. Polnisch erhält alle 4 Formen, Arabisch alle 6. Englisch / Deutsch / Französisch / Spanisch waren bereits grammatikalisch korrekt; die zugrundeliegende Mechanik verläuft jetzt konsistent durch denselben Pfad.
+
+---
+
 ## 1.33.6 — 9. Mai 2026 — Mülleimer-Ablegezone wieder zuverlässig nach Wiederherstellen
 
 - **Mülleimer-Ablegezone in Routenplanung und Messwerkzeug funktioniert wieder zuverlässig, nachdem die App minimiert und über „Letzte Apps" wieder geöffnet wurde.** Eine versteckte Schwachstelle führte dazu, dass die Geste „Wegpunkt über den Mülleimer ziehen, um ihn zu löschen" nach dem Lösen und Wiederanhängen des App-Fensters (Minimieren → aus „Letzte Apps" antippen) stillschweigend nicht mehr funktionierte. Die Begrenzung der Ablegezone blieb auf den Koordinaten vor dem Minimieren stehen, während die Kartenposition weiter aktualisiert wurde, sodass Ablegevorgänge nicht erkannt wurden. Der Treffertest liest die Begrenzung jetzt bei jedem Drag-Ereignis frisch (und nur, wenn das Mülleimer-Symbol tatsächlich am Fenster angehängt ist) — damit funktioniert die Ablegezone über beliebig viele Wiederherstellungszyklen hinweg. Kein App-Neustart als Workaround mehr nötig.

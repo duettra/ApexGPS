@@ -16,7 +16,7 @@ The tile style used when the app launches. Six options; see [The map screen → 
 Slider, 4–24 dp. Heavier lines are easier to see when many tracks overlap; thinner lines look cleaner at high zoom. Default is around 6 dp.
 
 ### Waypoint size
-Small / Normal / Large / XL. This is a multiplier on top of the automatic zoom-adaptive size — markers already shrink at low zoom and grow at high zoom so they stay readable; this setting nudges the whole range up or down. Default is Normal (1.0×).
+Small / Normal / Large / XL. This is a multiplier on top of the automatic zoom-adaptive size — markers already shrink at low zoom and grow at high zoom so they stay readable; this setting nudges the whole range up or down. Default is Normal (1.0×). As of 1.34.0 the baseline ladder is about 25 % larger across the board — Normal now renders at what prior "Large" did. If markers look bigger than before after updating, step one notch down.
 
 ### Start with rotation locked
 - **Off** (default) — two-finger rotation gestures work from the moment the app opens.

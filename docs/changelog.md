@@ -4,6 +4,16 @@ User-visible changes, newest first. For internal refactoring / version-bump-only
 
 ---
 
+## 1.34.0 — May 13, 2026 — Sizing polish · Water Sports · Live restore progress · Plural correctness
+
+- **Waypoint markers are about 25% larger by default.** "Normal" (1.0×) now renders at the size the prior "Large" did. If your waypoints feel too small, the picker still has Small / Normal / Large / XL — open Settings → Appearance → Waypoint size and switch back to Normal (existing setting kept; you may want to step down one notch since the whole ladder is bigger now).
+- **Crop track sliders — the round handles work from any point now.** Before, only the vertical line of each crop handle was draggable; tapping the round knob at the bottom often did nothing because the touch area didn't extend all the way down. Fixed — both round handles now grab from anywhere on the circle plus a small slop band below.
+- **New activity type: Water sports.** Pick it from Track details → Activity to tag paddle, sail, surf, kayak, or any other water session. Same wave-and-water-surface icon as the Waterfall waypoint symbol.
+- **Restoring a backup now shows live progress.** A large backup (hundreds of tracks, thousands of waypoints) used to lock the app on a spinner for several minutes with no indication it was working — easy to mistake for a crash and force-close. The Restore button now sits above a progress bar + "Restoring track N of M…" / "Restoring waypoint N of M…" caption that ticks per track and every 100 waypoints, so you can see the import is healthy and how far it has to go.
+- **Polish & Arabic now show correctly-pluralised count labels.** 13 strings that show counts ("X tracks", "Y waypoints", "Z minutes ago", "saved 12.4 km · 4,200 points kept", etc.) finally route through proper plural rules. Polish gets its full 4-form set (1 trasa / 2 trasy / 5 tras / 1,5 trasy); Arabic gets all 6 (zero / one / two / few / many / other). English / German / French / Spanish were already grammatically correct but the underlying machinery now routes through the same path for consistency.
+
+---
+
 ## 1.33.8 — May 10, 2026 — Measure tool & route planner first-pin queue
 
 - **Tap the measure tool or planner FAB before your GPS fix is ready and the first point now auto-drops as soon as your location lands.** Previously, tapping while GPS was still warming up left an empty start — you had to tap the map manually to drop pin A. Now the app shows "Acquiring GPS fix…" on the toggle and queues the first-point auto-place; once the fix arrives, pin A appears at your current location and the live tracker takes over normally. Mirrors the same queue behaviour the recording FAB got in 1.33.7. Manually tapping to drop a pin meanwhile cancels the queue, so you never lose a tap.

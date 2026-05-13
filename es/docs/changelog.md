@@ -4,6 +4,16 @@ Cambios visibles para el usuario, más recientes primero. Para refactors interno
 
 ---
 
+## 1.34.0 — 13 may. 2026 — Ajuste de tamaños · Deportes acuáticos · Progreso de restauración en vivo · Plurales correctos
+
+- **Los marcadores de waypoint son aproximadamente un 25 % más grandes por defecto.** «Normal» (1,0×) ahora se renderiza al tamaño que antes tenía «Grande». Si los waypoints parecen pequeños, el selector sigue ofreciendo Pequeño / Normal / Grande / XL — Ajustes → Apariencia → Tamaño de waypoint. Tu ajuste actual se mantiene; quizá bajar un nivel ya que toda la escala ha crecido.
+- **Deslizadores de recorte — los tiradores redondos funcionan en cualquier punto.** Antes, sólo la línea vertical de cada tirador respondía; tocar el botón redondo de abajo a menudo no hacía nada porque la zona táctil no llegaba hasta el fondo. Corregido — ambos tiradores redondos ahora se agarran desde cualquier punto del círculo más una pequeña franja debajo.
+- **Nuevo tipo de actividad: Deportes acuáticos.** Selecciónalo desde Detalles del track → Actividad para etiquetar sesiones de pádel, vela, surf, kayak o cualquier otro deporte de agua. Mismo icono de ola que el waypoint Cascada.
+- **Restaurar una copia de seguridad ahora muestra progreso en vivo.** Una copia grande (cientos de tracks, miles de waypoints) antes bloqueaba la app sobre un indicador durante varios minutos sin señal de progreso — fácil confundir con un fallo. El botón Restaurar ahora está sobre una barra de progreso + leyenda («Restaurando track N de M…» / «Restaurando waypoint N de M…») que avanza por track y cada 100 waypoints.
+- **Polaco y árabe ahora muestran etiquetas correctamente pluralizadas.** 13 cadenas con contadores («X tracks», «Y waypoints», «hace Z minutos» etc.) pasan ahora por reglas plurales reales. Polaco obtiene sus 4 formas completas; árabe sus 6. Inglés / alemán / francés / español ya eran gramaticalmente correctos; la mecánica subyacente ahora pasa por el mismo camino de forma coherente.
+
+---
+
 ## 1.33.6 — 9 may. 2026 — Fiabilidad de la zona-papelera tras volver desde recientes
 
 - **La zona-papelera para borrar un vértice durante la planificación o la medición vuelve a funcionar de forma fiable después de minimizar la app y reabrirla desde Recientes.** Un fallo latente hacía que el gesto de "arrastrar un vértice a la papelera para borrarlo" dejase de funcionar en silencio después de que la ventana de la app se desacoplase y se volviera a acoplar (minimizar → tocar desde Recientes). Los límites de la zona-papelera se quedaban fijados en las coordenadas previas a la minimización mientras la posición del mapa se seguía actualizando, así que los soltados ya no se detectaban. La prueba de colisión ahora lee los límites en fresco en cada evento de arrastre (y solo cuando el icono de la papelera está efectivamente acoplado a la ventana), por lo que la zona-papelera se mantiene operativa a través de cualquier número de ciclos de regreso. Ya no hace falta reiniciar la app como solución alternativa.

@@ -4,6 +4,16 @@ Zmiany widoczne dla użytkownika, najnowsze u góry. Refaktory wewnętrzne / pod
 
 ---
 
+## 1.34.0 — 13 maja 2026 — Dopasowanie rozmiarów · Sporty wodne · Postęp przywracania na żywo · Poprawne formy mnogie
+
+- **Znaczniki punktów trasy są domyślnie około 25 % większe.** „Normalny" (1,0×) renderuje się teraz w rozmiarze, który wcześniej miał „Duży". Jeśli znaczniki wydają się za małe, selektor nadal oferuje Mały / Normalny / Duży / XL — Ustawienia → Wygląd → Rozmiar znacznika. Twoje obecne ustawienie zostaje zachowane; rozważ obniżenie o jeden stopień, ponieważ cała skala urosła.
+- **Suwaki przycinania — okrągłe uchwyty działają z dowolnego miejsca.** Wcześniej reagowała tylko pionowa linia każdego uchwytu; dotknięcie okrągłego przycisku na dole często nic nie robiło, bo strefa dotyku nie sięgała do samego dołu. Naprawione — oba okrągłe uchwyty można teraz chwycić z dowolnego miejsca na kółku plus małego pasa pod nim.
+- **Nowy typ aktywności: Sporty wodne.** Wybierz w Szczegóły trasy → Aktywność, aby oznaczyć sesję kajakową, żeglarską, surfingową lub inny sport wodny. Ta sama ikona fali co znacznik wodospadu.
+- **Przywracanie kopii zapasowej pokazuje teraz postęp na żywo.** Duża kopia (setki tras, tysiące punktów) wcześniej blokowała aplikację na wskaźniku obracającym się przez kilka minut bez sygnału postępu — łatwo pomylić z awarią. Przycisk Przywróć siedzi teraz nad paskiem postępu + opisem („Przywracanie trasy N z M…" / „Przywracanie punktu N z M…"), który tyka co trasę i co 100 punktów.
+- **Polski i arabski pokazują teraz poprawnie odmienione etykiety z liczbami.** 13 ciągów z licznikami („X tras", „Y punktów", „Z minut temu" itd.) przechodzi teraz przez prawdziwe reguły liczby mnogiej. Polski otrzymuje wszystkie 4 formy (1 trasa / 2 trasy / 5 tras / 1,5 trasy); arabski wszystkie 6. Angielski / niemiecki / francuski / hiszpański były już gramatycznie poprawne; spójna obsługa w jednej ścieżce.
+
+---
+
 ## 1.33.6 — 9 maja 2026 — Niezawodna strefa-kosz po powrocie z ostatnich aplikacji
 
 - **Strefa-kosz służąca do usuwania punktów podczas planowania trasy i pomiaru znów działa niezawodnie po zminimalizowaniu aplikacji i ponownym otwarciu z listy ostatnich aplikacji.** Ukryta usterka powodowała, że gest "przeciągnij punkt na kosz, aby go usunąć" po cichu przestawał działać po odłączeniu i ponownym podłączeniu okna aplikacji (minimalizacja → dotknięcie z ostatnich aplikacji). Granice strefy-kosza pozostawały na współrzędnych sprzed minimalizacji, podczas gdy pozycja mapy nadal się aktualizowała, więc upuszczanie nie było już wykrywane. Test kolizji odczytuje teraz granice na świeżo przy każdym zdarzeniu przeciągania (i tylko wtedy, gdy ikona kosza jest faktycznie podłączona do okna) — dzięki czemu strefa-kosz działa poprawnie po dowolnej liczbie cykli powrotu. Restart aplikacji jako obejście nie jest już potrzebny.

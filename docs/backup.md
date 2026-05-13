@@ -57,7 +57,7 @@ Both modes work through the ZIP one category at a time.
 - Moving to a new phone → **Replace** (you want the exact state from the old phone).
 - Pulling a waypoint set from a friend's backup → **Merge** (keep your own data, add theirs).
 
-Restore runs as a streaming read — it should be fast even for a multi-hundred-MB ZIP. If it fails mid-way, partial categories may have been applied; re-run to be safe.
+Restore runs as a streaming read — it should be fast even for a multi-hundred-MB ZIP. While it runs, a progress bar + "Restoring track N of M…" / "Restoring waypoint N of M…" caption appears under the Restore button so you can see how far it has to go. If it fails mid-way, partial categories may have been applied; re-run to be safe.
 
 ## Moving to a new phone
 

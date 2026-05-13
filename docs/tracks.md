@@ -25,7 +25,7 @@ If Android ever kills the app during an active recording (low-memory reclaim, fo
 
 ### Activity type
 
-Every recorded track starts tagged as **Hiking**. Open the track's detail screen (Tracks → tap the row) and use the **Activity** picker to change it to Walking / Running / Cycling / Offroading / Paragliding. Imported tracks have no activity tag by default; you can assign one the same way.
+Every recorded track starts tagged as **Hiking**. Open the track's detail screen (Tracks → tap the row) and use the **Activity** picker to change it to Walking / Running / Cycling / Offroading / Paragliding / Water sports. Imported tracks have no activity tag by default; you can assign one the same way.
 
 ### Cropping a recording
 
@@ -92,7 +92,7 @@ Tap the **filter icon**. Three options:
 
 - **Visibility** — All / Visible only / Hidden only. Tracks you've hidden via the visibility toggle still exist in the list but don't draw on the map.
 - **Color** — 16-colour palette. Tap a colour chip to see only tracks of that colour.
-- **Activity** — six chips (Hiking / Walking / Running / Cycling / Offroading / Paragliding) plus a **No activity** chip for tracks you haven't tagged yet. Combine with the others to isolate, say, only hiking tracks coloured blue.
+- **Activity** — seven chips (Hiking / Walking / Running / Cycling / Offroading / Paragliding / Water sports) plus a **No activity** chip for tracks you haven't tagged yet. Combine with the others to isolate, say, only hiking tracks coloured blue.
 
 Active filter turns the icon blue. Tap **Any** in any section to clear that section.
 

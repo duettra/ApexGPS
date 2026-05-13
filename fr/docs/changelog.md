@@ -4,6 +4,16 @@ Changements visibles par l\'utilisateur, plus récents en premier. Pour les refa
 
 ---
 
+## 1.34.0 — 13 mai 2026 — Ajustement de tailles · Sports nautiques · Progression de restauration en direct · Pluriels corrects
+
+- **Les marqueurs de waypoints sont environ 25 % plus grands par défaut.** « Normal » (1,0×) rend maintenant à la taille qu\'avait l\'ancien « Grand ». Si les waypoints semblent trop petits, le sélecteur propose toujours Petit / Normal / Grand / XL — Paramètres → Apparence → Taille de waypoint. Le réglage existant est conservé ; envisagez de descendre d\'un cran puisque toute l\'échelle a grandi.
+- **Curseurs de découpe — les poignées rondes fonctionnent partout.** Avant, seule la ligne verticale de chaque poignée répondait ; toucher le bouton rond en bas ne déclenchait souvent rien parce que la zone tactile ne descendait pas jusqu\'en bas. Corrigé — les deux poignées rondes se saisissent maintenant depuis n\'importe quel point du cercle plus une petite bande en dessous.
+- **Nouveau type d\'activité : Sports nautiques.** Sélectionnable depuis Détails de trace → Activité pour marquer une session de pagaie, voile, surf, kayak ou autre sport nautique. Même icône vague que le waypoint Cascade.
+- **La restauration d\'une sauvegarde affiche maintenant une progression en direct.** Une grosse sauvegarde (centaines de traces, milliers de waypoints) bloquait l\'application sur un indicateur pendant plusieurs minutes sans signe de progression — facile à confondre avec un plantage. Le bouton Restaurer est maintenant au-dessus d\'une barre de progression + légende (« Restauration de la trace N sur M… » / « Restauration du waypoint N sur M… ») qui avance par trace puis tous les 100 waypoints.
+- **Le polonais et l\'arabe affichent enfin des étiquettes correctement accordées au pluriel.** 13 chaînes contenant des compteurs (« X traces », « Y waypoints », « il y a Z minutes » etc.) passent maintenant par de vraies règles de pluriel. Le polonais obtient ses 4 formes complètes ; l\'arabe ses 6. Anglais / allemand / français / espagnol étaient déjà grammaticalement corrects ; la mécanique sous-jacente passe maintenant par le même chemin de façon cohérente.
+
+---
+
 ## 1.33.6 — 9 mai 2026 — Fiabilité de la zone-poubelle après mise en arrière-plan
 
 - **La zone-poubelle pour supprimer un sommet pendant la planification d\'itinéraire ou la mesure fonctionne à nouveau de façon fiable après que l\'application a été minimisée et rouverte depuis Récents.** Un défaut latent faisait que le geste « glisser un sommet sur la corbeille pour le supprimer » cessait silencieusement de fonctionner après que la fenêtre de l\'app se soit détachée puis rattachée (minimiser → toucher depuis Récents). Les limites de la zone-poubelle restaient figées sur les coordonnées d\'avant la mise en arrière-plan tandis que la position de la carte continuait à se mettre à jour, donc les dépôts n\'étaient plus détectés. Le test de collision lit maintenant les limites à neuf à chaque événement de glissement (et seulement quand l\'icône poubelle est effectivement attachée à la fenêtre) — la zone-poubelle reste donc fonctionnelle après n\'importe quel nombre de cycles de retour. Plus besoin de redémarrer l\'application comme contournement.
