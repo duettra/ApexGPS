@@ -117,7 +117,12 @@ Tippen Sie in das Suchfeld, um auf Wegpunkte zu filtern, deren Name ODER Beschre
 
 ### Mehrere auswählen
 
-Lange drücken auf einen Wegpunkt in der Liste → Auswahlmodus. Weitere anhaken, dann Bulk-Löschen. Eine Bulk-Farb- oder Symbol-Änderung für Wegpunkte gibt es (noch) nicht — dafür Wegpunkt einzeln bearbeiten.
+Lange drücken auf einen Wegpunkt in der Liste → Auswahlmodus. Weitere anhaken, dann:
+
+- **Bulk-Teilen** (Teilen-Symbol) — bündelt jeden ausgewählten Wegpunkt in eine einzelne `.gpx`-Datei und öffnet den Teilen-Dialog. Siehe [Tracks & Wegpunkte teilen](share-and-navigate.md#tracks--wegpunkte-teilen).
+- **Bulk-Löschen** (Papierkorb, rot) — mit Bestätigung.
+
+Eine Bulk-Farb- oder Symbol-Änderung für Wegpunkte gibt es (noch) nicht — dafür Wegpunkt einzeln bearbeiten.
 
 ### Duplikate entfernen
 

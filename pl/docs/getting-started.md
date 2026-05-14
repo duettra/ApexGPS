@@ -2,13 +2,15 @@
 
 ## Instalacja
 
-ApexGPS jest obecnie w zamkniętych testach Play Store. Poproś dewelopera o zaproszenie do testów pod [sandwalker.one@proton.me](mailto:sandwalker.one@proton.me), a następnie dotknij linku zaproszenia w telefonie → **Zostań testerem** → zainstaluj z Play Store.
+ApexGPS jest dostępny w Play Store: [play.google.com/store/apps/details?id=com.apexgps.app](https://play.google.com/store/apps/details?id=com.apexgps.app). Zainstaluj ze strony aplikacji — zaproszenie testowe nie jest już potrzebne.
 
 ## Pierwsze uruchomienie
 
 Aplikacja poprosi o **uprawnienie do lokalizacji**. Wybierz **Tylko podczas używania aplikacji** (lub **Dokładna**, jeśli system rozdziela dokładną i przybliżoną — ApexGPS potrzebuje dokładnego GPS do turystyki).
 
-Otworzy się mapa. Domyślny styl to **OpenTopoMap** — poziomice, cieniowanie, szlaki turystyczne w czerwieni.
+Otworzy się mapa. Domyślny styl mapy na świeżej instalacji to **ESRI Topo** (czyste etykiety przy zoomach turystycznych); istniejące instalacje zachowują to, co miałeś wybrane. Domyślny styl możesz zmienić w dowolnym momencie w **Ustawienia → Wygląd → Domyślna mapa**, albo przełączać style w trakcie sesji przyciskiem warstw.
+
+Przy pierwszym uruchomieniu świeżej instalacji prawdziwy zapis **trawersowania Watzmanna** (Berchtesgaden, Niemcy) jest automatycznie importowany jako próbka — pętla ~22,6 km z trzema punktami orientacyjnymi, dzięki czemu aplikacja nie jest pusta przy otwarciu. Jeśli usuniesz próbki i będziesz chciał je z powrotem, **Ustawienia → Dane → Wczytaj dane przykładowe** zaimportuje je ponownie.
 
 ## Pięciominutowe wprowadzenie
 
@@ -28,7 +30,7 @@ Przytrzymaj dowolne miejsce na mapie. Otworzy się okno dialogowe — wybierz na
 
 ### Zaimportuj trasę GPX
 
-Menu → Trasy → dotknij niebieskiego **przycisku folderu** (prawy dolny róg) → wybierz plik `.gpx` z pobranych lub plików. Trasa pojawi się na mapie; dotknij jej, aby zobaczyć szczegóły (dystans, profil wysokości).
+Otwórz **menu → Trasy** → dotknij **FAB-a folderu** w prawym dolnym rogu → wybierz jeden lub więcej plików `.gpx`. Trasy pojawiają się na mapie; dotknij jednej, aby zobaczyć szczegóły (dystans, profil wysokości).
 
 ### Nagraj wędrówkę
 
@@ -37,6 +39,10 @@ Dotknij czerwonej **kropki nagrywania** w lewym górnym rogu. Kropka rozszerza s
 ### Udostępnij swoją lokalizację
 
 Dotknij niebieskiego trójkąta na mapie. Panel wysuwa się z góry z wysokością, dokładnością, czasem, baterią i dwoma linkami do map. Dotknij **Udostępnij** → wybierz WhatsApp, SMS, e-mail. Odbiorca zobaczy dane + link; jeśli też ma ApexGPS, link otwiera aplikację bezpośrednio.
+
+### Udostępnij to, co masz na ekranie
+
+Dotknij **ikony udostępniania** w lewym górnym rogu mapy (po lewej od menu ☰). Otwiera się arkusz z każdą widoczną trasą i punktem w Twoim widoku — zaznacz, co chcesz wysłać, dotknij Udostępnij, wybierz komunikator. Cała paczka wychodzi jako jeden plik `.gpx`. Zobacz [Udostępnij widoczne](share-and-navigate.md#udost%C4%99pnij-wszystko-widoczne-udost%C4%99pnij-widoczne).
 
 ### Powrót do menu
 

@@ -114,6 +114,7 @@ Lange drücken auf einen Track → Auswahlmodus. Haken Sie die gewünschten an, 
 
 - **Bulk-Farbänderung** (Paletten-Symbol) — alle ausgewählten auf eine Farbe setzen.
 - **Bulk ein- / ausblenden** (Auge-Symbole) — schnelle Sichtbarkeitssteuerung.
+- **Bulk-Teilen** (Teilen-Symbol) — bündelt jeden ausgewählten Track in eine einzelne `.gpx`-Datei und öffnet den Teilen-Dialog. Siehe [Tracks & Wegpunkte teilen](share-and-navigate.md#tracks--wegpunkte-teilen).
 - **Bulk-Löschen** (Papierkorb, rot) — mit Bestätigung.
 - **Alle auswählen** — hakt jeden Track in der aktuell gefilterten Ansicht an.
 

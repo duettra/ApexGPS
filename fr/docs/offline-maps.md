@@ -51,6 +51,10 @@ Chaque téléchargement terminé apparaît ici. Tap sur une région pour ouvrir 
 
 Supprimer une région enregistrée supprime son bundle mais PAS le cache général. La zone peut rester cachée via navigation antérieure.
 
+### Lignes recette (après restauration d\'une sauvegarde en mode recette)
+
+Restaurer une sauvegarde créée avec le mode hors-ligne **Recette** (voir [Sauvegarde → Recette vs tuiles complètes](backup.md#recette-vs-tuiles-complètes)) insère ici des lignes marquées **« Pas encore téléchargée · X tuiles »** avec un bouton **Télécharger** en fin de ligne. Appuyez sur **Télécharger** pour récupérer les tuiles en utilisant le nom enregistré, le cadre englobant, la plage de zoom et la source de tuiles. La ligne bascule en ligne de région enregistrée normale une fois le téléchargement terminé. Si la recette utilise des tuiles Thunderforest et que votre clé API n\'est pas enregistrée, l\'app affiche un toast unique vous demandant de l\'ajouter d\'abord sous **Paramètres → Clés API → Thunderforest**.
+
 ## Gestion du cache (menu → Paramètres → Stockage)
 
 - **Taille totale du cache** toutes sources confondues.

@@ -28,10 +28,10 @@ Option « verrouillage au lancement » dans **Paramètres → Apparence → Rota
 De haut en bas :
 
 ### Mesurer la distance
-**Icône règle**. Appuyez pour entrer en mode mesure ; tap sur la carte pour poser des épingles ; une ligne les relie et la barre stats en bas affiche la distance totale. Glissez la première épingle sur votre position GPS pour mesurer « depuis moi ». Appuyez de nouveau sur l\'icône pour sortir.
+**Icône règle**. Appuyez pour entrer en mode mesure ; tap sur la carte pour poser des épingles ; une ligne les relie et la barre stats en bas affiche la distance totale. Glissez la première épingle sur votre position GPS pour mesurer « depuis moi ». Glissez une épingle sur la corbeille (en haut à droite, juste sous la boussole) pour la supprimer. Appuyez de nouveau sur l\'icône pour sortir.
 
 ### Couches de carte
-**Icône couches**. Six styles : OpenTopoMap (par défaut, randonnée), OSM Standard (vue générale épurée), ESRI Topo, ESRI relief ombré, Satellite, Outdoors (Thunderforest — nécessite une clé API gratuite depuis Paramètres → Clés API).
+**Icône couches**. Jusqu\'à six styles : OpenTopoMap (randonnée), OSM Standard (vue générale épurée), ESRI Topo (par défaut sur les installations neuves), ESRI relief ombré, Satellite, Outdoors (Thunderforest — nécessite une clé API gratuite depuis Paramètres → Clés API ; l\'entrée est masquée tant qu\'aucune clé n\'est enregistrée).
 
 Le style choisi est conservé d\'une session à l\'autre.
 
@@ -57,6 +57,7 @@ Depuis la **v1.25.2**, la carte n\'a plus de FAB d\'import dédié — l\'import
 ## En haut à gauche
 
 - **☰ menu** — tiroir de navigation (Traces, Points, Cartes, Paramètres).
+- **Icône de partage** — raccourci en un appui pour exporter chaque trace + point visible dans votre zone d\'affichage actuelle sous forme d\'un seul fichier `.gpx`. Ouvre la feuille **Partager la zone visible** avec une liste à cocher par élément. Voir [Partager visible](share-and-navigate.md#partager-tout-ce-qui-est-visible-partager-visible).
 - **Pastille d\'enregistrement** — un point rouge dans un cercle foncé. Appuyez pour démarrer l\'enregistrement de votre sortie. Pendant l\'enregistrement, elle se déploie en un chronomètre live `00:00:00` ; tap sur le chrono pour **Pause / Terminer / Supprimer**. Votre parcours se dessine comme une ligne rouge sur la carte au fil de vos déplacements. Sur **Terminer** l\'enregistrement est sauvegardé comme nouvelle Trace et le panneau s\'ouvre pour que vous puissiez la consulter immédiatement. Voir [Traces → Enregistrement](tracks.md#enregistrement).
 
 ## Barre stats en bas

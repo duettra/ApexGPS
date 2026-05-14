@@ -28,10 +28,10 @@ Eine Option „Beim Start sperren“ finden Sie unter **Einstellungen → Darste
 Von oben nach unten:
 
 ### Distanz messen
-Das **Lineal-Symbol**. Antippen, um den Messmodus zu starten; auf die Karte tippen, um Pins zu setzen; eine Linie verbindet sie und die untere Statusleiste zeigt die Gesamtdistanz. Pin A auf Ihre GPS-Position ziehen, um „von mir aus“ zu messen. Erneut antippen zum Beenden.
+Das **Lineal-Symbol**. Antippen, um den Messmodus zu starten. Wenn der Folgen-Modus an ist, wird Pin A automatisch an Ihrer aktuellen Position gesetzt (oder in die Warteschlange aufgenommen, bis Ihr erster GPS-Fix eintrifft, mit einem „GPS wird erfasst…"-Toast — kein zweiter Tap nötig); andernfalls auf die Karte tippen, um Pin A zu setzen. Auf die Karte tippen, um weitere Pins zu setzen. Eine Linie verbindet die Pins und die untere Statusleiste zeigt die Gesamtdistanz. Während Messmodus und Folgen-Modus beide aktiv sind, verfolgt Pin A weiterhin Ihre Live-GPS-Position. **Ziehen Sie einen Pin auf das Mülleimer-Symbol** (oben rechts, direkt unter dem Kompass), um ihn zu löschen. Erneut auf das Lineal-Symbol tippen zum Beenden.
 
 ### Kartenlayer
-Das **Layer-Symbol**. Sechs Stile zur Auswahl: OpenTopoMap (Standard, Wander-Fokus), OSM Standard (klar und allgemein), ESRI Topo, ESRI Reliefschattierung, Satellit, Outdoors (Thunderforest — benötigt einen kostenlosen API-Schlüssel aus Einstellungen → API-Schlüssel).
+Das **Layer-Symbol**. Bis zu sechs Stile zur Auswahl: OpenTopoMap (Wander-Fokus), OSM Standard (klar und allgemein), ESRI Topo (Standard bei Neuinstallationen), ESRI Reliefschattierung, Satellit, Outdoors (Thunderforest — benötigt einen kostenlosen API-Schlüssel aus Einstellungen → API-Schlüssel; der Eintrag ist ausgeblendet, bis ein Schlüssel gespeichert ist).
 
 Der gewählte Stil wird über App-Neustarts hinweg gespeichert.
 
@@ -57,6 +57,7 @@ Seit **v1.25.2** hat die Karte keinen eigenen Import-FAB mehr — GPX-Import fin
 ## Oben links
 
 - **☰ Menü** — Navigationsschublade (Tracks, Wegpunkte, Karten, Einstellungen).
+- **Teilen-Symbol** — Ein-Tap-Abkürzung, um jeden sichtbaren Track + Wegpunkt im aktuellen Kartenausschnitt als einzelne `.gpx`-Datei zu exportieren. Öffnet das **Sichtbaren Bereich teilen**-Sheet mit einer Häkchen-Liste pro Eintrag. Siehe [Sichtbaren Bereich teilen](share-and-navigate.md#alles-teilen-was-gerade-sichtbar-ist-sichtbaren-bereich-teilen).
 - **Aufnahme-Chip** — ein roter Punkt in einem dunklen Kreis. Antippen, um die Aufzeichnung Ihrer aktuellen Tour zu starten. Während der Aufzeichnung erweitert er sich zu einem Live-Timer `00:00:00`; Tap auf den Timer für **Pause / Fertig / Löschen**. Ihr Pfad wird als rote Linie auf der Karte gezeichnet, während Sie sich bewegen. Bei **Fertig** wird die Aufzeichnung als neuer Track gespeichert und das Overlay öffnet sich direkt, damit Sie sie sofort ansehen können. Siehe [Tracks → Aufzeichnung](tracks.md#aufzeichnung).
 
 ## Untere Statusleiste

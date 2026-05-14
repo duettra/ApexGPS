@@ -118,6 +118,7 @@ Long-press a track → selection mode. Tick the ones you want, then:
 
 - **Bulk colour change** (palette icon) — set all selected to one colour.
 - **Bulk show / hide** (eye icons) — quickly control visibility.
+- **Bulk share** (share icon) — bundle every selected track into a single `.gpx` file and open the share dialog. See [Share tracks & waypoints](share-and-navigate.md#sharing-tracks--waypoints).
 - **Bulk delete** (trash icon, red) — with confirmation.
 - **Select all** — tick every track currently in the filtered view.
 

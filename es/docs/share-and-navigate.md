@@ -1,4 +1,4 @@
-# Compartir tu ubicación y navegar a un destino
+# Compartir tu ubicación, rutas y puntos — y navegar a un destino
 
 ## Compartir tu ubicación actual
 
@@ -42,6 +42,48 @@ En WhatsApp y similares ambas URL son clicables. En SMS son texto copiable.
 ### Si aún no hay fix GPS
 
 El panel se abre pero muestra «Adquiriendo GPS…» y el botón Compartir está deshabilitado. Al llegar el primer fix, el panel se actualiza y Compartir se activa — no hace falta cerrar y reabrir.
+
+## Compartir rutas y puntos
+
+ApexGPS te deja enviar tus rutas y puntos a quien quieras como archivos `.gpx` estándar — ábrelos en GaiaGPS, Strava, Garmin BaseCamp, wikiloc u otra copia de ApexGPS. Tres caminos para hacerlo:
+
+### Una sola ruta o un solo punto
+
+- **Ruta** — toca una ruta en el mapa → botón **Compartir** del panel. O abre la pantalla de detalle (Rutas → toca una fila) → **icono compartir** de la barra superior.
+- **Punto** — toca un punto en el mapa → botón **Compartir** del panel. El receptor recibe un mensaje con el nombre, las coordenadas, la altitud y dos enlaces (App Link de ApexGPS + Google Maps).
+
+### Compartir en lote desde las pantallas de lista
+
+Abre **Menú → Rutas** (o **Puntos**), pulsa largo una fila para entrar en modo selección, marca las que quieras y toca el **icono compartir** de la barra superior:
+
+- Rutas → empaqueta cada ruta seleccionada en un único archivo `.gpx`.
+- Puntos → empaqueta cada punto seleccionado en un único `.gpx`.
+
+Se abre un diálogo de compartir — elige WhatsApp, Drive, Gmail, lo que quieras. El nombre del archivo incluye la fecha.
+
+### Compartir todo lo visible («Compartir visible»)
+
+El camino más rápido cuando quieres entregarle a alguien «toda la zona que estoy viendo». Tres puntos de entrada, todos llevan a la misma hoja:
+
+- **Pantalla del mapa → icono compartir** en la barra superior (a la izquierda del menú ☰). Usa tu viewport del mapa en vivo.
+- **Menú → Mapas → Compartir rutas y puntos visibles** (tercera tarjeta del hub de Mapas, debajo de Descargar / Mapas guardados). Usa el viewport que tenías abierto justo antes de entrar en el hub — así puedes desplazarte, encontrar la zona y luego saltar dentro.
+- **Menú ⋮ del mapa → Compartir rutas y puntos visibles**.
+
+Sube una hoja listando cada ruta visible (líneas que cruzan el viewport Y están activadas como visibles) y cada punto visible (dentro del viewport). Cada fila tiene una casilla — **desmarca lo que no quieras enviar**. El nombre por defecto se geocodifica desde el centro del viewport («ApexGPS-Wadi-Bani-Khalid-2026-05-14.gpx» si el geocoder resuelve; «ApexGPS-2026-05-14.gpx» si estás sin conexión o no devuelve nada).
+
+Toca **Compartir** → se construye un único archivo `.gpx` con todas las rutas + puntos seleccionados + una pequeña cabecera de metadatos, y se abre el diálogo de compartir del sistema.
+
+#### Límites de tamaño
+
+Un paquete de «Compartir visible» se mantiene en memoria mientras se construye, así que selecciones muy grandes pueden fallar con un aviso claro:
+
+| Límite | Tope |
+|---|---|
+| Rutas por paquete | 100 |
+| Puntos por paquete | 1000 |
+| Puntos de ruta totales (sumando todas las rutas seleccionadas) | 100 000 |
+
+Si llegas a un tope, el aviso te dice cuál — reduce la selección en la hoja (desmarca alguna ruta grande) o usa **Ajustes → Datos → Copia de seguridad** para exportes muy grandes (esa ruta transmite el ZIP en streaming y no está acotada por estos límites).
 
 ## Recibir una ubicación compartida
 

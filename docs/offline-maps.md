@@ -51,6 +51,10 @@ Every completed download shows here. Tap a region to open its detail screen:
 
 Deleting a saved region removes its tile bundle but does NOT affect the general tile cache. The area may still be cached from prior browsing.
 
+### Recipe rows (after restoring a recipe-mode backup)
+
+Restoring a backup that was created with the **Recipe** offline-maps mode (see [Backup → Recipe vs full tiles](backup.md#recipe-vs-full-tiles)) inserts rows here marked **"Not downloaded yet · X tiles"** with a **Download** trailing button. Tap **Download** to re-fetch the tiles using the saved name, bounding box, zoom range, and tile source. The row flips to a normal saved-region row when the download finishes. If the recipe uses Thunderforest tiles and your API key isn't saved, the app shows a one-time toast telling you to add it first under **Settings → API Keys → Thunderforest**.
+
 ## Cache management (menu → Settings → Storage)
 
 - **Total cache size** across all tile sources.

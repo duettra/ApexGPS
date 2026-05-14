@@ -117,7 +117,12 @@ Wpisz w pole, aby filtrować punkty, których nazwa LUB opis zawiera Twój tekst
 
 ### Zaznaczanie wielu
 
-Przytrzymaj punkt na liście → tryb zaznaczania. Zaznacz więcej, potem grupowe usuwanie. Nie ma (jeszcze) grupowej zmiany koloru/symbolu dla punktów — użyj Edytuj dla każdego.
+Przytrzymaj punkt na liście → tryb zaznaczania. Zaznacz więcej, potem:
+
+- **Grupowe udostępnianie** (ikona udostępniania) — łączy każdy zaznaczony punkt w jeden plik `.gpx` i otwiera okno udostępniania. Zobacz [Udostępnianie tras i punktów](share-and-navigate.md#udost%C4%99pnianie-tras-i-punkt%C3%B3w).
+- **Grupowe usuwanie** (czerwony kosz) — z potwierdzeniem.
+
+Nie ma (jeszcze) grupowej zmiany koloru/symbolu dla punktów — użyj Edytuj dla każdego.
 
 ### Usuń duplikaty
 

@@ -51,6 +51,10 @@ Każde ukończone pobieranie pojawia się tutaj. Dotknij regionu, aby otworzyć 
 
 Usunięcie zapisanego regionu usuwa jego paczkę kafelków, ale NIE wpływa na ogólną pamięć. Obszar może być nadal zapisany z wcześniejszego przeglądania.
 
+### Wiersze przepisu (po przywróceniu kopii w trybie przepisu)
+
+Przywrócenie kopii utworzonej w trybie **Przepis** dla map offline (zobacz [Kopia zapasowa → Przepis vs pełne kafelki](backup.md#przepis-vs-pe%C5%82ne-kafelki)) wstawia tutaj wiersze oznaczone **„Jeszcze nie pobrano · X kafelków"** z końcowym przyciskiem **Pobierz**. Dotknij **Pobierz**, aby ponownie sprowadzić kafelki, używając zapisanej nazwy, ramki, zakresu zoomu i źródła kafelków. Po zakończeniu pobierania wiersz zmienia się w zwykły wiersz zapisanego regionu. Jeśli przepis używa kafelków Thunderforest, a Twój klucz API nie jest zapisany, aplikacja pokaże jednorazowy komunikat informujący, że trzeba go najpierw dodać w **Ustawienia → Klucze API → Thunderforest**.
+
 ## Zarządzanie pamięcią (menu → Ustawienia → Pamięć)
 
 - **Łączny rozmiar pamięci** wszystkich źródeł.

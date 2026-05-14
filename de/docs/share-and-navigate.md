@@ -1,4 +1,4 @@
-# Standort teilen & zu einem Ziel navigieren
+# Standort, Tracks & Wegpunkte teilen — und zu einem Ziel navigieren
 
 ## Ihren aktuellen Standort teilen
 
@@ -42,6 +42,48 @@ In WhatsApp und ähnlichen Apps werden beide URLs zu tappbaren Links. In SMS sin
 ### Wenn noch keine GPS-Position vorliegt
 
 Das Panel öffnet sich, zeigt aber „GPS wird erfasst…“ und der Teilen-Button ist deaktiviert. Sobald die erste Position verfügbar ist, aktualisiert sich das Panel und der Teilen-Button wird aktiv — Sie müssen nicht schließen und wieder öffnen.
+
+## Tracks & Wegpunkte teilen
+
+ApexGPS lässt Sie Ihre Tracks und Wegpunkte als standardisierte `.gpx`-Dateien an jeden senden — öffnen Sie sie in GaiaGPS, Strava, Garmin BaseCamp, wikiloc oder einer anderen ApexGPS-Installation. Drei Wege dorthin:
+
+### Einzelner Track oder einzelner Wegpunkt
+
+- **Track** — Track auf der Karte antippen → **Teilen**-Button im Overlay. Oder die Track-Detailansicht öffnen (Tracks → Zeile antippen) → **Teilen-Symbol** in der oberen Leiste.
+- **Wegpunkt** — Wegpunkt auf der Karte antippen → **Teilen**-Button im Overlay. Der Empfänger sieht eine Textnachricht mit Name, Koordinaten, Höhe und zwei Links (ApexGPS App Link + Google Maps).
+
+### Bulk-Teilen aus den Listen-Bildschirmen
+
+Öffnen Sie **Menü → Tracks** (oder **Wegpunkte**), lange drücken auf eine Zeile, um in den Auswahlmodus zu wechseln, haken Sie die gewünschten an, dann tippen Sie auf das **Teilen-Symbol** in der oberen Leiste:
+
+- Tracks → bündelt jeden ausgewählten Track in eine einzelne `.gpx`-Datei.
+- Wegpunkte → bündelt jeden ausgewählten Wegpunkt in eine einzelne `.gpx`.
+
+Ein Teilen-Dialog öffnet sich — wählen Sie WhatsApp, Drive, Gmail, was immer. Der Dateiname enthält das Datum.
+
+### Alles teilen, was gerade sichtbar ist („Sichtbaren Bereich teilen")
+
+Der schnellste Weg, wenn Sie jemandem „den ganzen Bereich, den ich gerade sehe" schicken wollen. Drei Einstiegspunkte, alle führen in dasselbe Sheet:
+
+- **Karten-Bildschirm → Teilen-Symbol** in der oberen Leiste (links vom ☰ Menü). Nutzt den Live-Karten-Bereich.
+- **Menü → Karten → Sichtbare Tracks & Wegpunkte teilen** (dritte Karte im Karten-Hub, unter Herunterladen / Gespeicherte Offline-Karten). Nutzt den Bereich, den Sie unmittelbar vor dem Öffnen des Hubs geöffnet hatten — so können Sie hochscrollen, den Bereich finden und dann hineinspringen.
+- **Karten-⋮-Überlaufmenü → Sichtbare Tracks & Wegpunkte teilen**.
+
+Ein Sheet fährt hoch und listet jeden sichtbaren Track (Linien, die den Bereich kreuzen UND auf sichtbar geschaltet sind) und jeden sichtbaren Wegpunkt (innerhalb der Bereichsgrenzen) auf. Jede Zeile hat ein Häkchen — **entfernen Sie das Häkchen bei allem, was Sie nicht senden möchten**. Der Standard-Dateiname wird vom Zentrum des Bereichs geokodiert („ApexGPS-Wadi-Bani-Khalid-2026-05-14.gpx", wenn der Geokoder etwas zurückgibt; „ApexGPS-2026-05-14.gpx", wenn Sie offline sind oder nichts zurückkommt).
+
+Tippen Sie auf **Teilen** → eine einzelne `.gpx`-Datei wird gebaut, die alle ausgewählten Tracks + Wegpunkte + einen kleinen Metadaten-Header enthält, dann öffnet sich der System-Teilen-Dialog.
+
+#### Größenbegrenzungen
+
+Ein „Sichtbaren Bereich teilen"-Bündel wird während des Bauens im Speicher gehalten, sehr große Auswahlen können also mit einem klaren Toast fehlschlagen:
+
+| Limit | Obergrenze |
+|---|---|
+| Tracks pro Bündel | 100 |
+| Wegpunkte pro Bündel | 1 000 |
+| Gesamte Track-Punkte (über alle ausgewählten Tracks) | 100 000 |
+
+Wenn Sie eine Grenze erreichen, sagt Ihnen der Toast, welche — reduzieren Sie Ihre Auswahl im Sheet (haken Sie ein paar große Tracks ab) oder nutzen Sie **Einstellungen → Daten → Sicherung** für sehr große Exporte (dieser Pfad streamt die ZIP und ist nicht durch diese Grenzen beschränkt).
 
 ## Einen geteilten Standort empfangen
 

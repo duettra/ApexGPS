@@ -1,4 +1,4 @@
-# Udostępnij lokalizację i nawiguj do celu
+# Udostępnij lokalizację, trasy i punkty — i nawiguj do celu
 
 ## Udostępnij swoją aktualną lokalizację
 
@@ -42,6 +42,48 @@ W WhatsApp i podobnych aplikacjach obie URL-e są klikalne. W SMS to tekst do sk
 ### Jeśli nie ma jeszcze fixa GPS
 
 Panel się otwiera, ale pokazuje „Szukam GPS…”, a przycisk Udostępnij jest nieaktywny. Gdy pojawi się pierwszy fix, panel się aktualizuje, a Udostępnij aktywuje — nie trzeba zamykać i otwierać.
+
+## Udostępnianie tras i punktów
+
+ApexGPS pozwala wysłać Twoje trasy i punkty komukolwiek jako standardowe pliki `.gpx` — otwórz je w GaiaGPS, Strava, Garmin BaseCamp, wikiloc lub innej kopii ApexGPS. Trzy drogi:
+
+### Pojedyncza trasa lub pojedynczy punkt
+
+- **Trasa** — dotknij trasy na mapie → przycisk **Udostępnij** w panelu. Albo otwórz ekran szczegółów trasy (Trasy → dotknij wiersza) → **ikona udostępniania** w górnym pasku.
+- **Punkt** — dotknij punktu na mapie → przycisk **Udostępnij** w panelu. Odbiorca dostaje wiadomość tekstową z nazwą, współrzędnymi, wysokością i dwoma linkami (ApexGPS App Link + Google Maps).
+
+### Grupowe udostępnianie z ekranów listy
+
+Otwórz **menu → Trasy** (lub **Punkty**), przytrzymaj wiersz, aby wejść w tryb zaznaczania, zaznacz interesujące, następnie dotknij **ikony udostępniania** w górnym pasku:
+
+- Trasy → łączy każdą zaznaczoną trasę w jeden plik `.gpx`.
+- Punkty → łączy każdy zaznaczony punkt w jeden `.gpx`.
+
+Otwiera się okno udostępniania — wybierz WhatsApp, Drive, Gmail, cokolwiek. Nazwa pliku zawiera datę.
+
+### Udostępnij wszystko widoczne („Udostępnij widoczne")
+
+Najszybsza droga, gdy chcesz komuś przekazać „cały obszar, na który patrzę". Trzy punkty wejścia, wszystkie prowadzą do tego samego arkusza:
+
+- **Ekran mapy → ikona udostępniania** w górnym pasku (po lewej od menu ☰). Używa Twojego aktualnego widoku mapy.
+- **menu → Mapy → Udostępnij widoczne trasy i punkty** (trzecia karta w hubie Mapy, pod Pobierz / Zapisane mapy offline). Używa widoku, który miałeś otwarty tuż przed wejściem do huba — możesz więc przewinąć w górę, znaleźć obszar, a potem wskoczyć.
+- **Menu kontekstowe ⋮ na mapie → Udostępnij widoczne trasy i punkty**.
+
+Arkusz wysuwa się z listą każdej widocznej trasy (linie przecinające widok ORAZ przełączone jako widoczne) i każdego widocznego punktu (w granicach widoku). Każdy wiersz ma pole — **odznacz, czego nie chcesz wysłać**. Domyślna nazwa pliku jest zgeokodowana ze środka widoku (np. „ApexGPS-Wadi-Bani-Khalid-2026-05-14.gpx", jeśli geokoder zwróci wynik; „ApexGPS-2026-05-14.gpx", jeśli jesteś offline lub geokoder nic nie zwraca).
+
+Dotknij **Udostępnij** → jeden plik `.gpx` zawierający wszystkie zaznaczone trasy + punkty + mały nagłówek metadanych jest budowany, a następnie otwiera się systemowe okno udostępniania.
+
+#### Limity rozmiaru
+
+Paczka „Udostępnij widoczne" jest trzymana w pamięci podczas budowy, więc bardzo duże zaznaczenia mogą się nie powieść z czytelnym komunikatem:
+
+| Limit | Próg |
+|---|---|
+| Tras na paczkę | 100 |
+| Punktów na paczkę | 1 000 |
+| Łącznie punktów tras (we wszystkich zaznaczonych) | 100 000 |
+
+Jeśli osiągniesz limit, komunikat powie który — zmniejsz zaznaczenie w arkuszu (odznacz kilka dużych tras), albo użyj **Ustawienia → Dane → Kopia zapasowa** do bardzo dużych eksportów (tamta ścieżka strumieniuje ZIP i nie ma tych limitów).
 
 ## Odbieranie udostępnionej lokalizacji
 

@@ -119,7 +119,12 @@ Type into the search box to filter to waypoints whose name OR description contai
 
 ### Select multiple
 
-Long-press a waypoint in the list → selection mode. Tick more, then bulk delete. There's no bulk colour/symbol change for waypoints (yet) — use Edit per waypoint for that.
+Long-press a waypoint in the list → selection mode. Tick more, then:
+
+- **Bulk share** (share icon) — bundle every selected waypoint into a single `.gpx` file and open the share dialog. See [Share tracks & waypoints](share-and-navigate.md#sharing-tracks--waypoints).
+- **Bulk delete** (trash icon, red) — with confirmation.
+
+There's no bulk colour/symbol change for waypoints (yet) — use Edit per waypoint for that.
 
 ### Remove duplicates
 

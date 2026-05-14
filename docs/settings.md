@@ -1,6 +1,6 @@
 # Settings
 
-**menu → Settings** is organised into four sub-screens: Appearance, Storage, Data, API Keys. Each has an ⓘ info button next to group headers explaining what the feature does.
+**menu → Settings** is organised into five sub-screens: Appearance, Storage, Data, API Keys, Advanced. Each has an ⓘ info button next to group headers explaining what the feature does.
 
 ## Appearance
 
@@ -39,7 +39,7 @@ Browse tile cache rebuilds as you look at areas with signal. Clearing doesn't hu
 ## Data
 
 ### Backup
-Create a ZIP containing tracks, waypoints, saved offline regions, and settings. Optional toggles let you exclude categories (saved maps are the biggest — often left out for quick "just my tracks" backups). See [Backup & restore](backup.md).
+Create a ZIP containing tracks, waypoints, saved offline regions, and settings. Toggles let you exclude categories. Saved offline regions have a **three-way mode**: **None** (skip them) / **Recipe** (small — just the instructions to re-download each region, works cross-platform between Android and iOS) / **Full tiles** (the old behaviour — embeds the raw tile bundles, large but offline-restorable, Android-only). See [Backup & restore](backup.md).
 
 ### Restore
 Open an existing `apexgps-backup-*.zip` file. Choose **Merge** (add to existing) or **Replace** (overwrite existing). See [Backup & restore → Merge vs Replace](backup.md#merge-vs-replace).
@@ -57,11 +57,18 @@ A real recording of the **Watzmann Traverse** (Berchtesgaden, Germany): Wimbachb
 ### Thunderforest
 Required to use the **Outdoors (Thunderforest)** tile style. Free "Hobby" plan: 150,000 tile requests per month, no credit card. Sign up at [thunderforest.com](https://www.thunderforest.com/), copy your API key, paste it here → **Save**.
 
-Without a key, the Outdoors style shows a placeholder; the other five styles work without any key.
+**Without a key, the Outdoors style is hidden** from the map-style picker (and from the Download Offline Region picker) so you don't accidentally pick it and see OpenTopoMap fallback tiles. Paste a key → the entry reappears in both menus. The other five styles work without any key.
+
+## Advanced
+
+### Battery saver at high speed
+When you're moving faster than **36 km/h** (≈22 mph) — driving, on a train, on a fast e-bike — the app drops its GPS sampling cadence to one fix every **10 seconds** instead of one per second. Road-shaped tracks still record cleanly; lane-level accuracy is reduced during driving. Cuts roughly half of GPS power draw on the highway leg of a road trip with no visible loss of route geometry. Toggle off if you need full sampling at speed (e.g., rally telemetry).
 
 ## About
 
 **Settings → About** shows the app version, attributions, and contact email — plus the **User Guide**: tappable entries for every chapter of this documentation, bundled with the app so the full guide works offline. Tap a chapter → a reader opens and renders the chapter in-app. Cross-chapter links inside each page are honoured; back arrow returns to the chapter list. A **"View online"** link at the bottom opens the same docs at [apexgps.duttra.de/docs](https://apexgps.duttra.de/docs/) in your browser. For help, contact [sandwalker.one@proton.me](mailto:sandwalker.one@proton.me).
+
+Below User Guide, a **Privacy policy** row opens the same in-app reader on the privacy chapter — no internet needed to read what data the app collects (none beyond what's on your phone) and how it's used. The same content is mirrored at [apexgps.duttra.de/privacy.html](https://apexgps.duttra.de/privacy.html) for anyone who wants to read it before installing.
 
 ---
 

@@ -4,6 +4,30 @@ Cambios visibles para el usuario, más recientes primero. Para refactors interno
 
 ---
 
+## 1.35.0 — 14 may. 2026 — Compartir rutas y puntos visibles · Ahorro de batería a alta velocidad · GPX desde apps de mensajería
+
+- **Comparte todo lo visible en el mapa con un solo toque.** Un nuevo **icono de compartir** aparece arriba a la izquierda del mapa, justo a la izquierda del menú ☰. Tócalo y se abre una hoja que lista cada ruta + punto visible dentro de tu área actual. Marca lo que quieras, toca **Compartir**, elige WhatsApp / correo / Drive — todo el paquete sale como un único archivo `.gpx` con el nombre del área que estabas viendo (p. ej. `ApexGPS-Wadi-Bani-Khalid-2026-05-14.gpx`). Hay dos puntos de entrada más que usan la misma hoja: una tarjeta **Compartir rutas y puntos visibles** en el menú Mapas (usa el área que tenías abierta al abrir el menú), y un icono **compartir** en la barra superior de las listas Rutas / Puntos cuando mantienes pulsado para seleccionar varios — empaqueta los elementos seleccionados directamente sin hoja extra.
+- **Ahorro de batería a alta velocidad.** Un nuevo interruptor en **Ajustes → Avanzado** (activado por defecto) reduce el muestreo GPS de una vez por segundo a una vez cada 10 segundos cuando te mueves a más de 36 km/h — coche, tren, bicicleta eléctrica rápida. Las rutas en carretera se siguen grabando con limpieza; la precisión de carril se reduce al conducir. Recorta aproximadamente la mitad del consumo GPS en el tramo de autopista de un viaje sin pérdida visible de la forma de la ruta. Desactívalo si necesitas muestreo completo a velocidad.
+- **Abrir archivos `.gpx` con un toque desde WhatsApp / Telegram / Signal / Outlook.** Antes, los adjuntos de estas apps caían al visor de texto del sistema porque anuncian el archivo como `application/xml` genérico en vez del tipo MIME GPX canónico. ApexGPS acepta ahora también esos tipos genéricos — toca una sola vez un adjunto `.gpx` en cualquier app de mensajería y el menú «Abrir con» del sistema muestra ApexGPS como opción de primer nivel.
+- **Copias de seguridad de mapas sin conexión en modo receta (multiplataforma).** Ajustes → Datos → Copia de seguridad sustituye la única casilla «Regiones de mapa guardadas» por un selector de tres opciones: **No incluir** / **Receta** (pequeño — lista qué regiones volver a descargar, funciona entre Android e iOS) / **Mosaicos completos** (el comportamiento antiguo — incrusta los paquetes de mosaicos, grande pero restaurable sin conexión, solo Android). Una copia en modo receta ronda los 80 KB incluso con una docena de regiones; restaurarla añade filas de marcador en **Mapas → Mapas sin conexión guardados** con un botón **Descargar** para traer los mosaicos reales bajo demanda.
+- **El estilo de mapa de pago se oculta sin clave.** La entrada **Outdoors (Thunderforest)** desaparece ahora del selector de estilo del mapa y del selector de descarga de región sin conexión hasta que pegues una clave API en **Ajustes → Claves API**. Antes, elegirlo sin clave caía silenciosamente a OpenTopoMap sin explicación. Pega una clave → la entrada vuelve a aparecer en ambos menús.
+
+---
+
+## 1.34.2 — 14 may. 2026 — Ocultar fuentes de mosaicos de pago sin clave
+
+- **El estilo «Outdoors (Thunderforest)» se oculta ahora por completo hasta que pegues una clave API.** Antes, elegirlo sin clave caía silenciosamente a OpenTopoMap sin explicación — tocabas Outdoors, veías mosaicos de OpenTopoMap y te preguntabas por qué. Tanto el selector de estilo del mapa como el selector de Descargar región sin conexión omiten ahora la entrada Outdoors hasta que **Ajustes → Claves API → Thunderforest** tenga una clave guardada. Pega una clave → Outdoors reaparece al instante en ambos menús.
+
+---
+
+## 1.34.1 — 13 may. 2026 — Copia de seguridad formato v2 (recetas de regiones offline, multiplataforma)
+
+- **Las copias de seguridad ya pueden saltarse los pesados paquetes de mosaicos y guardar una «receta» en su lugar.** Ajustes → Datos → Copia de seguridad sustituye la única casilla «Regiones de mapa guardadas» por un selector de tres opciones: **No incluir** / **Receta** (pequeño — lista qué regiones volver a descargar, funciona entre Android e iOS) / **Mosaicos completos** (grande — el comportamiento antiguo, solo Android). Una copia con receta ronda los 80 KB incluso con una docena de regiones; la equivalente con mosaicos completos podría ser de 50–500 MB. Restaura una copia en modo receta y la lista de mapas guardados se rellena con filas marcadas «Aún no descargada · X mosaicos» más un botón **Descargar** — tócalo para volver a descargar desde el servidor de mosaicos original (usa tu caché actual + una descarga nueva para el resto).
+- **Una copia hecha en Android ya se puede restaurar en iOS y al revés — para todo excepto los paquetes de mosaicos completos.** Rutas, puntos, ajustes y recetas de regiones viajan limpiamente. El modo mosaicos completos sigue siendo solo Android porque iOS no incluye un lector MBTiles, pero el modo receta cubre las necesidades prácticas de la mayoría (reconstruir en el teléfono nuevo y aceptar una breve redescarga de las regiones que te importan).
+- **Restaurar una receta de estilo Outdoors te recuerda configurar primero la clave API.** Si una receta restaurada apunta a Thunderforest y no tienes clave guardada, tocar **Descargar** muestra un aviso único que te dirige a **Ajustes → Avanzado → Clave API Thunderforest**; con la clave guardada, la descarga arranca con normalidad.
+
+---
+
 ## 1.34.0 — 13 may. 2026 — Ajuste de tamaños · Deportes acuáticos · Progreso de restauración en vivo · Plurales correctos
 
 - **Los marcadores de waypoint son aproximadamente un 25 % más grandes por defecto.** «Normal» (1,0×) ahora se renderiza al tamaño que antes tenía «Grande». Si los waypoints parecen pequeños, el selector sigue ofreciendo Pequeño / Normal / Grande / XL — Ajustes → Apariencia → Tamaño de waypoint. Tu ajuste actual se mantiene; quizá bajar un nivel ya que toda la escala ha crecido.
@@ -11,6 +35,20 @@ Cambios visibles para el usuario, más recientes primero. Para refactors interno
 - **Nuevo tipo de actividad: Deportes acuáticos.** Selecciónalo desde Detalles del track → Actividad para etiquetar sesiones de pádel, vela, surf, kayak o cualquier otro deporte de agua. Mismo icono de ola que el waypoint Cascada.
 - **Restaurar una copia de seguridad ahora muestra progreso en vivo.** Una copia grande (cientos de tracks, miles de waypoints) antes bloqueaba la app sobre un indicador durante varios minutos sin señal de progreso — fácil confundir con un fallo. El botón Restaurar ahora está sobre una barra de progreso + leyenda («Restaurando track N de M…» / «Restaurando waypoint N de M…») que avanza por track y cada 100 waypoints.
 - **Polaco y árabe ahora muestran etiquetas correctamente pluralizadas.** 13 cadenas con contadores («X tracks», «Y waypoints», «hace Z minutos» etc.) pasan ahora por reglas plurales reales. Polaco obtiene sus 4 formas completas; árabe sus 6. Inglés / alemán / francés / español ya eran gramaticalmente correctos; la mecánica subyacente ahora pasa por el mismo camino de forma coherente.
+
+---
+
+## 1.33.8 — 10 may. 2026 — Cola del primer pin de la regla y el planificador de rutas
+
+- **Tocar la herramienta de regla o el FAB de planificación antes de que esté listo tu fix GPS hace que el primer punto se coloque solo en cuanto llega tu posición.** Antes, tocar mientras el GPS aún se calentaba dejaba un inicio vacío — tenías que tocar el mapa a mano para soltar el pin A. Ahora la app muestra «Adquiriendo fix GPS…» en el botón y deja en cola el auto-emplazamiento del primer punto; cuando llega el fix, el pin A aparece en tu posición actual y el seguimiento en vivo toma el relevo con normalidad. Refleja el mismo comportamiento de cola que recibió el FAB de grabación en 1.33.7. Tocar a mano para soltar un pin mientras tanto cancela la cola, así nunca pierdes un toque.
+
+---
+
+## 1.33.7 — 10 may. 2026 — Importación tolerante de GPX · Privacidad en Acerca de · Auto-inicio de grabación
+
+- **Las importaciones de archivos GPX con coordenadas mal formadas ya no fallan por completo.** Un punto de track o waypoint con un valor `lat` / `lon` mal formado abortaba antes la importación entera. La app salta ahora el punto malo y sigue importando el resto — un punto malo en una marcha de 10 000 puntos ya no echa a perder el archivo. Los límites máximos absolutos (10 000 tracks, 100 000 waypoints, 500 000 puntos por track) siguen activos para evitar quedarse sin memoria.
+- **Política de privacidad directamente bajo Ajustes → Acerca de.** Una nueva fila «Política de privacidad» se sitúa debajo de Guía de usuario; tócala para leer la política dentro de la app, sin internet. El mismo contenido está espejado en `apexgps.duttra.de/privacy.html` (la URL de privacidad de Play Store) para quien quiera leerla antes de instalar.
+- **Toca Grabar antes de tu primer fix GPS y la grabación arranca sola cuando llegue el fix.** Antes, tocar Grabar antes de recibir ningún fix iniciaba al momento un track vacío de migas — si tocabas Detener antes de que llegara ningún fix, guardabas una ruta con cero puntos. Ahora el aviso dice «Adquiriendo fix GPS…» y la grabación se dispara sola en el momento en que llega el primer fix no nulo — no hace falta un segundo toque.
 
 ---
 

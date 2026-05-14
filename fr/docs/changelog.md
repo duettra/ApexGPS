@@ -4,6 +4,30 @@ Changements visibles par l\'utilisateur, plus récents en premier. Pour les refa
 
 ---
 
+## 1.35.0 — 14 mai 2026 — Partager les traces & points visibles · Économie de batterie à grande vitesse · GPX depuis les messageries
+
+- **Tout ce qui est visible sur la carte se partage d\'un seul appui.** Une nouvelle **icône de partage** s\'affiche en haut à gauche de la carte, juste à gauche du menu ☰. Appuyez dessus et un panneau s\'ouvre, listant chaque trace + point visible dans votre cadre actuel. Cochez ce que vous voulez, appuyez sur **Partager**, choisissez WhatsApp / e-mail / Drive — l\'ensemble part en un seul fichier `.gpx` nommé d\'après la zone que vous regardiez (par ex. `ApexGPS-Wadi-Bani-Khalid-2026-05-14.gpx`). Deux autres points d\'entrée utilisent le même panneau : une carte **Partager les traces & points visibles** dans le menu Cartes (utilise le cadre que vous aviez à l\'ouverture du menu), et une icône **partage** dans la barre supérieure des listes Traces / Points lorsque vous appuyez longuement pour en sélectionner plusieurs — regroupe les éléments sélectionnés directement sans panneau supplémentaire.
+- **Économie de batterie à grande vitesse.** Un nouvel interrupteur dans **Paramètres → Avancé** (activé par défaut) réduit l\'échantillonnage GPS d\'une fois par seconde à une fois toutes les 10 secondes lorsque vous dépassez 36 km/h — voiture, train, vélo électrique rapide. Les trajets routiers restent enregistrés proprement ; la précision de voie est réduite en voiture. Réduit grosso modo de moitié la consommation GPS sur le tronçon autoroutier d\'un trajet sans perte visible de la forme de l\'itinéraire. Désactivez-le si vous avez besoin d\'un échantillonnage complet à grande vitesse.
+- **Ouvrir d\'un appui les fichiers `.gpx` depuis WhatsApp / Telegram / Signal / Outlook.** Avant, les pièces jointes de ces applications retombaient sur la visionneuse de texte système parce qu\'elles annoncent le fichier comme `application/xml` générique au lieu du type MIME GPX canonique. ApexGPS accepte désormais aussi ces types génériques — appuyez une seule fois sur une pièce jointe `.gpx` dans n\'importe quelle messagerie et le menu système « Ouvrir avec » affiche ApexGPS comme option de premier rang.
+- **Sauvegardes des cartes hors ligne en mode recette (multiplateforme).** Paramètres → Données → Sauvegarder remplace l\'unique case « Régions de carte enregistrées » par un sélecteur à trois choix : **Ne pas inclure** / **Recette** (petit — liste les régions à retélécharger, fonctionne entre Android et iOS) / **Tuiles complètes** (l\'ancien comportement — embarque les bundles bruts, volumineux mais restaurable hors ligne, Android uniquement). Une sauvegarde recette pèse environ 80 Ko même pour une douzaine de régions ; la restauration ajoute des lignes de remplacement dans **Cartes → Cartes hors ligne enregistrées** avec un bouton **Télécharger** pour récupérer les tuiles à la demande.
+- **Le style de carte payant se masque sans clé.** L\'entrée **Outdoors (Thunderforest)** disparaît désormais du sélecteur de style de carte et du sélecteur de téléchargement de région hors ligne tant que vous n\'avez pas collé de clé API sous **Paramètres → Clés API**. Avant, la choisir sans clé retombait silencieusement sur OpenTopoMap sans explication. Collez une clé → l\'entrée réapparaît dans les deux menus.
+
+---
+
+## 1.34.2 — 14 mai 2026 — Masquer les sources de tuiles payantes sans clé
+
+- **Le style « Outdoors (Thunderforest) » se masque désormais entièrement tant que vous n\'avez pas collé de clé API.** Avant, le choisir sans clé retombait silencieusement sur OpenTopoMap sans explication — vous appuyiez sur Outdoors, vous voyiez des tuiles OpenTopoMap, et vous vous demandiez pourquoi. Le sélecteur de style de carte et le sélecteur de téléchargement de région hors ligne omettent tous les deux l\'entrée Outdoors tant que **Paramètres → Clés API → Thunderforest** n\'a pas de clé enregistrée. Collez une clé → Outdoors réapparaît immédiatement dans les deux menus.
+
+---
+
+## 1.34.1 — 13 mai 2026 — Format de sauvegarde v2 (recettes de régions hors ligne, multiplateforme)
+
+- **Les sauvegardes peuvent désormais ignorer les lourds bundles de tuiles et stocker une « recette » à la place.** Paramètres → Données → Sauvegarder remplace la case unique « Régions de carte enregistrées » par un sélecteur à trois choix : **Ne pas inclure** / **Recette** (petit — liste les régions à retélécharger, fonctionne entre Android et iOS) / **Tuiles complètes** (volumineux — l\'ancien comportement, Android uniquement). Une sauvegarde recette fait environ 80 Ko même pour une douzaine de régions ; la sauvegarde tuiles complètes équivalente pourrait peser 50–500 Mo. Restaurez une sauvegarde en mode recette et la liste des cartes enregistrées se remplit de lignes marquées « Pas encore téléchargée · X tuiles » avec un bouton **Télécharger** — appuyez pour retélécharger depuis le serveur de tuiles d\'origine (utilise votre cache actuel + une récupération fraîche pour le reste).
+- **Une sauvegarde faite sur Android peut maintenant être restaurée sur iOS et vice versa — sauf pour les bundles de tuiles complets.** Traces, points, paramètres et recettes de régions font tous l\'aller-retour proprement. Le mode tuiles complètes reste Android uniquement parce qu\'iOS ne livre pas de consommateur MBTiles, mais le mode recette couvre les besoins pratiques de la plupart des utilisateurs (reconstruire sur le nouveau téléphone, accepter un court retéléchargement pour les régions qui comptent).
+- **Restaurer une recette de style Outdoors vous incite à renseigner la clé API d\'abord.** Si une recette restaurée vise Thunderforest et que vous n\'avez pas de clé enregistrée, appuyer sur **Télécharger** affiche un toast unique vous dirigeant vers **Paramètres → Avancé → Clé API Thunderforest** ; une fois la clé en place, le téléchargement démarre normalement.
+
+---
+
 ## 1.34.0 — 13 mai 2026 — Ajustement de tailles · Sports nautiques · Progression de restauration en direct · Pluriels corrects
 
 - **Les marqueurs de waypoints sont environ 25 % plus grands par défaut.** « Normal » (1,0×) rend maintenant à la taille qu\'avait l\'ancien « Grand ». Si les waypoints semblent trop petits, le sélecteur propose toujours Petit / Normal / Grand / XL — Paramètres → Apparence → Taille de waypoint. Le réglage existant est conservé ; envisagez de descendre d\'un cran puisque toute l\'échelle a grandi.
@@ -11,6 +35,20 @@ Changements visibles par l\'utilisateur, plus récents en premier. Pour les refa
 - **Nouveau type d\'activité : Sports nautiques.** Sélectionnable depuis Détails de trace → Activité pour marquer une session de pagaie, voile, surf, kayak ou autre sport nautique. Même icône vague que le waypoint Cascade.
 - **La restauration d\'une sauvegarde affiche maintenant une progression en direct.** Une grosse sauvegarde (centaines de traces, milliers de waypoints) bloquait l\'application sur un indicateur pendant plusieurs minutes sans signe de progression — facile à confondre avec un plantage. Le bouton Restaurer est maintenant au-dessus d\'une barre de progression + légende (« Restauration de la trace N sur M… » / « Restauration du waypoint N sur M… ») qui avance par trace puis tous les 100 waypoints.
 - **Le polonais et l\'arabe affichent enfin des étiquettes correctement accordées au pluriel.** 13 chaînes contenant des compteurs (« X traces », « Y waypoints », « il y a Z minutes » etc.) passent maintenant par de vraies règles de pluriel. Le polonais obtient ses 4 formes complètes ; l\'arabe ses 6. Anglais / allemand / français / espagnol étaient déjà grammaticalement corrects ; la mécanique sous-jacente passe maintenant par le même chemin de façon cohérente.
+
+---
+
+## 1.33.8 — 10 mai 2026 — Outil mesure & planificateur d\'itinéraire : file d\'attente du premier point
+
+- **Appuyez sur le FAB mesure ou planificateur avant que votre fix GPS soit prêt et le premier point s\'auto-pose dès que votre position arrive.** Avant, appuyer pendant que le GPS chauffait encore laissait un démarrage vide — il fallait toucher la carte manuellement pour poser l\'épingle A. Désormais l\'app affiche « Acquisition du fix GPS… » sur le bouton et met en file le placement auto du premier point ; une fois le fix arrivé, l\'épingle A apparaît à votre position actuelle et le suivi live prend le relais normalement. Reprend le même comportement de file d\'attente que le FAB d\'enregistrement a reçu en 1.33.7. Toucher la carte manuellement pour poser une épingle annule la file, donc vous ne perdez jamais un appui.
+
+---
+
+## 1.33.7 — 10 mai 2026 — Import GPX tolérant · Confidentialité dans À propos · Auto-démarrage de l\'enregistrement
+
+- **Les imports de fichiers GPX avec des coordonnées mal formées ne plantent plus tout l\'import.** Un point de trace ou un waypoint avec une valeur `lat` / `lon` mal formée interrompait auparavant tout l\'import. L\'app ignore désormais le point fautif et continue d\'importer le reste — un mauvais point sur une randonnée de 10 000 points ne fait plus perdre le fichier. Les limites strictes (10 000 traces, 100 000 waypoints, 500 000 points par trace) lèvent toujours une erreur pour éviter les manques mémoire.
+- **Politique de confidentialité directement sous Paramètres → À propos.** Une nouvelle ligne « Politique de confidentialité » se trouve sous Guide d\'utilisation ; appuyez pour lire la politique dans l\'app, sans connexion. Le même contenu est miroir sur `apexgps.duttra.de/privacy.html` (l\'URL de confidentialité du Play Store) pour quiconque veut la lire avant d\'installer.
+- **Appuyez sur Enregistrer avant votre premier fix GPS et l\'enregistrement s\'auto-démarre dès l\'arrivée du fix.** Avant, appuyer sur Enregistrer avant qu\'un fix soit reçu démarrait immédiatement une trace vide — si vous appuyiez sur Arrêter avant l\'arrivée d\'un fix, vous sauvegardiez une trace à zéro point. Désormais le toast dit « Acquisition du fix GPS… » et l\'enregistrement se déclenche automatiquement à l\'instant où le premier fix non nul arrive — pas besoin d\'un deuxième appui.
 
 ---
 

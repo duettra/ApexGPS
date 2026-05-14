@@ -4,6 +4,30 @@ Für Nutzer sichtbare Änderungen, neueste zuerst. Für internes Refactoring / r
 
 ---
 
+## 1.35.0 — 14. Mai 2026 — Sichtbare Tracks & Wegpunkte teilen · Energiesparmodus bei hoher Geschwindigkeit · GPX aus Messenger-Apps
+
+- **Alles, was auf der Karte sichtbar ist, mit einem Tipp teilen.** Ein neues **Teilen-Symbol** sitzt oben links auf der Karte, direkt links neben dem ☰-Menü. Tippen Sie es an und ein Blatt öffnet sich, das jeden sichtbaren Track + Wegpunkt im aktuellen Ausschnitt auflistet. Hakeln Sie ab, was Sie möchten, tippen Sie auf **Teilen**, wählen Sie WhatsApp / E-Mail / Drive — das ganze Bündel geht als einzelne `.gpx`-Datei raus, benannt nach dem Bereich, den Sie gerade anschauten (z. B. `ApexGPS-Wadi-Bani-Khalid-2026-05-14.gpx`). Zwei weitere Einstiegspunkte nutzen dasselbe Blatt: eine **Sichtbare Tracks & Wegpunkte teilen**-Karte im Karten-Menü (verwendet den Ausschnitt, den Sie beim Öffnen des Menüs hatten), und ein **Teilen**-Symbol in der oberen Leiste der Listen Tracks / Wegpunkte, wenn Sie per Langdruck mehrere Einträge auswählen — bündelt die ausgewählten Elemente direkt ohne zusätzliches Blatt.
+- **Energiesparmodus bei hoher Geschwindigkeit.** Ein neuer Schalter in **Einstellungen → Erweitert** (standardmäßig an) reduziert die GPS-Abtastung von einmal pro Sekunde auf einmal alle 10 Sekunden, wenn Sie schneller als 36 km/h unterwegs sind — Auto, Zug, schnelles E-Bike. Straßentracks werden weiterhin sauber aufgezeichnet; die Spur-Genauigkeit ist beim Fahren reduziert. Spart auf der Autobahn-Etappe einer Reise grob die Hälfte des GPS-Akkuverbrauchs ohne sichtbaren Verlust der Routenform. Bei Bedarf abschalten, um volle Abtastung bei Geschwindigkeit zu erhalten.
+- **`.gpx`-Anhänge aus WhatsApp / Telegram / Signal / Outlook per Antippen öffnen.** Vorher fielen Anhänge aus diesen Apps auf den System-Texteditor zurück, weil sie die Datei als generisches `application/xml` statt als kanonischen GPX-MIME-Typ ankündigen. ApexGPS akzeptiert nun auch diese generischen Typen — tippen Sie einen `.gpx`-Anhang in einer beliebigen Messenger-App einmal an und das System-„Öffnen mit"-Menü zeigt ApexGPS als erstklassige Option.
+- **Rezept-Modus für Offline-Karten-Sicherungen (plattformübergreifend).** Einstellungen → Daten → Sicherung ersetzt das einzelne Häkchen „Gespeicherte Kartenregionen" durch eine Drei-Wege-Auswahl: **Nicht einschließen** / **Rezept** (klein — listet auf, welche Regionen neu heruntergeladen werden sollen, funktioniert plattformübergreifend mit dem iOS-Port) / **Vollständige Kacheln** (das alte Verhalten — bettet die rohen Kachelpakete ein, groß aber offline wiederherstellbar, nur Android). Eine Rezept-Sicherung ist selbst für ein Dutzend Regionen etwa 80 KB; das Wiederherstellen fügt Platzhalter-Zeilen in **Karten → Gespeicherte Offline-Karten** mit einer **Herunterladen**-Schaltfläche ein, um die eigentlichen Kacheln bei Bedarf zu holen.
+- **Kostenpflichtiger Kartenstil blendet sich ohne Schlüssel aus.** Der Eintrag **Outdoors (Thunderforest)** verschwindet jetzt sowohl aus dem Kartenstil-Picker als auch aus dem Picker für Offline-Region-Download, bis Sie unter **Einstellungen → API-Schlüssel** einen API-Schlüssel eingefügt haben. Vorher fiel die Auswahl ohne Schlüssel stillschweigend auf OpenTopoMap zurück, ohne Erklärung. Schlüssel einfügen → der Eintrag erscheint in beiden Menüs wieder.
+
+---
+
+## 1.34.2 — 14. Mai 2026 — Kostenpflichtige Kachelquellen ohne Schlüssel ausblenden
+
+- **Der Stil „Outdoors (Thunderforest)" blendet sich nun vollständig aus, bis Sie einen API-Schlüssel eingefügt haben.** Vorher fiel die Auswahl ohne Schlüssel stillschweigend auf OpenTopoMap zurück, ohne Erklärung — Sie tippten Outdoors an, sahen OpenTopoMap-Kacheln und fragten sich, warum. Der Kartenstil-Picker und der Picker zum Download einer Offline-Region lassen den Outdoors-Eintrag weg, bis unter **Einstellungen → API-Schlüssel → Thunderforest** ein Schlüssel gespeichert ist. Schlüssel einfügen → Outdoors erscheint sofort wieder in beiden Menüs.
+
+---
+
+## 1.34.1 — 13. Mai 2026 — Sicherungsformat v2 (Offline-Regions-Rezepte, plattformübergreifend)
+
+- **Sicherungen können die schweren Kachelpakete jetzt überspringen und stattdessen ein „Rezept" speichern.** Einstellungen → Daten → Sicherung ersetzt das einzelne Häkchen „Gespeicherte Kartenregionen" durch eine Drei-Wege-Auswahl: **Nicht einschließen** / **Rezept** (klein — listet auf, welche Regionen neu heruntergeladen werden sollen, funktioniert plattformübergreifend mit dem iOS-Port) / **Vollständige Kacheln** (groß — das alte Verhalten, nur Android). Eine Rezept-Sicherung ist selbst für ein Dutzend Regionen etwa 80 KB; die entsprechende Vollständige-Kacheln-Sicherung könnte 50–500 MB groß werden. Eine Rezept-Sicherung wiederherstellen und die Liste der gespeicherten Karten füllt sich mit Zeilen, die mit „Noch nicht heruntergeladen · X Kacheln" markiert sind, plus einer **Herunterladen**-Schaltfläche — antippen, um vom ursprünglichen Kachelserver neu zu laden (nutzt Ihren aktuellen Cache + frische Kachelabrufe für den Rest).
+- **Eine auf Android erstellte Sicherung kann nun auf iOS wiederhergestellt werden und umgekehrt — bis auf die Vollständige-Kacheln-Pakete.** Tracks, Wegpunkte, Einstellungen und Regions-Rezepte gehen sauber hin und her. Der Vollständige-Kacheln-Modus bleibt Android-only, weil iOS keinen MBTiles-Consumer mitliefert, aber der Rezept-Modus deckt die praktischen Bedürfnisse der meisten Nutzer ab (auf dem neuen Telefon neu aufbauen, einen kurzen Neudownload für die wichtigen Regionen akzeptieren).
+- **Beim Wiederherstellen eines Outdoors-Stil-Rezepts werden Sie aufgefordert, zuerst den API-Schlüssel zu setzen.** Wenn ein wiederhergestelltes Rezept auf Thunderforest zielt und Sie keinen Schlüssel gespeichert haben, zeigt das Antippen von **Herunterladen** einen einmaligen Toast, der Sie zu **Einstellungen → Erweitert → Thunderforest-API-Schlüssel** lenkt; sobald der Schlüssel hinterlegt ist, startet der Download normal.
+
+---
+
 ## 1.34.0 — 13. Mai 2026 — Größenanpassung · Wassersport · Live-Wiederherstellungsfortschritt · Korrekte Pluralformen
 
 - **Wegpunkt-Symbole sind standardmäßig etwa 25 % größer.** „Normal" (1,0×) rendert jetzt in der Größe, die früher „Groß" hatte. Wenn die Wegpunkte zu klein wirken, gibt es weiterhin Klein / Normal / Groß / XL — Einstellungen → Darstellung → Wegpunkt-Größe. Bestehende Einstellung wird beibehalten; möglicherweise eine Stufe niedriger wählen, da die ganze Skala größer geworden ist.
@@ -11,6 +35,20 @@ Für Nutzer sichtbare Änderungen, neueste zuerst. Für internes Refactoring / r
 - **Neue Aktivitätsart: Wassersport.** Wählbar über Trackdetails → Aktivität, um Paddel-, Segel-, Surf-, Kajak- oder andere Wassersport-Sitzungen zu markieren. Gleiches Wellen-Symbol wie der Wasserfall-Wegpunkt.
 - **Wiederherstellen einer Sicherung zeigt jetzt Live-Fortschritt.** Eine große Sicherung (hunderte Tracks, tausende Wegpunkte) blockierte die App früher minutenlang auf einem Spinner ohne Hinweis — leicht mit einem Absturz zu verwechseln. Die Schaltfläche „Wiederherstellen" sitzt jetzt über einem Fortschrittsbalken + Beschriftung („Stelle Track N von M wieder her…" / „Stelle Wegpunkt N von M wieder her…"), die pro Track und alle 100 Wegpunkte tickt.
 - **Polnisch und Arabisch zeigen jetzt korrekt pluralisierte Zähltexte.** 13 Zeichenketten mit Zählwerten („X Tracks", „Y Wegpunkte", „vor Z Minuten" usw.) routen jetzt durch echte Pluralregeln. Polnisch erhält alle 4 Formen, Arabisch alle 6. Englisch / Deutsch / Französisch / Spanisch waren bereits grammatikalisch korrekt; die zugrundeliegende Mechanik verläuft jetzt konsistent durch denselben Pfad.
+
+---
+
+## 1.33.8 — 10. Mai 2026 — Messwerkzeug & Routenplaner: Erst-Pin-Warteschlange
+
+- **Tippen Sie auf das Messwerkzeug oder den Planer-FAB, bevor Ihr GPS-Fix bereit ist, fällt der erste Punkt nun automatisch, sobald Ihre Position eintrifft.** Bisher hinterließ ein Tap, während GPS noch warmlief, einen leeren Start — Sie mussten manuell auf die Karte tippen, um Pin A zu setzen. Jetzt zeigt die App „GPS wird erfasst…" am Schalter und reiht den Erst-Punkt-Auto-Place in die Warteschlange ein; sobald der Fix eintrifft, erscheint Pin A an Ihrer aktuellen Position und der Live-Tracker übernimmt normal. Spiegelt dasselbe Warteschlangen-Verhalten, das der Aufnahme-FAB in 1.33.7 bekommen hat. Manuelles Antippen zum Setzen eines Pins bricht die Warteschlange währenddessen ab, sodass Sie keinen Tap verlieren.
+
+---
+
+## 1.33.7 — 10. Mai 2026 — Toleranter GPX-Import · Datenschutz unter Über · Auto-Start der Aufzeichnung
+
+- **Imports von GPX-Dateien mit fehlerhaften Koordinaten brechen nicht mehr komplett ab.** Ein Track-Punkt oder Wegpunkt mit einem fehlerhaften `lat` / `lon`-Wert brach bisher den ganzen Import ab. Die App überspringt jetzt den fehlerhaften Punkt und importiert den Rest weiter — ein schlechter Punkt in einer 10 000-Punkt-Wanderung verliert die Datei nicht mehr. Harte Obergrenzen (10 000 Tracks, 100 000 Wegpunkte, 500 000 Punkte pro Track) lösen weiterhin Fehler aus, um Out-of-Memory zu verhindern.
+- **Datenschutzerklärung direkt unter Einstellungen → Über.** Eine neue Zeile „Datenschutzerklärung" sitzt unter der Anleitung; antippen, um die Erklärung in der App zu lesen, kein Internet nötig. Derselbe Inhalt wird unter `apexgps.duttra.de/privacy.html` (die Play-Store-Datenschutz-URL) gespiegelt für alle, die ihn vor der Installation lesen möchten.
+- **Tippen Sie auf Aufnahme, bevor Ihr erster GPS-Fix eintrifft, und die Aufzeichnung startet automatisch, sobald der Fix kommt.** Vorher startete ein Tap auf Aufnahme, bevor irgendein Fix empfangen war, sofort einen leeren Breadcrumb-Track — wenn Sie auf Stopp tippten, bevor ein Fix eintraf, speicherten Sie einen Track mit null Punkten. Jetzt sagt der Toast „GPS wird erfasst…" und die Aufzeichnung feuert automatisch in dem Moment, in dem der erste nicht-null-Fix eintrifft — kein zweiter Tap nötig.
 
 ---
 

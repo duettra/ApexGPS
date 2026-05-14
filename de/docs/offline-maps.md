@@ -51,6 +51,10 @@ Jeder abgeschlossene Download erscheint hier. Tippen Sie eine Region an, um ihre
 
 Das Löschen einer gespeicherten Region entfernt ihr Kachelpaket, aber NICHT den allgemeinen Kachel-Cache. Der Bereich kann durch früheres Stöbern weiterhin zwischengespeichert sein.
 
+### Rezept-Zeilen (nach Wiederherstellen einer Rezept-Modus-Sicherung)
+
+Das Wiederherstellen einer Sicherung, die mit dem **Rezept**-Offline-Karten-Modus erstellt wurde (siehe [Sicherung → Rezept vs. Vollständige Kacheln](backup.md#rezept-vs-vollständige-kacheln)), fügt hier Zeilen ein, die mit **„Noch nicht heruntergeladen · X Kacheln"** markiert sind und eine **Herunterladen**-Schaltfläche am Ende haben. Tippen Sie auf **Herunterladen**, um die Kacheln mit dem gespeicherten Namen, Bounding-Box, Zoom-Bereich und der Kachelquelle neu zu holen. Die Zeile wechselt zu einer normalen Gespeicherte-Region-Zeile, sobald der Download abgeschlossen ist. Wenn das Rezept Thunderforest-Kacheln nutzt und Ihr API-Schlüssel nicht gespeichert ist, zeigt die App einen einmaligen Toast, der Sie auffordert, ihn zuerst unter **Einstellungen → API-Schlüssel → Thunderforest** hinzuzufügen.
+
 ## Cache-Verwaltung (Menü → Einstellungen → Speicher)
 
 - **Gesamte Cache-Größe** über alle Kartenquellen.

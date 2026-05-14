@@ -99,6 +99,7 @@ Przytrzymaj trasę → tryb zaznaczania. Zaznacz interesujące, następnie:
 
 - **Grupowa zmiana koloru** (ikona palety) — jeden kolor dla wszystkich zaznaczonych.
 - **Grupowe pokazywanie / ukrywanie** (ikony oka) — szybka widoczność.
+- **Grupowe udostępnianie** (ikona udostępniania) — łączy każdą zaznaczoną trasę w jeden plik `.gpx` i otwiera okno udostępniania. Zobacz [Udostępnianie tras i punktów](share-and-navigate.md#udost%C4%99pnianie-tras-i-punkt%C3%B3w).
 - **Grupowe usuwanie** (czerwony kosz) — z potwierdzeniem.
 - **Zaznacz wszystkie** — zaznacza wszystkie trasy w filtrowanym widoku.
 

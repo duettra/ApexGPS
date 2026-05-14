@@ -4,6 +4,30 @@ User-visible changes, newest first. For internal refactoring / version-bump-only
 
 ---
 
+## 1.35.0 — May 14, 2026 — Share visible tracks & waypoints · Battery saver at speed · GPX from chat apps
+
+- **Share everything visible on the map with one tap.** A new **share icon** sits in the top-left of the map, just to the left of the ☰ menu. Tap it and a sheet opens listing every visible track + waypoint inside your current viewport. Tick what you want, tap **Share**, pick WhatsApp / email / Drive — the whole bundle goes out as a single `.gpx` file named after the area you were viewing (e.g. `ApexGPS-Wadi-Bani-Khalid-2026-05-14.gpx`). Two more entry points use the same sheet: a **Share visible** card on the Maps menu (uses the viewport you had open when you opened the menu), and a **share** icon in the top bar of Tracks / Waypoints lists when you long-press to select multiple — bundles the selected items directly with no extra sheet.
+- **Battery saver at high speed.** A new toggle in **Settings → Advanced** (default on) reduces GPS sampling from once-a-second to once-every-10-seconds when you're moving faster than 36 km/h — driving, on a train, on a fast e-bike. Road tracks still record cleanly; lane-level accuracy is reduced during driving. Cuts roughly half the GPS battery drain on the highway leg of a road trip with no visible loss of route shape. Toggle off if you need full sampling at speed.
+- **Tap-to-open `.gpx` files from WhatsApp / Telegram / Signal / Outlook.** Before, attachments from these apps fell back to the system text viewer because they advertise the file as generic `application/xml` instead of the canonical GPX MIME type. ApexGPS now also accepts those generic types — single-tap a `.gpx` attachment in any messaging app and the system "Open with" menu shows ApexGPS as a first-class option.
+- **Recipe-mode offline-map backups (cross-platform).** Settings → Data → Backup replaces the single "Saved map regions" checkbox with a three-way picker: **None** / **Recipe** (small — lists which regions to re-download, works cross-platform with the iOS port) / **Full tiles** (the old behaviour — embeds the raw tile bundles, large but offline-restorable, Android-only). A recipe backup is around 80 KB even for a dozen regions; restoring one drops placeholder rows in **Maps → Saved offline maps** with a **Download** button to fetch the actual tiles on demand.
+- **Paid map style hides itself without a key.** The **Outdoors (Thunderforest)** entry now disappears from the map-style picker and from the Download Offline Region picker until you've pasted an API key under **Settings → API Keys**. Before, picking it without a key silently fell through to OpenTopoMap with no explanation. Paste a key → the entry reappears in both menus.
+
+---
+
+## 1.34.2 — May 14, 2026 — Hide paid tile sources without a key
+
+- **The "Outdoors (Thunderforest)" style now hides itself entirely until you've pasted an API key.** Before, picking it without a key silently fell through to OpenTopoMap with no explanation — you tapped Outdoors, saw OpenTopoMap tiles, and wondered why. The map-style picker and the Download Offline Region picker both omit the Outdoors entry until **Settings → API Keys → Thunderforest** has a saved key. Paste a key → Outdoors reappears immediately in both menus.
+
+---
+
+## 1.34.1 — May 13, 2026 — Backup format v2 (offline-region recipes, cross-platform)
+
+- **Backups can now skip the heavy tile bundles and store a "recipe" instead.** Settings → Data → Backup replaces the single "Saved map regions" checkbox with a three-way picker: **None** / **Recipe** (small — lists which regions to re-download, works cross-platform with the iOS port) / **Full tiles** (large — the old behaviour, Android-only). A recipe backup is around 80 KB even for a dozen regions; the equivalent full-tile backup could be 50–500 MB. Restore a recipe-mode backup and the saved-maps list fills with rows marked "Not downloaded yet · X tiles" plus a **Download** button — tap it to re-download from the original tile server (uses your current cache + a brand-new tile fetch for the rest).
+- **A backup made on Android can now be restored on iOS and vice versa — for everything except full-tile bundles.** Tracks, waypoints, settings, and region recipes all round-trip cleanly. The full-tile bundle mode is still Android-only because iOS doesn't ship an MBTiles consumer, but the recipe mode covers most users' practical needs (rebuild on the new phone, accept a short re-download for the regions you care about).
+- **Restoring an Outdoors-style recipe nudges you to set the API key first.** If a restored recipe targets Thunderforest and you don't have a key saved, tapping **Download** shows a one-time toast directing you to **Settings → Advanced → Thunderforest API key**; once the key is there, the download starts normally.
+
+---
+
 ## 1.34.0 — May 13, 2026 — Sizing polish · Water Sports · Live restore progress · Plural correctness
 
 - **Waypoint markers are about 25% larger by default.** "Normal" (1.0×) now renders at the size the prior "Large" did. If your waypoints feel too small, the picker still has Small / Normal / Large / XL — open Settings → Appearance → Waypoint size and switch back to Normal (existing setting kept; you may want to step down one notch since the whole ladder is bigger now).

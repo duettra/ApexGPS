@@ -1,4 +1,4 @@
-# Share your location & navigate to a target
+# Share your location, tracks & waypoints — and navigate to a target
 
 ## Sharing your current location
 
@@ -42,6 +42,48 @@ On WhatsApp and similar apps, both URLs become tappable links. On SMS they're st
 ### If there's no GPS fix yet
 
 The panel opens but shows "Acquiring GPS…" and the Share button is disabled. As soon as the first fix lands, the panel updates and Share enables — you don't need to close and re-open.
+
+## Sharing tracks & waypoints
+
+ApexGPS lets you send your tracks and waypoints to anyone as standard `.gpx` files — open them in GaiaGPS, Strava, Garmin BaseCamp, wikiloc, or another copy of ApexGPS. Three paths into it:
+
+### Single track or single waypoint
+
+- **Track** — tap a track on the map → **Share** button on the overlay. Or open the track detail screen (Tracks → tap a row) → top-bar **share icon**.
+- **Waypoint** — tap a waypoint on the map → **Share** button on the overlay. The recipient sees a text message with the name, coords, elevation, and two links (ApexGPS App Link + Google Maps).
+
+### Bulk share from the list screens
+
+Open **menu → Tracks** (or **Waypoints**), long-press a row to enter selection mode, tick the ones you want, then tap the **share icon** in the top bar:
+
+- Tracks → bundles every selected track into a single `.gpx` file.
+- Waypoints → bundles every selected waypoint into a single `.gpx`.
+
+A share dialog opens — pick WhatsApp, Drive, Gmail, whatever. The filename includes the date.
+
+### Share everything visible right now ("Share visible")
+
+The fastest path when you want to hand someone "the whole area I'm looking at." Three entry points, all funnel into the same sheet:
+
+- **Map screen → share icon** in the top bar (left of the ☰ menu). Uses your live map viewport.
+- **menu → Maps → Share visible tracks & waypoints** (third card on the Maps hub, below Download / Saved offline maps). Uses the viewport you had open just before entering the hub — so you can scroll up, find the area, then jump in.
+- **Map's ⋮ overflow menu → Share visible tracks & waypoints**.
+
+A sheet slides up listing every visible track (lines that intersect the viewport AND are toggled visible) and every visible waypoint (inside the viewport bounds). Each row has a checkbox — **untick anything you don't want to send**. The default filename is geocoded from the viewport centre ("ApexGPS-Wadi-Bani-Khalid-2026-05-14.gpx" if the geocoder resolves; "ApexGPS-2026-05-14.gpx" if you're offline or it returns nothing).
+
+Tap **Share** → a single `.gpx` file is built containing all the selected tracks + waypoints + a small metadata header, then the system share dialog opens.
+
+#### Size limits
+
+A "Share visible" bundle is held in memory while it's being built, so very large selections can fail with a clear toast:
+
+| Limit | Cap |
+|---|---|
+| Tracks per bundle | 100 |
+| Waypoints per bundle | 1,000 |
+| Total track points (across all selected tracks) | 100,000 |
+
+If you hit a cap, the toast tells you which one — reduce your selection in the sheet (untick a few large tracks), or use **Settings → Data → Backup** for very large exports (that path streams the ZIP and isn't bounded by these limits).
 
 ## Receiving a shared location
 

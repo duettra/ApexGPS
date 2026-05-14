@@ -2,13 +2,15 @@
 
 ## Instalación
 
-ApexGPS está en pruebas cerradas del Play Store. Pide una invitación a pruebas al desarrollador en [sandwalker.one@proton.me](mailto:sandwalker.one@proton.me), luego toca el enlace en tu teléfono → **Convertirse en probador** → instalar desde Play Store.
+ApexGPS está disponible en Play Store: [play.google.com/store/apps/details?id=com.apexgps.app](https://play.google.com/store/apps/details?id=com.apexgps.app). Instálala desde la ficha — ya no hace falta invitación de probador.
 
 ## Primer inicio
 
 Al abrir la app pedirá el **permiso de ubicación**. Elige **Mientras uso la app** (o **Precisa** si el sistema separa precisa y aproximada — ApexGPS necesita GPS preciso para senderismo).
 
-Aparecerá el mapa. El estilo por defecto es **OpenTopoMap** — curvas de nivel, sombreado, senderos en rojo.
+Aparecerá el mapa. El estilo por defecto en una instalación nueva es **ESRI Topo** (etiquetas limpias a zoom de senderismo); las instalaciones existentes mantienen el que tuvieras seleccionado. Puedes cambiar el predeterminado en cualquier momento en **Ajustes → Apariencia → Mapa predeterminado**, o cambiar de estilo a mitad de sesión con el botón de capas.
+
+La primera vez que abres una instalación nueva, una grabación real de la **travesía del Watzmann** (Berchtesgaden, Alemania) se importa automáticamente como ejemplo — un bucle de ~22,6 km con tres puntos destacados, para que la app no esté vacía al abrirla. Si borras los ejemplos y los quieres luego, **Ajustes → Datos → Cargar datos de ejemplo** los reimporta.
 
 ## Recorrido en cinco minutos
 
@@ -28,7 +30,7 @@ Mantén pulsado en cualquier parte del mapa. Se abre un diálogo — elige nombr
 
 ### Importar una ruta GPX
 
-Menú → Rutas → toca el **botón de carpeta azul** abajo a la derecha → elige un archivo `.gpx` de tus descargas o archivos. La ruta aparece en el mapa; tócala para ver detalles (distancia, perfil de altitud).
+Abre **menú → Rutas** → toca el FAB con el **icono de carpeta** abajo a la derecha → elige uno o varios archivos `.gpx`. Las rutas aparecen en el mapa; toca una para ver detalles (distancia, perfil de altitud).
 
 ### Grabar una salida
 
@@ -37,6 +39,10 @@ Toca la **pastilla de grabación** roja en la esquina superior izquierda. El pun
 ### Compartir tu ubicación
 
 Toca el triángulo azul. Un panel sube con altitud, precisión, hora, batería y dos enlaces de mapas. Toca **Compartir** → elige WhatsApp, SMS, e-mail, lo que sea. El receptor ve la info + un enlace; si también tiene ApexGPS, el enlace abre directamente la app.
+
+### Compartir lo que tienes en pantalla
+
+Toca el **icono compartir** arriba a la izquierda del mapa (a la izquierda del menú ☰). Sube una hoja con cada ruta y cada punto visible en tu viewport — marca lo que quieras enviar, toca Compartir, elige el mensajero. Todo el paquete sale como un único archivo `.gpx`. Ver [Compartir visible](share-and-navigate.md#compartir-todo-lo-visible-compartir-visible).
 
 ### Volver al menú principal
 

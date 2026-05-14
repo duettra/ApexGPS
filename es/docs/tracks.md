@@ -99,6 +99,7 @@ Mantén pulsada una ruta → modo selección. Marca las que quieras, luego:
 
 - **Cambio de color masivo** (icono paleta) — asigna un color a todas.
 - **Mostrar / ocultar masivo** (iconos de ojo) — visibilidad rápida.
+- **Compartir masivo** (icono compartir) — empaqueta cada ruta seleccionada en un único archivo `.gpx` y abre el diálogo de compartir. Ver [Compartir rutas y puntos](share-and-navigate.md#compartir-rutas-y-puntos).
 - **Borrado masivo** (papelera roja) — con confirmación.
 - **Seleccionar todas** — marca todas las de la vista filtrada.
 

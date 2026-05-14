@@ -1,4 +1,4 @@
-# Partager votre position & naviguer vers un point
+# Partager votre position, vos traces & vos points — et naviguer vers un point
 
 ## Partager votre position actuelle
 
@@ -42,6 +42,48 @@ Dans WhatsApp et apps similaires, les deux URL sont cliquables. En SMS c\'est du
 ### S\'il n\'y a pas encore de fix GPS
 
 Le panneau s\'ouvre mais affiche « Acquisition GPS… » et le bouton Partager est désactivé. Dès que le premier fix arrive, le panneau se met à jour et Partager s\'active — pas besoin de fermer et rouvrir.
+
+## Partager des traces et des points
+
+ApexGPS vous permet d\'envoyer vos traces et points à n\'importe qui sous forme de fichiers `.gpx` standard — ouvrez-les dans GaiaGPS, Strava, Garmin BaseCamp, wikiloc, ou un autre exemplaire d\'ApexGPS. Trois chemins pour y arriver :
+
+### Une seule trace ou un seul point
+
+- **Trace** — appuyez sur une trace de la carte → bouton **Partager** du panneau. Ou ouvrez l\'écran de détail de la trace (Traces → tap sur une ligne) → **icône de partage** dans la barre supérieure.
+- **Point** — appuyez sur un point de la carte → bouton **Partager** du panneau. Le destinataire reçoit un message texte avec le nom, les coordonnées, l\'altitude et deux liens (App Link ApexGPS + Google Maps).
+
+### Partage en lot depuis les listes
+
+Ouvrez **menu → Traces** (ou **Points**), appuyez longuement sur une ligne pour entrer en mode sélection, cochez celles que vous voulez, puis appuyez sur l\'**icône de partage** dans la barre supérieure :
+
+- Traces → regroupe chaque trace sélectionnée dans un seul fichier `.gpx`.
+- Points → regroupe chaque point sélectionné dans un seul `.gpx`.
+
+Un dialogue de partage s\'ouvre — choisissez WhatsApp, Drive, Gmail, etc. Le nom du fichier inclut la date.
+
+### Partager tout ce qui est visible (« Partager visible »)
+
+Le chemin le plus rapide quand vous voulez transmettre à quelqu\'un « toute la zone que je regarde ». Trois points d\'entrée, tous canalisés vers la même feuille :
+
+- **Écran carte → icône de partage** dans la barre supérieure (à gauche du menu ☰). Utilise votre zone visible de carte actuelle.
+- **menu → Cartes → Partager les traces & points visibles** (troisième carte du hub Cartes, sous Télécharger / Cartes hors ligne enregistrées). Utilise la zone que vous aviez ouverte juste avant d\'entrer dans le hub — vous pouvez donc faire défiler, trouver la zone, puis y plonger.
+- **Menu ⋮ de débordement de la carte → Partager les traces & points visibles**.
+
+Une feuille glisse vers le haut listant chaque trace visible (lignes qui croisent la zone visible ET sont activées) et chaque point visible (à l\'intérieur des limites de la zone visible). Chaque ligne a une case à cocher — **décochez ce que vous ne voulez pas envoyer**. Le nom de fichier par défaut est géocodé depuis le centre de la zone visible (« ApexGPS-Wadi-Bani-Khalid-2026-05-14.gpx » si le géocodeur résout ; « ApexGPS-2026-05-14.gpx » si vous êtes hors ligne ou s\'il ne renvoie rien).
+
+Appuyez sur **Partager** → un seul fichier `.gpx` est construit contenant toutes les traces + points sélectionnés + un petit en-tête de métadonnées, puis le dialogue de partage système s\'ouvre.
+
+#### Limites de taille
+
+Un lot « Partager visible » est gardé en mémoire pendant sa construction, donc de très grandes sélections peuvent échouer avec un toast clair :
+
+| Limite | Plafond |
+|---|---|
+| Traces par lot | 100 |
+| Points par lot | 1 000 |
+| Points de trace au total (toutes traces sélectionnées) | 100 000 |
+
+Si vous atteignez un plafond, le toast vous indique lequel — réduisez votre sélection dans la feuille (décochez quelques grosses traces), ou utilisez **Paramètres → Données → Sauvegarder** pour de très gros exports (ce chemin diffuse le ZIP en streaming et n\'est pas borné par ces limites).
 
 ## Recevoir une position partagée
 

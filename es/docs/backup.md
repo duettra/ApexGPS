@@ -6,29 +6,43 @@ La copia es manual pero sencilla. Hazla periódicamente si tienes datos que no q
 
 ## Qué incluye una copia
 
-- **Todas las rutas** (datos GPX, nombre, color, visibilidad).
+- **Todas las rutas** (datos GPX, nombre, color, visibilidad, etiqueta de actividad).
 - **Todos los puntos** (nombre, descripción, coords, altitud, color, símbolo).
-- **Todas las regiones guardadas** (bundles de mosaicos — pueden ser grandes).
-- **Todos los ajustes** (tema, fuente por defecto, grosor, tamaño de puntos, bloqueo de rotación).
+- **Todas las regiones de mapa guardadas sin conexión** — ver [Receta vs mosaicos completos](#receta-vs-mosaicos-completos) abajo para las dos formas de incluirlas.
+- **Todos los ajustes** (tema, fuente por defecto, grosor, tamaño de puntos, bloqueo de rotación, ahorro de batería, etc.).
 
 Qué **no** incluye:
 
-- La **caché de navegación** (mosaicos auto-guardados por uso general). No se incluye por regenerable y potencialmente enorme. Las regiones guardadas sí; la caché no.
+- La **caché de navegación** (mosaicos auto-guardados por uso general). No se incluye por regenerable y potencialmente enorme.
 - La **clave API de Thunderforest** se guarda con los ajustes, así no hay que reintroducirla.
 
 ## Crear una copia
 
 1. **Menú → Ajustes → Datos → Copia**.
-2. Opcional: desmarca categorías que no quieras (las regiones guardadas son lo más grande — déjalas fuera si solo quieres rutas/puntos).
+2. Elige qué incluir — hay casillas para rutas / puntos / ajustes, más un **selector de tres modos para las regiones de mapa sin conexión** (ver abajo).
 3. Toca **Crear copia**.
 4. El ZIP queda en almacenamiento privado. Se abre un diálogo para compartir:
    - **Google Drive / Dropbox / OneDrive** — resguardo en nube.
    - **Enviármelo** por e-mail / chat.
    - **Guardar en Descargas** por un gestor de archivos.
 
-El ZIP se llama por ejemplo `apexgps-backup-2026-04-19.zip`. La fecha va en el nombre.
+El ZIP se llama por ejemplo `apexgps-backup-2026-05-14.zip`. La fecha va en el nombre.
 
-**Una copia con regiones offline puede tardar un par de minutos** y generar un ZIP grande (50–500 MB según cuántas regiones). La UI muestra progreso.
+### Receta vs mosaicos completos
+
+Para las regiones de mapa guardadas sin conexión, eliges **uno de tres modos**:
+
+| Modo | Tamaño | Comportamiento | ¿Multiplataforma? |
+|---|---|---|---|
+| **No incluir** | el menor | Las filas de región no se incluyen. | n/a |
+| **Receta** | ~80 KB total | Cada región se guarda como una breve «tarjeta de instrucciones» — nombre, caja envolvente, rango de zoom, fuente de mosaicos. Al restaurar, las regiones aparecen en **Mapas → Mapas guardados** marcadas *«Aún no descargada · X mosaicos»*, con un botón **Descargar** para traer los mosaicos del servidor de mosaicos. | **Sí** — funciona entre Android e iOS. |
+| **Mosaicos completos** | 50–500 MB | El paquete MBTiles real de cada región se incrusta en el ZIP. Al restaurar, las regiones se pueden usar sin conexión al instante; sin redescarga. | **Solo Android.** iOS no puede leer los paquetes incrustados (todavía). |
+
+**Elige Receta** para mover entre dispositivos (cambio de teléfono, compartir una copia con un amigo en iOS o una copia «por si acaso» que guardarás en Drive para siempre). La redescarga es rápida por Wi-Fi y usa los mosaicos más actuales.
+
+**Elige Mosaicos completos** si quieres específicamente una copia restaurable en un paso y sin conexión en Android — útil antes de un viaje en el que podrías formatear el teléfono y no tener Wi-Fi en destino.
+
+**Una copia con Mosaicos completos puede tardar un par de minutos** y generar un ZIP grande. La UI muestra progreso.
 
 ## Restaurar una copia
 
@@ -58,6 +72,14 @@ Ambos modos recorren el ZIP por categoría.
 - Recibes puntos de la copia de un amigo → **Combinar** (conservas los tuyos y añades los suyos).
 
 La restauración va en streaming — rápida incluso con ZIP de cientos de MB. Si falla a medias, algunas categorías pueden estar aplicadas; repite para asegurar.
+
+### Restauración en modo receta — descargar las regiones
+
+Si la copia usó el modo **Receta** para los mapas offline, la restauración es instantánea pero verás las regiones en **Mapas → Mapas guardados** marcadas *«Aún no descargada · X mosaicos»* con un botón **Descargar**. Tócalo para volver a traer los mosaicos del servidor. Si la región usa mosaicos Thunderforest y aún no has pegado tu clave API, la app muestra un aviso único pidiendo añadirla primero en **Ajustes → Claves API**; una vez guardada la clave, vuelve a tocar Descargar.
+
+### Restauración entre versiones de la app
+
+Una copia v2 (creada con esta versión o posterior) no se abrirá en versiones anteriores y mostrará *«La copia con formato v2 es más reciente de lo que soporta esta app. Actualiza ApexGPS.»* — actualiza primero y luego restaura. Las copias v1 antiguas se siguen restaurando con la versión actual sin paso extra.
 
 ## Pasar a un nuevo teléfono
 

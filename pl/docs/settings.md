@@ -1,6 +1,6 @@
 # Ustawienia
 
-**Menu → Ustawienia** jest zorganizowane w cztery podekrany: Wygląd, Pamięć, Dane, Klucze API. Każdy ma przycisk ⓘ obok tytułów sekcji, wyjaśniający funkcję.
+**Menu → Ustawienia** jest zorganizowane w pięć podekranów: Wygląd, Pamięć, Dane, Klucze API, Zaawansowane. Każdy ma przycisk ⓘ obok tytułów sekcji, wyjaśniający funkcję.
 
 ## Wygląd
 
@@ -39,7 +39,7 @@ Pamięć podręczna przeglądania odbudowuje się, gdy patrzysz na obszary z zas
 ## Dane
 
 ### Kopia zapasowa
-Tworzy ZIP z trasami, punktami, zapisanymi regionami i ustawieniami. Przełączniki pozwalają wyłączyć kategorie (regiony są największe — często pomijane dla szybkich kopii „tylko moje trasy”). Zobacz [Kopia zapasowa](backup.md).
+Tworzy ZIP z trasami, punktami, zapisanymi regionami offline i ustawieniami. Przełączniki pozwalają wyłączyć kategorie. Zapisane regiony offline mają **trójstopniowy tryb**: **Nie dołączaj** (pomiń je) / **Przepis** (mały — tylko instrukcje pobrania każdego regionu, działa między Androidem a iOS) / **Pełne kafelki** (stare zachowanie — osadza surowe paczki kafelków, duże, ale przywracalne offline, tylko Android). Zobacz [Kopia zapasowa](backup.md).
 
 ### Przywróć
 Otwiera istniejący plik `apexgps-backup-*.zip`. Wybierz **Scal** (dodaj do istniejących) lub **Zamień** (nadpisz). Zobacz [Kopia → Scal vs Zamień](backup.md#scalanie-vs-zamiana).
@@ -57,11 +57,18 @@ Prawdziwy zapis **trawersowania Watzmanna** (Berchtesgaden, Niemcy): Wimbachbrü
 ### Thunderforest
 Wymagany dla stylu **Outdoors (Thunderforest)**. Darmowy plan „Hobby”: 150 000 żądań miesięcznie, bez karty. Zarejestruj się na [thunderforest.com](https://www.thunderforest.com/), skopiuj klucz API, wklej tutaj → **Zapisz**.
 
-Bez klucza styl Outdoors pokazuje placeholder; pozostałe pięć stylów działa bez klucza.
+**Bez klucza styl Outdoors jest ukryty** w selektorze stylu mapy (oraz w selektorze pobierania regionu offline), aby przez przypadek go nie wybrać i nie zobaczyć fallbacku OpenTopoMap. Wklej klucz → pozycja wraca natychmiast w obu menu. Pozostałe pięć stylów działa bez klucza.
+
+## Zaawansowane
+
+### Oszczędzanie baterii przy wysokiej prędkości
+Gdy poruszasz się szybciej niż **36 km/h** (≈22 mph) — samochodem, pociągiem, szybkim e-bike’em — aplikacja zmniejsza częstotliwość próbkowania GPS do jednego fixu co **10 sekund** zamiast jednego na sekundę. Trasy o kształcie drogi nadal nagrywają się czysto; dokładność pasa ruchu jest zredukowana podczas jazdy. Wycina mniej więcej połowę zużycia GPS-a na autostradowym odcinku podróży bez widocznej utraty geometrii trasy. Wyłącz, jeśli potrzebujesz pełnego próbkowania przy prędkości (np. telemetria rajdowa).
 
 ## Informacje
 
 **Ustawienia → Informacje** pokazuje wersję, atrybucje i e-mail kontaktowy — dodatkowo **Podręcznik użytkownika**: dotykalne wpisy dla każdego rozdziału tej dokumentacji, dostarczone w aplikacji, aby cały przewodnik działał offline. Dotknij rozdziału → otwiera się czytnik i renderuje rozdział w aplikacji. Linki między rozdziałami są honorowane; strzałka wstecz wraca do listy. Link **„Czytaj online”** u dołu otwiera tę samą dokumentację na [apexgps.duttra.de/docs](https://apexgps.duttra.de/docs/) w przeglądarce. Po pomoc: [sandwalker.one@proton.me](mailto:sandwalker.one@proton.me).
+
+Pod Podręcznikiem użytkownika wiersz **Polityka prywatności** otwiera ten sam czytnik w aplikacji na rozdziale polityki prywatności — bez internetu możesz przeczytać, jakie dane aplikacja zbiera (żadne poza tym, co masz w telefonie) i jak są wykorzystywane. Ta sama treść jest zwierciadlana pod [apexgps.duttra.de/privacy.html](https://apexgps.duttra.de/privacy.html) dla każdego, kto chce ją przeczytać przed instalacją.
 
 ---
 

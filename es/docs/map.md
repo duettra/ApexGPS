@@ -28,10 +28,10 @@ Opción de bloqueo al inicio en **Ajustes → Apariencia → Bloquear rotación 
 De arriba abajo:
 
 ### Medir distancia
-**Icono de regla**. Toca para entrar en modo medición; toca en el mapa para dejar pines; una línea los conecta y la barra inferior muestra la distancia total. Arrastra el primer pin a tu posición GPS para medir «desde mí». Toca el icono otra vez para salir.
+**Icono de regla**. Toca para entrar en modo medición; toca en el mapa para dejar pines; una línea los conecta y la barra inferior muestra la distancia total. Arrastra el primer pin a tu posición GPS para medir «desde mí». Arrastra un pin a la papelera (arriba a la derecha, justo bajo la brújula) para borrarlo. Toca el icono otra vez para salir.
 
 ### Capas de mapa
-**Icono de capas**. Seis estilos: OpenTopoMap (por defecto, senderismo), OSM Estándar (general limpio), ESRI Topo, ESRI relieve sombreado, Satélite, Outdoors (Thunderforest — requiere una clave API gratuita en Ajustes → Claves API).
+**Icono de capas**. Hasta seis estilos: OpenTopoMap (senderismo), OSM Estándar (general limpio), ESRI Topo (predeterminado en instalaciones nuevas), ESRI relieve sombreado, Satélite, Outdoors (Thunderforest — requiere una clave API gratuita en Ajustes → Claves API; la entrada queda oculta hasta que haya una clave guardada).
 
 El estilo elegido se mantiene entre sesiones.
 
@@ -57,6 +57,7 @@ Desde la **v1.25.2** el mapa ya no tiene FAB de importar — la importación GPX
 ## Arriba a la izquierda
 
 - **☰ menú** — cajón de navegación (Rutas, Puntos, Mapas, Ajustes).
+- **Icono compartir** — atajo de un toque para exportar cada ruta y cada punto visible del viewport actual como un único archivo `.gpx`. Abre la hoja **Compartir visible** con una lista de casillas por elemento. Ver [Compartir visible](share-and-navigate.md#compartir-todo-lo-visible-compartir-visible).
 - **Pastilla de grabación** — un punto rojo en un círculo oscuro. Tócalo para iniciar la grabación de tu salida actual. Mientras graba se expande a un cronómetro en vivo `00:00:00`; toca el cronómetro para **Pausar / Finalizar / Eliminar**. Tu trayecto se dibuja como una línea roja en el mapa mientras te mueves. Al **Finalizar** la grabación se guarda como nueva Ruta y el panel se abre para que la revises al instante. Ver [Rutas → Grabación](tracks.md#grabación).
 
 ## Barra de estadísticas (abajo)

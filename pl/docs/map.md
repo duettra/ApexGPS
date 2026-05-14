@@ -28,10 +28,10 @@ Opcja blokady przy starcie w **Ustawienia → Wygląd → Zablokuj obrót przy s
 Od góry do dołu:
 
 ### Mierz dystans
-**Ikona linijki**. Dotknij, aby wejść w tryb pomiaru; dotykaj mapy, aby stawiać punkty; linia je łączy, a pasek u dołu pokazuje łączny dystans. Przeciągnij pierwszy punkt na swoją pozycję GPS, aby mierzyć „od siebie”. Dotknij ikonki ponownie, aby wyjść.
+**Ikona linijki**. Dotknij, aby wejść w tryb pomiaru. Jeśli śledzenie lokalizacji jest włączone, punkt A automatycznie umieszcza się w Twojej aktualnej pozycji (lub zakolejkuje do pierwszego fixa GPS z komunikatem „Szukam GPS…" — drugie stuknięcie nie jest potrzebne); w przeciwnym razie dotknij mapy, aby upuścić punkt A. Dotykaj mapy, aby dodawać kolejne punkty. Linia łączy punkty, a pasek u dołu pokazuje łączny dystans. Gdy tryb pomiaru i śledzenie są oba włączone, punkt A nadal podąża za Twoją pozycją GPS. Przeciągnij punkt na ikonę kosza (prawy górny róg, tuż pod kompasem), aby go usunąć. Dotknij ikonki linijki ponownie, aby wyjść.
 
 ### Warstwy mapy
-**Ikona warstw**. Sześć stylów: OpenTopoMap (domyślny, turystyczny), OSM Standard (czysta mapa ogólna), ESRI Topo, ESRI relief cieniowany, Satelita, Outdoors (Thunderforest — wymaga darmowego klucza API w Ustawienia → Klucze API).
+**Ikona warstw**. Do sześciu stylów do wyboru: OpenTopoMap (turystyczny), OSM Standard (czysta mapa ogólna), ESRI Topo (domyślny na świeżych instalacjach), ESRI relief cieniowany, Satelita, Outdoors (Thunderforest — wymaga darmowego klucza API w Ustawienia → Klucze API; pozycja jest ukryta, dopóki nie zapiszesz klucza).
 
 Wybrany styl jest zapamiętywany między sesjami.
 
@@ -57,6 +57,7 @@ Od **v1.25.2** mapa nie ma już dedykowanego FAB importu — import GPX znajduje
 ## Lewy górny róg
 
 - **☰ menu** — szuflada nawigacji (Trasy, Punkty, Mapy, Ustawienia).
+- **Ikona udostępniania** — jednostuknięciowy skrót do wyeksportowania wszystkich widocznych tras i punktów z aktualnego widoku jako jeden plik `.gpx`. Otwiera arkusz **Udostępnij widoczne** z listą do odhaczenia. Zobacz [Udostępnij widoczne](share-and-navigate.md#udost%C4%99pnij-wszystko-widoczne-udost%C4%99pnij-widoczne).
 - **Znaczek nagrywania** — czerwona kropka w ciemnym kółku. Dotknij, aby rozpocząć nagrywanie aktualnej wędrówki. Podczas nagrywania rozszerza się do stopera na żywo `00:00:00`; dotknij stopera, aby otworzyć **Pauza / Zakończ / Usuń**. Twoja trasa rysuje się jako czerwona linia na mapie w miarę przemieszczania się. Po **Zakończ** nagranie zostaje zapisane jako nowa Trasa, a panel otwiera się, żebyś mógł od razu przejrzeć wynik. Zobacz [Trasy → Nagrywanie](tracks.md#nagrywanie).
 
 ## Dolny pasek statystyk

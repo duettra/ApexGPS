@@ -117,7 +117,12 @@ Tapez dans le champ pour filtrer les points dont le nom OU la description contie
 
 ### Sélection multiple
 
-Appui long dans la liste → mode sélection. Cochez plusieurs, puis suppression groupée. Pas de changement groupé de couleur/symbole pour les points (pour l\'instant) — utilisez Modifier par point.
+Appui long dans la liste → mode sélection. Cochez plusieurs, puis :
+
+- **Partage groupé** (icône partage) — regroupe chaque point sélectionné dans un seul fichier `.gpx` et ouvre le dialogue de partage. Voir [Partager traces & points](share-and-navigate.md#partager-des-traces-et-des-points).
+- **Suppression groupée** (corbeille rouge) — avec confirmation.
+
+Pas de changement groupé de couleur/symbole pour les points (pour l\'instant) — utilisez Modifier par point.
 
 ### Supprimer les doublons
 

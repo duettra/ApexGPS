@@ -28,10 +28,10 @@ A lock-at-launch option lives in **Settings → Appearance → Start with rotati
 From top to bottom:
 
 ### Measure distance
-The **ruler icon**. Tap to enter measure mode. If location-following is on, pin A auto-places at your current position (or queues until your first GPS fix arrives, with an "Acquiring GPS fix…" toast — no second tap needed); otherwise tap on the map to drop pin A. Tap the map to add more pins. A line connects the pins and the bottom stats bar shows the total distance. While both measure mode and follow-me are on, pin A continues to track your live GPS position. Tap the ruler icon again to exit.
+The **ruler icon**. Tap to enter measure mode. If location-following is on, pin A auto-places at your current position (or queues until your first GPS fix arrives, with an "Acquiring GPS fix…" toast — no second tap needed); otherwise tap on the map to drop pin A. Tap the map to add more pins. A line connects the pins and the bottom stats bar shows the total distance. While both measure mode and follow-me are on, pin A continues to track your live GPS position. Drag a pin onto the trash bin (top-right, just below the compass) to delete it. Tap the ruler icon again to exit.
 
 ### Map layers
-The **layers icon**. Six styles to pick from: OpenTopoMap (default, hiking focus), OSM Standard (clean general-purpose), ESRI Topo, ESRI Shaded Relief, Satellite, Outdoors (Thunderforest — requires a free API key from Settings → API Keys).
+The **layers icon**. Up to six styles to pick from: OpenTopoMap (hiking focus), OSM Standard (clean general-purpose), ESRI Topo (default on fresh installs), ESRI Shaded Relief, Satellite, Outdoors (Thunderforest — requires a free API key from Settings → API Keys; the entry is hidden until a key is saved).
 
 The chosen style is remembered across app restarts.
 
@@ -57,6 +57,7 @@ As of **v1.25.2** the map no longer has a dedicated import FAB — importing GPX
 ## Top-left
 
 - **☰ menu** — nav drawer (Tracks, Waypoints, Maps, Settings).
+- **Share icon** — one-tap shortcut to export every visible track + waypoint in your current viewport as a single `.gpx` file. Opens the **Share visible** sheet with a per-item checklist. See [Share visible](share-and-navigate.md#share-everything-visible-right-now-share-visible).
 - **Record chip** — a red dot in a dark circle. Tap to start recording your current trip. While recording it expands into a live `00:00:00` timer; tap the timer for **Pause / Finish / Delete**. Your path draws as a red line on the map as you move. On **Finish** the recording is saved as a new Track and the overlay opens so you can immediately review it. See [Tracks → Recording](tracks.md#recording).
 
 ## Bottom stats bar

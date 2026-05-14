@@ -4,6 +4,30 @@ Zmiany widoczne dla użytkownika, najnowsze u góry. Refaktory wewnętrzne / pod
 
 ---
 
+## 1.35.0 — 14 maja 2026 — Udostępnij widoczne trasy i punkty · Oszczędzanie baterii przy dużej prędkości · GPX z komunikatorów
+
+- **Udostępnij wszystko, co widać na mapie, jednym stuknięciem.** Nowa **ikona udostępniania** znajduje się w lewym górnym rogu mapy, tuż obok menu ☰. Stuknij ją, a otworzy się arkusz z listą każdej widocznej trasy + punktu w bieżącym kadrze. Zaznacz, co chcesz, stuknij **Udostępnij**, wybierz WhatsApp / e-mail / Drive — cała paczka wychodzi jako pojedynczy plik `.gpx` nazwany od obszaru, który oglądałeś (np. `ApexGPS-Wadi-Bani-Khalid-2026-05-14.gpx`). Dwa kolejne punkty wejścia korzystają z tego samego arkusza: karta **Udostępnij widoczne trasy i punkty** w menu Mapy (używa kadru, który miałeś otwarty w chwili otwarcia menu), oraz ikona **udostępniania** w górnym pasku list Trasy / Punkty, gdy długo przytrzymasz, aby zaznaczyć wiele elementów — pakuje zaznaczone elementy bezpośrednio bez dodatkowego arkusza.
+- **Oszczędzanie baterii przy dużej prędkości.** Nowy przełącznik w **Ustawienia → Zaawansowane** (domyślnie włączony) zmniejsza próbkowanie GPS z raz na sekundę do raz na 10 sekund, gdy poruszasz się szybciej niż 36 km/h — samochód, pociąg, szybki rower elektryczny. Trasy drogowe są nadal rejestrowane czysto; dokładność pasa ruchu jest zmniejszona podczas jazdy. Tnie z grubsza połowę zużycia baterii GPS na autostradowym odcinku podróży bez widocznej utraty kształtu trasy. Wyłącz, jeśli potrzebujesz pełnego próbkowania przy prędkości.
+- **Otwórz pliki `.gpx` jednym stuknięciem z WhatsApp / Telegram / Signal / Outlook.** Wcześniej załączniki z tych aplikacji spadały do systemowej przeglądarki tekstu, ponieważ ogłaszają plik jako generyczny `application/xml` zamiast kanonicznego typu MIME GPX. ApexGPS akceptuje teraz również te generyczne typy — stuknij raz załącznik `.gpx` w dowolnym komunikatorze, a systemowe menu „Otwórz w" pokaże ApexGPS jako opcję pierwszej klasy.
+- **Kopie zapasowe map offline w trybie przepisu (między platformami).** Ustawienia → Dane → Kopia zapasowa zastępują jedno pole „Zapisane regiony map" trójstopniowym selektorem: **Nie dołączaj** / **Przepis** (mały — wymienia, które regiony pobrać ponownie, działa między Androidem a iOS) / **Pełne kafelki** (stare zachowanie — osadza surowe paczki kafelków, duży, ale można przywrócić offline, tylko Android). Kopia w trybie przepisu zajmuje około 80 KB nawet dla kilkunastu regionów; przywrócenie dodaje wiersze zastępcze w **Mapy → Zapisane mapy offline** z przyciskiem **Pobierz**, aby pobrać właściwe kafelki na żądanie.
+- **Płatny styl mapy ukrywa się bez klucza.** Pozycja **Outdoors (Thunderforest)** znika teraz zarówno z selektora stylu mapy, jak i z selektora pobierania regionu offline, dopóki nie wkleisz klucza API w **Ustawienia → Klucze API**. Wcześniej wybranie jej bez klucza po cichu przełączało na OpenTopoMap bez wyjaśnienia. Wklej klucz → pozycja wraca w obu menu.
+
+---
+
+## 1.34.2 — 14 maja 2026 — Ukrywanie płatnych źródeł kafelków bez klucza
+
+- **Styl „Outdoors (Thunderforest)" całkowicie się teraz ukrywa, dopóki nie wkleisz klucza API.** Wcześniej wybranie go bez klucza po cichu przełączało na OpenTopoMap bez żadnego wyjaśnienia — stukałeś Outdoors, widziałeś kafelki OpenTopoMap i nie wiedziałeś, dlaczego. Selektor stylu mapy oraz selektor pobierania regionu offline pomijają teraz pozycję Outdoors, dopóki **Ustawienia → Klucze API → Thunderforest** nie zawiera zapisanego klucza. Wklej klucz → Outdoors natychmiast wraca w obu menu.
+
+---
+
+## 1.34.1 — 13 maja 2026 — Format kopii v2 (przepisy regionów offline, między platformami)
+
+- **Kopie zapasowe mogą teraz pomijać ciężkie paczki kafelków i zapisać zamiast nich „przepis".** Ustawienia → Dane → Kopia zapasowa zastępują jedno pole „Zapisane regiony map" trójstopniowym selektorem: **Nie dołączaj** / **Przepis** (mały — wymienia, które regiony pobrać ponownie, działa między Androidem a iOS) / **Pełne kafelki** (duży — stare zachowanie, tylko Android). Kopia w trybie przepisu zajmuje około 80 KB nawet dla kilkunastu regionów; odpowiadająca jej kopia z pełnymi kafelkami zajmowałaby 50–500 MB. Po przywróceniu kopii w trybie przepisu lista zapisanych map wypełnia się wierszami oznaczonymi „Jeszcze nie pobrano · X kafelków" z przyciskiem **Pobierz** — stuknij, aby pobrać ponownie z oryginalnego serwera kafelków (używa Twojej obecnej pamięci podręcznej + świeżego pobrania reszty).
+- **Kopia utworzona na Androidzie może teraz zostać przywrócona na iOS i odwrotnie — wszystko poza paczkami z pełnymi kafelkami.** Trasy, punkty, ustawienia i przepisy regionów krążą czysto między platformami. Tryb pełnych kafelków pozostaje tylko dla Androida, bo iOS nie ma konsumenta MBTiles, ale tryb przepisu pokrywa praktyczne potrzeby większości użytkowników (odbudowa na nowym telefonie, akceptacja krótkiego pobrania regionów, na których Ci zależy).
+- **Przywracanie przepisu w stylu Outdoors przypomina najpierw o ustawieniu klucza API.** Jeśli przywrócony przepis celuje w Thunderforest, a nie masz zapisanego klucza, stuknięcie **Pobierz** pokazuje jednorazowy komunikat kierujący do **Ustawienia → Zaawansowane → Klucz API Thunderforest**; gdy klucz jest na miejscu, pobieranie rusza normalnie.
+
+---
+
 ## 1.34.0 — 13 maja 2026 — Dopasowanie rozmiarów · Sporty wodne · Postęp przywracania na żywo · Poprawne formy mnogie
 
 - **Znaczniki punktów trasy są domyślnie około 25 % większe.** „Normalny" (1,0×) renderuje się teraz w rozmiarze, który wcześniej miał „Duży". Jeśli znaczniki wydają się za małe, selektor nadal oferuje Mały / Normalny / Duży / XL — Ustawienia → Wygląd → Rozmiar znacznika. Twoje obecne ustawienie zostaje zachowane; rozważ obniżenie o jeden stopień, ponieważ cała skala urosła.
@@ -11,6 +35,20 @@ Zmiany widoczne dla użytkownika, najnowsze u góry. Refaktory wewnętrzne / pod
 - **Nowy typ aktywności: Sporty wodne.** Wybierz w Szczegóły trasy → Aktywność, aby oznaczyć sesję kajakową, żeglarską, surfingową lub inny sport wodny. Ta sama ikona fali co znacznik wodospadu.
 - **Przywracanie kopii zapasowej pokazuje teraz postęp na żywo.** Duża kopia (setki tras, tysiące punktów) wcześniej blokowała aplikację na wskaźniku obracającym się przez kilka minut bez sygnału postępu — łatwo pomylić z awarią. Przycisk Przywróć siedzi teraz nad paskiem postępu + opisem („Przywracanie trasy N z M…" / „Przywracanie punktu N z M…"), który tyka co trasę i co 100 punktów.
 - **Polski i arabski pokazują teraz poprawnie odmienione etykiety z liczbami.** 13 ciągów z licznikami („X tras", „Y punktów", „Z minut temu" itd.) przechodzi teraz przez prawdziwe reguły liczby mnogiej. Polski otrzymuje wszystkie 4 formy (1 trasa / 2 trasy / 5 tras / 1,5 trasy); arabski wszystkie 6. Angielski / niemiecki / francuski / hiszpański były już gramatycznie poprawne; spójna obsługa w jednej ścieżce.
+
+---
+
+## 1.33.8 — 10 maja 2026 — Kolejka pierwszego punktu pomiaru i planera
+
+- **Stuknięcie narzędzia pomiaru lub FAB-a planera trasy przed nadejściem fixu GPS automatycznie upuszcza pierwszy punkt, gdy tylko pozycja się pojawi.** Wcześniej stuknięcie w trakcie rozgrzewki GPS zostawiało puste rozpoczęcie — trzeba było ręcznie stuknąć mapę, żeby upuścić punkt A. Aplikacja pokazuje teraz „Szukam GPS…" na przełączniku i zakolejkowuje auto-upuszczenie pierwszego punktu; gdy pojawi się fix, punkt A pojawia się w Twojej pozycji, a śledzenie na żywo przejmuje normalnie. Działa tak samo jak FAB nagrywania od 1.33.7. Ręczne stuknięcie mapy w międzyczasie anuluje kolejkę, więc żadne stuknięcie nie ginie.
+
+---
+
+## 1.33.7 — 10 maja 2026 — Tolerancyjny import GPX · Prywatność w Informacjach · Auto-start nagrywania
+
+- **Importy plików GPX z błędnymi współrzędnymi nie przerywają już całego importu.** Punkt trasy lub waypoint z błędną wartością `lat` / `lon` przerywał wcześniej cały import. Aplikacja pomija teraz zły punkt i kontynuuje importowanie reszty — jeden błędny punkt w 10 000-punktowej wędrówce nie powoduje już utraty pliku. Twarde górne limity (10 tys. tras, 100 tys. punktów, 500 tys. punktów na trasę) nadal wyrzucają wyjątek, aby zapobiec wyczerpaniu pamięci.
+- **Polityka prywatności bezpośrednio pod Ustawienia → Informacje.** Nowy wiersz „Polityka prywatności" znajduje się pod Podręcznikiem użytkownika; stuknij, aby przeczytać politykę w aplikacji, bez internetu. Ta sama treść jest zwierciadlana pod [apexgps.duttra.de/privacy.html](https://apexgps.duttra.de/privacy.html) (adres URL polityki prywatności w Play Store) dla każdego, kto chce ją przeczytać przed instalacją.
+- **Stuknij Nagrywaj przed pierwszym fixem GPS i nagrywanie auto-startuje po jego nadejściu.** Wcześniej stuknięcie Nagrywaj przed otrzymaniem jakiegokolwiek fixu natychmiast rozpoczynało pustą trasę okruchów — jeśli stuknąłeś Stop przed nadejściem fixu, zapisywałeś trasę z zerową liczbą punktów. Teraz komunikat mówi „Szukam GPS…", a nagrywanie automatycznie startuje w chwili pojawienia się pierwszego fixu — żadne drugie stuknięcie nie jest potrzebne.
 
 ---
 

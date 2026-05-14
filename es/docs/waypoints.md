@@ -117,7 +117,12 @@ Escribe en el campo para filtrar puntos cuyo nombre O descripción contenga tu t
 
 ### Selección múltiple
 
-Mantén pulsado un punto en la lista → modo selección. Marca más, luego borrado masivo. No hay cambio masivo de color/símbolo para puntos (aún) — usa Editar por punto.
+Mantén pulsado un punto en la lista → modo selección. Marca más, luego:
+
+- **Compartir masivo** (icono compartir) — empaqueta cada punto seleccionado en un único archivo `.gpx` y abre el diálogo de compartir. Ver [Compartir rutas y puntos](share-and-navigate.md#compartir-rutas-y-puntos).
+- **Borrado masivo** (papelera roja) — con confirmación.
+
+No hay cambio masivo de color/símbolo para puntos (aún) — usa Editar por punto.
 
 ### Eliminar duplicados
 

@@ -51,6 +51,10 @@ Cada descarga completa aparece aquí. Toca una región para abrir su detalle:
 
 Eliminar una región guardada quita su bundle pero NO afecta la caché general. El área puede seguir en caché de navegación previa.
 
+### Filas de receta (tras restaurar una copia en modo receta)
+
+Restaurar una copia que se creó con el modo **Receta** para mapas offline (ver [Copia → Receta vs mosaicos completos](backup.md#receta-vs-mosaicos-completos)) inserta filas aquí marcadas **«Aún no descargada · X mosaicos»** con un botón **Descargar** al final. Toca **Descargar** para volver a traer los mosaicos usando el nombre, la caja envolvente, el rango de zoom y la fuente de mosaicos guardados. La fila se convierte en una fila de región guardada normal cuando termina la descarga. Si la receta usa mosaicos Thunderforest y tu clave API no está guardada, la app muestra un aviso único pidiendo añadirla primero en **Ajustes → Claves API → Thunderforest**.
+
 ## Gestión de caché (menú → Ajustes → Almacenamiento)
 
 - **Tamaño total** de caché sumando fuentes.

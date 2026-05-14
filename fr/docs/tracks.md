@@ -99,6 +99,7 @@ Appui long sur une trace → mode sélection. Cochez celles que vous voulez, pui
 
 - **Changement de couleur groupé** (icône palette) — couleur unique pour la sélection.
 - **Afficher / masquer groupé** (icônes œil) — visibilité rapide.
+- **Partage groupé** (icône partage) — regroupe chaque trace sélectionnée dans un seul fichier `.gpx` et ouvre le dialogue de partage. Voir [Partager traces & points](share-and-navigate.md#partager-des-traces-et-des-points).
 - **Suppression groupée** (corbeille rouge) — avec confirmation.
 - **Tout sélectionner** — coche toutes les traces de la vue filtrée.
 

@@ -2,13 +2,15 @@
 
 ## Installation
 
-ApexGPS est en test fermé sur le Play Store. Demandez une invitation testeur au développeur à [sandwalker.one@proton.me](mailto:sandwalker.one@proton.me), puis cliquez sur le lien d\'invitation depuis votre téléphone → **Devenir testeur** → installer depuis le Play Store.
+ApexGPS est disponible sur le Play Store : [play.google.com/store/apps/details?id=com.apexgps.app](https://play.google.com/store/apps/details?id=com.apexgps.app). Installez depuis la fiche — plus besoin d\'invitation testeur.
 
 ## Premier lancement
 
 À l\'ouverture, l\'app demande la **permission de localisation**. Choisissez **Pendant que l\'appli est utilisée** (ou **Précise** si le système sépare précise et approximative — ApexGPS a besoin du GPS précis pour la randonnée).
 
-Vous arrivez sur la carte. Le style par défaut est **OpenTopoMap** — courbes de niveau, estompage, sentiers de randonnée en rouge.
+Vous arrivez sur la carte. Le style de carte par défaut sur une installation neuve est **ESRI Topo** (libellés nets aux zooms de randonnée) ; les installations existantes conservent ce que vous aviez sélectionné. Vous pouvez changer la valeur par défaut à tout moment dans **Paramètres → Apparence → Carte par défaut**, ou changer de style en cours de session via le bouton couches.
+
+La première fois que vous lancez une installation neuve, un enregistrement réel de la **traversée du Watzmann** (Berchtesgaden, Allemagne) est auto-importé comme exemple — boucle de ~22,6 km avec trois points de repère, pour que l\'app ne soit pas vide à l\'ouverture. Si vous supprimez les exemples et les voulez à nouveau, **Paramètres → Données → Charger les exemples** les réimporte.
 
 ## Visite éclair en cinq minutes
 
@@ -28,7 +30,7 @@ Appui long n\'importe où sur la carte. Une boîte de dialogue s\'ouvre — choi
 
 ### Importer une trace GPX
 
-Menu → Traces → appuyez sur le bouton **dossier bleu** (en bas à droite) → choisissez un fichier `.gpx` dans vos téléchargements ou fichiers. La trace apparaît sur la carte ; appuyez dessus pour voir les détails (distance, profil d\'altitude).
+Ouvrez **menu → Traces** → appuyez sur le **FAB icône dossier** en bas à droite → choisissez un ou plusieurs fichiers `.gpx`. Les traces apparaissent sur la carte ; appuyez sur l\'une d\'elles pour voir les détails (distance, profil d\'altitude).
 
 ### Enregistrer une sortie
 
@@ -37,6 +39,10 @@ Appuyez sur la **pastille d\'enregistrement** rouge en haut à gauche. La pastil
 ### Partager votre position
 
 Appuyez sur le triangle bleu. Un panneau glisse vers le haut avec altitude, précision, heure, batterie et deux liens carte. Appuyez **Partager** → choisissez WhatsApp, SMS, e-mail. Le destinataire voit les infos + un lien ; s\'il a aussi ApexGPS, le lien ouvre directement l\'app.
+
+### Partager ce qui est à l\'écran
+
+Appuyez sur l\'**icône de partage** en haut à gauche de la carte (à gauche du menu ☰). Une feuille s\'ouvre avec chaque trace + point visible dans votre zone d\'affichage — cochez ce que vous voulez envoyer, appuyez sur Partager, choisissez le messager. Tout le lot part comme un seul fichier `.gpx`. Voir [Partager visible](share-and-navigate.md#partager-tout-ce-qui-est-visible-partager-visible).
 
 ### Retour au menu principal
 

@@ -1,6 +1,6 @@
 # Einstellungen
 
-**Menü → Einstellungen** ist in vier Unterbildschirme gegliedert: Darstellung, Speicher, Daten, API-Schlüssel. Jeder hat einen ⓘ Info-Button neben den Gruppenüberschriften, der erklärt, was das Feature tut.
+**Menü → Einstellungen** ist in fünf Unterbildschirme gegliedert: Darstellung, Speicher, Daten, API-Schlüssel, Erweitert. Jeder hat einen ⓘ Info-Button neben den Gruppenüberschriften, der erklärt, was das Feature tut.
 
 ## Darstellung
 
@@ -39,7 +39,7 @@ Der Browse-Kachel-Cache baut sich wieder auf, während Sie Bereiche mit Signal a
 ## Daten
 
 ### Sichern
-Eine ZIP mit Tracks, Wegpunkten, gespeicherten Offline-Regionen und Einstellungen erstellen. Optionale Toggles ermöglichen es, Kategorien auszuschließen (gespeicherte Karten sind am größten — oft für schnelle „nur meine Tracks“-Sicherungen weggelassen). Siehe [Sicherung & Wiederherstellung](backup.md).
+Eine ZIP mit Tracks, Wegpunkten, gespeicherten Offline-Regionen und Einstellungen erstellen. Toggles ermöglichen es, Kategorien auszuschließen. Gespeicherte Offline-Regionen haben einen **Drei-Wege-Modus**: **Nicht einschließen** (überspringen) / **Rezept** (klein — nur die Anweisungen, jede Region neu herunterzuladen, funktioniert plattformübergreifend zwischen Android und iOS) / **Vollständige Kacheln** (das alte Verhalten — bettet die rohen Kachelpakete ein, groß, aber offline wiederherstellbar, nur Android). Siehe [Sicherung & Wiederherstellung](backup.md).
 
 ### Wiederherstellen
 Eine existierende `apexgps-backup-*.zip` öffnen. **Zusammenführen** (zu vorhandenen hinzufügen) oder **Ersetzen** (vorhandene überschreiben) wählen. Siehe [Sicherung & Wiederherstellung → Zusammenführen vs. Ersetzen](backup.md#zusammenführen-vs-ersetzen).
@@ -57,11 +57,18 @@ Eine reale Aufzeichnung der **Watzmann-Überschreitung** (Berchtesgaden): Wimbac
 ### Thunderforest
 Erforderlich, um den **Outdoors (Thunderforest)**-Kachelstil zu nutzen. Kostenloser „Hobby“-Plan: 150 000 Kachelabrufe pro Monat, keine Kreditkarte. Registrieren Sie sich unter [thunderforest.com](https://www.thunderforest.com/), kopieren Sie Ihren API-Schlüssel, fügen Sie ihn hier ein → **Speichern**.
 
-Ohne Schlüssel zeigt der Outdoors-Stil einen Platzhalter; die anderen fünf Stile funktionieren ohne jeden Schlüssel.
+**Ohne Schlüssel wird der Outdoors-Stil ausgeblendet** — sowohl im Kartenstil-Picker als auch im Picker zum Download einer Offline-Region — damit Sie ihn nicht versehentlich wählen und OpenTopoMap-Fallback-Kacheln sehen. Schlüssel einfügen → der Eintrag erscheint in beiden Menüs wieder. Die anderen fünf Stile funktionieren ohne jeden Schlüssel.
+
+## Erweitert
+
+### Energiesparmodus bei hoher Geschwindigkeit
+Wenn Sie sich schneller als **36 km/h** (≈22 mph) bewegen — beim Fahren, im Zug, auf einem schnellen E-Bike — senkt die App ihre GPS-Abtastrate auf einen Fix alle **10 Sekunden** statt einen pro Sekunde. Straßenförmige Tracks werden weiterhin sauber aufgezeichnet; die Spur-Genauigkeit ist beim Fahren reduziert. Spart auf der Autobahn-Etappe einer Autofahrt etwa die Hälfte des GPS-Stromverbrauchs ohne sichtbaren Verlust der Routengeometrie. Ausschalten, wenn Sie bei hoher Geschwindigkeit volle Abtastung brauchen (z. B. Rallye-Telemetrie).
 
 ## Über
 
 **Einstellungen → Über** zeigt die App-Version, Attributionen und Kontakt-E-Mail — außerdem die **Anleitung**: antippbare Einträge für jedes Kapitel dieser Dokumentation, in der App gebündelt, sodass die vollständige Anleitung offline funktioniert. Tippen Sie ein Kapitel an → ein Reader öffnet sich und rendert das Kapitel in der App. Kapitelübergreifende Links innerhalb der Seiten werden befolgt; die Zurück-Pfeil-Taste kehrt zur Kapitelliste zurück. Ein **„Online lesen“**-Link unten öffnet dieselbe Dokumentation unter [apexgps.duttra.de/docs](https://apexgps.duttra.de/docs/) im Browser. Für Hilfe: [sandwalker.one@proton.me](mailto:sandwalker.one@proton.me).
+
+Unter der Anleitung öffnet eine **Datenschutzerklärung**-Zeile denselben In-App-Reader auf dem Datenschutz-Kapitel — kein Internet nötig, um zu lesen, welche Daten die App erhebt (nichts über das hinaus, was auf Ihrem Telefon ist) und wie sie genutzt werden. Derselbe Inhalt wird unter [apexgps.duttra.de/privacy.html](https://apexgps.duttra.de/privacy.html) gespiegelt für alle, die ihn vor der Installation lesen möchten.
 
 ---
 
