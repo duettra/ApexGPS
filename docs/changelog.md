@@ -4,6 +4,14 @@ User-visible changes, newest first. For internal refactoring / version-bump-only
 
 ---
 
+## 1.35.1 — May 15, 2026 — Recycle-bin fixes · Track planning starts where you tapped
+
+- **The recycle-bin trash now works when the map is rotated.** Before, dragging a measure pin or planning vertex onto the top-right trash icon silently failed if the map had been rotated by any amount — the icon wouldn't glow red and dropping wouldn't delete. The hit-test now reads raw finger coordinates instead of the rotated map's internal frame, so the trash works at any orientation.
+- **Deleting the first measure pin in follow-me mode no longer destroys the next pin.** When measuring with follow-me on, the first pin (pin A) auto-tracks your live location. Trashing it used to fail in a confusing way: A appeared to come back on the next GPS fix, and the pin you'd put right after it (B) silently disappeared. Now trashing A keeps A gone for the rest of the measure session, and B + every other pin stay put. Toggle measure mode off and on to re-seed A at your current location.
+- **Track planning no longer auto-places vertex 1 at your current location.** Planning is a deliberate map-area workflow — most users pan to the area they want to plan in, then enter plan mode. Auto-seeding vertex 1 at your GPS location surprised users planning remote routes. Planning now starts empty; the first tap places vertex 1 exactly where you tapped, wherever you've panned the map.
+
+---
+
 ## 1.35.0 — May 14, 2026 — Share visible tracks & waypoints · Battery saver at speed · GPX from chat apps
 
 - **Share everything visible on the map with one tap.** A new **share icon** sits in the top-left of the map, just to the left of the ☰ menu. Tap it and a sheet opens listing every visible track + waypoint inside your current viewport. Tick what you want, tap **Share**, pick WhatsApp / email / Drive — the whole bundle goes out as a single `.gpx` file named after the area you were viewing (e.g. `ApexGPS-Wadi-Bani-Khalid-2026-05-14.gpx`). Two more entry points use the same sheet: a **Share visible** card on the Maps menu (uses the viewport you had open when you opened the menu), and a **share** icon in the top bar of Tracks / Waypoints lists when you long-press to select multiple — bundles the selected items directly with no extra sheet.

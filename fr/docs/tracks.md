@@ -38,6 +38,21 @@ Du bruit de préchauffage GPS au début de votre trace ? Oublié de taper **Term
 
 Le rognage recalcule aussi la distance, la bounding box et le profil d\'altitude de la trace, pour que les stats en haut d\'écran reflètent immédiatement la trace raccourcie.
 
+## Planifier une trace
+
+Si vous voulez repérer un itinéraire avant de le marcher — la sortie de demain, une boucle aperçue sur une carte papier, un connecteur entre deux sentiers que vous connaissez — vous pouvez l\'esquisser directement sur la carte et l\'enregistrer comme trace.
+
+Ouvrez **menu → Traces** → appuyez sur le **FAB + bleu** en bas à droite (au-dessus du FAB dossier d\'import). L\'app saute sur la carte en **mode plan** :
+
+- La barre supérieure devient `✕  Planifier une trace  ✓ Enregistrer`. Un petit chip en dessous affiche le nombre de points en cours et la distance totale.
+- **Tapez n\'importe où sur la carte** pour poser un sommet numéroté de couleur sarcelle. Chaque appui étend l\'itinéraire jusqu\'à l\'étape suivante. Le premier appui pose le sommet 1 là où vous tapez — la planification démarre vide, vous pouvez donc paner vers n\'importe quelle zone d\'abord et planifier depuis là.
+- **Appui long sur un sommet puis glissez** pour le déplacer. Appui long sur le petit point entre deux sommets et glissez pour insérer un nouveau point sur ce segment.
+- **Glissez un sommet sur l\'icône corbeille** en haut à droite (juste sous la boussole) pour le supprimer. La ligne se reconnecte à travers les voisins restants. La corbeille s\'allume en rouge quand un sommet la survole.
+- Tapez sur l\'**icône graphique** à droite pour ouvrir la feuille **profil d\'altitude**. L\'app récupère les altitudes depuis Open-Meteo pour des échantillons pris tous les ~100 m le long de l\'itinéraire, puis affiche un graphique avec dénivelé positif et négatif totaux. Un itinéraire long est échantillonné plus grossièrement (plafonné à ~500 échantillons) pour que la récupération n\'explose jamais. Annuler et fermer sont tous les deux disponibles pendant le chargement.
+- Tapez sur **✓ Enregistrer** dans la barre supérieure, nommez l\'itinéraire, confirmez. La nouvelle trace atterrit dans votre liste de traces (triable, exportable en GPX, comparable à un futur enregistrement). La carte cadre automatiquement la bounding box de la nouvelle trace.
+
+Pour abandonner : tapez sur **✕** ou utilisez le retour matériel. Si vous avez posé des points, l\'app demande confirmation avant de jeter.
+
 ## Importer
 
 ### Depuis un fichier

@@ -4,6 +4,14 @@ Für Nutzer sichtbare Änderungen, neueste zuerst. Für internes Refactoring / r
 
 ---
 
+## 1.35.1 — 15. Mai 2026 — Mülleimer-Korrekturen · Streckenplanung beginnt dort, wo Sie getippt haben
+
+- **Der Mülleimer funktioniert jetzt auch bei gedrehter Karte.** Vorher schlug das Ziehen eines Mess-Pins oder Planungs-Punkts auf das Mülleimer-Symbol oben rechts stillschweigend fehl, wenn die Karte um irgendeinen Winkel gedreht war — das Symbol leuchtete nicht rot und das Loslassen löschte nichts. Der Trefferpunkt liest jetzt die rohen Finger-Koordinaten statt des internen Rahmens der gedrehten Karte, sodass der Mülleimer in jeder Ausrichtung funktioniert.
+- **Das Löschen des ersten Mess-Pins im Folgemodus zerstört nicht mehr den nächsten Pin.** Beim Messen mit aktivem Folgemodus folgt der erste Pin (Pin A) automatisch Ihrer Live-Position. Ihn in den Mülleimer zu ziehen schlug auf verwirrende Weise fehl: A schien beim nächsten GPS-Fix zurückzukehren, und der Pin, den Sie direkt danach gesetzt hatten (B), verschwand stillschweigend. Jetzt bleibt A nach dem Mülleimer-Ziehen für den Rest der Mess-Sitzung weg, und B + alle anderen Pins bleiben an Ort und Stelle. Schalten Sie den Mess-Modus aus und wieder an, um A erneut an Ihrer aktuellen Position zu setzen.
+- **Die Streckenplanung setzt Punkt 1 nicht mehr automatisch an Ihrer aktuellen Position.** Planung ist ein bewusster Arbeitsablauf auf einem Kartenbereich — die meisten Nutzer schwenken in den Bereich, den sie planen möchten, und wechseln dann in den Planungsmodus. Das automatische Setzen von Punkt 1 an der GPS-Position überraschte Nutzer, die abgelegene Routen planten. Die Planung beginnt jetzt leer; der erste Tipp setzt Punkt 1 genau dort, wo Sie tippen, egal wohin Sie die Karte geschwenkt haben.
+
+---
+
 ## 1.35.0 — 14. Mai 2026 — Sichtbare Tracks & Wegpunkte teilen · Energiesparmodus bei hoher Geschwindigkeit · GPX aus Messenger-Apps
 
 - **Alles, was auf der Karte sichtbar ist, mit einem Tipp teilen.** Ein neues **Teilen-Symbol** sitzt oben links auf der Karte, direkt links neben dem ☰-Menü. Tippen Sie es an und ein Blatt öffnet sich, das jeden sichtbaren Track + Wegpunkt im aktuellen Ausschnitt auflistet. Hakeln Sie ab, was Sie möchten, tippen Sie auf **Teilen**, wählen Sie WhatsApp / E-Mail / Drive — das ganze Bündel geht als einzelne `.gpx`-Datei raus, benannt nach dem Bereich, den Sie gerade anschauten (z. B. `ApexGPS-Wadi-Bani-Khalid-2026-05-14.gpx`). Zwei weitere Einstiegspunkte nutzen dasselbe Blatt: eine **Sichtbare Tracks & Wegpunkte teilen**-Karte im Karten-Menü (verwendet den Ausschnitt, den Sie beim Öffnen des Menüs hatten), und ein **Teilen**-Symbol in der oberen Leiste der Listen Tracks / Wegpunkte, wenn Sie per Langdruck mehrere Einträge auswählen — bündelt die ausgewählten Elemente direkt ohne zusätzliches Blatt.

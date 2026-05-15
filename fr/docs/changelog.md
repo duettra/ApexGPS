@@ -4,6 +4,14 @@ Changements visibles par l\'utilisateur, plus récents en premier. Pour les refa
 
 ---
 
+## 1.35.1 — 15 mai 2026 — Corrections de la corbeille · La planification de tracé commence là où vous avez tapé
+
+- **La corbeille fonctionne désormais quand la carte est pivotée.** Avant, glisser une épingle de mesure ou un sommet de planification sur l\'icône poubelle en haut à droite échouait silencieusement dès que la carte avait été pivotée d\'un degré — l\'icône ne s\'allumait pas en rouge et le dépôt ne supprimait rien. Le test de collision lit maintenant les coordonnées brutes du doigt au lieu du repère interne de la carte pivotée, donc la corbeille fonctionne quelle que soit l\'orientation.
+- **Supprimer la première épingle de mesure en mode suivi ne détruit plus l\'épingle suivante.** Quand vous mesurez avec le mode suivi actif, la première épingle (épingle A) s\'auto-cale sur votre position live. La jeter échouait avant de façon déroutante : A semblait revenir au fix GPS suivant, et l\'épingle que vous veniez de poser juste après (B) disparaissait silencieusement. Désormais jeter A garde A absente pour le reste de la session de mesure, et B + toutes les autres épingles restent en place. Basculez le mode mesure off puis on pour replacer A à votre position actuelle.
+- **La planification de tracé ne pose plus automatiquement le sommet 1 à votre position actuelle.** La planification est un flux délibéré centré sur une zone de la carte — la plupart des utilisateurs panent vers la zone qu\'ils veulent planifier, puis entrent en mode plan. L\'auto-pose du sommet 1 à votre position GPS surprenait les utilisateurs planifiant des itinéraires lointains. La planification démarre maintenant vide ; le premier appui pose le sommet 1 exactement là où vous avez tapé, où que vous ayez pané la carte.
+
+---
+
 ## 1.35.0 — 14 mai 2026 — Partager les traces & points visibles · Économie de batterie à grande vitesse · GPX depuis les messageries
 
 - **Tout ce qui est visible sur la carte se partage d\'un seul appui.** Une nouvelle **icône de partage** s\'affiche en haut à gauche de la carte, juste à gauche du menu ☰. Appuyez dessus et un panneau s\'ouvre, listant chaque trace + point visible dans votre cadre actuel. Cochez ce que vous voulez, appuyez sur **Partager**, choisissez WhatsApp / e-mail / Drive — l\'ensemble part en un seul fichier `.gpx` nommé d\'après la zone que vous regardiez (par ex. `ApexGPS-Wadi-Bani-Khalid-2026-05-14.gpx`). Deux autres points d\'entrée utilisent le même panneau : une carte **Partager les traces & points visibles** dans le menu Cartes (utilise le cadre que vous aviez à l\'ouverture du menu), et une icône **partage** dans la barre supérieure des listes Traces / Points lorsque vous appuyez longuement pour en sélectionner plusieurs — regroupe les éléments sélectionnés directement sans panneau supplémentaire.

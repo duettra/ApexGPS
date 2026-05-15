@@ -45,7 +45,7 @@ Wenn Sie eine Route vor der Wanderung planen möchten — die morgige Tour, eine
 Öffnen Sie **Menü → Tracks** → tippen Sie auf den blauen **+**-Knopf unten rechts (über dem Importordner-Knopf). Die App wechselt zur Karte im **Planungsmodus**:
 
 - Die obere Leiste ändert sich zu `✕  Strecke planen  ✓ Speichern`. Ein kleiner Chip darunter zeigt die aktuelle Punktzahl und Gesamtdistanz.
-- **Tippen Sie irgendwo auf die Karte**, um einen nummerierten türkisfarbenen Punkt zu setzen. Jeder Tipp verlängert die Route zum nächsten Stopp. Punkt 1 wird automatisch an Ihrer aktuellen Position gesetzt, wenn Folgemodus aktiv ist.
+- **Tippen Sie irgendwo auf die Karte**, um einen nummerierten türkisfarbenen Punkt zu setzen. Jeder Tipp verlängert die Route zum nächsten Stopp. Der erste Tipp setzt Punkt 1 genau dort, wo Sie tippen — die Planung beginnt leer, sodass Sie zuerst in einen beliebigen Bereich schwenken und von dort aus planen können.
 - **Lange auf einen Punkt drücken und ziehen**, um ihn zu verschieben. Lange auf den kleinen Punkt zwischen zwei Stopps drücken und ziehen, um einen neuen Punkt auf diesem Abschnitt einzufügen.
 - **Ziehen Sie einen Punkt auf das Mülleimer-Symbol** oben rechts (direkt unter dem Kompass), um ihn zu löschen. Die Linie verbindet sich neu durch die verbleibenden Nachbarn. Der Mülleimer leuchtet rot, wenn ein Punkt darüber schwebt.
 - Tippen Sie auf das **Diagramm-Symbol** rechts, um das **Höhenprofil** zu öffnen. Die App fragt Höhen von Open-Meteo für Stichproben alle ~100 m entlang Ihrer Route ab und zeigt dann ein Diagramm mit Aufstieg und Abstieg. Eine lange Strecke wird gröber abgetastet (max. ~500 Stichproben), damit der Abruf nie aufgebläht wird. Während des Ladens stehen Abbruch und Schließen zur Verfügung.

@@ -4,6 +4,14 @@ Cambios visibles para el usuario, más recientes primero. Para refactors interno
 
 ---
 
+## 1.35.1 — 15 de mayo de 2026 — Correcciones de la papelera · La planificación de ruta empieza donde tocas
+
+- **La papelera ya funciona con el mapa rotado.** Antes, arrastrar un pin de la regla o un vértice de planificación hasta el icono de la papelera arriba a la derecha fallaba en silencio si el mapa estaba rotado lo más mínimo — el icono no se encendía en rojo y soltar no borraba. La prueba de colisión lee ahora las coordenadas crudas del dedo en lugar del marco interno del mapa rotado, así la papelera funciona con cualquier orientación.
+- **Borrar el primer pin de la regla en modo seguir ya no destruye el siguiente pin.** Al medir con modo seguir activado, el primer pin (pin A) sigue solo tu posición en vivo. Mandarlo a la papelera antes fallaba de forma confusa: A parecía volver con el siguiente fix GPS, y el pin que habías puesto justo después (B) desaparecía en silencio. Ahora mandar A a la papelera lo deja fuera durante el resto de la sesión de medición, y B y los demás pines se quedan donde estaban. Desactiva y reactiva el modo regla para volver a sembrar A en tu posición actual.
+- **La planificación de ruta ya no coloca solo el vértice 1 en tu posición actual.** Planificar es un flujo deliberado de zona del mapa — la mayoría de la gente desplaza el mapa hasta la zona que quiere planificar y luego entra en modo planificación. Auto-sembrar el vértice 1 en tu posición GPS sorprendía a quien planificaba rutas remotas. La planificación arranca ahora vacía; el primer toque coloca el vértice 1 exactamente donde tocas, en cualquier zona a la que hayas desplazado el mapa.
+
+---
+
 ## 1.35.0 — 14 may. 2026 — Compartir rutas y puntos visibles · Ahorro de batería a alta velocidad · GPX desde apps de mensajería
 
 - **Comparte todo lo visible en el mapa con un solo toque.** Un nuevo **icono de compartir** aparece arriba a la izquierda del mapa, justo a la izquierda del menú ☰. Tócalo y se abre una hoja que lista cada ruta + punto visible dentro de tu área actual. Marca lo que quieras, toca **Compartir**, elige WhatsApp / correo / Drive — todo el paquete sale como un único archivo `.gpx` con el nombre del área que estabas viendo (p. ej. `ApexGPS-Wadi-Bani-Khalid-2026-05-14.gpx`). Hay dos puntos de entrada más que usan la misma hoja: una tarjeta **Compartir rutas y puntos visibles** en el menú Mapas (usa el área que tenías abierta al abrir el menú), y un icono **compartir** en la barra superior de las listas Rutas / Puntos cuando mantienes pulsado para seleccionar varios — empaqueta los elementos seleccionados directamente sin hoja extra.

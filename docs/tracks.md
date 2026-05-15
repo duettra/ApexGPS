@@ -45,7 +45,7 @@ If you want to scout a route before hiking it — tomorrow's walk, a loop you sa
 Open **menu → Tracks** → tap the blue **+** FAB at the bottom-right (above the import-folder FAB). The app jumps to the map in **planning mode**:
 
 - The top bar changes to `✕  Plan track  ✓ Save`. A small chip below shows your live point count and total distance.
-- **Tap anywhere on the map** to drop a numbered teal vertex. Each tap extends the route to the next stop. Vertex 1 is auto-placed at your current location if follow-me is on.
+- **Tap anywhere on the map** to drop a numbered teal vertex. Each tap extends the route to the next stop. The first tap places vertex 1 wherever you tap — planning starts empty, so you can pan to any area first and plan from there.
 - **Long-press a vertex and drag** to move it. Long-press the small dot between two vertices and drag to insert a new point on that leg.
 - **Drag a vertex onto the trash icon** at the top-right (just below the compass) to delete it. The line reconnects through the remaining neighbours. The trash glows red when a vertex is hovering over it.
 - Tap the **chart icon** on the right to open the **elevation profile** sheet. The app fetches elevations from Open-Meteo for samples taken every ~100 m along your route, then shows a chart with total ascent and descent. A long route is sampled coarser (capped at ~500 samples) so the fetch never balloons. Cancel and dismiss are both available while loading.

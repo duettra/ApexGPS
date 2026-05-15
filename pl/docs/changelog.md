@@ -4,6 +4,14 @@ Zmiany widoczne dla użytkownika, najnowsze u góry. Refaktory wewnętrzne / pod
 
 ---
 
+## 1.35.1 — 15 maja 2026 — Poprawki kosza · Planowanie trasy zaczyna się tam, gdzie dotkniesz
+
+- **Strefa-kosz znów działa, gdy mapa jest obrócona.** Wcześniej przeciągnięcie punktu pomiaru lub punktu planowania na ikonę kosza w prawym górnym rogu po cichu zawodziło, jeśli mapa była choć trochę obrócona — ikona nie świeciła się na czerwono, a upuszczenie nie usuwało punktu. Test kolizji odczytuje teraz surowe współrzędne palca zamiast wewnętrznej ramki obróconej mapy, więc kosz działa przy dowolnej orientacji.
+- **Usunięcie pierwszego punktu pomiaru przy włączonym śledzeniu nie niszczy już kolejnego punktu.** Gdy mierzysz dystans z włączonym śledzeniem, pierwszy punkt (punkt A) sam podąża za Twoją bieżącą pozycją. Wyrzucenie go na kosz wcześniej zawodziło w mylący sposób: A wracał przy następnym fixu GPS, a punkt, który postawiłeś tuż po nim (B), po cichu znikał. Teraz wyrzucenie A trzyma A z dala do końca sesji pomiaru, a B i każdy kolejny punkt pozostają na miejscu. Wyłącz i włącz ponownie tryb pomiaru, aby na nowo zasiać A w Twojej bieżącej pozycji.
+- **Planowanie trasy nie umieszcza już automatycznie punktu 1 w Twojej bieżącej pozycji.** Planowanie to świadomy proces na konkretnym obszarze mapy — większość użytkowników najpierw przesuwa mapę w okolicę, którą chce zaplanować, a dopiero potem wchodzi w tryb planowania. Auto-zasianie punktu 1 w pozycji GPS zaskakiwało użytkowników planujących odległe trasy. Planowanie startuje teraz pusto; pierwsze dotknięcie umieszcza punkt 1 dokładnie tam, gdzie dotknąłeś, gdziekolwiek przesunąłeś mapę.
+
+---
+
 ## 1.35.0 — 14 maja 2026 — Udostępnij widoczne trasy i punkty · Oszczędzanie baterii przy dużej prędkości · GPX z komunikatorów
 
 - **Udostępnij wszystko, co widać na mapie, jednym stuknięciem.** Nowa **ikona udostępniania** znajduje się w lewym górnym rogu mapy, tuż obok menu ☰. Stuknij ją, a otworzy się arkusz z listą każdej widocznej trasy + punktu w bieżącym kadrze. Zaznacz, co chcesz, stuknij **Udostępnij**, wybierz WhatsApp / e-mail / Drive — cała paczka wychodzi jako pojedynczy plik `.gpx` nazwany od obszaru, który oglądałeś (np. `ApexGPS-Wadi-Bani-Khalid-2026-05-14.gpx`). Dwa kolejne punkty wejścia korzystają z tego samego arkusza: karta **Udostępnij widoczne trasy i punkty** w menu Mapy (używa kadru, który miałeś otwarty w chwili otwarcia menu), oraz ikona **udostępniania** w górnym pasku list Trasy / Punkty, gdy długo przytrzymasz, aby zaznaczyć wiele elementów — pakuje zaznaczone elementy bezpośrednio bez dodatkowego arkusza.

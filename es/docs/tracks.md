@@ -38,6 +38,21 @@ Cada ruta grabada arranca etiquetada como **Senderismo**. Abre la pantalla de de
 
 Recortar también recalcula la distancia, el bounding box y el perfil de altitud de la ruta, así que las estadísticas de la parte superior reflejan la ruta recortada al instante.
 
+## Planificación de una ruta
+
+Si quieres trazar una ruta antes de hacerla — la caminata de mañana, un bucle que viste en un mapa de papel, un enlace entre dos senderos que conoces — puedes esbozarla directamente sobre el mapa y guardarla como Ruta.
+
+Abre **menú → Rutas** → toca el **FAB + azul** abajo a la derecha (encima del FAB de carpeta de importación). La app salta al mapa en **modo planificación**:
+
+- La barra superior cambia a `✕  Planificar ruta  ✓ Guardar`. Un pequeño chip debajo muestra tu cuenta de puntos en vivo y la distancia total.
+- **Toca en cualquier punto del mapa** para soltar un vértice numerado verde azulado. Cada toque extiende la ruta hasta la siguiente parada. El primer toque coloca el vértice 1 donde tú toques — la planificación arranca vacía, así que puedes desplazar el mapa a cualquier zona primero y planificar desde ahí.
+- **Mantén pulsado un vértice y arrástralo** para moverlo. Mantén pulsado el pequeño punto entre dos vértices y arrastra para insertar un punto nuevo en ese tramo.
+- **Arrastra un vértice hasta el icono de la papelera** arriba a la derecha (justo debajo de la brújula) para borrarlo. La línea se vuelve a conectar a través de los vecinos restantes. La papelera se enciende en rojo cuando un vértice está encima.
+- Toca el **icono de gráfico** a la derecha para abrir la hoja de **perfil de altitud**. La app obtiene altitudes de Open-Meteo para muestras tomadas cada ~100 m a lo largo de tu ruta, y luego muestra un gráfico con ascenso y descenso totales. Una ruta larga se muestrea con menor densidad (tope de ~500 muestras) para que la descarga no se dispare. Cancelar y cerrar están disponibles mientras carga.
+- Toca **✓ Guardar** en la barra superior, ponle nombre a la ruta y confirma. La nueva Ruta aterriza en tu lista de Rutas (ordenable, exportable como GPX, comparable contra una futura grabación). El mapa ajusta el zoom al bbox de la nueva ruta automáticamente.
+
+Para abandonar: toca **✕** o pulsa el botón atrás del sistema. Si has colocado algún punto, la app pregunta antes de descartar.
+
 ## Importar
 
 ### Desde un archivo
