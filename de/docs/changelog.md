@@ -4,6 +4,14 @@ Für Nutzer sichtbare Änderungen, neueste zuerst. Für internes Refactoring / r
 
 ---
 
+## 1.35.2 — May 15, 2026 — Zuverlässiger Mülleimer · Mülleimer-Symbol erscheint nur während des Ziehens · Tippen neben Mittelpunkten funktioniert
+
+- **Das Mülleimer-Symbol erscheint jetzt nur beim Ziehen — es taucht im Moment auf, in dem Sie einen Eckpunkt oder Mittelpunkt lange drücken, leuchtet rot beim Darüberziehen und verschwindet beim Loslassen.** Vorher war das Symbol im Mess- und Planungsmodus immer sichtbar, aber die Lang-drücken-und-zum-Löschen-ziehen-Geste war für die meisten Nutzer nicht offensichtlich — sie sahen den Mülleimer, konnten aber nicht herausfinden, wie sie einen Punkt hineinbekommen sollten. Jetzt erscheint der Mülleimer nur, wenn Sie tatsächlich einen Punkt aufgenommen haben, was die Bedienungslogik klar macht.
+- **Einen Mittelpunkt auf dem Mülleimer abzulegen löscht ihn jetzt zuverlässig.** Zwei sporadische Fehler behoben: (1) Lose-Lass-Jitter hinterließ die Ablege-Koordinaten manchmal ein paar Pixel außerhalb der Mülleimer-Zone, obwohl das Symbol rot leuchtete — jetzt ist das gerenderte rote Leuchten selbst das Signal, wenn Sie also beim Loslassen Rot sehen, wird der Punkt gelöscht; (2) gelegentlich blieb ein auf den Mülleimer abgelegter Mittelpunkt optisch am Symbol-Bereich stehen, bis die Liste sich das nächste Mal änderte — jetzt springt die Linie bei jedem Abbruch sauber in die ursprüngliche Form zurück.
+- **Ein Tipp auf die Linie nahe einem Mittelpunkt-Punkt verzerrt das vorhandene Segment nicht mehr.** Vorher: Wollten Sie auf die Linie tippen, um einen neuen Eckpunkt hinzuzufügen, landeten aber nahe dem Mittelpunkt-Punkt zwischen zwei vorhandenen Eckpunkten, verzerrte sich das vorhandene Segment — Ihr Tipp wurde in ein Fast-null-Ziehen umgewandelt, das einen Eckpunkt genau am Mittelpunkt einfügte. Jetzt wird der Tipp als Tipp erkannt und ein neuer Eckpunkt ans Ende der Liste gesetzt, genau wie beim Tippen an einer beliebigen anderen Stelle auf der Karte.
+
+---
+
 ## 1.35.1 — 15. Mai 2026 — Mülleimer-Korrekturen · Streckenplanung beginnt dort, wo Sie getippt haben
 
 - **Der Mülleimer funktioniert jetzt auch bei gedrehter Karte.** Vorher schlug das Ziehen eines Mess-Pins oder Planungs-Punkts auf das Mülleimer-Symbol oben rechts stillschweigend fehl, wenn die Karte um irgendeinen Winkel gedreht war — das Symbol leuchtete nicht rot und das Loslassen löschte nichts. Der Trefferpunkt liest jetzt die rohen Finger-Koordinaten statt des internen Rahmens der gedrehten Karte, sodass der Mülleimer in jeder Ausrichtung funktioniert.

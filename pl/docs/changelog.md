@@ -4,6 +4,14 @@ Zmiany widoczne dla użytkownika, najnowsze u góry. Refaktory wewnętrzne / pod
 
 ---
 
+## 1.35.2 — May 15, 2026 — Niezawodny kosz · Ikona kosza pojawia się tylko podczas przeciągania · Dotknięcie blisko punktów środkowych działa
+
+- **Ikona kosza pojawia się teraz tylko podczas przeciągania — pojawia się w chwili, gdy przytrzymasz wierzchołek lub punkt środkowy, świeci się na czerwono po najechaniu i znika po puszczeniu.** Wcześniej ikona była zawsze widoczna w trybie pomiaru i planowania, ale gest „przytrzymaj-i-przeciągnij-na-kosz-żeby-usunąć" nie był oczywisty dla większości użytkowników — widzieli kosz, ale nie wiedzieli, jak doprowadzić do niego punkt. Teraz kosz pojawia się dopiero, gdy faktycznie chwycisz punkt, co czyni gest jasnym.
+- **Upuszczenie punktu środkowego na koszu znów niezawodnie go usuwa.** Naprawiono dwa sporadyczne błędy: (1) drganie pozycji w chwili puszczenia palca czasem zostawiało współrzędne upuszczenia kilka pikseli poza strefą kosza, nawet gdy ikona świeciła się na czerwono — teraz sygnałem jest sam czerwony blask, więc jeśli widzisz czerwień w chwili puszczenia, punkt zostaje usunięty; (2) w kilku przypadkach punkt środkowy upuszczony na kosz zostawał wizualnie zaparkowany przy ikonie aż do następnej zmiany listy — teraz linia czysto wraca do pierwotnego kształtu przy każdym przerwaniu.
+- **Dotknięcie linii blisko kropki punktu środkowego nie zniekształca już istniejącego odcinka.** Wcześniej, jeśli próbowałeś dotknąć linii, aby dodać nowy wierzchołek, ale trafiłeś blisko kropki punktu środkowego między dwoma istniejącymi wierzchołkami, istniejący odcinek się zniekształcał — Twoje dotknięcie zostawało przejęte jako niemal-zerowe przeciągnięcie, które wstawiało wierzchołek dokładnie w punkcie środkowym. Teraz dotknięcie jest rozpoznawane jako dotknięcie i nowy wierzchołek jest dodawany na końcu listy, dokładnie tak samo jak przy dotknięciu w dowolnym innym miejscu mapy.
+
+---
+
 ## 1.35.1 — 15 maja 2026 — Poprawki kosza · Planowanie trasy zaczyna się tam, gdzie dotkniesz
 
 - **Strefa-kosz znów działa, gdy mapa jest obrócona.** Wcześniej przeciągnięcie punktu pomiaru lub punktu planowania na ikonę kosza w prawym górnym rogu po cichu zawodziło, jeśli mapa była choć trochę obrócona — ikona nie świeciła się na czerwono, a upuszczenie nie usuwało punktu. Test kolizji odczytuje teraz surowe współrzędne palca zamiast wewnętrznej ramki obróconej mapy, więc kosz działa przy dowolnej orientacji.

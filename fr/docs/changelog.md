@@ -4,6 +4,14 @@ Changements visibles par l\'utilisateur, plus récents en premier. Pour les refa
 
 ---
 
+## 1.35.2 — May 15, 2026 — Corbeille fiable · L\'icône poubelle n\'apparaît que pendant le glissement · Le tap près d\'un point milieu fonctionne
+
+- **L\'icône corbeille n\'apparaît plus qu\'au glissement — elle surgit dès que vous faites un appui long sur un sommet ou un point milieu, s\'allume en rouge au survol, et disparaît au relâchement.** Avant, l\'icône était toujours visible en mode mesure et planification mais le geste « appui long puis glisser jusqu\'à la corbeille pour supprimer » n\'était pas évident pour la plupart des utilisateurs — ils voyaient la corbeille mais n\'arrivaient pas à comprendre comment y amener un point. Désormais la corbeille n\'apparaît que lorsque vous avez réellement saisi un point, rendant l\'affordance claire.
+- **Lâcher un point milieu sur la corbeille le supprime maintenant de façon fiable.** Deux bugs intermittents corrigés : (1) le tremblement de la position au relâchement laissait parfois les coordonnées de dépôt à quelques pixels en dehors de la zone-poubelle même quand l\'icône s\'allumait en rouge — désormais le rougeoiement affiché est lui-même le signal, donc si vous voyez du rouge au relâchement, le point est supprimé ; (2) à quelques reprises un point milieu lâché sur la corbeille restait visuellement figé au niveau de l\'icône jusqu\'au changement de liste suivant — la ligne revient maintenant proprement à sa forme d\'origine à chaque abandon.
+- **Taper la ligne près d\'un point milieu ne déforme plus le segment existant.** Avant, si vous essayiez de taper la ligne pour ajouter un nouveau sommet mais que vous atterrissiez près du point milieu entre deux sommets existants, le segment existant se déformait — votre tap était détourné en un glissement quasi nul qui insérait un sommet pile au point milieu. Désormais le tap est reconnu comme un tap et un nouveau sommet est ajouté à la fin de la liste, exactement comme quand vous tapez n\'importe où ailleurs sur la carte.
+
+---
+
 ## 1.35.1 — 15 mai 2026 — Corrections de la corbeille · La planification de tracé commence là où vous avez tapé
 
 - **La corbeille fonctionne désormais quand la carte est pivotée.** Avant, glisser une épingle de mesure ou un sommet de planification sur l\'icône poubelle en haut à droite échouait silencieusement dès que la carte avait été pivotée d\'un degré — l\'icône ne s\'allumait pas en rouge et le dépôt ne supprimait rien. Le test de collision lit maintenant les coordonnées brutes du doigt au lieu du repère interne de la carte pivotée, donc la corbeille fonctionne quelle que soit l\'orientation.

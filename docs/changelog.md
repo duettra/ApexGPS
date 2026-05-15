@@ -4,6 +4,14 @@ User-visible changes, newest first. For internal refactoring / version-bump-only
 
 ---
 
+## 1.35.2 — May 15, 2026 — Reliable recycle-bin · Trash icon now appears only while dragging · Tapping near midpoints works
+
+- **The recycle-bin icon is now drag-only — it appears the moment you long-press a vertex or midpoint, glows red on hover, and disappears on release.** Before, the icon was always visible in measure and planning modes but the long-press-drag-to-delete gesture wasn't obvious to most users — they saw the bin but couldn't figure out how to get a point into it. Now the bin appears only when you've actually picked up a point, making the affordance clear.
+- **Dropping a midpoint on the recycle-bin now reliably deletes it.** Two intermittent bugs fixed: (1) release-position jitter sometimes left the drop-coordinates a few pixels outside the trash zone even when the icon was glowing red — now the rendered red glow itself is the signal, so if you see red on release, the point deletes; (2) on a few occasions a midpoint dropped on the trash would stay visually parked at the icon area until the next list change — now the line cleanly snaps back to the original shape on every abort.
+- **Tapping the line near a midpoint dot no longer warps the existing segment.** Before, if you tried to tap the line to add a new vertex but landed near the midpoint dot between two existing vertices, the existing segment would distort — your tap got hijacked into a near-zero drag that inserted a vertex right at the midpoint. Now the tap is recognised as a tap and a new vertex is added to the end of the list, exactly like tapping anywhere else on the map.
+
+---
+
 ## 1.35.1 — May 15, 2026 — Recycle-bin fixes · Track planning starts where you tapped
 
 - **The recycle-bin trash now works when the map is rotated.** Before, dragging a measure pin or planning vertex onto the top-right trash icon silently failed if the map had been rotated by any amount — the icon wouldn't glow red and dropping wouldn't delete. The hit-test now reads raw finger coordinates instead of the rotated map's internal frame, so the trash works at any orientation.

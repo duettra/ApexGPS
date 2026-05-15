@@ -4,6 +4,14 @@ Cambios visibles para el usuario, más recientes primero. Para refactors interno
 
 ---
 
+## 1.35.2 — May 15, 2026 — Papelera fiable · El icono solo aparece al arrastrar · Tocar cerca de los puntos intermedios funciona
+
+- **El icono de la papelera ahora es solo para arrastrar — aparece en cuanto mantienes pulsado un vértice o un punto intermedio, se enciende en rojo al pasar por encima y desaparece al soltar.** Antes, el icono estaba siempre visible en los modos de regla y planificación, pero el gesto de mantener pulsado y arrastrar para eliminar no era obvio para la mayoría — veían la papelera pero no acertaban a meter un punto dentro. Ahora la papelera aparece solo cuando has cogido un punto, así la affordance queda clara.
+- **Soltar un punto intermedio en la papelera ahora lo elimina de forma fiable.** Dos fallos intermitentes corregidos: (1) la sacudida al soltar dejaba a veces las coordenadas unos píxeles fuera de la zona de la papelera aunque el icono estuviera encendido en rojo — ahora el propio brillo rojo renderizado es la señal, así que si ves rojo al soltar, el punto se elimina; (2) en algunas ocasiones un punto intermedio soltado sobre la papelera se quedaba visualmente aparcado en el icono hasta el siguiente cambio de la lista — ahora la línea vuelve limpiamente a su forma original en cada cancelación.
+- **Tocar la línea cerca de un punto intermedio ya no deforma el segmento existente.** Antes, si intentabas tocar la línea para añadir un nuevo vértice pero caías cerca del punto intermedio entre dos vértices existentes, el segmento existente se distorsionaba — tu toque se reinterpretaba como un arrastre casi nulo que insertaba un vértice justo en el punto intermedio. Ahora el toque se reconoce como toque y se añade un nuevo vértice al final de la lista, exactamente igual que al tocar en cualquier otro punto del mapa.
+
+---
+
 ## 1.35.1 — 15 de mayo de 2026 — Correcciones de la papelera · La planificación de ruta empieza donde tocas
 
 - **La papelera ya funciona con el mapa rotado.** Antes, arrastrar un pin de la regla o un vértice de planificación hasta el icono de la papelera arriba a la derecha fallaba en silencio si el mapa estaba rotado lo más mínimo — el icono no se encendía en rojo y soltar no borraba. La prueba de colisión lee ahora las coordenadas crudas del dedo en lugar del marco interno del mapa rotado, así la papelera funciona con cualquier orientación.
