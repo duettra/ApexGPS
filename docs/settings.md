@@ -12,11 +12,17 @@
 ### Default map
 The tile style used when the app launches. Six options; see [The map screen → Map layers](map.md) for details on each. You can still switch styles mid-session via the layers button on the map. Fresh installs default to **ESRI Topo** (clean labels at hiking zooms); existing installs keep whatever you'd previously selected.
 
-### Track line width
-Slider, 4–24 dp. Heavier lines are easier to see when many tracks overlap; thinner lines look cleaner at high zoom. Default is around 6 dp.
+### Text size
+Slider, 50 %–150 % in 10 % steps. Scales **all in-app text** — menus, lists, the stats bar, dialogs. It applies *on top of* your phone's system font-size setting rather than replacing it, so it never overrides an accessibility choice you've made system-wide; it just nudges ApexGPS up or down from there. Default is 100 %. Use it if a large system font overflows the menus, or if you want bigger text in ApexGPS specifically.
+
+### Map controls size
+Slider, 50 %–150 % (same steps as Text size). Resizes the on-map buttons (the FAB column, compass, and recording pill). Shrink it to reclaim screen space on a small phone where the controls feel like they crowd the map; grow it for easier tapping with gloves. Buttons never shrink below a comfortable tap target. Default is 100 %.
 
 ### Waypoint size
-Small / Normal / Large / XL. This is a multiplier on top of the automatic zoom-adaptive size — markers already shrink at low zoom and grow at high zoom so they stay readable; this setting nudges the whole range up or down. Default is Normal (1.0×). As of 1.34.0 the baseline ladder is about 25 % larger across the board — Normal now renders at what prior "Large" did. If markers look bigger than before after updating, step one notch down.
+Slider, 50 %–200 %. A multiplier on top of the automatic zoom-adaptive size — markers already shrink at low zoom and grow at high zoom so they stay readable; this setting nudges the whole range up or down. Default is 100 %. (Before 1.38.0 this was a Small/Normal/Large/XL picker; it's now a slider for finer control.)
+
+### Track line width
+Slider, 4–24 dp. Heavier lines are easier to see when many tracks overlap; thinner lines look cleaner at high zoom. Default is around 6 dp.
 
 ### Start with rotation locked
 - **Off** (default) — two-finger rotation gestures work from the moment the app opens.

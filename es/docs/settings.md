@@ -12,11 +12,17 @@
 ### Mapa predeterminado
 Estilo usado al iniciar. Seis opciones; ver [La pantalla del mapa → Capas](map.md) para detalles. Puedes cambiar de estilo en cualquier momento con el botón de capas.
 
-### Grosor de línea
-Slider, 4–24 dp. Líneas gruesas se ven mejor cuando hay muchas rutas solapadas; finas lucen más limpias en zoom alto. Por defecto ~6 dp.
+### Tamaño del texto
+Slider, 50 %–150 % en pasos de 10 %. Escala **todo el texto de la app** — menús, listas, la barra de estadísticas, diálogos. Se aplica *encima* del tamaño de fuente del sistema del teléfono en lugar de reemplazarlo, así que nunca anula una opción de accesibilidad definida a nivel de sistema; solo desplaza ApexGPS respecto a ese ajuste. Por defecto 100 %. Útil si una fuente grande del sistema desborda los menús, o si quieres texto más grande específicamente en ApexGPS.
+
+### Tamaño de los controles del mapa
+Slider, 50 %–150 % (mismos pasos que Tamaño del texto). Cambia el tamaño de los botones del mapa (la columna de FAB, la brújula y la píldora de grabación). Redúcelo para ganar espacio en un teléfono pequeño donde los controles saturan el mapa; auméntalo para tocar más fácil con guantes. Los botones nunca se reducen por debajo de un objetivo táctil cómodo. Por defecto 100 %.
 
 ### Tamaño de puntos
-Pequeño / Normal / Grande / XL. Multiplicador sobre el tamaño adaptativo al zoom — los marcadores ya encogen a zoom bajo y crecen a zoom alto para ser legibles; esto desplaza toda la escala. Por defecto Normal (1,0×).
+Slider, 50 %–200 %. Multiplicador sobre el tamaño adaptativo al zoom — los marcadores ya encogen a zoom bajo y crecen a zoom alto para ser legibles; esto desplaza toda la escala. Por defecto 100 %. (Antes de 1.38.0 era un selector Pequeño/Normal/Grande/XL; ahora es un slider para un control más fino.)
+
+### Grosor de línea
+Slider, 4–24 dp. Líneas gruesas se ven mejor cuando hay muchas rutas solapadas; finas lucen más limpias en zoom alto. Por defecto ~6 dp.
 
 ### Bloquear rotación al iniciar
 - **Desactivado** (por defecto) — los gestos de dos dedos funcionan desde el inicio.

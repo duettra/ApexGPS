@@ -12,11 +12,17 @@
 ### Domyślna mapa
 Styl używany przy uruchomieniu. Sześć opcji; zobacz [Ekran mapy → Warstwy mapy](map.md) po szczegóły. Styl można zmieniać w trakcie sesji przyciskiem warstw.
 
-### Szerokość linii trasy
-Suwak, 4–24 dp. Grubsze linie są bardziej widoczne, gdy wiele tras się nakłada; cieńsze wyglądają czyściej przy wysokim zoomie. Domyślnie ~6 dp.
+### Rozmiar tekstu
+Suwak, 50 %–150 % w krokach co 10 %. Skaluje **cały tekst aplikacji** — menu, listy, pasek statystyk, okna dialogowe. Działa *dodatkowo* do systemowego rozmiaru czcionki telefonu, a nie zamiast niego, więc nigdy nie nadpisuje ustawienia dostępności wybranego w systemie; jedynie przesuwa ApexGPS względem tego ustawienia. Domyślnie 100 %. Przydatne, gdy duża czcionka systemowa rozsadza menu lub gdy chcesz większy tekst właśnie w ApexGPS.
+
+### Rozmiar elementów sterujących mapą
+Suwak, 50 %–150 % (te same kroki co Rozmiar tekstu). Zmienia rozmiar elementów sterujących na mapie (kolumny FAB, kompasu i pigułki nagrywania). Zmniejsz go, aby odzyskać miejsce na małym telefonie, gdy elementy zaśmiecają mapę; zwiększ, aby łatwiej dotykać w rękawiczkach. Przyciski nigdy nie schodzą poniżej wygodnego celu dotyku. Domyślnie 100 %.
 
 ### Rozmiar punktów
-Mały / Normalny / Duży / XL. To mnożnik nakładany na automatyczny rozmiar adaptowalny do zoomu — markery kurczą się przy niskim zoomie i rosną przy wysokim, aby pozostać czytelne; to ustawienie przesuwa całą skalę. Domyślnie Normalny (1,0×).
+Suwak, 50 %–200 %. Mnożnik nakładany na automatyczny rozmiar adaptowalny do zoomu — markery kurczą się przy niskim zoomie i rosną przy wysokim, aby pozostać czytelne; to ustawienie przesuwa całą skalę. Domyślnie 100 %. (Przed 1.38.0 był to wybór Mały/Normalny/Duży/XL; teraz suwak dla precyzyjniejszej regulacji.)
+
+### Szerokość linii trasy
+Suwak, 4–24 dp. Grubsze linie są bardziej widoczne, gdy wiele tras się nakłada; cieńsze wyglądają czyściej przy wysokim zoomie. Domyślnie ~6 dp.
 
 ### Zablokuj obrót przy starcie
 - **Wył.** (domyślnie) — dwupalcowe gesty obrotu działają od otwarcia aplikacji.

@@ -12,11 +12,17 @@
 ### Carte par défaut
 Le style utilisé au lancement. Six options ; voir [L\'écran carte → Couches](map.md) pour les détails. Vous pouvez toujours changer en cours de session via le bouton couches.
 
-### Largeur de trace
-Slider, 4–24 dp. Des lignes plus épaisses sont plus visibles quand plusieurs traces se chevauchent ; plus fines c\'est plus net à zoom élevé. Défaut ~6 dp.
+### Taille du texte
+Slider, 50 %–150 % par pas de 10 %. Met à l\'échelle **tout le texte de l\'application** — menus, listes, barre de stats, dialogues. S\'applique *en plus* de la taille de police système du téléphone sans la remplacer, donc ne remplace jamais un choix d\'accessibilité défini au niveau système ; cela décale seulement ApexGPS par rapport à ce réglage. Défaut 100 %. Utile si une grande police système fait déborder les menus, ou si vous voulez un texte plus grand spécifiquement dans ApexGPS.
+
+### Taille des commandes de carte
+Slider, 50 %–150 % (mêmes pas que Taille du texte). Redimensionne les boutons sur la carte (la colonne de FAB, la boussole et la pastille d\'enregistrement). Réduisez-la pour gagner de la place sur un petit téléphone où les commandes encombrent la carte ; agrandissez-la pour appuyer plus facilement avec des gants. Les boutons ne descendent jamais sous une cible tactile confortable. Défaut 100 %.
 
 ### Taille des points
-Petit / Normal / Grand / XL. Multiplicateur sur la taille adaptative au zoom — les marqueurs rétrécissent à petit zoom et grossissent à fort zoom pour rester lisibles ; ce réglage décale toute la plage. Défaut Normal (1,0×).
+Slider, 50 %–200 %. Multiplicateur sur la taille adaptative au zoom — les marqueurs rétrécissent à petit zoom et grossissent à fort zoom pour rester lisibles ; ce réglage décale toute la plage. Défaut 100 %. (Avant 1.38.0 c\'était un sélecteur Petit/Normal/Grand/XL ; maintenant un slider pour un réglage plus fin.)
+
+### Largeur de trace
+Slider, 4–24 dp. Des lignes plus épaisses sont plus visibles quand plusieurs traces se chevauchent ; plus fines c\'est plus net à zoom élevé. Défaut ~6 dp.
 
 ### Rotation verrouillée au démarrage
 - **Désactivé** (par défaut) — les gestes deux doigts marchent dès l\'ouverture.
