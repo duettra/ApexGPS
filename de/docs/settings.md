@@ -16,13 +16,13 @@ Der Kartenstil, der beim Start der App verwendet wird. Sechs Optionen; siehe [Di
 Slider, 50 %–150 % in 10-%-Schritten. Skaliert **den gesamten App-Text** — Menüs, Listen, die Statusleiste, Dialoge. Wirkt *zusätzlich* zur System-Schriftgröße Ihres Telefons statt sie zu ersetzen, überschreibt also keine systemweite Bedienhilfen-Einstellung; ApexGPS wird nur relativ dazu größer oder kleiner. Standard ist 100 %. Nützlich, wenn eine große System-Schrift die Menüs überlaufen lässt oder wenn Sie speziell in ApexGPS größeren Text möchten.
 
 ### Größe der Kartenbedienelemente
-Slider, 50 %–150 % (gleiche Schritte wie Textgröße). Ändert die Größe der Bedienelemente auf der Karte (die FAB-Spalte, den Kompass und die Aufnahme-Leiste). Verkleinern Sie sie, um auf einem kleinen Telefon Platz zurückzugewinnen, wenn die Elemente die Karte überladen; vergrößern Sie sie für leichteres Tippen mit Handschuhen. Die Schaltflächen werden nie kleiner als eine bequeme Tippfläche. Standard ist 100 %.
+Slider, 50 %–150 % (gleiche Schritte wie Textgröße). Ändert die Größe der Bedienelemente auf der Karte (die Hauptschaltflächen, den Kompass und die Aufnahme-Leiste). Verkleinern Sie sie, um auf einem kleinen Telefon Platz zurückzugewinnen, wenn die Elemente die Karte überladen; vergrößern Sie sie für leichteres Tippen mit Handschuhen. Die Schaltflächen werden nie kleiner als eine bequeme Tippfläche. Standard ist 100 %.
 
 ### Wegpunkt-Größe
 Slider, 50 %–200 %. Ein Multiplikator auf die automatische zoom-abhängige Größe — Marker schrumpfen bei niedrigem Zoom und wachsen bei hohem Zoom, damit sie lesbar bleiben; diese Einstellung schiebt den gesamten Bereich nach oben oder unten. Standard ist 100 %. (Vor 1.38.0 war dies eine Auswahl Klein/Normal/Groß/XL; jetzt ein Slider für feinere Abstufung.)
 
 ### Linienbreite Tracks
-Slider, 4–24 dp. Dickere Linien sind bei vielen überlappenden Tracks besser sichtbar; dünnere Linien sehen bei hohem Zoom sauberer aus. Standard ist etwa 6 dp.
+Slider von dünn bis dick. Dickere Linien sind bei vielen überlappenden Tracks besser sichtbar; dünnere Linien sehen bei hohem Zoom sauberer aus. Standard ist eine mittlere Breite.
 
 ### Beim Start Rotation sperren
 - **Aus** (Standard) — Zwei-Finger-Drehgesten funktionieren vom ersten Moment an.
