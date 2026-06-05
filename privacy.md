@@ -6,7 +6,7 @@ layout: default
 
 # ApexGPS Privacy Policy
 
-_Last updated: 2026-04-22_
+_Last updated: 2026-06-05_
 
 ApexGPS is a free Android hiking app. This policy explains what data the app reads, where it stays, and who it's shared with.
 
@@ -16,7 +16,7 @@ Your location data and everything you create (tracks, waypoints, saved map regio
 
 ## What data the app reads
 
-**Device location (precise GPS)** — optional. Read while the app is open for the position marker on the map and for the "follow me" mode. Required only if you want live GPS features; the app works without it for browsing maps and viewing imported tracks.
+**Device location (precise GPS)** — optional. Read while you use live GPS features: the position marker, "follow me" mode, and trip recording. While you are recording a trip, location keeps being read with the screen off via a foreground service that shows a persistent notification, so the track continues while the phone is in your pocket. The app works without location for browsing maps and viewing imported tracks.
 
 **GPX files you import** — read from the file you select or share in.
 
@@ -33,6 +33,8 @@ Your location data and everything you create (tracks, waypoints, saved map regio
 - Thunderforest (tile.thunderforest.com), only if you configure an API key
 
 Those providers see a standard HTTP request — IP address, User-Agent — as they would for any map on any app. Nothing ApexGPS-specific is sent. Refer to each provider's own privacy policy for their handling.
+
+**Weather and elevation (Open-Meteo)** — when you open the weather panel or fetch elevation data, the app sends the relevant **coordinates** over HTTPS to Open-Meteo (`api.open-meteo.com`) to retrieve the forecast or ground elevation for that point. The coordinates are used only to service that request; per Open-Meteo's own terms, no personal data is stored. See open-meteo.com's privacy terms for their handling.
 
 ## Third-party SDKs
 
