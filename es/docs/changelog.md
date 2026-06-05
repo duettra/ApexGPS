@@ -4,6 +4,93 @@ Cambios visibles para el usuario, más recientes primero. Para refactors interno
 
 ---
 
+## 1.40.1 — 5 de junio de 2026 — Correcciones de la tarjeta de estadísticas de grabación
+
+- La tarjeta de estadísticas de grabación en vivo ahora mantiene su reloj al día incluso con la grabación en pausa.
+- Mejor rendimiento en grabaciones largas — las estadísticas en vivo solo se recalculan mientras la tarjeta está abierta.
+
+---
+
+## 1.40.0 — 4 de junio de 2026 — Tarjeta de estadísticas de grabación en vivo
+
+- **Toca el cronómetro de grabación para abrir una tarjeta de estadísticas en vivo** — duración, distancia, altitud actual (con su fuente), ascenso total y el reloj, todo actualizándose sobre la marcha.
+- Pausar, Finalizar y Eliminar son ahora botones de icono claros, cada uno con su confirmación.
+- El menú de grabación y los demás menús del mapa ahora coinciden: redondeados, translúcidos y siguen tu ajuste de Tamaño de texto en la app.
+
+---
+
+## 1.39.1 — 4 de junio de 2026 — Correcciones de regreso al mapa y de la Guía de usuario
+
+- Corregido un **mapa en negro** ocasional al volver al mapa desde un menú — ahora se redibuja al instante en lugar de quedarse en blanco hasta que desplazabas.
+- El texto de la **Guía de usuario** sin conexión ahora escala con el ajuste **Tamaño de texto** de la app, como el resto de la app.
+
+---
+
+## 1.38.0 — 3 de junio de 2026 — Tamaños de texto y de controles ajustables
+
+- Nuevo deslizador **Tamaño de texto** en Ajustes → Apariencia (50–150 %) que escala todo el texto de la app sobre tu ajuste de fuente de Android.
+- Nuevo deslizador **Tamaño de los controles del mapa** — redimensiona los botones del mapa, la brújula y la pastilla de grabación; redúcelos para recuperar área de mapa en un teléfono pequeño.
+- El ajuste de tamaño de waypoint es ahora también un deslizador suave.
+
+---
+
+## 1.37.15 — 2 de junio de 2026 — La altitud del waypoint funciona sin conexión
+
+- Añadir un waypoint en el mapa ahora **rellena previamente su altitud a partir de tu altitud GPS actual**, así funciona en modo avión o sin señal. Puedes editarla, o consultar el valor preciso más tarde cuando tengas conexión.
+
+---
+
+## 1.37.14 — 2 de junio de 2026 — Las grabaciones nuevas empiezan sin actividad
+
+- Una grabación nueva ya no toma «Senderismo» por defecto — empieza sin actividad seleccionada (mostrada como «Ninguna»), así eliges tú la correcta. Los tracks existentes no cambian.
+
+---
+
+## 1.37.13 — 1 de junio de 2026 — Optimizar muestra una vista previa del trazado
+
+- El diálogo Optimizar ahora muestra una **vista previa del trazado antes/después** (original tenue, resultado optimizado en negrita encima) para que veas el enderezado antes de guardar.
+
+---
+
+## 1.37.12 — 1 de junio de 2026 — Optimizar limpia el ruido GPS de los cañones
+
+- Optimizar ahora **limpia el track antes de simplificarlo** — suaviza la altitud ruidosa y endereza el «garabato» GPS que se forma en cañones profundos, conservando los zigzags reales. Validado contra un reloj con barómetro en una marcha de cañón. La vista previa y Guardar como nuevo siguen manteniendo a salvo tu original.
+
+---
+
+## 1.37.11 — 1 de junio de 2026 — Recortar: Guardar como nuevo
+
+- **Recortar** un track ahora ofrece **Guardar como nuevo** (como Optimizar) — conserva la versión recortada como un track aparte y deja el original intacto.
+
+---
+
+## 1.37.10 — 1 de junio de 2026 — Ascenso y descenso precisos
+
+- Corregido el **ascenso/descenso total** desorbitadamente inflado en teléfonos sin barómetro (una marcha de cañón mostraba +17 000 m en lugar de ~2250 m). La cifra ahora elimina el ruido de la altitud antes de sumarla, igual que calculan el desnivel Strava y Komoot. Se aplica a todos los tracks guardados e importados.
+
+---
+
+## 1.37.5 — 21 de mayo de 2026 — Overlay de diagnóstico GPS (opcional)
+
+- Nuevo overlay opcional de **Diagnóstico GPS** (Ajustes → Avanzado) que muestra en vivo la calidad del fix, la precisión y el detalle de la fuente de altitud — útil para entender grabaciones con señal complicada.
+
+---
+
+## 1.37.0 — 17 de mayo de 2026 — Altímetro barométrico y mejor altitud
+
+- En teléfonos con barómetro, ApexGPS lo usa ahora como **fuente principal de altitud** — estable a nivel submétrico y libre del ruido del GPS y de los cortes en los cañones.
+- El ascenso/descenso usa ahora un **umbral de 5 m** (el estándar de Strava/AllTrails); los tracks existentes mostrarán cifras más pequeñas y realistas.
+- Además, una serie de mejoras de precisión para teléfonos **sin** barómetro — varias comprobaciones de plausibilidad de la altitud y suavizado para rechazar picos del GPS, y un campo opcional de precisión GPS en los GPX exportados.
+
+---
+
+## 1.36.0 — 17 de mayo de 2026 — Mejor grabación en cañones
+
+- La grabación ahora **captura más puntos en cañones y terreno cerrado** (captura cruda con controles de densidad más inteligentes), así los descensos en cañones profundos no se pierden.
+- Nueva opción **Limpiar saltos GPS** en Optimizar para arreglar tracks ruidosos a posteriori.
+
+---
+
 ## 1.35.2 — May 15, 2026 — Papelera fiable · El icono solo aparece al arrastrar · Tocar cerca de los puntos intermedios funciona
 
 - **El icono de la papelera ahora es solo para arrastrar — aparece en cuanto mantienes pulsado un vértice o un punto intermedio, se enciende en rojo al pasar por encima y desaparece al soltar.** Antes, el icono estaba siempre visible en los modos de regla y planificación, pero el gesto de mantener pulsado y arrastrar para eliminar no era obvio para la mayoría — veían la papelera pero no acertaban a meter un punto dentro. Ahora la papelera aparece solo cuando has cogido un punto, así la affordance queda clara.

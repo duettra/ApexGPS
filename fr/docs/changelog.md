@@ -4,6 +4,93 @@ Changements visibles par l\'utilisateur, plus récents en premier. Pour les refa
 
 ---
 
+## 1.40.1 — 5 juin 2026 — Corrections de la carte de statistiques d\'enregistrement
+
+- La carte de statistiques d\'enregistrement en direct garde maintenant son horloge à jour même quand un enregistrement est en pause.
+- Performances plus fluides sur les longs enregistrements — les statistiques en direct ne se recalculent désormais que lorsque la carte est ouverte.
+
+---
+
+## 1.40.0 — 4 juin 2026 — Carte de statistiques d\'enregistrement en direct
+
+- **Tapez sur le chrono d\'enregistrement pour ouvrir une carte de statistiques en direct** — durée, distance, altitude actuelle (avec sa source), montée totale et horloge, le tout se mettant à jour au fil de votre progression.
+- Pause, Terminer et Supprimer sont désormais des boutons à icône clairs, chacun avec une confirmation.
+- Le menu d\'enregistrement et les autres menus de la carte se ressemblent maintenant : arrondis, translucides, et ils suivent votre réglage Taille du texte dans l\'app.
+
+---
+
+## 1.39.1 — 4 juin 2026 — Corrections du retour à la carte et du Guide d\'utilisation
+
+- Correction d\'une **carte noire** occasionnelle au retour à la carte depuis un menu — elle se redessine maintenant immédiatement au lieu de rester vide jusqu\'à ce que vous panniez.
+- Le texte du **Guide d\'utilisation** hors ligne s\'adapte désormais au réglage **Taille du texte** de l\'app, comme le reste de l\'application.
+
+---
+
+## 1.38.0 — 3 juin 2026 — Tailles de texte et de contrôles ajustables
+
+- Nouveau curseur **Taille du texte** dans Paramètres → Apparence (50–150 %) qui met à l\'échelle tout le texte de l\'app par-dessus votre réglage de police Android.
+- Nouveau curseur **Taille des contrôles de carte** — redimensionnez les boutons sur la carte, la boussole et la pastille d\'enregistrement ; rétrécissez-les pour récupérer de la surface de carte sur un petit téléphone.
+- Le réglage de la taille des waypoints est lui aussi désormais un curseur fluide.
+
+---
+
+## 1.37.15 — 2 juin 2026 — L\'altitude des waypoints fonctionne hors ligne
+
+- Ajouter un waypoint sur la carte **pré-remplit maintenant son altitude depuis votre altitude GPS actuelle**, donc cela fonctionne en mode avion ou sans signal. Vous pouvez toujours la modifier, ou récupérer la valeur précise plus tard une fois en ligne.
+
+---
+
+## 1.37.14 — 2 juin 2026 — Les nouveaux enregistrements démarrent sans activité
+
+- Un nouvel enregistrement ne démarre plus par défaut sur « Randonnée » — il démarre sans activité sélectionnée (affiché comme « Aucune »), afin que vous choisissiez vous-même la bonne. Les traces existantes ne changent pas.
+
+---
+
+## 1.37.13 — 1 juin 2026 — Optimize affiche un aperçu du tracé
+
+- La boîte de dialogue Optimize affiche maintenant un **aperçu avant/après du tracé** (original en pâle, résultat optimisé en gras par-dessus) afin que vous puissiez voir le lissage avant d\'enregistrer.
+
+---
+
+## 1.37.12 — 1 juin 2026 — Optimize nettoie le bruit GPS des canyons
+
+- Optimize **nettoie maintenant la trace avant de la simplifier** — il lisse l\'altitude bruitée et redresse le « gribouillis » GPS qu\'on obtient dans les canyons profonds, tout en préservant les vrais lacets. Validé contre une montre à baromètre sur une randonnée en canyon. L\'aperçu et l\'option Enregistrer comme nouvelle gardent toujours votre original en sécurité.
+
+---
+
+## 1.37.11 — 1 juin 2026 — Rogner : Enregistrer comme nouvelle
+
+- **Rogner** une trace propose désormais **Enregistrer comme nouvelle** (comme Optimize) — gardez la version rognée comme trace séparée et laissez l\'original intact.
+
+---
+
+## 1.37.10 — 1 juin 2026 — Montée et descente exactes
+
+- Correction d\'une **montée/descente totale** follement gonflée sur les téléphones sans baromètre (une randonnée en canyon affichait +17 000 m au lieu de ~2 250 m). Le chiffre débruite maintenant l\'altitude avant de l\'additionner, à la manière dont Strava et Komoot calculent le dénivelé. S\'applique à toutes les traces stockées et importées.
+
+---
+
+## 1.37.5 — 21 mai 2026 — Overlay Diagnostics GPS (optionnel)
+
+- Nouvel overlay **Diagnostics GPS** opt-in (Paramètres → Avancé) affichant en direct la qualité du fix, la précision et le détail de la source d\'altitude — utile pour comprendre les enregistrements à signal délicat.
+
+---
+
+## 1.37.0 — 17 mai 2026 — Altimètre barométrique et meilleure altitude
+
+- Sur les téléphones équipés d\'un baromètre, ApexGPS l\'utilise désormais comme **source d\'altitude principale** — stable au mètre près et exempt du bruit GPS et des coupures en canyon.
+- La montée/descente utilise maintenant un **seuil de 5 m** (le standard Strava/AllTrails) ; les traces existantes afficheront des chiffres plus petits et plus réalistes.
+- Plus une série d\'améliorations de précision pour les téléphones **sans** baromètre — plusieurs contrôles de plausibilité de l\'altitude et un lissage pour rejeter les pics GPS, ainsi qu\'un champ optionnel de précision GPS dans le GPX exporté.
+
+---
+
+## 1.36.0 — 17 mai 2026 — Meilleur enregistrement en canyon
+
+- L\'enregistrement **capture maintenant plus de points dans les canyons et les terrains resserrés** (capture brute avec des seuils de densité plus intelligents), afin que les descentes de canyon profond ne soient pas perdues.
+- Nouvelle option **Nettoyer les sauts GPS** dans Optimize pour assainir les traces bruitées après coup.
+
+---
+
 ## 1.35.2 — May 15, 2026 — Corbeille fiable · L\'icône poubelle n\'apparaît que pendant le glissement · Le tap près d\'un point milieu fonctionne
 
 - **L\'icône corbeille n\'apparaît plus qu\'au glissement — elle surgit dès que vous faites un appui long sur un sommet ou un point milieu, s\'allume en rouge au survol, et disparaît au relâchement.** Avant, l\'icône était toujours visible en mode mesure et planification mais le geste « appui long puis glisser jusqu\'à la corbeille pour supprimer » n\'était pas évident pour la plupart des utilisateurs — ils voyaient la corbeille mais n\'arrivaient pas à comprendre comment y amener un point. Désormais la corbeille n\'apparaît que lorsque vous avez réellement saisi un point, rendant l\'affordance claire.

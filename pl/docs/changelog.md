@@ -4,6 +4,93 @@ Zmiany widoczne dla użytkownika, najnowsze u góry. Refaktory wewnętrzne / pod
 
 ---
 
+## 1.40.1 — 5 czerwca 2026 — Poprawki karty statystyk nagrywania
+
+- Karta statystyk nagrywania na żywo utrzymuje teraz aktualny zegar nawet, gdy nagrywanie jest wstrzymane.
+- Płynniejsze działanie przy długich nagraniach — statystyki na żywo są teraz przeliczane tylko, gdy karta jest otwarta.
+
+---
+
+## 1.40.0 — 4 czerwca 2026 — Karta statystyk nagrywania na żywo
+
+- **Stuknij stoper nagrywania, aby otworzyć kartę statystyk na żywo** — czas trwania, dystans, bieżąca wysokość (wraz z jej źródłem), całkowite podejście i zegar, wszystko aktualizowane na bieżąco.
+- Pauza, Zakończ i Usuń to teraz czytelne przyciski-ikony, każdy z potwierdzeniem.
+- Menu nagrywania i pozostałe menu mapy są teraz spójne: zaokrąglone, półprzezroczyste i podążają za ustawieniem rozmiaru tekstu w aplikacji.
+
+---
+
+## 1.39.1 — 4 czerwca 2026 — Poprawki powrotu na mapę i Podręcznika użytkownika
+
+- Naprawiono sporadyczną **czarną mapę** przy powrocie na mapę z menu — przerysowuje się teraz natychmiast, zamiast pozostawać pusta do momentu przesunięcia.
+- Tekst **Podręcznika użytkownika** offline skaluje się teraz wraz z ustawieniem **rozmiaru tekstu** w aplikacji, tak jak reszta aplikacji.
+
+---
+
+## 1.38.0 — 3 czerwca 2026 — Regulowane rozmiary tekstu i kontrolek
+
+- Nowy suwak **rozmiaru tekstu** w Ustawienia → Wygląd (50–150%), który skaluje cały tekst w aplikacji ponad ustawieniem czcionki Androida.
+- Nowy suwak **rozmiaru kontrolek mapy** — zmień rozmiar przycisków na mapie, kompasu i znaczka nagrywania; zmniejsz je, by odzyskać obszar mapy na małym telefonie.
+- Ustawienie rozmiaru znacznika to teraz również płynny suwak.
+
+---
+
+## 1.37.15 — 2 czerwca 2026 — Wysokość punktu działa offline
+
+- Dodanie punktu na mapie **wypełnia teraz wstępnie jego wysokość na podstawie bieżącej wysokości GPS**, więc działa w trybie samolotowym lub bez sygnału. Nadal możesz ją edytować lub pobrać dokładną wartość później, gdy będziesz online.
+
+---
+
+## 1.37.14 — 2 czerwca 2026 — Nowe nagrania startują bez aktywności
+
+- Nowe nagranie nie jest już domyślnie ustawiane na „Wędrówkę" — startuje bez wybranej aktywności (pokazywanej jako „Brak"), więc sam wybierasz właściwą. Istniejące trasy pozostają bez zmian.
+
+---
+
+## 1.37.13 — 1 czerwca 2026 — Optymalizacja pokazuje podgląd trasy
+
+- Okno Optymalizacji pokazuje teraz **podgląd trasy przed/po** (blada oryginalna, pogrubiony zoptymalizowany wynik na wierzchu), abyś mógł zobaczyć wyprostowanie przed zapisem.
+
+---
+
+## 1.37.12 — 1 czerwca 2026 — Optymalizacja czyści szum GPS w kanionach
+
+- Optymalizacja **czyści teraz trasę przed uproszczeniem** — wygładza zaszumioną wysokość i prostuje GPS-owe „bazgroły", które powstają w głębokich kanionach, zachowując przy tym prawdziwe serpentyny. Zweryfikowano względem zegarka z barometrem na wędrówce kanionem. Podgląd i Zapisz jako nową nadal chronią Twój oryginał.
+
+---
+
+## 1.37.11 — 1 czerwca 2026 — Przytnij: Zapisz jako nową
+
+- **Przytnij** trasę oferuje teraz **Zapisz jako nową** (jak Optymalizacja) — zachowaj przyciętą wersję jako osobną trasę i pozostaw oryginał nietknięty.
+
+---
+
+## 1.37.10 — 1 czerwca 2026 — Dokładne podejście i zejście
+
+- Naprawiono mocno zawyżone **całkowite podejście/zejście** na telefonach bez barometru (jedna wędrówka kanionem pokazywała +17 000 m zamiast ~2250 m). Wartość odszumia teraz wysokość przed jej zsumowaniem, tak jak liczą wzniesienie Strava i Komoot. Dotyczy wszystkich zapisanych i zaimportowanych tras.
+
+---
+
+## 1.37.5 — 21 maja 2026 — Nakładka diagnostyki GPS (opcjonalna)
+
+- Nowa, włączana ręcznie nakładka **diagnostyki GPS** (Ustawienia → Zaawansowane) pokazująca na żywo jakość fixu, dokładność i szczegóły źródła wysokości — przydatna do zrozumienia nagrań w trudnym sygnale.
+
+---
+
+## 1.37.0 — 17 maja 2026 — Wysokościomierz barometryczny i lepsza wysokość
+
+- Na telefonach z barometrem ApexGPS używa go teraz jako **głównego źródła wysokości** — stabilny z dokładnością poniżej metra i wolny od szumu GPS oraz utraty sygnału w kanionach.
+- Podejście/zejście używa teraz **progu 5 m** (standard Strava/AllTrails); istniejące trasy pokażą mniejsze, bardziej realistyczne liczby.
+- Do tego seria usprawnień dokładności dla telefonów **bez** barometru — wiele kontroli wiarygodności wysokości i wygładzanie odrzucające skoki GPS oraz opcjonalne pole dokładności GPS w eksportowanych plikach GPX.
+
+---
+
+## 1.36.0 — 17 maja 2026 — Lepsze nagrywanie w kanionach
+
+- Nagrywanie **zapisuje teraz więcej punktów w kanionach i ciasnym terenie** (surowy zapis z mądrzejszymi bramkami gęstości), więc zejścia w głębokich kanionach nie giną.
+- Nowa opcja **Wyczyść skoki GPS** w Optymalizacji do porządkowania zaszumionych tras po fakcie.
+
+---
+
 ## 1.35.2 — May 15, 2026 — Niezawodny kosz · Ikona kosza pojawia się tylko podczas przeciągania · Dotknięcie blisko punktów środkowych działa
 
 - **Ikona kosza pojawia się teraz tylko podczas przeciągania — pojawia się w chwili, gdy przytrzymasz wierzchołek lub punkt środkowy, świeci się na czerwono po najechaniu i znika po puszczeniu.** Wcześniej ikona była zawsze widoczna w trybie pomiaru i planowania, ale gest „przytrzymaj-i-przeciągnij-na-kosz-żeby-usunąć" nie był oczywisty dla większości użytkowników — widzieli kosz, ale nie wiedzieli, jak doprowadzić do niego punkt. Teraz kosz pojawia się dopiero, gdy faktycznie chwycisz punkt, co czyni gest jasnym.

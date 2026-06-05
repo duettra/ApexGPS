@@ -4,6 +4,93 @@ Für Nutzer sichtbare Änderungen, neueste zuerst. Für internes Refactoring / r
 
 ---
 
+## 1.40.1 — 5. Juni 2026 — Korrekturen an der Aufzeichnungs-Statistikkarte
+
+- Die Live-Statistikkarte der Aufzeichnung hält ihre Uhr jetzt auch dann aktuell, während eine Aufzeichnung pausiert ist.
+- Flüssigere Leistung bei langen Aufzeichnungen — die Live-Statistik wird jetzt nur noch neu berechnet, solange die Karte geöffnet ist.
+
+---
+
+## 1.40.0 — 4. Juni 2026 — Live-Statistikkarte der Aufzeichnung
+
+- **Tippen Sie auf den Aufzeichnungs-Timer, um eine Live-Statistikkarte zu öffnen** — Dauer, Distanz, aktuelle Höhe (mit ihrer Quelle), Gesamt-Aufstieg und die Uhr, alle laufend aktualisiert.
+- Pause, Fertig und Löschen sind jetzt klare Symbol-Schaltflächen, jede mit einer Bestätigung.
+- Das Aufzeichnungs-Menü und die anderen Karten-Menüs sind jetzt einheitlich: abgerundet, durchscheinend und sie folgen Ihrer In-App-Einstellung der Textgröße.
+
+---
+
+## 1.39.1 — 4. Juni 2026 — Korrekturen für Kartenrückkehr und Anleitung
+
+- Ein gelegentlich **schwarzes Kartenbild** beim Zurückkehren zur Karte aus einem Menü wurde behoben — sie wird jetzt sofort neu gezeichnet, statt leer zu bleiben, bis Sie geschwenkt haben.
+- Der Text der Offline-**Anleitung** skaliert jetzt mit der In-App-Einstellung der **Textgröße**, wie der Rest der App.
+
+---
+
+## 1.38.0 — 3. Juni 2026 — Anpassbare Text- und Bediengrößen
+
+- Neuer Schieberegler **Textgröße** unter Einstellungen → Darstellung (50–150 %), der allen In-App-Text zusätzlich zu Ihrer Android-Schrifteinstellung skaliert.
+- Neuer Schieberegler **Größe der Kartenbedienelemente** — passen Sie die Schaltflächen auf der Karte, den Kompass und die Aufnahme-Pille in der Größe an; verkleinern Sie sie, um auf einem kleinen Telefon Kartenfläche zurückzugewinnen.
+- Die Einstellung der Wegpunkt-Größe ist jetzt ebenfalls ein flüssiger Schieberegler.
+
+---
+
+## 1.37.15 — 2. Juni 2026 — Wegpunkt-Höhe funktioniert offline
+
+- Beim Hinzufügen eines Wegpunkts auf der Karte wird seine **Höhe jetzt aus Ihrer aktuellen GPS-Höhe vorausgefüllt**, sodass es im Flugmodus oder ohne Signal funktioniert. Sie können sie weiterhin bearbeiten oder den genauen Wert später online abrufen.
+
+---
+
+## 1.37.14 — 2. Juni 2026 — Neue Aufzeichnungen starten ohne Aktivität
+
+- Eine neue Aufzeichnung ist nicht mehr standardmäßig „Wandern" — sie startet ohne ausgewählte Aktivität (angezeigt als „Keine"), sodass Sie selbst die richtige auswählen. Bestehende Tracks bleiben unverändert.
+
+---
+
+## 1.37.13 — 1. Juni 2026 — Optimieren zeigt eine Pfad-Vorschau
+
+- Der Optimieren-Dialog zeigt jetzt eine **Vorher/Nachher-Pfad-Vorschau** (blasses Original, kräftiges optimiertes Ergebnis darüber), sodass Sie die Begradigung vor dem Speichern sehen können.
+
+---
+
+## 1.37.12 — 1. Juni 2026 — Optimieren bereinigt Canyon-GPS-Rauschen
+
+- Optimieren **bereinigt den Track jetzt vor dem Vereinfachen** — es glättet verrauschte Höhe und begradigt das GPS-„Gekritzel", das in tiefen Canyons entsteht, während echte Serpentinen erhalten bleiben. Validiert gegen eine Barometer-Uhr auf einer Canyon-Wanderung. Vorschau und Als neu speichern halten Ihr Original weiterhin sicher.
+
+---
+
+## 1.37.11 — 1. Juni 2026 — Zuschneiden: Als neu speichern
+
+- Das **Zuschneiden** von Tracks bietet jetzt **Als neu speichern** (wie Optimieren) — behalten Sie die zugeschnittene Version als separaten Track und lassen Sie das Original unberührt.
+
+---
+
+## 1.37.10 — 1. Juni 2026 — Genauer Aufstieg und Abstieg
+
+- Wild überhöhter **Gesamt-Aufstieg/-Abstieg** auf Telefonen ohne Barometer wurde behoben (eine Canyon-Wanderung zeigte +17.000 m statt ~2.250 m). Der Wert entrauscht die Höhe jetzt vor dem Aufsummieren, so wie Strava und Komoot den Höhengewinn berechnen. Gilt für alle gespeicherten und importierten Tracks.
+
+---
+
+## 1.37.5 — 21. Mai 2026 — GPS-Diagnose-Overlay (optional)
+
+- Neues opt-in **GPS-Diagnose**-Overlay (Einstellungen → Erweitert), das Live-Fix-Qualität, Genauigkeit und Höhenquellen-Detail zeigt — nützlich, um Aufzeichnungen mit schwierigem Signal zu verstehen.
+
+---
+
+## 1.37.0 — 17. Mai 2026 — Barometrischer Höhenmesser und bessere Höhe
+
+- Auf Telefonen mit Barometer nutzt ApexGPS dieses jetzt als **primäre Höhenquelle** — submeter-stabil und frei von GPS-Rauschen und Canyon-Aussetzern.
+- Aufstieg/Abstieg nutzt jetzt einen **5-m-Schwellenwert** (der Strava/AllTrails-Standard); bestehende Tracks zeigen kleinere, realistischere Zahlen.
+- Dazu eine Reihe von Genauigkeitsverbesserungen für Telefone **ohne** Barometer — mehrere Höhen-Plausibilitätsprüfungen und Glättung, um GPS-Spitzen zu verwerfen, sowie ein optionales GPS-Genauigkeitsfeld in exportierten GPX-Dateien.
+
+---
+
+## 1.36.0 — 17. Mai 2026 — Bessere Canyon-Aufzeichnung
+
+- Die Aufzeichnung **erfasst jetzt mehr Punkte in Canyons und engem Gelände** (Roh-Erfassung mit intelligenteren Dichte-Gattern), sodass Abstiege in tiefen Canyons nicht verloren gehen.
+- Neue Option **GPS-Sprünge bereinigen** in Optimieren zum nachträglichen Aufräumen verrauschter Tracks.
+
+---
+
 ## 1.35.2 — May 15, 2026 — Zuverlässiger Mülleimer · Mülleimer-Symbol erscheint nur während des Ziehens · Tippen neben Mittelpunkten funktioniert
 
 - **Das Mülleimer-Symbol erscheint jetzt nur beim Ziehen — es taucht im Moment auf, in dem Sie einen Eckpunkt oder Mittelpunkt lange drücken, leuchtet rot beim Darüberziehen und verschwindet beim Loslassen.** Vorher war das Symbol im Mess- und Planungsmodus immer sichtbar, aber die Lang-drücken-und-zum-Löschen-ziehen-Geste war für die meisten Nutzer nicht offensichtlich — sie sahen den Mülleimer, konnten aber nicht herausfinden, wie sie einen Punkt hineinbekommen sollten. Jetzt erscheint der Mülleimer nur, wenn Sie tatsächlich einen Punkt aufgenommen haben, was die Bedienungslogik klar macht.
