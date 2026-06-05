@@ -4,6 +4,93 @@ User-visible changes, newest first. For internal refactoring / version-bump-only
 
 ---
 
+## 1.40.1 — June 5, 2026 — Recording stats card fixes
+
+- The live recording stats card now keeps its clock current even while a recording is paused.
+- Smoother performance on long recordings — the live stats now recompute only while the card is open.
+
+---
+
+## 1.40.0 — June 4, 2026 — Live recording stats card
+
+- **Tap the recording timer to open a live stats card** — duration, distance, current elevation (with its source), total ascent, and the clock, all updating as you go.
+- Pause, Finish, and Delete are now clear icon buttons, each with a confirmation.
+- The recording menu and the other map menus now match: rounded, translucent, and they follow your in-app Text size setting.
+
+---
+
+## 1.39.1 — June 4, 2026 — Map-return and User Guide fixes
+
+- Fixed an occasional **black map** when returning to the map from a menu — it now redraws immediately instead of staying blank until you panned.
+- The offline **User Guide** text now scales with the in-app **Text size** setting, like the rest of the app.
+
+---
+
+## 1.38.0 — June 3, 2026 — Adjustable text and control sizes
+
+- New **Text size** slider in Settings → Appearance (50–150%) that scales all in-app text on top of your Android font setting.
+- New **Map controls size** slider — resize the on-map buttons, compass, and record pill; shrink them to reclaim map area on a small phone.
+- The waypoint-size setting is now a smooth slider too.
+
+---
+
+## 1.37.15 — June 2, 2026 — Waypoint elevation works offline
+
+- Adding a waypoint on the map now **pre-fills its elevation from your current GPS altitude**, so it works in flight mode or with no signal. You can still edit it, or fetch the precise value later when online.
+
+---
+
+## 1.37.14 — June 2, 2026 — New recordings start with no activity
+
+- A new recording no longer defaults to "Hiking" — it starts with no activity selected (shown as "None"), so you choose the right one yourself. Existing tracks are unchanged.
+
+---
+
+## 1.37.13 — June 1, 2026 — Optimize shows a path preview
+
+- The Optimize dialog now shows a **before/after path preview** (faint original, bold optimized result on top) so you can see the straightening before you save.
+
+---
+
+## 1.37.12 — June 1, 2026 — Optimize cleans canyon GPS noise
+
+- Optimize now **cleans the track before simplifying** — it smooths noisy altitude and straightens the GPS "scribble" you get in deep canyons, while preserving real switchbacks. Validated against a barometer watch on a canyon hike. Preview and Save-as-new still keep your original safe.
+
+---
+
+## 1.37.11 — June 1, 2026 — Crop: Save as new
+
+- Track **Crop** now offers **Save as new** (like Optimize) — keep the cropped version as a separate track and leave the original untouched.
+
+---
+
+## 1.37.10 — June 1, 2026 — Accurate ascent and descent
+
+- Fixed wildly inflated **total ascent/descent** on phones without a barometer (one canyon hike showed +17,000 m instead of ~2,250 m). The figure now denoises the elevation before adding it up, the way Strava and Komoot compute gain. Applies to all stored and imported tracks.
+
+---
+
+## 1.37.5 — May 21, 2026 — GPS Diagnostics overlay (optional)
+
+- New opt-in **GPS Diagnostics** overlay (Settings → Advanced) showing live fix quality, accuracy, and altitude-source detail — useful for understanding tricky-signal recordings.
+
+---
+
+## 1.37.0 — May 17, 2026 — Barometric altimeter and better elevation
+
+- On phones with a barometer, ApexGPS now uses it as the **primary altitude source** — sub-metre stable and free of GPS noise and canyon dropouts.
+- Ascent/descent now uses a **5 m threshold** (the Strava/AllTrails standard); existing tracks will show smaller, more realistic numbers.
+- Plus a series of accuracy improvements for phones **without** a barometer — multiple altitude sanity-checks and smoothing to reject GPS spikes, and an optional GPS-accuracy field in exported GPX.
+
+---
+
+## 1.36.0 — May 17, 2026 — Better canyon recording
+
+- Recording now **captures more points in canyons and tight terrain** (raw capture with smarter density gates), so deep-canyon descents aren't lost.
+- New **Clean GPS jumps** option in Optimize for tidying noisy tracks after the fact.
+
+---
+
 ## 1.35.2 — May 15, 2026 — Reliable recycle-bin · Trash icon now appears only while dragging · Tapping near midpoints works
 
 - **The recycle-bin icon is now drag-only — it appears the moment you long-press a vertex or midpoint, glows red on hover, and disappears on release.** Before, the icon was always visible in measure and planning modes but the long-press-drag-to-delete gesture wasn't obvious to most users — they saw the bin but couldn't figure out how to get a point into it. Now the bin appears only when you've actually picked up a point, making the affordance clear.
