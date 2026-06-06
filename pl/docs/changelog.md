@@ -4,6 +4,13 @@ Zmiany widoczne dla użytkownika, najnowsze u góry. Refaktory wewnętrzne / pod
 
 ---
 
+## 1.40.2 — 6 czerwca 2026 — Poprawka zapisu wysokości
+
+- Naprawiono błąd na telefonach bez barometru, przez który wibracje (np. podczas jazdy na rowerze górskim) mogły stopniowo zaniżać zapisywaną wysokość do niemożliwych wartości — wysokość jest teraz zakotwiczona w prawdziwych pomiarach GPS.
+- Fizycznie niemożliwe wysokości (poniżej −500 m lub powyżej 9000 m) nie są już zapisywane, niezależnie od źródła.
+
+---
+
 ## 1.40.1 — 5 czerwca 2026 — Poprawki karty statystyk nagrywania
 
 - Karta statystyk nagrywania na żywo utrzymuje teraz aktualny zegar nawet, gdy nagrywanie jest wstrzymane.

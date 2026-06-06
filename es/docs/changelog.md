@@ -4,6 +4,13 @@ Cambios visibles para el usuario, más recientes primero. Para refactors interno
 
 ---
 
+## 1.40.2 — 6 de junio de 2026 — Corrección de la altitud grabada
+
+- Corregido un error en teléfonos sin barómetro donde las vibraciones (p. ej. en bicicleta de montaña) podían arrastrar la altitud grabada hacia valores imposibles — la altitud ahora queda anclada a mediciones GPS reales.
+- Las altitudes físicamente imposibles (por debajo de −500 m o por encima de 9000 m) ya no pueden grabarse, sea cual sea su origen.
+
+---
+
 ## 1.40.1 — 5 de junio de 2026 — Correcciones de la tarjeta de estadísticas de grabación
 
 - La tarjeta de estadísticas de grabación en vivo ahora mantiene su reloj al día incluso con la grabación en pausa.

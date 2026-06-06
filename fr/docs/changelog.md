@@ -4,6 +4,13 @@ Changements visibles par l\'utilisateur, plus récents en premier. Pour les refa
 
 ---
 
+## 1.40.2 — 6 juin 2026 — Correction de l’altitude enregistrée
+
+- Correction d’un bug sur les téléphones sans baromètre où les vibrations (p. ex. en VTT) pouvaient entraîner l’altitude enregistrée vers des valeurs impossibles — l’altitude reste désormais ancrée aux vraies mesures GPS.
+- Les altitudes physiquement impossibles (sous −500 m ou au-dessus de 9000 m) ne peuvent plus être enregistrées, quelle que soit leur source.
+
+---
+
 ## 1.40.1 — 5 juin 2026 — Corrections de la carte de statistiques d\'enregistrement
 
 - La carte de statistiques d\'enregistrement en direct garde maintenant son horloge à jour même quand un enregistrement est en pause.

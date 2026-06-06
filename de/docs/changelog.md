@@ -4,6 +4,13 @@ Für Nutzer sichtbare Änderungen, neueste zuerst. Für internes Refactoring / r
 
 ---
 
+## 1.40.2 — 6. Juni 2026 — Korrektur der Höhenaufzeichnung
+
+- Ein Fehler auf Telefonen ohne Barometer wurde behoben, bei dem Vibrationen (z. B. beim Mountainbiken) die aufgezeichnete Höhe stetig auf unmögliche Werte nach unten ziehen konnten — die Höhe bleibt jetzt an echten GPS-Messungen verankert.
+- Physikalisch unmögliche Höhen (unter −500 m oder über 9000 m) werden nicht mehr aufgezeichnet, unabhängig von ihrer Quelle.
+
+---
+
 ## 1.40.1 — 5. Juni 2026 — Korrekturen an der Aufzeichnungs-Statistikkarte
 
 - Die Live-Statistikkarte der Aufzeichnung hält ihre Uhr jetzt auch dann aktuell, während eine Aufzeichnung pausiert ist.

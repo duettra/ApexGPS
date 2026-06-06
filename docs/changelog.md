@@ -4,6 +4,13 @@ User-visible changes, newest first. For internal refactoring / version-bump-only
 
 ---
 
+## 1.40.2 — June 6, 2026 — Elevation recording fix
+
+- Fixed a bug on phones without a barometer where vibration (e.g. mountain biking) could drag a recording's elevation steadily downward to impossible values — elevation now stays anchored to genuine GPS readings.
+- Physically impossible elevations (below −500 m or above 9000 m) can no longer be recorded, whatever their source.
+
+---
+
 ## 1.40.1 — June 5, 2026 — Recording stats card fixes
 
 - The live recording stats card now keeps its clock current even while a recording is paused.
