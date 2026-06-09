@@ -4,6 +4,14 @@ Zmiany widoczne dla użytkownika, najnowsze u góry. Refaktory wewnętrzne / pod
 
 ---
 
+## 1.41.0 — 9 czerwca 2026 — Prowadzenie po trasie
+
+- **Podążaj za trasą** — wybierz dowolną zapisaną lub zaimportowaną trasę, a ApexGPS poprowadzi Cię nią. Gdy zboczysz z kursu, aplikacja ostrzeże Cię sygnałem i wibracją – nawet przy wyłączonym ekranie – a pasek pokaże, ile pozostało do celu. Strzałki wzdłuż trasy i flaga w miejscu docelowym wskazują drogę; dotknij przycisku odwracania, aby zmienić kierunek.
+- **Powrót do startu** — podczas nagrywania jedno dotknięcie poprowadzi Cię z powrotem do punktu startowego: dokładnie po swoich śladach albo prosto.
+- Naprawiono: przycisk wyśrodkowania pozycji był zasłonięty przez pasek prowadzenia.
+
+---
+
 ## 1.40.2 — 6 czerwca 2026 — Poprawka zapisu wysokości
 
 - Naprawiono błąd na telefonach bez barometru, przez który wibracje (np. podczas jazdy na rowerze górskim) mogły stopniowo zaniżać zapisywaną wysokość do niemożliwych wartości — wysokość jest teraz zakotwiczona w prawdziwych pomiarach GPS.

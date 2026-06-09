@@ -4,6 +4,14 @@ Changements visibles par l\'utilisateur, plus récents en premier. Pour les refa
 
 ---
 
+## 1.41.0 — 9 juin 2026 — Guidage sur trace
+
+- **Suivre une trace** — choisissez une trace enregistrée ou importée et ApexGPS vous guide le long de celle-ci. Si vous vous écartez, l\'application vous alerte par un bip et une vibration, même écran éteint, et une barre indique la distance restante. Des flèches le long de la trace et un drapeau à l\'arrivée montrent le chemin ; appuyez sur le bouton inverser pour changer de sens.
+- **Retour au départ** — pendant un enregistrement, une seule touche vous ramène à votre point de départ : refaites votre trajet exact, ou rentrez en ligne droite.
+- Correction : le bouton de recentrage était masqué derrière la barre de guidage.
+
+---
+
 ## 1.40.2 — 6 juin 2026 — Correction de l’altitude enregistrée
 
 - Correction d’un bug sur les téléphones sans baromètre où les vibrations (p. ex. en VTT) pouvaient entraîner l’altitude enregistrée vers des valeurs impossibles — l’altitude reste désormais ancrée aux vraies mesures GPS.

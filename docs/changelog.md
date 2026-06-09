@@ -4,6 +4,14 @@ User-visible changes, newest first. For internal refactoring / version-bump-only
 
 ---
 
+## 1.41.0 — June 9, 2026 — Track Guidance
+
+- **Follow a track** — pick any saved or imported track and ApexGPS guides you along it. If you drift off course it alerts you with a beep and a vibration, even with the screen off, and a bar shows how far you have left to go. Arrows along the route and a flag at the destination show the way; tap the reverse button to flip direction.
+- **Back to start** — while recording, one tap guides you back to where you began: either retrace your exact path, or head straight back.
+- Fixed the follow-me (recenter) button being hidden behind the guidance bar.
+
+---
+
 ## 1.40.2 — June 6, 2026 — Elevation recording fix
 
 - Fixed a bug on phones without a barometer where vibration (e.g. mountain biking) could drag a recording's elevation steadily downward to impossible values — elevation now stays anchored to genuine GPS readings.

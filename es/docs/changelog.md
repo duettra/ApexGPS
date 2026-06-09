@@ -4,6 +4,14 @@ Cambios visibles para el usuario, más recientes primero. Para refactors interno
 
 ---
 
+## 1.41.0 — 9 de junio de 2026 — Guía por ruta
+
+- **Seguir una ruta** — elige cualquier ruta guardada o importada y ApexGPS te guía por ella. Si te desvías, la app te avisa con un pitido y una vibración, incluso con la pantalla apagada, y una barra muestra la distancia que queda. Las flechas a lo largo de la ruta y una bandera en el destino indican el camino; toca el botón de invertir para cambiar de sentido.
+- **Volver al inicio** — durante una grabación, un toque te guía de vuelta al punto de partida: rehaz tu trayecto exacto o vuelve en línea recta.
+- Corregido: el botón de centrar mi ubicación quedaba oculto tras la barra de guía.
+
+---
+
 ## 1.40.2 — 6 de junio de 2026 — Corrección de la altitud grabada
 
 - Corregido un error en teléfonos sin barómetro donde las vibraciones (p. ej. en bicicleta de montaña) podían arrastrar la altitud grabada hacia valores imposibles — la altitud ahora queda anclada a mediciones GPS reales.

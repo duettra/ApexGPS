@@ -4,6 +4,14 @@ Für Nutzer sichtbare Änderungen, neueste zuerst. Für internes Refactoring / r
 
 ---
 
+## 1.41.0 — 9. Juni 2026 — Streckenführung
+
+- **Einer Strecke folgen** — wähle eine gespeicherte oder importierte Strecke, und ApexGPS leitet dich entlang. Wenn du vom Kurs abkommst, warnt dich die App mit einem Ton und Vibration – auch bei ausgeschaltetem Bildschirm – und eine Leiste zeigt die verbleibende Entfernung. Pfeile entlang der Strecke und eine Fahne am Ziel weisen den Weg; tippe auf die Umkehren-Taste, um die Richtung zu wechseln.
+- **Zurück zum Start** — tippe während einer Aufzeichnung einmal, um zum Ausgangspunkt zurückgeführt zu werden: entweder den genauen Weg zurückverfolgen oder direkt zurück.
+- Behoben: Die Mein-Standort-Taste war hinter der Führungsleiste verborgen.
+
+---
+
 ## 1.40.2 — 6. Juni 2026 — Korrektur der Höhenaufzeichnung
 
 - Ein Fehler auf Telefonen ohne Barometer wurde behoben, bei dem Vibrationen (z. B. beim Mountainbiken) die aufgezeichnete Höhe stetig auf unmögliche Werte nach unten ziehen konnten — die Höhe bleibt jetzt an echten GPS-Messungen verankert.
