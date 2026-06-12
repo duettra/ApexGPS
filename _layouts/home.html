@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{{ page.title | default: site.title }}</title>
-<meta name="description" content="ApexGPS — a free Android hiking app. Offline maps, GPX import, waypoints, tracks, weather, planning. No subscription, no tracking.">
+<meta name="description" content="ApexGPS — a free Android hiking app. Offline maps, GPX import, waypoints, tracks, track guidance with off-route alerts, weather, planning. No subscription, no tracking.">
 <meta name="theme-color" content="#0c1828">
 
 <!-- Open Graph (WhatsApp / Telegram / Slack link unfurl) -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="ApexGPS — Free hiking maps · offline">
-<meta property="og:description" content="GPX · waypoints · tracks · weather · planning. No subscription, no tracking.">
+<meta property="og:description" content="GPX · waypoints · tracks · guidance · weather · planning. No subscription, no tracking.">
 <meta property="og:image" content="https://apexgps.duttra.de/assets/hero.png">
 <meta property="og:url" content="https://apexgps.duttra.de/">
 <meta property="og:site_name" content="ApexGPS">
@@ -24,7 +24,7 @@
 <header class="hero">
   <h1><span aria-hidden="true">📍</span> ApexGPS</h1>
   <p class="tag">Free hiking maps · 100% offline</p>
-  <p class="sub">GPX · Waypoints · Tracks · Weather · Planning</p>
+  <p class="sub">GPX · Waypoints · Tracks · Guidance · Weather · Planning</p>
   <p class="ctas">
     <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.apexgps.app">▸ Get it on Google Play</a>
     <a class="btn btn-ghost" href="/docs/getting-started/">Read the guide →</a>
@@ -38,6 +38,7 @@
     <div class="shots" role="list">
       <img src="/assets/screenshots/01-world.jpg" alt="World map with clustered waypoints" loading="lazy">
       <img src="/assets/screenshots/02-relief.jpg" alt="ESRI Relief map with track overlay and tile-source picker" loading="lazy">
+      <img src="/assets/screenshots/08-guidance.jpg" alt="Track guidance: route with direction chevrons, a destination flag, and the distance-to-go strip" loading="lazy">
       <img src="/assets/screenshots/03-track-profile.jpg" alt="Track detail with elevation profile" loading="lazy">
       <img src="/assets/screenshots/04-planning.jpg" alt="Track planner with numbered vertices on satellite imagery" loading="lazy">
       <img src="/assets/screenshots/05-tracks-list.jpg" alt="Tracks list with sort menu" loading="lazy">
@@ -75,6 +76,11 @@
         <span class="icon" aria-hidden="true">🛰️</span>
         <h3>Live GPS recording</h3>
         <p>Foreground tracking with smart filters; survives screen-off and reboots.</p>
+      </div>
+      <div class="feature">
+        <span class="icon" aria-hidden="true">🚩</span>
+        <h3>Track guidance</h3>
+        <p>Follow any track with off-route alerts that beep and vibrate, even screen-off. Back-to-start gets you home.</p>
       </div>
       <div class="feature">
         <span class="icon" aria-hidden="true">📤</span>

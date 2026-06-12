@@ -10,7 +10,7 @@ layout: home
 
 # ApexGPS
 
-A free Android hiking app. Open offline maps, import GPX tracks, mark waypoints, and share your live location with anyone.
+A free Android hiking app. Open offline maps, import GPX tracks, follow a route with off-route alerts, mark waypoints, and share your live location with anyone.
 
 **[Install from Google Play →](https://play.google.com/store/apps/details?id=com.apexgps.app)**
 
