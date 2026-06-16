@@ -4,6 +4,13 @@ User-visible changes, newest first. For internal refactoring / version-bump-only
 
 ---
 
+## 1.42.0 — June 17, 2026 — Adjustable waypoint clustering
+
+- **Control how waypoints cluster** — a new *Waypoint clustering* slider in **Settings → Appearance** lets you choose how aggressively nearby waypoints collapse into a numbered badge when you zoom out: **Off** (always show every pin), **Low**, **Medium**, or **Default**. Lower settings show individual pins sooner as you zoom in.
+- The new default is **Medium**, which keeps busy maps tidy while still showing individual pins at hiking zoom levels. Slide it to **Off** if you'd rather never group your waypoints.
+
+---
+
 ## 1.41.2 — June 16, 2026 — Smoother compass
 
 - **Smoother navigation compass** — the needle now glides instead of jumping in steps, at any speed.

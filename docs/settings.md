@@ -21,6 +21,14 @@ Slider, 50 %–150 % (same steps as Text size). Resizes the on-map buttons (the 
 ### Waypoint size
 Slider, 50 %–200 %. A multiplier on top of the automatic zoom-adaptive size — markers already shrink at low zoom and grow at high zoom so they stay readable; this setting nudges the whole range up or down. Default is 100 %. (Before 1.38.0 this was a Small/Normal/Large/XL picker; it's now a slider for finer control.)
 
+### Waypoint clustering
+Stepped slider — **Off · Low · Medium · Default**. When you zoom out, nearby waypoints collapse into a single numbered badge so a busy map stays readable; tap a badge to zoom in toward that group. This setting controls how eagerly that grouping happens:
+
+- **Off** — never group; every waypoint always shows as its own pin.
+- **Low / Medium / Default** — group progressively more. Lower settings show individual pins sooner as you zoom in and group more loosely; **Default** keeps groups longest.
+
+Default is **Medium**, which keeps crowded maps tidy while still showing individual pins at hiking zoom levels.
+
 ### Track line width
 Slider from thin to thick. Heavier lines are easier to see when many tracks overlap; thinner lines look cleaner at high zoom. Default is a medium width.
 
