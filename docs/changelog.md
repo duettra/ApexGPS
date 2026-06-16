@@ -4,6 +4,14 @@ User-visible changes, newest first. For internal refactoring / version-bump-only
 
 ---
 
+## 1.41.1 — June 16, 2026 — Accuracy & navigation polish
+
+- **Realistic elevation gain for imported tracks** — tracks imported from another device (e.g. a GPS watch) used to show wildly inflated total ascent. They now report a realistic figure, matching what the same hike records on your phone.
+- **Smarter Optimize** — the Optimize dialog now suggests the right level of detail for you (you can still override it), keeps a track equally smooth whether it's short or long, and works on shorter recordings too — not just huge imports.
+- **Better waypoint compass** — points the correct way while driving (it follows your direction of travel from GPS, instead of the in-car compass which metal throws off), moves more smoothly, and the arrival time (ETA) turns green when you're closing in and red **"away"** when you're heading away from the target.
+
+---
+
 ## 1.41.0 — June 9, 2026 — Track Guidance
 
 - **Follow a track** — pick any saved or imported track and ApexGPS guides you along it. If you drift off course it alerts you with a beep and a vibration, even with the screen off, and a bar shows how far you have left to go. Arrows along the route and a flag at the destination show the way; tap the reverse button to flip direction.

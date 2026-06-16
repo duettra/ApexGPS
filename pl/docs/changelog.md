@@ -4,6 +4,14 @@ Zmiany widoczne dla użytkownika, najnowsze u góry. Refaktory wewnętrzne / pod
 
 ---
 
+## 1.41.1 — 16 czerwca 2026 — Dokładność i nawigacja
+
+- **Realistyczne przewyższenie dla zaimportowanych tras** — trasy zaimportowane z innego urządzenia (np. zegarka GPS) pokazywały dotąd mocno zawyżoną sumę podejść. Teraz podają realistyczną wartość, zgodną z tym, co ta sama wędrówka zapisuje na Twoim telefonie.
+- **Inteligentniejsze Optymalizowanie** — okno Optymalizuj proponuje teraz odpowiedni poziom szczegółowości (nadal możesz go zmienić), utrzymuje trasę równie gładką niezależnie od tego, czy jest krótka, czy długa, i działa także dla krótszych nagrań — nie tylko dużych importów.
+- **Lepszy kompas nawigacyjny** — wskazuje właściwy kierunek podczas jazdy (podąża za Twoim kierunkiem ruchu z GPS, zamiast kompasu, który zakłóca metal w samochodzie), porusza się płynniej, a czas przybycia (ETA) zmienia się na zielony, gdy się zbliżasz, i na czerwony **„oddala się"**, gdy oddalasz się od celu.
+
+---
+
 ## 1.41.0 — 9 czerwca 2026 — Prowadzenie po trasie
 
 - **Podążaj za trasą** — wybierz dowolną zapisaną lub zaimportowaną trasę, a ApexGPS poprowadzi Cię nią. Gdy zboczysz z kursu, aplikacja ostrzeże Cię sygnałem i wibracją – nawet przy wyłączonym ekranie – a pasek pokaże, ile pozostało do celu. Strzałki wzdłuż trasy i flaga w miejscu docelowym wskazują drogę; dotknij przycisku odwracania, aby zmienić kierunek.

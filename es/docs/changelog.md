@@ -4,6 +4,14 @@ Cambios visibles para el usuario, más recientes primero. Para refactors interno
 
 ---
 
+## 1.41.1 — 16 de junio de 2026 — Precisión y navegación
+
+- **Desnivel realista en rutas importadas** — las rutas importadas desde otro dispositivo (p. ej. un reloj GPS) mostraban un ascenso total enormemente exagerado. Ahora indican una cifra realista, acorde con lo que registra la misma excursión en tu teléfono.
+- **Optimizar más inteligente** — el cuadro Optimizar ahora te sugiere el nivel de detalle adecuado (puedes cambiarlo), mantiene una ruta igual de suave tanto si es corta como larga, y funciona también en grabaciones más cortas, no solo en importaciones enormes.
+- **Mejor brújula de navegación** — apunta en la dirección correcta al conducir (sigue tu sentido de marcha por GPS, en lugar de la brújula que el metal del coche distorsiona), se mueve con más suavidad, y la hora de llegada (ETA) se vuelve verde cuando te acercas y roja **«se aleja»** cuando te alejas del destino.
+
+---
+
 ## 1.41.0 — 9 de junio de 2026 — Guía por ruta
 
 - **Seguir una ruta** — elige cualquier ruta guardada o importada y ApexGPS te guía por ella. Si te desvías, la app te avisa con un pitido y una vibración, incluso con la pantalla apagada, y una barra muestra la distancia que queda. Las flechas a lo largo de la ruta y una bandera en el destino indican el camino; toca el botón de invertir para cambiar de sentido.

@@ -4,6 +4,14 @@ Für Nutzer sichtbare Änderungen, neueste zuerst. Für internes Refactoring / r
 
 ---
 
+## 1.41.1 — 16. Juni 2026 — Genauigkeit & Navigation
+
+- **Realistischer Höhengewinn bei importierten Strecken** — von einem anderen Gerät importierte Strecken (z. B. von einer GPS-Uhr) zeigten bisher einen stark überhöhten Gesamtanstieg. Jetzt erscheint ein realistischer Wert, passend zu dem, was dieselbe Tour auf deinem Telefon aufzeichnet.
+- **Klügeres Optimieren** — der Optimieren-Dialog schlägt dir jetzt den passenden Detailgrad vor (du kannst ihn weiterhin überschreiben), hält eine Strecke gleich glatt, ob kurz oder lang, und funktioniert auch bei kürzeren Aufzeichnungen – nicht nur bei riesigen Importen.
+- **Besserer Navigationskompass** — zeigt beim Fahren in die richtige Richtung (er folgt deiner Fahrtrichtung per GPS statt des Kompasses, den Metall im Auto stört), bewegt sich flüssiger, und die Ankunftszeit (ETA) wird grün, wenn du dich näherst, und rot **„entfernt"**, wenn du dich vom Ziel wegbewegst.
+
+---
+
 ## 1.41.0 — 9. Juni 2026 — Streckenführung
 
 - **Einer Strecke folgen** — wähle eine gespeicherte oder importierte Strecke, und ApexGPS leitet dich entlang. Wenn du vom Kurs abkommst, warnt dich die App mit einem Ton und Vibration – auch bei ausgeschaltetem Bildschirm – und eine Leiste zeigt die verbleibende Entfernung. Pfeile entlang der Strecke und eine Fahne am Ziel weisen den Weg; tippe auf die Umkehren-Taste, um die Richtung zu wechseln.

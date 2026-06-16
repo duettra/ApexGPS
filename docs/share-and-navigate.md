@@ -128,7 +128,7 @@ While navigating to a target, a small **compass icon** 🧭 appears on the navig
 
 ### Layout
 
-Top data row: **Distance** (blue) · **ETA** · **Speed** · **Elevation**.
+Top data row: **Distance** (blue) · **ETA** · **Speed** · **Elevation**. The **ETA turns green** while you're actually closing in on the target, and turns **red and reads "away"** when you're heading away from it (or straight sideways) — so a shrinking time never fools you into thinking you're making progress when you aren't.
 
 Central analog-style dial:
 - Outer ring with tick marks every 15° (major ticks every 30°).
@@ -143,9 +143,11 @@ At the bottom: **Stop navigation** (full-width, ends nav entirely).
 
 ### Using it
 
-The compass dial **rotates with your phone's orientation** so the red triangle always points to real-world north regardless of how you're holding the phone. Point the top of the phone at the blue needle's direction to face the target.
+The compass dial **rotates with your phone's orientation** so the red triangle always points to real-world north regardless of how you're holding the phone. Point the top of the phone at the blue needle's direction to face the target. The dial now glides smoothly as you turn, and points to **true** north (not magnetic).
 
-When the sensor is fully reliable the centre badge shows the heading in degrees; otherwise it falls back to a stylised "S" and labels itself *Simulated Heading* — a reminder that the direction might drift.
+**While moving fast (driving, above ~10 km/h)** the dial follows your **direction of travel** from GPS instead of the phone's compass — in a car the magnetic compass is thrown off by the metal body and the mount, and a propped-up phone isn't pointing where the car is going, so GPS travel direction is the trustworthy heading. On foot / standing still it uses the phone's compass as before.
+
+When the compass sensor is unreliable (near metal, strong magnets, or needing a figure-8 calibration waggle) the centre badge falls back to a stylised "S" and labels itself *Simulated Heading* — a reminder that the direction might drift. This is also why the compass is an outdoor tool: indoors, building steel and a weak GPS fix make both the heading and the target direction unreliable.
 
 ### What happens to the bottom stats bar
 
@@ -157,7 +159,7 @@ When the compass is minimised, the navigation strip at the bottom reads:
 
 > *Navigating · **045° NE** · ETA 12 min · 🧭 · Stop*
 
-The bearing and cardinal are in **blue** because they update with every GPS fix. ETA is an estimate based on your current walking / moving speed — shows `--` when you're stationary. Distance isn't shown on the strip any more; it's in the bottom stats bar's **DIST** field (also blue while navigating).
+The bearing and cardinal are in **blue** because they update with every GPS fix. ETA is an estimate based on your current walking / moving speed — shows `--` when you're stationary, and reads **"away"** when you're actually heading away from the target. Distance isn't shown on the strip any more; it's in the bottom stats bar's **DIST** field (also blue while navigating).
 
 ---
 

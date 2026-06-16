@@ -135,7 +135,7 @@ Tap a track in the list → it opens the **Track detail** screen.
 - **Top-bar icons:** **share** (export as GPX) and **show on map** (closes the detail and zooms the map to fit the track).
 - **Action row below the chart** — three buttons:
   - **Crop Track** — open the cropping dialog (see [Cropping a recording](#cropping-a-recording) above).
-  - **Optimize Track (N pts)** — simplify the track by dropping redundant points. Useful for importing huge overly-detailed exports. The dialog asks for a target point count; on confirm the simplified track renders in the chart + stats panel beneath a small dialog summary (`3214 → 500 points · 12.40 → 12.30 km`). **Save** persists; **Discard** (or hardware-back) drops the preview without touching your track.
+  - **Optimize Track (N pts)** — simplify the track by dropping redundant points and cleaning up GPS jitter. Useful for importing huge overly-detailed exports. The dialog now **suggests a target point count for you** — sized so the track stays smooth at a sensible level of detail regardless of how long it is (a longer track keeps proportionally more points). You can type your own number to override it. On confirm the simplified track renders in the chart + stats panel beneath a small dialog summary (`3214 → 980 points · 12.40 → 12.30 km`). **Save** persists; **Discard** (or hardware-back) drops the preview without touching your track. Optimize is now available on **shorter recordings too** (not just large ones), so you can clean up GPS wobble on any track.
   - **Delete Track** (red) — with confirmation.
 
 ## Bulk optimize (for heavy libraries)

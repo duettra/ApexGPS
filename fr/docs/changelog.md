@@ -4,6 +4,14 @@ Changements visibles par l\'utilisateur, plus récents en premier. Pour les refa
 
 ---
 
+## 1.41.1 — 16 juin 2026 — Précision et navigation
+
+- **Dénivelé réaliste pour les traces importées** — les traces importées depuis un autre appareil (par ex. une montre GPS) affichaient un dénivelé positif total très exagéré. Elles indiquent désormais une valeur réaliste, conforme à ce que la même randonnée enregistre sur votre téléphone.
+- **Optimisation plus intelligente** — la fenêtre Optimiser vous propose maintenant le bon niveau de détail (vous pouvez toujours le modifier), garde une trace tout aussi lisse qu'elle soit courte ou longue, et fonctionne aussi sur les enregistrements plus courts — pas seulement les gros imports.
+- **Meilleure boussole de navigation** — pointe dans la bonne direction en voiture (elle suit votre sens de déplacement via le GPS, au lieu de la boussole que le métal de la voiture perturbe), bouge plus en douceur, et l'heure d'arrivée (ETA) passe au vert quand vous vous rapprochez et au rouge **« s'éloigne »** quand vous vous éloignez de la cible.
+
+---
+
 ## 1.41.0 — 9 juin 2026 — Guidage sur trace
 
 - **Suivre une trace** — choisissez une trace enregistrée ou importée et ApexGPS vous guide le long de celle-ci. Si vous vous écartez, l\'application vous alerte par un bip et une vibration, même écran éteint, et une barre indique la distance restante. Des flèches le long de la trace et un drapeau à l\'arrivée montrent le chemin ; appuyez sur le bouton inverser pour changer de sens.
