@@ -4,6 +4,13 @@ Zmiany widoczne dla użytkownika, najnowsze u góry. Refaktory wewnętrzne / pod
 
 ---
 
+## 1.41.2 — 16 czerwca 2026 — Płynniejszy kompas
+
+- **Płynniejszy kompas nawigacyjny** — igła teraz płynnie się przesuwa, zamiast skakać skokowo, przy każdej prędkości.
+- **Wskazówka kalibracji** — gdy kompas jest niewiarygodny, prosi teraz o kalibrację: porusz telefonem ruchem ósemki (z dala od metalu). Działa w każdej chwili, nawet podczas nawigacji.
+
+---
+
 ## 1.41.1 — 16 czerwca 2026 — Dokładność i nawigacja
 
 - **Realistyczne przewyższenie dla zaimportowanych tras** — trasy zaimportowane z innego urządzenia (np. zegarka GPS) pokazywały dotąd mocno zawyżoną sumę podejść. Teraz podają realistyczną wartość, zgodną z tym, co ta sama wędrówka zapisuje na Twoim telefonie.

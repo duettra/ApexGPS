@@ -135,7 +135,7 @@ Central analog-style dial:
 - **N / E / S / W** labels on the card.
 - A small **red triangle** marks true north on the card.
 - A **blue needle** (triangle) points at the target in real-world direction.
-- **Centre badge** shows the phone's current heading (`245°`), or the letter **S** with a *"Simulated Heading"* caption when the phone's compass sensor is unreliable (near metal, strong magnets, or needing a figure-8 calibration waggle).
+- **Centre badge** shows the phone's current heading (`245°`), or the letter **S** with a *"Compass uncalibrated — wave your phone in a figure-8"* caption when the phone's compass sensor is unreliable (near metal, strong magnets, or simply needing calibration).
 
 Bottom data row: **Lat · Lon · Bearing° + cardinal · ±Accuracy**.
 
@@ -147,7 +147,7 @@ The compass dial **rotates with your phone's orientation** so the red triangle a
 
 **While moving fast (driving, above ~10 km/h)** the dial follows your **direction of travel** from GPS instead of the phone's compass — in a car the magnetic compass is thrown off by the metal body and the mount, and a propped-up phone isn't pointing where the car is going, so GPS travel direction is the trustworthy heading. On foot / standing still it uses the phone's compass as before.
 
-When the compass sensor is unreliable (near metal, strong magnets, or needing a figure-8 calibration waggle) the centre badge falls back to a stylised "S" and labels itself *Simulated Heading* — a reminder that the direction might drift. This is also why the compass is an outdoor tool: indoors, building steel and a weak GPS fix make both the heading and the target direction unreliable.
+When the compass sensor is unreliable the centre badge falls back to a stylised "S" and prompts you to **calibrate: wave the phone in a figure-8**. You can do this **anytime — even while navigating** (it's a built-in Android gesture, nothing to press); within a second or two the badge returns to a live degree reading. Do it **clear of metal and electronics** (a laptop, the car, a metal desk) for a good result — calibration fixes the phone's own bias, not the room's. This is also why the compass is an outdoor tool: indoors, building steel and a weak GPS fix make both the heading and the target direction unreliable, calibrated or not.
 
 ### What happens to the bottom stats bar
 

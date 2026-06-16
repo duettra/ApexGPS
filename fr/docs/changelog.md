@@ -4,6 +4,13 @@ Changements visibles par l\'utilisateur, plus récents en premier. Pour les refa
 
 ---
 
+## 1.41.2 — 16 juin 2026 — Boussole plus fluide
+
+- **Boussole de navigation plus fluide** — l'aiguille glisse désormais au lieu de sauter par à-coups, à toute vitesse.
+- **Aide au calibrage** — quand la boussole est peu fiable, elle vous invite maintenant à la calibrer : agitez le téléphone en forme de 8 (loin du métal). Fonctionne à tout moment, même pendant la navigation.
+
+---
+
 ## 1.41.1 — 16 juin 2026 — Précision et navigation
 
 - **Dénivelé réaliste pour les traces importées** — les traces importées depuis un autre appareil (par ex. une montre GPS) affichaient un dénivelé positif total très exagéré. Elles indiquent désormais une valeur réaliste, conforme à ce que la même randonnée enregistre sur votre téléphone.

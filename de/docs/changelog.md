@@ -4,6 +4,13 @@ Für Nutzer sichtbare Änderungen, neueste zuerst. Für internes Refactoring / r
 
 ---
 
+## 1.41.2 — 16. Juni 2026 — Flüssigerer Kompass
+
+- **Flüssigerer Navigationskompass** — die Nadel gleitet jetzt, statt in Stufen zu springen, bei jedem Tempo.
+- **Kalibrierhinweis** — wenn der Kompass unzuverlässig ist, fordert er dich jetzt zum Kalibrieren auf: Telefon in einer Acht bewegen (fern von Metall). Funktioniert jederzeit, auch während der Navigation.
+
+---
+
 ## 1.41.1 — 16. Juni 2026 — Genauigkeit & Navigation
 
 - **Realistischer Höhengewinn bei importierten Strecken** — von einem anderen Gerät importierte Strecken (z. B. von einer GPS-Uhr) zeigten bisher einen stark überhöhten Gesamtanstieg. Jetzt erscheint ein realistischer Wert, passend zu dem, was dieselbe Tour auf deinem Telefon aufzeichnet.

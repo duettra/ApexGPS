@@ -4,6 +4,13 @@ User-visible changes, newest first. For internal refactoring / version-bump-only
 
 ---
 
+## 1.41.2 — June 16, 2026 — Smoother compass
+
+- **Smoother navigation compass** — the needle now glides instead of jumping in steps, at any speed.
+- **Calibration hint** — when the compass is unreliable it now tells you to calibrate: wave your phone in a figure-8 (clear of metal). Works anytime, even while navigating.
+
+---
+
 ## 1.41.1 — June 16, 2026 — Accuracy & navigation polish
 
 - **Realistic elevation gain for imported tracks** — tracks imported from another device (e.g. a GPS watch) used to show wildly inflated total ascent. They now report a realistic figure, matching what the same hike records on your phone.

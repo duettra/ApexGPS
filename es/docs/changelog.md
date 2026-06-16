@@ -4,6 +4,13 @@ Cambios visibles para el usuario, más recientes primero. Para refactors interno
 
 ---
 
+## 1.41.2 — 16 de junio de 2026 — Brújula más fluida
+
+- **Brújula de navegación más fluida** — la aguja ahora se desliza en lugar de saltar a pasos, a cualquier velocidad.
+- **Aviso de calibración** — cuando la brújula no es fiable, ahora te pide calibrarla: mueve el teléfono en forma de 8 (lejos del metal). Funciona en cualquier momento, incluso mientras navegas.
+
+---
+
 ## 1.41.1 — 16 de junio de 2026 — Precisión y navegación
 
 - **Desnivel realista en rutas importadas** — las rutas importadas desde otro dispositivo (p. ej. un reloj GPS) mostraban un ascenso total enormemente exagerado. Ahora indican una cifra realista, acorde con lo que registra la misma excursión en tu teléfono.
