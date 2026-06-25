@@ -42,7 +42,7 @@ If a waypoint has a stored elevation (entered manually, set from GPS, or importe
 
 ## Auto-refresh
 
-When weather is enabled, the chip updates every 15 minutes while the app is open and online. If you're in airplane mode the chip stays put with the last known data and a "stale" indicator until you reconnect.
+The current-location forecast appears as soon as you open the map (it uses your last known position so it doesn't wait for a full GPS lock, then sharpens to your exact spot and elevation once a fix lands). After that it refreshes when you **open the forecast sheet**, when you tap the **↻ refresh button**, and **automatically every 15 minutes** while weather is on, you have a live location, and you're online. It does not refresh on every step you take, and it never contacts the network while you're offline — the chip simply keeps the last data with its "… ago" age until you reconnect or refresh.
 
 ## Data sources
 

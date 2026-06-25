@@ -4,6 +4,14 @@ User-visible changes, newest first. For internal refactoring / version-bump-only
 
 ---
 
+## 1.42.1 — June 25, 2026 — Accurate weather on peaks
+
+- **Current-location weather now uses your altitude.** Previously the chip for your live position could show a too-warm, valley-level forecast — your elevation wasn't being sent to the weather model (on a mountain this could be off by ~9 °C). Tapped waypoints were already correct; now your live location matches.
+- **Faster first weather.** The forecast appears almost immediately when you open the map instead of waiting for a full GPS lock, then sharpens to your exact location and elevation once your position settles.
+- **Tidier refreshing.** Weather refreshes when you open the forecast, when you tap refresh, and automatically every 15 minutes while you have a live signal — and never makes network calls while you're offline.
+
+---
+
 ## 1.42.0 — June 17, 2026 — Adjustable waypoint clustering
 
 - **Control how waypoints cluster** — a new *Waypoint clustering* slider in **Settings → Appearance** lets you choose how aggressively nearby waypoints collapse into a numbered badge when you zoom out: **Off** (always show every pin), **Low**, **Medium**, or **Default**. Lower settings show individual pins sooner as you zoom in.
