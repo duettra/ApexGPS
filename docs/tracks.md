@@ -32,7 +32,7 @@ Every recorded track starts tagged as **Hiking**. Open the track's detail screen
 Got GPS-warmup noise at the start of your track? Forgot to tap **Finish** and the track now drags halfway to your car? Open the track detail screen and tap **Crop Track**:
 
 - A dialog opens with a mini-map preview of the full track and its elevation profile below.
-- Drag the two handles on the elevation chart to set the start and end of the range you want to keep. The mini-map updates live — the kept segment stays in the track's colour, the parts you're dropping fade to grey.
+- Drag the two handles of the range slider to set the start and end of the range you want to keep. The mini-map updates live — the kept segment is drawn in bold green, the parts you're dropping fade to a faint green.
 - The **Kept** readout shows the resulting distance and point count.
 - Tap **Crop** to commit. A confirmation dialog spells out how many points will drop from each end. **This cannot be undone** — keep a GPX export if you're worried.
 

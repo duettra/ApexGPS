@@ -9,6 +9,7 @@ User-visible changes, newest first. For internal refactoring / version-bump-only
 - **Current-location weather now uses your altitude.** Previously the chip for your live position could show a too-warm, valley-level forecast — your elevation wasn't being sent to the weather model (on a mountain this could be off by ~9 °C). Tapped waypoints were already correct; now your live location matches.
 - **Faster first weather.** The forecast appears almost immediately when you open the map instead of waiting for a full GPS lock, then sharpens to your exact location and elevation once your position settles.
 - **Tidier refreshing.** Weather refreshes when you open the forecast, when you tap refresh, and automatically every 15 minutes while you have a live signal — and never makes network calls while you're offline.
+- **Clearer track cropping.** The Crop Track dialog now uses a range slider to set the part you want to keep (instead of dragging handles on the chart), and the preview map shows the kept stretch in green with the trimmed ends faded.
 
 ---
 
