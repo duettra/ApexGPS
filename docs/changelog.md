@@ -4,6 +4,13 @@ User-visible changes, newest first. For internal refactoring / version-bump-only
 
 ---
 
+## 1.44.0 — June 28, 2026 — Terrain elevation for any track
+
+- **Look up terrain elevation for a track.** A new **Terrain (DEM)** button on the track screen fills in an elevation profile from terrain map data (Copernicus ~30 m elevation model) — ideal for tracks imported without elevation, or any track you'd like a terrain-based profile and ascent/descent for. It shows a preview first, then lets you **Save as new** (keeps the original track untouched), **Overwrite** the existing track, or **Discard**.
+- Works on long tracks too — the lookup samples along the route, so it stays fast and reliable instead of stalling.
+
+---
+
 ## 1.43.0 — June 28, 2026 — Forecast at your timescale
 
 - **New 24h / 8h / 2h toggle on the weather forecast.** A small toggle above the forecast strip lets you switch the time window: **24h** for the whole day at a glance (every 3 hours), **8h** for the next eight hours, or **2h** for fine 15-minute detail of what's coming right now. The 2-hour view is great for catching a shower or storm that's about to roll in — it can show the change up to ~45 minutes before the hourly view does.
