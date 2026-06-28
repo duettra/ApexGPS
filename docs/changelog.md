@@ -11,6 +11,13 @@ User-visible changes, newest first. For internal refactoring / version-bump-only
 
 ---
 
+## 1.42.2 — June 26, 2026 — Faster map after reconnect
+
+- **The map reloads the moment your connection returns.** Previously, after leaving airplane mode (or regaining signal), the map could stay blank or stale until you panned or zoomed. It now refreshes its tiles automatically as soon as a usable connection is back.
+- The offline indicator and weather now agree on what "online" means, so they no longer disagree on a flaky or captive-portal connection.
+
+---
+
 ## 1.42.1 — June 25, 2026 — Accurate weather on peaks
 
 - **Current-location weather now uses your altitude.** Previously the chip for your live position could show a too-warm, valley-level forecast — your elevation wasn't being sent to the weather model (on a mountain this could be off by ~9 °C). Tapped waypoints were already correct; now your live location matches.
