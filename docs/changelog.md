@@ -4,6 +4,13 @@ User-visible changes, newest first. For internal refactoring / version-bump-only
 
 ---
 
+## 1.43.0 — June 28, 2026 — Forecast at your timescale
+
+- **New 24h / 8h / 2h toggle on the weather forecast.** A small toggle above the forecast strip lets you switch the time window: **24h** for the whole day at a glance (every 3 hours), **8h** for the next eight hours, or **2h** for fine 15-minute detail of what's coming right now. The 2-hour view is great for catching a shower or storm that's about to roll in — it can show the change up to ~45 minutes before the hourly view does.
+- The **2h** option appears where 15-minute data is available (most of Europe and North America); elsewhere you'll see 24h and 8h.
+
+---
+
 ## 1.42.1 — June 25, 2026 — Accurate weather on peaks
 
 - **Current-location weather now uses your altitude.** Previously the chip for your live position could show a too-warm, valley-level forecast — your elevation wasn't being sent to the weather model (on a mountain this could be off by ~9 °C). Tapped waypoints were already correct; now your live location matches.

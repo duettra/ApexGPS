@@ -29,7 +29,10 @@ The chip never disappears once weather is on — it just changes its appearance 
 Tap the chip (or the "Weather here" line on a waypoint) to open the full sheet. Top-to-bottom it shows:
 
 - **Now** — large weather emoji + temperature, "feels like", and a row each for wind / humidity + max precip / dewpoint + UV / pressure + sunset.
-- **Next 24 hours** — eight icons every 3 hours (sun-side or moon-side depending on the local sunrise / sunset for that hour) with the hourly temperature.
+- **Forecast strip with a 24h / 8h / 2h toggle** — eight icons (sun-side or moon-side depending on the local sunrise / sunset for that step) with the temperature. The small toggle above the strip switches the window:
+  - **24h** — the whole day at a glance, one cell every 3 hours.
+  - **8h** — the next eight hours, one cell per hour.
+  - **2h** — the next two hours in 15-minute steps, for catching a shower or storm that's about to arrive (it can show the change up to ~45 minutes before the hourly view does). The **2h** option appears where 15-minute data is available (most of Europe and North America); elsewhere you'll see just **24h** and **8h**.
 - **Pressure trend** (green) — 24-hour line chart, useful for spotting an approaching front.
 - **Humidity trend** (light blue) — 24-hour line chart.
 - **Next 7 days** — a row of weekday icons with the day's high / low temperature.
