@@ -4,6 +4,49 @@ Zmiany widoczne dla użytkownika, najnowsze u góry. Refaktory wewnętrzne / pod
 
 ---
 
+## 1.45.0 — 30 czerwca 2026 — Trendy pogody w Twoim zakresie
+
+- **Wykresy ciśnienia i wilgotności podążają teraz za Twoim zakresem prognozy.** Gdy przełączasz prognozę pogody między 24 h, 8 h i 2 h, wykresy trendu ciśnienia i wilgotności poniżej rysują się na nowo, aby pasować do tego samego okna — dzięki temu odczytujesz najnowszy trend w interesującej Cię skali. Widok 2-godzinny korzysta z dokładnych danych co 15 minut tam, gdzie są dostępne.
+
+---
+
+## 1.44.0 — 28 czerwca 2026 — Wysokość terenu dla każdej trasy
+
+- **Pobierz wysokość terenu dla trasy.** Nowy przycisk **Teren (DEM)** na ekranie trasy uzupełnia profil wysokości na podstawie danych map terenu (model wysokości Copernicus ~30 m) — idealny dla tras zaimportowanych bez wysokości lub każdej trasy, dla której chcesz mieć profil oparty na terenie wraz z podejściami i zejściami. Najpierw pokazuje podgląd, a następnie pozwala **Zapisz jako nowy** (oryginalna trasa pozostaje nienaruszona), **Zastąp** istniejącą trasę lub **Odrzuć**.
+- Działa też dla długich tras — pobieranie próbkuje wzdłuż trasy, więc pozostaje szybkie i niezawodne, zamiast się zacinać.
+
+---
+
+## 1.43.0 — 28 czerwca 2026 — Prognoza w Twojej skali czasu
+
+- **Nowy przełącznik 24 h / 8 h / 2 h w prognozie pogody.** Mały przełącznik nad paskiem prognozy zmienia okno czasu: **24 h** dla całego dnia na pierwszy rzut oka (co 3 godziny), **8 h** dla najbliższych ośmiu godzin lub **2 h** dla dokładnych, 15-minutowych szczegółów tego, co nadciąga właśnie teraz. Widok 2-godzinny świetnie nadaje się do wychwycenia przelotnego deszczu lub burzy, która zaraz nadejdzie — potrafi pokazać zmianę nawet ~45 minut wcześniej niż widok godzinowy.
+- Opcja **2 h** pojawia się tam, gdzie dostępne są dane co 15 minut (większość Europy i Ameryki Północnej); gdzie indziej zobaczysz 24 h i 8 h.
+
+---
+
+## 1.42.2 — 26 czerwca 2026 — Szybsza mapa po ponownym połączeniu
+
+- **Mapa przeładowuje się w chwili powrotu połączenia.** Wcześniej po trybie samolotowym (lub po odzyskaniu sygnału) mapa mogła pozostać pusta lub nieaktualna, dopóki jej nie przesunąłeś lub nie przybliżyłeś. Teraz odświeża swoje kafelki automatycznie, gdy tylko wróci użyteczne połączenie.
+- Wskaźnik trybu offline i pogoda zgadzają się teraz co do tego, co znaczy „online", więc nie są już sprzeczne przy niestabilnym połączeniu lub portalu przechwytującym.
+
+---
+
+## 1.42.1 — 25 czerwca 2026 — Dokładna pogoda na szczytach
+
+- **Pogoda dla bieżącej lokalizacji korzysta teraz z Twojej wysokości.** Wcześniej plakietka Twojej pozycji na żywo mogła pokazywać zbyt ciepłą prognozę z poziomu doliny — Twoja wysokość nie była wysyłana do modelu pogody (w górach mogło to być ~9 °C różnicy). Dotknięte punkty orientacyjne były już poprawne; teraz zgadza się też Twoja pozycja na żywo.
+- **Szybsza pierwsza pogoda.** Prognoza pojawia się niemal natychmiast po otwarciu mapy, zamiast czekać na pełne ustalenie pozycji GPS, a potem doprecyzowuje się do Twojej dokładnej lokalizacji i wysokości, gdy pozycja się ustali.
+- **Schludniejsze odświeżanie.** Pogoda odświeża się przy otwarciu prognozy, po dotknięciu Odśwież oraz automatycznie co 15 minut, dopóki masz sygnał na żywo — i nigdy nie wykonuje połączeń sieciowych w trybie offline.
+- **Czytelniejsze przycinanie trasy.** Okno „Przytnij trasę" korzysta teraz z suwaka zakresu do ustawienia części, którą chcesz zachować (zamiast przeciągania uchwytów na wykresie), a mapa podglądu pokazuje zachowany odcinek na zielono z wyblakłymi przyciętymi końcami.
+
+---
+
+## 1.42.0 — 17 czerwca 2026 — Regulowane grupowanie punktów
+
+- **Decyduj, jak grupują się punkty orientacyjne** — nowy suwak *Grupowanie punktów* w **Ustawienia → Wygląd** pozwala wybrać, jak mocno pobliskie punkty łączą się w numerowaną plakietkę przy oddalaniu: **Wył.** (zawsze pokazuj każdą pinezkę), **Niskie**, **Średnie** lub **Domyślne**. Niższe ustawienia pokazują pojedyncze pinezki wcześniej przy przybliżaniu.
+- Nowa wartość domyślna to **Średnie**, które utrzymuje zatłoczone mapy w porządku, a mimo to pokazuje pojedyncze pinezki przy poziomach przybliżenia używanych podczas wędrówki. Przesuń na **Wył.**, jeśli wolisz nigdy nie grupować swoich punktów.
+
+---
+
 ## 1.41.2 — 16 czerwca 2026 — Płynniejszy kompas
 
 - **Płynniejszy kompas nawigacyjny** — igła teraz płynnie się przesuwa, zamiast skakać skokowo, przy każdej prędkości.

@@ -4,6 +4,12 @@ User-visible changes, newest first. For internal refactoring / version-bump-only
 
 ---
 
+## 1.45.0 — June 30, 2026 — Weather trends at your timescale
+
+- **The pressure and humidity graphs now follow your forecast range.** When you switch the weather forecast between 24h, 8h and 2h, the pressure and humidity trend graphs beneath it redraw to match the same window — so you read the recent trend at the timescale you care about. The 2-hour view uses fine 15-minute data where it's available.
+
+---
+
 ## 1.44.0 — June 28, 2026 — Terrain elevation for any track
 
 - **Look up terrain elevation for a track.** A new **Terrain (DEM)** button on the track screen fills in an elevation profile from terrain map data (Copernicus ~30 m elevation model) — ideal for tracks imported without elevation, or any track you'd like a terrain-based profile and ascent/descent for. It shows a preview first, then lets you **Save as new** (keeps the original track untouched), **Overwrite** the existing track, or **Discard**.

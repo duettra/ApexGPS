@@ -4,6 +4,49 @@ Cambios visibles para el usuario, más recientes primero. Para refactors interno
 
 ---
 
+## 1.45.0 — 30 de junio de 2026 — Tendencias del tiempo a tu escala
+
+- **Los gráficos de presión y humedad ahora siguen tu rango de pronóstico.** Cuando cambias el pronóstico del tiempo entre 24 h, 8 h y 2 h, los gráficos de tendencia de presión y humedad de debajo se redibujan para coincidir con la misma ventana — así lees la tendencia reciente a la escala que te interesa. La vista de 2 horas usa datos finos de 15 minutos donde están disponibles.
+
+---
+
+## 1.44.0 — 28 de junio de 2026 — Altitud del terreno para cualquier ruta
+
+- **Consultar la altitud del terreno de una ruta.** Un nuevo botón **Terreno (DEM)** en la pantalla de ruta añade un perfil de altitud a partir de los datos cartográficos del terreno (modelo de altitud Copernicus ~30 m) — ideal para rutas importadas sin altitud, o cualquier ruta para la que quieras un perfil basado en el terreno con su ascenso/descenso. Primero muestra una vista previa y luego te deja **Guardar como nueva** (la ruta original queda intacta), **Sobrescribir** la ruta existente o **Descartar**.
+- Funciona también con rutas largas — la consulta toma muestras a lo largo del recorrido, así que se mantiene rápida y fiable en lugar de atascarse.
+
+---
+
+## 1.43.0 — 28 de junio de 2026 — El pronóstico a tu escala de tiempo
+
+- **Nuevo selector 24 h / 8 h / 2 h en el pronóstico del tiempo.** Un pequeño selector sobre la franja de pronóstico cambia la ventana de tiempo: **24 h** para todo el día de un vistazo (cada 3 horas), **8 h** para las próximas ocho horas, o **2 h** para el detalle fino de 15 minutos de lo que viene ahora mismo. La vista de 2 horas es ideal para anticipar un chubasco o tormenta a punto de llegar — puede mostrar el cambio hasta ~45 minutos antes que la vista horaria.
+- La opción **2 h** aparece donde hay datos de 15 minutos disponibles (la mayor parte de Europa y Norteamérica); en otros lugares verás 24 h y 8 h.
+
+---
+
+## 1.42.2 — 26 de junio de 2026 — Mapa más rápido tras reconectar
+
+- **El mapa se recarga en cuanto vuelve tu conexión.** Antes, tras el modo avión (o al recuperar la señal), el mapa podía quedarse en blanco o desactualizado hasta que desplazabas o hacías zoom. Ahora actualiza sus teselas automáticamente en cuanto vuelve una conexión utilizable.
+- El indicador sin conexión y el tiempo ahora coinciden en qué significa «en línea», así que ya no se contradicen en una conexión inestable o de portal cautivo.
+
+---
+
+## 1.42.1 — 25 de junio de 2026 — Tiempo preciso en las cumbres
+
+- **El tiempo de la posición actual ahora usa tu altitud.** Antes, la etiqueta de tu posición en directo podía mostrar un pronóstico demasiado cálido, a nivel del valle — tu altitud no se enviaba al modelo del tiempo (en una montaña podía desviarse ~9 °C). Los puntos de referencia tocados ya eran correctos; ahora tu posición en directo también lo es.
+- **Primer tiempo más rápido.** El pronóstico aparece casi de inmediato al abrir el mapa, en lugar de esperar a una localización GPS completa, y luego se afina a tu posición y altitud exactas cuando tu posición se asienta.
+- **Actualización más ordenada.** El tiempo se actualiza al abrir el pronóstico, al tocar Actualizar, y automáticamente cada 15 minutos mientras tienes señal en directo — y nunca hace llamadas de red sin conexión.
+- **Recorte de ruta más claro.** El cuadro «Recortar ruta» ahora usa un control de rango para fijar la parte que quieres conservar (en lugar de arrastrar tiradores en el gráfico), y el mapa de vista previa muestra el tramo conservado en verde con los extremos recortados atenuados.
+
+---
+
+## 1.42.0 — 17 de junio de 2026 — Agrupación de puntos ajustable
+
+- **Controla cómo se agrupan los puntos de referencia** — un nuevo control *Agrupación de puntos* en **Ajustes → Apariencia** te deja elegir con qué intensidad los puntos cercanos se agrupan en una insignia numerada al alejar el zoom: **Desactivado** (mostrar siempre cada chincheta), **Bajo**, **Medio** o **Predeterminado**. Los ajustes más bajos muestran las chinchetas individuales antes al acercar el zoom.
+- El nuevo valor predeterminado es **Medio**, que mantiene ordenados los mapas cargados y aun así muestra chinchetas individuales en los niveles de zoom de senderismo. Ponlo en **Desactivado** si prefieres no agrupar nunca tus puntos.
+
+---
+
 ## 1.41.2 — 16 de junio de 2026 — Brújula más fluida
 
 - **Brújula de navegación más fluida** — la aguja ahora se desliza en lugar de saltar a pasos, a cualquier velocidad.

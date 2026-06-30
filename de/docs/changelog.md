@@ -4,6 +4,49 @@ Für Nutzer sichtbare Änderungen, neueste zuerst. Für internes Refactoring / r
 
 ---
 
+## 1.45.0 — 30. Juni 2026 — Wetter-Trends in deinem Zeitfenster
+
+- **Die Diagramme für Luftdruck und Luftfeuchtigkeit folgen jetzt deinem Vorhersage-Zeitraum.** Wenn du die Wettervorhersage zwischen 24 h, 8 h und 2 h umschaltest, zeichnen sich die Trend-Diagramme für Druck und Feuchtigkeit darunter passend neu — so liest du den aktuellen Trend in dem Zeitfenster, das dich interessiert. Die 2-Stunden-Ansicht nutzt feine 15-Minuten-Daten, wo sie verfügbar sind.
+
+---
+
+## 1.44.0 — 28. Juni 2026 — Geländehöhe für jeden Track
+
+- **Geländehöhe für einen Track abrufen.** Eine neue Schaltfläche **Gelände (DEM)** im Track-Bildschirm ergänzt ein Höhenprofil aus Geländekartendaten (Copernicus-Höhenmodell ~30 m) — ideal für ohne Höhe importierte Tracks oder jeden Track, für den du ein geländebasiertes Profil samt Auf- und Abstieg möchtest. Zuerst erscheint eine Vorschau, dann kannst du **Als neu speichern** (der ursprüngliche Track bleibt unberührt), den bestehenden **Überschreiben** oder **Verwerfen**.
+- Funktioniert auch bei langen Tracks — der Abruf tastet die Route stichprobenartig ab und bleibt so schnell und zuverlässig, statt zu hängen.
+
+---
+
+## 1.43.0 — 28. Juni 2026 — Vorhersage in deinem Zeitfenster
+
+- **Neue Umschaltung 24 h / 8 h / 2 h in der Wettervorhersage.** Ein kleiner Schalter über dem Vorhersage-Streifen wechselt das Zeitfenster: **24 h** für den ganzen Tag auf einen Blick (alle 3 Stunden), **8 h** für die nächsten acht Stunden oder **2 h** für feine 15-Minuten-Details dessen, was gerade aufzieht. Die 2-Stunden-Ansicht ist ideal, um einen Schauer oder ein Gewitter zu erwischen, das gleich kommt — sie zeigt die Änderung bis zu ~45 Minuten früher als die Stundenansicht.
+- Die Option **2 h** erscheint dort, wo 15-Minuten-Daten verfügbar sind (in weiten Teilen Europas und Nordamerikas); andernorts siehst du 24 h und 8 h.
+
+---
+
+## 1.42.2 — 26. Juni 2026 — Schnellere Karte nach Wiederverbindung
+
+- **Die Karte lädt neu, sobald deine Verbindung zurückkehrt.** Bisher konnte die Karte nach dem Flugmodus (oder bei wiederkehrendem Empfang) leer oder veraltet bleiben, bis du verschoben oder gezoomt hast. Sie aktualisiert ihre Kacheln jetzt automatisch, sobald eine nutzbare Verbindung wieder da ist.
+- Die Offline-Anzeige und das Wetter sind sich jetzt einig, was „online" bedeutet, und widersprechen sich daher bei einer instabilen oder Captive-Portal-Verbindung nicht mehr.
+
+---
+
+## 1.42.1 — 25. Juni 2026 — Genaues Wetter auf Gipfeln
+
+- **Das Wetter für den aktuellen Standort nutzt jetzt deine Höhe.** Bisher konnte die Anzeige für deine Live-Position eine zu warme Vorhersage auf Talniveau zeigen — deine Höhe wurde nicht an das Wettermodell übermittelt (auf einem Berg konnten das ~9 °C Abweichung sein). Angetippte Wegpunkte waren bereits korrekt; jetzt stimmt auch dein Live-Standort.
+- **Schnelleres erstes Wetter.** Die Vorhersage erscheint fast sofort, wenn du die Karte öffnest, statt auf eine vollständige GPS-Ortung zu warten, und schärft sich dann auf deinen genauen Standort samt Höhe, sobald deine Position feststeht.
+- **Aufgeräumtere Aktualisierung.** Das Wetter aktualisiert sich, wenn du die Vorhersage öffnest, wenn du auf Aktualisieren tippst, und automatisch alle 15 Minuten, solange du ein Live-Signal hast — und stellt offline nie Netzwerkanfragen.
+- **Klareres Zuschneiden von Tracks.** Der Dialog „Track zuschneiden" nutzt jetzt einen Bereichsregler, um den zu behaltenden Teil festzulegen (statt Griffe im Diagramm zu ziehen), und die Vorschaukarte zeigt den behaltenen Abschnitt in Grün, die abgeschnittenen Enden ausgeblendet.
+
+---
+
+## 1.42.0 — 17. Juni 2026 — Anpassbare Wegpunkt-Gruppierung
+
+- **Bestimme, wie Wegpunkte gruppiert werden** — ein neuer Regler *Wegpunkt-Gruppierung* unter **Einstellungen → Darstellung** lässt dich wählen, wie stark nahe beieinanderliegende Wegpunkte beim Herauszoomen zu einem nummerierten Symbol zusammengefasst werden: **Aus** (immer jede Markierung zeigen), **Niedrig**, **Mittel** oder **Standard**. Niedrigere Stufen zeigen einzelne Markierungen beim Hineinzoomen früher.
+- Der neue Standard ist **Mittel** — er hält volle Karten aufgeräumt und zeigt einzelne Markierungen trotzdem bei Wander-Zoomstufen. Schiebe ihn auf **Aus**, wenn du deine Wegpunkte lieber nie gruppieren möchtest.
+
+---
+
 ## 1.41.2 — 16. Juni 2026 — Flüssigerer Kompass
 
 - **Flüssigerer Navigationskompass** — die Nadel gleitet jetzt, statt in Stufen zu springen, bei jedem Tempo.

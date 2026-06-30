@@ -4,6 +4,49 @@ Changements visibles par l\'utilisateur, plus récents en premier. Pour les refa
 
 ---
 
+## 1.45.0 — 30 juin 2026 — Tendances météo à votre échelle
+
+- **Les graphiques de pression et d'humidité suivent désormais votre plage de prévision.** Quand vous basculez la prévision météo entre 24 h, 8 h et 2 h, les graphiques de tendance de la pression et de l'humidité en dessous se redessinent pour correspondre à la même fenêtre — vous lisez ainsi la tendance récente à l'échelle qui vous intéresse. La vue 2 heures utilise des données fines à 15 minutes là où elles sont disponibles.
+
+---
+
+## 1.44.0 — 28 juin 2026 — Altitude du terrain pour n'importe quelle trace
+
+- **Récupérer l'altitude du terrain pour une trace.** Un nouveau bouton **Terrain (DEM)** sur l'écran de trace ajoute un profil d'altitude à partir des données cartographiques du terrain (modèle d'altitude Copernicus ~30 m) — idéal pour les traces importées sans altitude, ou toute trace pour laquelle vous voulez un profil basé sur le terrain ainsi qu'un dénivelé. Un aperçu s'affiche d'abord, puis vous pouvez **Enregistrer comme nouvelle** (la trace d'origine reste intacte), **Écraser** la trace existante ou **Abandonner**.
+- Fonctionne aussi sur les longues traces — la récupération échantillonne le long de l'itinéraire, ce qui la garde rapide et fiable au lieu de bloquer.
+
+---
+
+## 1.43.0 — 28 juin 2026 — La prévision à votre échelle de temps
+
+- **Nouveau sélecteur 24 h / 8 h / 2 h sur la prévision météo.** Un petit sélecteur au-dessus de la bande de prévision change la fenêtre de temps : **24 h** pour toute la journée d'un coup d'œil (toutes les 3 heures), **8 h** pour les huit prochaines heures, ou **2 h** pour le détail fin à 15 minutes de ce qui arrive maintenant. La vue 2 heures est idéale pour anticiper une averse ou un orage sur le point d'arriver — elle peut montrer le changement jusqu'à ~45 minutes avant la vue horaire.
+- L'option **2 h** apparaît là où des données à 15 minutes sont disponibles (la majeure partie de l'Europe et de l'Amérique du Nord) ; ailleurs, vous verrez 24 h et 8 h.
+
+---
+
+## 1.42.2 — 26 juin 2026 — Carte plus rapide après reconnexion
+
+- **La carte se recharge dès que votre connexion revient.** Auparavant, après le mode avion (ou au retour du signal), la carte pouvait rester vide ou périmée jusqu'à ce que vous fassiez un déplacement ou un zoom. Elle actualise maintenant ses tuiles automatiquement dès qu'une connexion utilisable est de retour.
+- L'indicateur hors ligne et la météo s'accordent désormais sur le sens de « en ligne », et ne se contredisent donc plus sur une connexion instable ou de portail captif.
+
+---
+
+## 1.42.1 — 25 juin 2026 — Météo précise sur les sommets
+
+- **La météo de la position actuelle utilise désormais votre altitude.** Auparavant, la pastille de votre position en direct pouvait afficher une prévision trop chaude, au niveau de la vallée — votre altitude n'était pas envoyée au modèle météo (en montagne, l'écart pouvait atteindre ~9 °C). Les points de repère touchés étaient déjà corrects ; désormais, votre position en direct l'est aussi.
+- **Première météo plus rapide.** La prévision apparaît presque immédiatement à l'ouverture de la carte, au lieu d'attendre un point GPS complet, puis s'affine à votre position et altitude exactes une fois votre position stabilisée.
+- **Actualisation plus nette.** La météo s'actualise à l'ouverture de la prévision, lorsque vous appuyez sur Actualiser, et automatiquement toutes les 15 minutes tant que vous avez un signal en direct — et ne fait jamais d'appels réseau hors ligne.
+- **Rognage de trace plus clair.** La boîte de dialogue « Rogner la trace » utilise maintenant un curseur de plage pour définir la partie à conserver (au lieu de glisser des poignées sur le graphique), et la carte d'aperçu montre la portion conservée en vert, les extrémités coupées estompées.
+
+---
+
+## 1.42.0 — 17 juin 2026 — Regroupement des points ajustable
+
+- **Contrôlez le regroupement des points de repère** — un nouveau curseur *Regroupement des points* dans **Paramètres → Apparence** vous laisse choisir à quel point les points proches se regroupent en un badge numéroté lorsque vous dézoomez : **Désactivé** (toujours afficher chaque épingle), **Faible**, **Moyen** ou **Par défaut**. Les réglages plus faibles affichent les épingles individuelles plus tôt au zoom.
+- Le nouveau réglage par défaut est **Moyen**, qui garde les cartes chargées bien rangées tout en affichant les épingles individuelles aux niveaux de zoom de randonnée. Mettez-le sur **Désactivé** si vous préférez ne jamais regrouper vos points.
+
+---
+
 ## 1.41.2 — 16 juin 2026 — Boussole plus fluide
 
 - **Boussole de navigation plus fluide** — l'aiguille glisse désormais au lieu de sauter par à-coups, à toute vitesse.
